@@ -1,0 +1,26 @@
+PSTREE
+pstree - process tree - display a tree of processes
+
+Tree of all processes:
+$ pstree
+
+systemd-+-ModemManager---2*[{ModemManager}]
+        |-NetworkManager---2*[{NetworkManager}]
+        |-3*[VBoxClient---VBoxClient---3*[{VBoxClient}]]
+        |-VBoxClient---VBoxClient---4*[{VBoxClient}]
+        |-VBoxService---8*[{VBoxService}]
+        |-agetty
+<truncated>
+
+Tree of processes rooted at <pid>, ex: $ pstree 2:
+$ pstree <pid>
+
+Tree of current process ID:
+$ pstree $$
+zsh───pstree
+
+Tree of user processes, ex: $ pstree root:
+$ pstree <userid>
+
+
+---
