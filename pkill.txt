@@ -1,0 +1,6 @@
+PKILL
+pkill - look up or signal processes based on name and other
+
+# Kill process by name:
+$ pkill gedit
+---

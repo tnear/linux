@@ -1,0 +1,5 @@
+KILLALL
+killall - kill processes by name
+
+$ killall gedit
+---

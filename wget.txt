@@ -1,0 +1,9 @@
+WGET
+Wget - World Wide Web get - The non-interactive network downloader.
+
+# (default) Download page as 'index.html':
+$ wget example.com
+
+# Download page as 'example.html' using -O (or --output-document):
+wget -O example.html example.com
+---

@@ -1,0 +1,12 @@
+KILL
+kill - send a signal to a process
+
+$ kill <pid>
+
+# Search for process id and kill:
+$ ps | grep gedit
+ 220421 pts/3    00:00:06 gedit
+
+$ kill 220421
+
+---
