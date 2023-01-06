@@ -1,0 +1,11 @@
+PASSWD
+passwd - change user password
+
+$ passwd
+Changing password for <user>.
+(current) UNIX password:
+Enter new UNIX password:
+Retype new UNIX password:
+passwd: password updated successfully
+
+---
