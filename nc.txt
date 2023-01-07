@@ -1,0 +1,28 @@
+NC
+nc - netcat -TCP/IP swiss army knife
+
+Utility which reads and writes data across network connections.
+Uses TCP or UDP protocols. Note: executable is "ncat.exe" on Windows.
+
+stdin is sent to host and stdout is received
+
+$ nc <options> <host> <port>
+
+Read from host 33.173... and port 9999:
+$ nc 33.173.133.43 9999
+
+Copying files:
+
+Server command to listen for a file:
+$ nc -l -p 6790 > file.txt
+
+-l: listen mode for inbound connects
+-p: port number to receive data
+file.txt: file to listen for
+
+Client command to send file to server.
+Note how port number and file name are same as above:
+$ nc <addr> 6790 < file.txt
+
+Left off: port scans	https://www.ionos.com/digitalguide/server/tools/netcat/
+---

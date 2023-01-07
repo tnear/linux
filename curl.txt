@@ -1,0 +1,19 @@
+CURL
+curl - cURL - Client URL - transfer a URL
+
+# Output web page HTML:
+$ curl example.com
+<!doctype html>
+<html>
+<head>
+    <title>Example Domain</title>
+...
+
+# Output to file using -o:
+$ curl -o example.html example.com
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  1256  100  1256    0     0  17091      0 --:--:-- --:--:-- --:--:-- 17444
+
+
+---

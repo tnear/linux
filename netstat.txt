@@ -1,0 +1,21 @@
+NETSTAT
+netstat - Print network connections, routing tables, interface statistics,
+          masquerade connections, and multicast memberships
+
+
+Display network connections. Often used for diagnosing problems or determining traffic.
+
+$ netstat
+Active Internet connections (w/o servers)
+Proto Recv-Q Send-Q Local Address           Foreign Address
+udp        0      0 192.168.200.128:bootpc  192.168.200.254:bootps
+Active UNIX domain sockets (w/o servers)
+Proto RefCnt Flags  Type    State      I-Node Path
+unix  3      [ ]    DGRAM   CONNECTED  14416  /run/systemd/notify
+unix  2      [ ]    DGRAM              15465  /run/systemd/journal/syslog
+<truncated>
+
+List all sockets:
+$ netstat -a | less
+
+---

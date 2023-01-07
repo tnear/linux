@@ -6,4 +6,18 @@ $ ssh username@host
 Example:
 $ ssh tnear@example.edu
 
+Flags:
+-X    Enables X11 forwarding
+-Y    Enables trusted X11 forwarding (less secure)
+
+$ ssh -Y tnear@example.edu
+
+https://goteleport.com/blog/x11-forwarding/
+
+X11: X Windows System v11
+
+X11 forwarding: an SSH protocol that enables users to run graphical applications
+on a remote server and interact with them using their local display and I/O
+devices. It is commonly relied upon by developers for securely interacting with
+remote machines across wide and heterogeneous server fleets.
 ---
