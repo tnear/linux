@@ -8,21 +8,34 @@ stdin is sent to host and stdout is received
 
 $ nc <options> <host> <port>
 
-Read from host 33.173... and port 9999:
+# Read from host 33.173... and port 9999:
 $ nc 33.173.133.43 9999
 
+# Read web page source
+# Note: ^M = Ctrl+V + Enter key. This produces carriage return required by HTTP.
+$ nc www.google.com 80
+GET / HTTP/1.1^M
+Host: www.google.com^M
+^M
+
+# Alt syntax (without ^M):
+printf "GET / HTTP/1.1\r\nHost: www.google.com\r\n\r\n" | nc google.com 80
+
 Copying files:
+Note: transferred data is NOT encrypted (unlike with SSH)
 
-Server command to listen for a file:
-$ nc -l -p 6790 > file.txt
+# Server command to listen for a file:
+$ nc -l -p 1234 > file.txt
 
--l: listen mode for inbound connects
+-l: listen mode for inbound connects. Often used with -p flag.
 -p: port number to receive data
+-v: verbose (-vv additional verbosity)
+-e: specifies a file name to execute after connect, ex: "-e /bin/bash"
 file.txt: file to listen for
 
 Client command to send file to server.
 Note how port number and file name are same as above:
-$ nc <addr> 6790 < file.txt
+$ nc <addr> 1234 < file.txt
 
-Left off: port scans	https://www.ionos.com/digitalguide/server/tools/netcat/
+Left off: port scans https://www.ionos.com/digitalguide/server/tools/netcat/
 ---
