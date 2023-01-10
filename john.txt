@@ -1,0 +1,24 @@
+JOHN
+
+john - John the Ripper - a tool to find weak passwords of your users
+
+# Reverse "mypassword" hash value:
+$ echo -n "34819d7beeabb9260a5c854bc85b3e44" > md5hash.txt
+$ john --format=raw-md5 md5hash.txt
+
+Using default input encoding: UTF-8
+Loaded 1 password hash (Raw-MD5 [MD5 256/256 AVX2 8x3])
+Warning: no OpenMP support for this hash type, consider --fork=4
+Proceeding with single, rules:Single
+Press 'q' or Ctrl-C to abort, almost any other key for status
+Almost done: Processing the remaining buffered candidate passwords, if any.
+Proceeding with wordlist:/usr/share/john/password.lst
+Proceeding with incremental:ASCII
+mypassword       (?)
+1g 0:00:00:11 DONE 3/3 (2023-01-10 17:12)
+0.09033g/s 10694Kp/s 10694Kc/s 10694KC/s mypassamor..mypanganna
+
+1 password hash cracked, 0 left
+
+
+---

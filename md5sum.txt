@@ -1,0 +1,12 @@
+MD5SUM
+
+md5sum - compute and check MD5 message digest
+
+# String to md5 digest. -n needed to avoid trailing newline:
+$ echo -n my_string | md5sum
+3d212b21fad7bed63c1fb560c6a5c5d0  -
+
+$ echo -n 'my string space' | md5sum
+32aecc42aaab562503a187440fb4637d  -
+
+---
