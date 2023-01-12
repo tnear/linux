@@ -1,5 +1,9 @@
 KILLALL
 killall - kill processes by name
 
+# Kill ALL gedit processes
 $ killall gedit
+
+# Force-kill all gedit processes
+$ killall -9 gedit
 ---

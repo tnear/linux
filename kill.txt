@@ -3,10 +3,16 @@ kill - send a signal to a process
 
 $ kill <pid>
 
-# Search for process id and kill:
+# (1/2) Search for process id and kill:
 $ ps | grep gedit
  220421 pts/3    00:00:06 gedit
 
+# (2/2) Kill process ID above:
 $ kill 220421
+
+# Force-kill an unresponsive service:
+$ kill -9 <processID>
+OR
+$ kill -SIGKILL <processID>
 
 ---
