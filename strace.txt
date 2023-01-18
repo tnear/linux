@@ -1,0 +1,16 @@
+STRACE
+
+strace - trace system calls and signals
+
+Note: all strace outputs begin with 'execve'. This command runs an executable.
+
+# strace <cmd>:
+
+$ strace pwd
+execve("/usr/bin/pwd", ["pwd"], 0x7ffff62cbf90 /* 55 vars */) = 0
+brk(NULL)                               = 0x5581dd782000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc54fdf3000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+<truncated>
+
+---
