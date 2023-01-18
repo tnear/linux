@@ -1,0 +1,39 @@
+NSLOOKUP
+
+nslookup - query Internet name servers interactively
+NSL = Name Server Lookup
+
+Obtains mapping between domain name and IP address.
+
+# Send query to default DNS server (iteratively finds answer):
+# (returns type=A records)
+$ nslookup example.edu
+Server:         192.168.0.1
+Address:        192.168.0.1#53
+
+# (non-authoritative comes from cache,
+# authoritative comes directly from server)
+Non-authoritative answer:
+Name:   example.edu
+Address: 93.184.216.34
+Name:   example.edu
+Address: 2606:2800:220:1:248:1893:25c8:1946
+
+
+
+# Stop looking at NS (Authoritative) level:
+$ nslookup -type=NS example.edu
+Server:         192.168.0.1
+Address:        192.168.0.1#53
+
+Non-authoritative answer:
+example.edu     nameserver = a.iana-servers.net.
+example.edu     nameserver = b.iana-servers.net.
+
+Authoritative answers can be found from:
+a.iana-servers.net      internet address = 199.43.135.53
+a.iana-servers.net      has AAAA address 2001:500:8f::53
+b.iana-servers.net      internet address = 199.43.133.53
+b.iana-servers.net      has AAAA address 2001:500:8d::53
+
+---

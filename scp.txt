@@ -1,0 +1,8 @@
+SCP
+
+scp — OpenSSH secure file copy
+
+# Copy file "file1" from remote machine locally:
+scp user@cs.example.edu:/home/user/path/file1 file1
+
+---

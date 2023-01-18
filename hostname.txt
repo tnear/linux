@@ -1,0 +1,10 @@
+HOSTNAME
+
+hostname - show or set the system's host name
+
+$ hostname # SSH
+machine.cs.example.edu
+
+$ hostname # local
+travis
+---
