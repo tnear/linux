@@ -1,0 +1,20 @@
+HTOP
+
+htop, pcp-htop - interactive process viewer
+
+(1)
+# Display process status
+$ htop
+
+(2)
+# Show processes for a user, ex: top -u root:
+$ htop -u <user>
+
+(3)
+# Interactive sort:
+Click column headers.
+
+(4)
+# Search (F3), Kill (F9), and other shortcut keys:
+See bottom banner for shortcuts.
+---

@@ -7,7 +7,10 @@ $ curl example.com
 <html>
 <head>
     <title>Example Domain</title>
-...
+...(truncated)
+
+# Output to file using redirect
+$ curl example.com > example.html
 
 # Output to file using -o:
 $ curl -o example.html example.com
