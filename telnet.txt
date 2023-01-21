@@ -1,0 +1,25 @@
+TELNET
+
+telnet — teletype network - user interface to the unencrypted TELNET protocol
+
+
+# Connect to localhost
+$ telnet 127.0.0.1 1234
+
+# Enter GET request at prompt:
+(telnet) GET /basic.html HTTP/1.1
+
+# Response (found /basic.html)
+HTTP/1.1 200 OK
+Content-Type: text/html
+Connection: close
+Content-Length: 82
+
+<html>
+<body>
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+</body>
+</html>Connection closed by foreign host.
+
+---
