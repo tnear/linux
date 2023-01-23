@@ -1,0 +1,15 @@
+LS
+
+ls - list directory contents
+
+# Flags
+-a = list all files (including hidden)
+-i = include inode number (ex: $ ls -li)
+-l = long format
+-r = reverse output order
+-R = recursive search of sub-driectories, ex: $ ls -lR
+-t = sort by timestamp, ex: $ ls -ltr shows oldest contents on top
+
+# List all symbolic links in sub-directories of pwd:
+$ ls -lR | grep "^l"
+---

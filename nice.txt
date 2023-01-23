@@ -1,0 +1,17 @@
+NICE
+
+nice - run a program with modified scheduling priority
+nice runs a command with particular CPU priority
+
+Range: -20 is highest priority and 19 is lowest priority
+
+# Get default niceness:
+$ nice
+0
+
+# Run 'ls' with a different priority (5):
+$ nice -n5 ls  # or -n 5
+
+# Shows niceness value of a process in "NI" column:
+$ ps -axl
+---
