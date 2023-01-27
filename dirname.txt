@@ -1,0 +1,11 @@
+DIRNAME
+
+dirname - strip last component from file name
+
+# Return directory that a file or directory is in:
+$ dirname /home/user/file.c
+/home/user
+
+$ dirname /home/user
+/home
+---

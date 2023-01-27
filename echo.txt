@@ -10,4 +10,13 @@ hello\n
 $ echo -n hello
 hello
 
+# Create file (or overwrite):
+$ echo "hello" > file.txt
+
+# Append to file (>>):
+$ echo "world" > file.txt
+$ cat file.txt
+hello
+world
+
 ---

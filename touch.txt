@@ -1,0 +1,10 @@
+TOUCH
+
+touch - change file timestamps
+
+# Create empty file:
+$ touch empty_file.txt
+
+# Update timestamp of file:
+$ touch existing_file.txt
+---

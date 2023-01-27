@@ -1,0 +1,33 @@
+BC
+
+bc — basic calculator - arbitrary-precision arithmetic language
+
+# Built-in functions: sqrt, scale, ...
+
+# Supported operators: +=, /=, ++, <, ==, <=, %, ^
+
+# Power:
+(bc) 2 ^ 256
+11579208923731619542357098500868790785326998466564056403945758400791\
+3129639936
+
+# Scaling:
+(bc) scale = 20
+(bc) sqrt(2)
+1.41421356237309504880
+
+# Creating variables:
+(bc) scale = 0
+(bc) a = 5 % 3 + 7
+(bc) a
+9
+
+# Here String:
+$ bc <<< "1 <= 2"
+1
+
+# Pipe string into to be executed by bc:
+$ echo "236 % 15" | bc
+11
+
+---

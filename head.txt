@@ -1,0 +1,12 @@
+HEAD
+
+head - output the first part of files
+
+# Output first 10 lines (default) of /etc/passwd:
+$ head /etc/passwd
+
+
+# Output first two lines of /etc/passwd:
+$ head -2 /etc/passwd
+
+---
