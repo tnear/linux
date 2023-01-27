@@ -1,0 +1,24 @@
+TYPE
+
+This manual page is part of the POSIX Programmer's Manual. The Linux
+implementation of this interface may differ (consult the corresponding
+Linux manual page for details of Linux  behavior), or the interface
+may not be implemented on Linux.
+
+Type: Description of how an argument would run as a command.
+
+# Describe 'ls':
+$ type ls
+ls is an alias for ls --color=auto
+
+# Run non-aliased 'ls':
+$ command ls
+
+# Shell builtin example:
+$ type jobs
+jobs is a shell builtin
+
+# 'mv' command
+$ type mv
+mv is /usr/bin/mv"
+---

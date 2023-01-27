@@ -1,0 +1,13 @@
+ECHO
+
+echo - display a line of text
+
+# Echo by default adds newline:
+$ echo hello
+hello\n
+
+# Use -n to avoid newline:
+$ echo -n hello
+hello
+
+---

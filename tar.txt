@@ -1,0 +1,32 @@
+TAR
+
+tar - Tape ARchive - an archiving utility
+Combines files, does not compress by default.
+
+# Create archive my_tar.tar:
+$ tar -cf my_tar.tar f1.txt f2.txt
+
+# Flags:
+-c (--create) = Create
+-f (--file) = Specify file name
+-t (--list) = List contents of archive
+-v (--verbose) = Verbose output
+-x (--extract) = Extract archive
+-z (--gzip) = Compress directories and files
+
+# Display contents without extracing:
+$ tar -tf my_tar.tar
+f1.txt
+f2.txt
+
+# Extract archive:
+$ tar -xf my_tar.tar
+
+# Compress (dir_or_files) into archive (my_tar_tar.gz):
+$ tar -czf my_tar.tar.gz dir_or_files
+
+# Decompress and extract:
+$ tar -xzf my_tar.tar.gz
+
+
+---

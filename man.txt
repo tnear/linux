@@ -1,0 +1,11 @@
+MAN
+
+man - an interface to the system reference manuals
+
+# Open manual page for 'cd'. Section number is in top left: CD(1POSIX)
+$ man cd
+
+# Explicit section number (often not needed):
+$ man 1POSIX cd
+
+---
