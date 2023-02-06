@@ -2,6 +2,10 @@ JOHN
 
 john - John the Ripper - a tool to find weak passwords of your users
 
+# Get latest information on cracked passwords:
+$ john --show passwd.list
+0 password hashes cracked, 10 left
+
 # Reverse "mypassword" hash value:
 $ echo -n "34819d7beeabb9260a5c854bc85b3e44" > md5hash.txt
 $ john --format=raw-md5 md5hash.txt
@@ -20,5 +24,17 @@ mypassword       (?)
 
 1 password hash cracked, 0 left
 
+# Using a word list:
+$ john --wordlist=password.lst ./passwd.crack
 
+# Rule explanations:
+https://miloserdov.org/?p=5477
+https://www.openwall.com/john/doc/RULES.shtml
+
+# Rules:
+# insert a-z0-9&! at indexes 4-14 (D=14):
+i[4-9A-D][a-z0-9&!]
+
+# Deletes chars at indexes 4-14:
+D[4-9A-D]
 ---
