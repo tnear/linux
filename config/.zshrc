@@ -153,9 +153,9 @@ if [ "$color_prompt" = yes ]; then
         ZSH_HIGHLIGHT_STYLES[double-hyphen-option]=fg=green
         ZSH_HIGHLIGHT_STYLES[back-quoted-argument]=none
         ZSH_HIGHLIGHT_STYLES[back-quoted-argument-delimiter]=fg=blue,bold
-        ZSH_HIGHLIGHT_STYLES[single-quoted-argument]=fg=yellow
-        ZSH_HIGHLIGHT_STYLES[double-quoted-argument]=fg=yellow
-        ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]=fg=yellow
+        ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=#A51515' # travis (default yellow)
+        ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=#A51515' # travis (default yellow)
+        ZSH_HIGHLIGHT_STYLES[dollar-quoted-argument]='fg=#A51515' # travis (default yellow)
         ZSH_HIGHLIGHT_STYLES[rc-quote]=fg=magenta
         ZSH_HIGHLIGHT_STYLES[dollar-double-quoted-argument]=fg=magenta,bold
         ZSH_HIGHLIGHT_STYLES[back-double-quoted-argument]=fg=magenta,bold
