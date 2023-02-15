@@ -1,0 +1,17 @@
+CP
+
+cp - copy files and directories
+
+# Copying file to cwd:
+$ cp /path/to/file .
+
+# Copy file to directory:
+# cp file dir/
+
+# Copy multiple files to directory:
+$ cp file1 file2 file3 dir/
+
+# Copy directory:
+$ cp -r srcDir newDir
+
+---
