@@ -2,15 +2,26 @@ STRACE
 
 strace - trace system calls and signals
 
-Note: all strace outputs begin with 'execve'. This command runs an executable.
-
-# strace <cmd>:
+Note:  ALL strace outputs begin with 'execve'. This syscall runs an executable.
+Note2: strace writes to stderr (not stdout).
 
 $ strace pwd
 execve("/usr/bin/pwd", ["pwd"], 0x7ffff62cbf90 /* 55 vars */) = 0
 brk(NULL)                               = 0x5581dd782000
 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc54fdf3000
-access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
 <truncated>
+
+# Write 'strace' output (stderr) to file:
+$ strace ls 2> ls.out
+$ cat ls.out
+execve("/usr/bin/ls", ["ls"], 0x7ffe594fc6e0 /* 55 vars */) = 0
+brk(NULL)                               = 0x562c2dfed000
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fe92661b000
+
+# Write regular 'ls' output to ls.out and 'strace' output to stderr (screen):
+$ strace ls > ls.out
+$ cat ls.out
+basename.txt
+bc.txt
 
 ---
