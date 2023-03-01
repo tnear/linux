@@ -1,0 +1,28 @@
+HISTORY
+
+history - GNU History Library
+
+# View command history:
+$ history
+
+# View command history of "grep":
+$ history | grep grep
+
+# Reload previous command (!!):
+$ printf hello
+hello
+$ !!
+$ printf hello
+
+# Return previous command by prefix (!prefix):
+$ gcc formatString.c -o formatString -g -m32 -Wall
+$ !gcc
+
+# Search history:
+Ctrl+R
+# type string to history search
+# Ctrl+R finds previous match (bck-i-search)
+# Ctrl+S finds next match     (fwd-i-search)
+
+
+---

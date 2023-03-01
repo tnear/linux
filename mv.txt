@@ -1,0 +1,17 @@
+MV
+
+mv - move (rename) files
+
+# Rename file:
+$ mv oldName newName
+
+# Move file to folder:
+$ mv file.txt dir/
+
+# Move multiple files:
+$ mv file1 file2 file3 dir/
+
+# Rename directory
+$ mv oldDir newDir
+
+---
