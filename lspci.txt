@@ -14,5 +14,18 @@ $ lspci
 00:10.0 SCSI storage controller: Broadcom PCI-X Fusion-MPT Ultra320 SCSI (rev 01)
 00:11.0 PCI bridge: VMware PCI bridge (rev 02)
 
+# Verbose output:
+$ lspci -v
+00:0d.0 SATA controller: Intel Corporation 82801HM/HEM (ICH8M/ICH8M-E) SATA Controller [AHCI mode] (prog-if 01 [AHCI 1.0])
+        Flags: bus master, fast devsel, latency 64, IRQ 21
+        I/O ports at d240 [size=8]
+        I/O ports at d248 [size=4]
+        I/O ports at d250 [size=8]
+        I/O ports at d258 [size=4]
+        I/O ports at d260 [size=16]
+        Memory at f0806000 (32-bit, non-prefetchable) [size=8K]
+        Capabilities: <access denied>
+        Kernel driver in use: ahci
+        Kernel modules: ahci
 
 ---
