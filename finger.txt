@@ -1,0 +1,18 @@
+FINGER
+
+finger — user information lookup program
+
+# Lookup currently logged in users
+$ finger
+Login     Name       Tty      Idle  Login Time   Office     Office Phone
+kali                 tty7      24d  Feb 20 08:05 (:0)
+
+# Lookup user 'root'
+$ finger root
+Login: root                             Name: root
+Directory: /root                        Shell: /usr/bin/zsh
+Never logged in.
+No mail.
+No Plan.
+
+---
