@@ -24,4 +24,12 @@ $ cat ls.out
 basename.txt
 bc.txt
 
+# -e = filter for expression
+# This filters for 'brk' syscalls (and ignores stdout)
+$ strace -e brk ls > /dev/null
+brk(NULL)                               = 0x55788b70c000
+brk(NULL)                               = 0x55788b70c000
+brk(0x55788b72d000)                     = 0x55788b72d000
++++ exited with 0 +++
+
 ---

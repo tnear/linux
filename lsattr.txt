@@ -1,0 +1,21 @@
+LSATTR
+
+lsattr - list file attributes on a Linux second extended file system
+
+$ touch file.txt
+$ lsattr file.txt
+--------------e------- file.txt
+
+# Make file.txt immutable (i):
+$ sudo chattr +i file.txt
+----i---------e------- file.txt
+
+# This file cannot be deleted even by root:
+$ sudo rm file.txt
+rm: cannot remove 'file.txt': Operation not permitted
+
+# Remove 'i' attribute then delete file:
+$ sudo chattr -i file.txt
+$ rm file.txt
+
+---

@@ -1,0 +1,15 @@
+WHICH
+
+which - shows the full path of (shell) commands
+
+# Find 'clang' executable:
+$ which clang
+/usr/bin/clang
+
+# Find multiple commands:
+$ which factor ls cp
+/usr/bin/factor
+ls: aliased to ls --color=auto
+/usr/bin/cp
+
+---
