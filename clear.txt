@@ -1,0 +1,11 @@
+CLEAR
+
+clear - clear the terminal screen
+
+# Clear screen and scrollback:
+$ clear
+
+
+# Clear sscreen without clearing scrollback:
+$ clear -x
+---

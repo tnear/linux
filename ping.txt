@@ -1,0 +1,25 @@
+PING
+
+ping - send ICMP ECHO_REQUEST to network hosts
+
+# Basic usage:
+$ ping google.com
+PING google.com (142.251.32.14) 56(84) bytes of data.
+64 bytes from ord38s33-in-f14.1e100.net (142.251.32.14): icmp_seq=1 ttl=55 time=17.4 ms
+64 bytes from ord38s33-in-f14.1e100.net (142.251.32.14): icmp_seq=2 ttl=55 time=20.1 ms
+^C
+--- google.com ping statistics ---
+2 packets transmitted, 2 received, 0% packet loss, time 1001ms
+rtt min/avg/max/mdev = 17.369/18.748/20.127/1.379 ms
+
+
+# Phone home:
+$ ping 127.0.0.1
+PING 127.0.0.1 (127.0.0.1) 56(84) bytes of data.
+64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.075 ms
+
+
+# Limit ping count (-c) to one:
+$ ping -c 1 google.com
+
+---
