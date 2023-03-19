@@ -1,0 +1,20 @@
+# HERE DOCUMENT
+
+https://www.baeldung.com/linux/heredoc-herestring
+here document (also commonly referred to as heredoc) refers to a special block
+of code that contains multi-line strings that will be redirected to a command.
+
+
+Here documents are denoted by '<<' followed by a token.
+Reading stops upon encountering that oken.
+
+# Count number of lines between EOF/EOF:
+$ wc -l << EOF
+heredoc> as sdf sdf awef
+heredoc> a wefwae fawe fawef
+heredoc> EOF
+2
+
+Answer is 2 because there are two newlines encountered between EOF/EOF
+
+---

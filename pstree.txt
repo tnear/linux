@@ -1,7 +1,8 @@
 PSTREE
+
 pstree - process tree - display a tree of processes
 
-Tree of all processes:
+# Tree of all processes:
 $ pstree
 
 systemd-+-ModemManager---2*[{ModemManager}]
@@ -12,15 +13,26 @@ systemd-+-ModemManager---2*[{ModemManager}]
         |-agetty
 <truncated>
 
-Tree of processes rooted at <pid>, ex: $ pstree 2:
+# Tree of processes rooted at <pid>, ex: $ pstree 2:
 $ pstree <pid>
 
-Tree of current process ID:
+# Tree of current process ID:
 $ pstree $$
 zsh───pstree
 
-Tree of user processes, ex: $ pstree root:
+# Tree of user processes, ex: $ pstree root:
 $ pstree <userid>
 
+# Flags:
+# -a = show command line arguments
+# -p = show PIDs
 
+$ watch pstree -ap 1087170
+python,1087170
+  `-sh,1088344 -c /bin/sleep 10
+      `-sleep,1088345 10
+
+# 1087170 = Python PID
+# 1088344 = newly created shell PID
+# 1088345 = sleep process PID
 ---
