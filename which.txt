@@ -12,4 +12,11 @@ $ which factor ls cp
 ls: aliased to ls --color=auto
 /usr/bin/cp
 
+# -a = match all pathnames
+$ which -a man
+/usr/bin/man
+/bin/man
+
+$ which man
+/usr/bin/man
 ---

@@ -1,0 +1,33 @@
+ALIAS
+
+alias — define or display aliases
+
+# List aliases:
+$ alias
+diff='diff --color=auto'
+egrep='egrep --color=auto'
+fgrep='fgrep --color=auto'
+grep='grep --color=auto -P'
+
+# Create temporary alias:
+$ alias grep="grep --color=auto -P"
+
+# Create permanent alias:
+$ code ~/.zshrc
+
+# Display alias:
+$ alias ls
+ls='ls --color=auto'
+
+# Escape alias (technique 1), use 'command':
+$ command ls
+
+# Escape alias (technique 2), escape a letter:
+$ \ls
+OR
+$ l\s
+O$
+$ \l\s
+
+
+---

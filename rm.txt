@@ -1,0 +1,11 @@
+RM
+
+rm - remove files or directories
+
+# Remove file:
+$ rm file.txt
+
+# Remove non-empty directory:
+$ rm -r my_directory
+
+---
