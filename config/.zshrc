@@ -285,10 +285,12 @@ bindkey '^[[3~'    beginning-of-line   # home
 bindkey '^[[24~'   delete-char         # Map delete to F12
 
 # up arrow history
-bindkey "${terminfo[kcuu1]}" history-search-backward
+#bindkey "${terminfo[kcuu1]}" history-beginning-search-backward
+bindkey "${terminfo[kcuu1]}" history-search-backward # only checks first word (command)
 
 # down arrow history
-bindkey "${terminfo[kcud1]}" history-search-forward
+#bindkey "${terminfo[kcud1]}" history-beginning-search-forward
+bindkey "${terminfo[kcud1]}" history-search-forward # only checks first word (command)
 
 # always quiet when starting gdb
 alias gdb='gdb -q'
