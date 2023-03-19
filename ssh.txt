@@ -3,14 +3,23 @@ ssh — "secure shell" - OpenSSH remote login client
 
 $ ssh username@host
 
-Example:
+# Simple example:
 $ ssh tnear@example.edu
 
-Flags:
+# Common flags:
 -X    Enables X11 forwarding
 -Y    Enables trusted X11 forwarding (less secure)
+-L    Local port forwarding tunnel
 
+# Connect and allow trusted X11 forwarding:
 $ ssh -Y tnear@example.edu
+
+# Tell the SSH server at ssh-server.example.com to forward port 8080 on the
+# localhost to port 80 on the desired, but restricted, server: social.example.org:
+$ ssh -L 8080:social.example.org:80 ssh-server.example.com
+
+^ Allows you to access the restricted server using the url http://localhost:8080/
+
 
 https://goteleport.com/blog/x11-forwarding/
 
@@ -20,4 +29,5 @@ X11 forwarding: an SSH protocol that enables users to run graphical applications
 on a remote server and interact with them using their local display and I/O
 devices. It is commonly relied upon by developers for securely interacting with
 remote machines across wide and heterogeneous server fleets.
+
 ---
