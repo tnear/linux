@@ -1,0 +1,28 @@
+UNIQ
+
+uniq - report or omit repeated lines
+
+$ cat file.txt
+a
+b
+a
+a
+b
+c
+
+# uniq detects consecutive duplicate lines:
+$ uniq sort.txt
+a
+b
+a
+b
+c
+
+# Sorting data first will ensure lines are globally unique:
+# (sort -u file.txt also works)
+$ sort file.txt | uniq
+a
+b
+c
+
+---

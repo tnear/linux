@@ -17,4 +17,7 @@ $ sort -n
 
 # Reverse order of sort:
 $ sort -r
+
+# -u = sort unique (alternate for sort | uniq)
+$ sort -u file.txt
 ---

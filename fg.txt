@@ -1,0 +1,30 @@
+FG
+
+fg — foreground - run jobs in the foreground
+
+# Create a long running process:
+$ sleep 1000
+
+$ Ctrl-Z  # Suspend sleep job
+
+$ Use 'jobs' to show suspended state
+[1]  + suspended  sleep 1000
+
+# Place sleep job in background (state changes to 'continued':
+$ bg
+[1]  + continued  sleep 1000
+
+# Show that sleep process is running again:
+$ jobs
+[1]  + running    sleep 1000
+
+# Place sleep job in foreground:
+$ fg
+[1]  + running    sleep 1000
+
+# %n = switch to job by number n:
+$ bg %n  # ex: bg %2
+
+$ fg %n  # ex: fg %1
+
+---
