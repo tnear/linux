@@ -9,7 +9,13 @@ ls - list directory contents
 -r = reverse output order
 -R = recursive search of sub-driectories, ex: $ ls -lR
 -t = sort by timestamp, ex: $ ls -ltr shows oldest contents on top
+-d = list directory itself (instead of directory contents)
 
 # List all symbolic links in sub-directories of pwd:
 $ ls -lR | grep "^l"
+
+# -d = list directory itself. This has the letter 'd' at the front:
+$ ls -ld /tmp
+drwxrwxrwt 14 root 4096 /tmp
+
 ---
