@@ -16,8 +16,13 @@ COMMANDS:
 <Up Arrow>          One line up
 d                   Page down
 u                   Page up
+q                   Quit
+
 g                   Top of output
 G                   Bottom of output
+Home                Top of output
+End                 Bottom of output
+
 n                   Next match during search
 N                   Previous match during search
 

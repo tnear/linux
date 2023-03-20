@@ -1,0 +1,39 @@
+WC
+
+wc - word count - print newline, word, and byte counts for each file
+
+Returns number of newlines, words, and characters in files
+
+Basic usage:
+$ wc <file1> <file2> ...
+
+# Get newlines | word count | num characters for all starting with 'w':
+$ wc w*
+   0    0    0 wc.txt
+   8   35  240 wget.txt
+  12   39  254 whatis.txt
+   7   22  177 whereis.txt
+  21   51  313 which.txt
+   7   22  139 who.txt
+  11   50  309 w.txt
+  66  219 1432 total
+
+# -l = show line column only.
+# Sort files by number of lines:
+$ wc -l * | sort -n
+      0 config
+      0 README.md
+      5 pkill.txt
+      <...>
+     43 hex.txt
+     48 time.txt
+     49 find.txt
+   1557 total
+
+
+# Get number of files with .h or .c extension:
+$ find /usr/include -name "*.[hc]" | wc
+  9834        9834       445552
+newlines | word count | characters
+
+---

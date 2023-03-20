@@ -1,0 +1,16 @@
+SHRED
+
+shred - overwrite a file to hide its contents, and optionally delete it
+
+$ cat file.txt
+abc
+
+# Overwrite file (no delete):
+$ shred file.txt
+$ cat file.txt
+��"�O   ����C}�zt#[K@m��
+
+# -u = delete file:
+$ shred -u file.txt
+
+---
