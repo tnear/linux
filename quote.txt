@@ -13,4 +13,13 @@ $ var=hello
 $ echo "$var"
 hello
 
+# Use single quote character inside single quotes:
+$ echo 'Single quote:' "'" 'example'
+Single quote: ' example
+
+# Python's shlex module can generate this syntax for you:
+>>> import shlex
+>>> print(shlex.quote("Single quote: ' example"))
+'Single quote: '"'"' example'
+
 ---

@@ -1,0 +1,18 @@
+LTRACE
+
+ltrace - A library call tracer
+
+Note: strace writes to stderr (not stdout).
+
+$ ltrace ./license
+printf("Checking License: ")
+strcmp("a", "AAAA-G10N-ALL-OK")
+
+$ ltrace echo 'abc' 2> ltrace.out
+$ head -n4 ltrace.out
+getenv("POSIXLY_CORRECT")                                = nil
+strrchr("echo", '/')                                     = nil
+setlocale(LC_ALL, "")                                    = "en_US.UTF-8"
+bindtextdomain("coreutils", "/usr/share/locale")         = "/usr/share/locale"
+
+---

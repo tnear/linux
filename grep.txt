@@ -1,0 +1,48 @@
+GREP
+
+grep - print lines that match patterns
+Globally search for a Regular Expression and Print matching lines
+
+$ grep -options 'pattern' <file>
+
+# Common flags:
+-A = show X lines after. Space is optional: "-A 3" or "-A3"
+-B = show X lines before
+-C = show X lines before and after
+-c = count number of occurrences
+-E = extended regexp, supports a few extra characters such as '|'
+-i = case insensitive
+-n = show line numbers
+-o = only print matched text
+-P = PCRE. For example, if left off must use [0-9] for \d.
+-r = recursively search folders
+-v = invert-select. Return lines NOT containing pattern.
+-w = match whole word
+
+# Find lines NOT containing the letter 'e' using invert-select (-v):
+$ lscpu | grep -v e
+CPU(s):                4
+CPU family:            6
+BogoMIPS:              5183.99
+
+# Line number example:
+$ grep -n root /etc/passwd
+1:root:x:0:0:root:/root:/usr/bin/zsh
+33:nm-openvpn:x:114:120:NetworkManager
+
+# Count number of occurrences
+$ grep -c system /etc/passwd
+4
+
+# Show 3 lines before and 4 lines after pattern:
+grep -B3 -A4 "pattern" <file>
+
+# Only print matched text:
+$ grep -o kali /etc/passwd
+kali
+kali
+
+# PCRE example (fails without -P):
+$ echo "1 2" | grep -P '\d'
+
+---

@@ -53,7 +53,11 @@ SAVEHIST=20000000 # travis: default 2000
 setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
 setopt hist_ignore_dups       # ignore duplicated commands history list
 setopt hist_ignore_space      # ignore commands that start with space
-setopt hist_verify            # show command with history expansion to user before running it
+#setopt hist_verify           # show command with history expansion to user before running it
+                              # travis: not setting hist_verify is consistent with bash:
+                              # touch file.txt; ll !$
+                              # ^does not require extra enter keypress
+
 #setopt share_history         # share command history data
 
 # force zsh to show the complete history

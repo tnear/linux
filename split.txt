@@ -1,0 +1,30 @@
+SPLIT
+
+split - split a file into pieces
+
+split [OPTION]... [FILE [PREFIX]]
+
+# Create sequence of 100 lines:
+$ seq 100 > file.txt
+
+# Split lines into 5 files using l/N syntax (l = lines).
+# This creates 5 files called xaa, xab, xac, xad, xae:
+$ split -n l/5 file.txt
+
+# Specify file names using prefix:
+$ split -n l/5 file.txt my_prefix_
+$ ls
+file.txt  my_prefix_aa  my_prefix_ab  my_prefix_ac  my_prefix_ad  my_prefix_ae
+
+# Use hex suffixes:
+$ split -x -n l/25 file.txt
+$ ls
+file.txt  x01  x03  x05  x07  x09  x0b  x0d  x0f  x11  x13  x15  x17
+x00       x02  x04  x06  x08  x0a  x0c  x0e  x10  x12  x14  x16  x18
+
+# Join data back together:
+$ split -n l/25 file.txt my_prefix_
+$ find -name 'my_prefix*' | sort | xargs cat
+
+
+---

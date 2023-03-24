@@ -8,4 +8,8 @@ $ rm file.txt
 # Remove non-empty directory:
 $ rm -r my_directory
 
+# -f = force. Remove directory and do not prompt.
+# Useful for deleting local git repositories:
+$ rm -rf my_repository
+
 ---
