@@ -1,0 +1,43 @@
+COMM
+
+comm - (common) compare two sorted files line by line
+Peforms set difference between files with sorted lines.
+
+$ cat f1.txt
+a
+b
+c
+
+$ cat f2.txt
+b
+c
+d
+
+# Output is in 3 columns:
+$ comm f1.txt f2.txt
+a
+        b
+        c
+    d
+
+# Col 1: content unique to f1
+# Col 2: content unique to f2
+# Col 3: content in both f1 and f2
+
+# Suppress columns 1 and 2 to print commonality (col 3):
+$ comm -1 -2 f1.txt f2.txt
+b
+c
+
+
+# Requires sorted inputs (warns if misused):
+$ comm f1.txt f2.txt
+a
+b
+        c
+comm: file 2 is not in sorted order
+      b
+      d
+comm: input is not in sorted order
+
+---

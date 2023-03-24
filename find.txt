@@ -1,12 +1,12 @@
 FIND
 find - search for files in a directory hierarchy
 
-# Case sensitive recursive find in pwd for file names containing 'hello':
+# Case sensitive recursive find in pwd (.) for file names containing 'hello':
 $ find . -name *hello*
 
 # Get number of files with .h or .c extension:
 $ find /usr/include -name "*.[hc]" | wc
-   8085       8085      378708
+  8085        8085        378708
 newlines | word count | characters
 "find" outputs file paths, so this means there are 8085 files (first col)
 
@@ -28,6 +28,16 @@ PERM - search file permissions
 # Find executable (+x) files:
 $ find . -perm -+x
 
+EXECUTABLE - search for executable files
+# Find executable files and directories:
+# (directories are executable if they are listable)
+$ find /usr/bin -executable | wc -l
+3093
+
+# Find executable files only:
+$ find /usr/bin -executable -type f | wc -l
+3093
+
 SIZE - search file sizes
 c = byes suffix
 # Find all files larger than 1000 bytes:
@@ -46,5 +56,11 @@ f = plaintext, d = directory
 # Find all directories:
 $ find . -type d
 
+MAXDEPTH - stop at a specified recursion depth:
+$ find /usr -maxdepth 1
+/usr
+/usr/games
+/usr/local
+<...>
 
 ---

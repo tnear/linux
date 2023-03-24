@@ -6,7 +6,20 @@ head - output the first part of files
 $ head /etc/passwd
 
 
+# n = num lines
 # Output first two lines of /etc/passwd:
-$ head -2 /etc/passwd
+$ head -n2 /etc/passwd
+
+
+# Output multiple files:
+==> f1.txt <==
+a
+b
+c
+
+==> f2.txt <==
+b
+c
+d
 
 ---
