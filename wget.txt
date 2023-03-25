@@ -5,5 +5,6 @@ Wget - World Wide Web get - The non-interactive network downloader.
 $ wget example.com
 
 # Download page as 'example.html' using -O (or --output-document):
-wget -O example.html example.com
+$ wget -O example.html example.com
+
 ---

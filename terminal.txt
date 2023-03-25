@@ -6,6 +6,6 @@ Ctrl - K: Delete line to right
 Ctrl - A: Move cursor to beginning of line
 Ctrl - E: Move cursor to end of line
 
-Ctrl - L: Scroll away screen output (different from clear)
+Ctrl - L: Clear screen without clearing scrollback (command form: clear -x)
 
 ---

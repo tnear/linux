@@ -4,22 +4,23 @@ strings - print the sequences of printable characters in files
 
 Find strings in (binary) files. Defaults to 4+ characters
 
-# Find 4+ character strings
+# Find 4+ character strings:
 $ strings shellclean.o
 /bin/bashABBBBCCCC
 CustomJump
 ShellCode
 
-# Find 2+ character strings
+# Find 2+ character strings:
 $ strings -n2 shellclean.o
 ELF
 /bin/bashABBBBCCCC
 CustomJump
 ShellCode
 
-# Find GMP functions exported in 'factor'
+# Find GMP functions exported in 'factor':
 $ strings $(where factor) | grep -i gmp
 __gmpz_init_set_si
 __gmpz_init
 __gmpz_tdiv_q_ui
+
 ---

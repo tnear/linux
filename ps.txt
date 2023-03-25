@@ -2,7 +2,7 @@ PS
 
 ps - process status - report a snapshot of the current processes.
 
-# Example processes
+# Example processes:
 $ ps -aux
 USER   PID %CPU %MEM    VSZ   RSS TTY   STAT START   TIME COMMAND
 root     1  0.0  0.2 167480 12028 ?     Ss   Jan22   0:03 /sbin/init splash
@@ -12,7 +12,7 @@ root     2  0.0  0.0      0     0 ?     S    Jan22   0:00 [kthreadd]
 -a = all user processes
 -u = user-oriented (extra columns)
 -x = include extra processes not attached to terminal
--l = long format: includes niceness value (NI). Note: -u is incompatible with -u
+-l = long format: includes niceness value (NI). Note: -u is incompatible with -l
 
 # Show niceness value:
 $ ps -axl

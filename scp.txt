@@ -10,4 +10,5 @@ $ scp file1.txt user@cs.example.edu:/home/user/path/file1.txt
 
 # Copy directory d from local to remote machine:
 $ scp -r /tmp/d user@cs.example.edu:/home/user/d
+
 ---

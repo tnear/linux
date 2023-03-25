@@ -25,7 +25,7 @@ basename.txt
 bc.txt
 
 # -e = filter for expression
-# This filters for 'brk' syscalls (and ignores stdout)
+# This filters for 'brk' syscalls (and ignores stdout):
 $ strace -e brk ls > /dev/null
 brk(NULL)                               = 0x55788b70c000
 brk(NULL)                               = 0x55788b70c000

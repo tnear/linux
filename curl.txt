@@ -9,10 +9,10 @@ $ curl example.com
     <title>Example Domain</title>
 ...(truncated)
 
-# Output to file using redirect
+# Output to file using redirect:
 $ curl example.com > example.html
 
-# Get header only (-I, --head)
+# Get header only (-I, --head):
 $ curl -I google.com
 Location: http://www.google.com/
 Content-Type: text/html; charset=UTF-8

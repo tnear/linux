@@ -27,6 +27,7 @@ $ screen -r
 # Reattach screen by name (needed for 2+):
 $ screen -r my_new_screen
 
-# Exit screen
+# Exit screen:
 $ exit
+
 ---

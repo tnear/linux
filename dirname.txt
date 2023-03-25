@@ -8,4 +8,5 @@ $ dirname /home/user/file.c
 
 $ dirname /home/user
 /home
+
 ---

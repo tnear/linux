@@ -28,5 +28,4 @@ $ tar -czf my_tar.tar.gz dir_or_files
 # Decompress and extract:
 $ tar -xzf my_tar.tar.gz
 
-
 ---

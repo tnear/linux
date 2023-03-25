@@ -9,4 +9,5 @@ User     tty       login@  idle  what
 smithj   pts/5      8:52am       w
 jonesm   pts/23    20Apr06    28 -bash
 harry    pts/18     9:01am     9 pine
+
 ---

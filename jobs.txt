@@ -12,5 +12,4 @@ $ jobs
 $ jobs -l
 [1]  + 214509 running    gedit file.txt
 
-
 ---

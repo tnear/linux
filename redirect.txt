@@ -13,7 +13,7 @@ $ bash -c 'echo hello; echo hi 1>&2' |& grep ^h
 hi
 hello
 
-# Redirect stdout to text file (1 = stdout)
+# Redirect stdout to text file (1 = stdout):
 $ echo 'hello' > hello.txt
 $ echo 'hello' 1> hello.txt  # '1>' is equivalent to '>'
 

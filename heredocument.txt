@@ -1,4 +1,6 @@
-# HERE DOCUMENT
+HERE DOCUMENT
+
+aka 'heredoc'
 
 https://www.baeldung.com/linux/heredoc-herestring
 here document (also commonly referred to as heredoc) refers to a special block

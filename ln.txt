@@ -39,4 +39,5 @@ $ ll -i a*.txt
 1713 lrwxrwxrwx 1 kali aLink.txt -> a.txt
 
 $ rm a.txt   # breaks symlink (changes coloring of 'ls')
+
 ---

@@ -30,7 +30,7 @@ $ grep -n root /etc/passwd
 1:root:x:0:0:root:/root:/usr/bin/zsh
 33:nm-openvpn:x:114:120:NetworkManager
 
-# Count number of occurrences
+# Count number of occurrences:
 $ grep -c system /etc/passwd
 4
 

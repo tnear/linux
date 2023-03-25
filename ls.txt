@@ -2,7 +2,7 @@ LS
 
 ls - list directory contents
 
-# Flags
+# Flags:
 -a = list all files (including hidden)
 -i = include inode number (ex: $ ls -li)
 -l = long format

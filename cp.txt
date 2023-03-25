@@ -6,7 +6,7 @@ cp - copy files and directories
 $ cp /path/to/file .
 
 # Copy file to directory:
-# cp file dir/
+$ cp file dir/
 
 # Copy multiple files to directory:
 $ cp file1 file2 file3 dir/

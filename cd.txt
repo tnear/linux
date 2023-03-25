@@ -2,12 +2,12 @@ CD
 
 cd — change the working directory
 
-# Change to home directory
+# Change to home directory:
 $ cd
 OR
 $ cd ~
 
-# Change to previous directory
+# Change to previous directory:
 $ cd /tmp
 $ cd
 $ cd - # this line returns to /tmp

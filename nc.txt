@@ -12,7 +12,7 @@ $ nc <options> <host> <port>
 $ nc 33.173.133.43 9999
 
 # Read web page source
-# Note: ^M = Ctrl+V + Enter key. This produces carriage return required by HTTP.
+# Note: ^M = Ctrl+V + Enter key. This produces carriage return required by HTTP:
 $ nc www.google.com 80
 GET / HTTP/1.1^M
 Host: www.google.com^M
@@ -38,4 +38,5 @@ Note how port number and file name are same as above:
 $ nc <addr> 1234 < file.txt
 
 Left off: port scans https://www.ionos.com/digitalguide/server/tools/netcat/
+
 ---

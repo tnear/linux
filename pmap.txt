@@ -23,7 +23,8 @@ $ pmap 186744 | less
 00007f677a800000   2364K r--s- en-common.rws
 <truncated>
 
-# One-liner
+# One-liner:
 $ pmap $(pidof gedit)
 0000555af2374000      4K r---- gedit
+
 ---

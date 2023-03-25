@@ -3,7 +3,7 @@ HTOP
 htop, pcp-htop - interactive process viewer
 
 (1)
-# Display process status
+# Display process status:
 $ htop
 
 (2)
@@ -17,4 +17,5 @@ Click column headers.
 (4)
 # Search (F3), Kill (F9), and other shortcut keys:
 See bottom banner for shortcuts.
+
 ---

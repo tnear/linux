@@ -18,7 +18,8 @@ $ command ls
 $ type jobs
 jobs is a shell builtin
 
-# 'mv' command
+# 'mv' command:
 $ type mv
-mv is /usr/bin/mv"
+mv is /usr/bin/mv
+
 ---

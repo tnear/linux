@@ -4,8 +4,8 @@ look - display lines beginning with a given string
 
 Note: 'grep' is typically a better choice.
 
-# Find words in dictionary beginning with <STRING>
-# When file name is left off, look searches /usr/share/dict/words
+# Find words in dictionary beginning with <STRING>.
+# When file name is omitted, look searches /usr/share/dict/words:
 $ look metro
 
 metro

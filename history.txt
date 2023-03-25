@@ -24,5 +24,4 @@ Ctrl+R
 # Ctrl+R finds previous match (bck-i-search)
 # Ctrl+S finds next match     (fwd-i-search)
 
-
 ---

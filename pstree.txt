@@ -28,7 +28,7 @@ $ pstree <userid>
 # -p = show PIDs
 # -s = show parent processes
 
-# Monitor child processes for a given process ID
+# Monitor child processes for a given process ID:
 $ watch pstree -ap 1087170
 python,1087170
   `-sh,1088344 -c /bin/sleep 10

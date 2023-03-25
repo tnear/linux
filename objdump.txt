@@ -20,4 +20,5 @@ ex: '-M intel' will change assembly syntax to intel
 Includes information such as if STACK is executable (rw-)
 
 -t = --syms = display symbol table information
+
 ---
