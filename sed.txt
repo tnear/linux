@@ -24,7 +24,7 @@ $ cat file.txt
 abc123 abc456 a
 
 # stdout example (no file).
-# Replace "colord" process name with 'C----->':
+# Replace 'colord' process name with 'C----->':
 $ ps -aux | grep colord | sed -E 's/colord\s+/C----->/g'
 C----->1372  0.0  0.3 242300 15400 ?    Ssl  Mar24   0:00 /usr/libexec/colord
 

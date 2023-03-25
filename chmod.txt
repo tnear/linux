@@ -17,8 +17,8 @@ mode of 'file.txt' changed from 0644 (rw-r--r--) to 0777 (rwxrwxrwx)
 
 # For current user (u), add (+) SUID bit (set user ID bit).
 # SUID sets effective user ID for calling process.
-# Useful for running as root. "passwd" command works this way.
-# When the bit is set, "ls" displays a red background color for the file:
+# Useful for running as root. 'passwd' command works this way.
+# When the bit is set, 'ls' displays a red background color for the file:
 $ chmod u+s file.txt
 
 # 4-digit syntax. First digit controls special bits. SUID=4, Sticky=1:

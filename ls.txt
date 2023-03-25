@@ -12,7 +12,10 @@ ls - list directory contents
 -d = list directory itself (instead of directory contents)
 
 # List all symbolic links in sub-directories of pwd:
-$ ls -lR | grep "^l"
+$ ls -lR | grep '^l'
+
+# Note: a better way is using 'find':
+# find . -type l -ls
 
 # -d = list directory itself. This has the letter 'd' at the front:
 $ ls -ld /tmp

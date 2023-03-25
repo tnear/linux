@@ -10,6 +10,6 @@ test
 
 # -P = pattern
 # Print all .c files in home directory (~) or beneath:
-$ tree -P "*.c" ~
+$ tree -P '*.c' ~
 
 ---

@@ -1,0 +1,31 @@
+GZIP
+
+gzip, gunzip, zcat - compress or expand files
+
+# Common flags:
+-k = keep original file (default behavior is to delete file)
+-v = verbose. Shows percent compression
+-# = level of compression, ex: -9
+-f = force operation if file already exists
+-l = show statistics of archive
+
+# Compress file.txt into file.txt.gz:
+$ gzip -k file.txt
+$ ll f.txt*
+-rw-r--r-- 1 kali kali 54 Mar 25 16:17 f.txt
+-rw-r--r-- 1 kali kali 36 Mar 25 16:17 f.txt.gz
+
+# Uncompress file (and keep original file using -k):
+$ gunzip -k file.txt.gz
+
+# Compress multiple files. This creates 3 .gz files (use TAR to create 1 file):
+$ gzip -k file1 file2 file3
+
+# List verbose metadata for .gz containers:
+$ gzip -l *.gz
+ compressed  uncompressed    ratio   uncompressed_name
+         34             8   -25.0%   a.txt
+         94            81    18.5%   linux.txt
+        128            89   -12.4%   (totals)
+
+---

@@ -5,7 +5,7 @@ history - GNU History Library
 # View command history:
 $ history
 
-# View command history of "grep":
+# View command history of 'grep':
 $ history | grep grep
 
 # Reload previous command (!!):

@@ -1,7 +1,7 @@
 HD / HEXDUMP
 hexdump - display file contents in hexadecimal, decimal, octal, or ascii
 
-$ echo "hello" > file.txt
+$ echo 'hello' > file.txt
 $ hd file.txt
 
 00000000  68 65 6c 6c 6f 0a         |hello.|

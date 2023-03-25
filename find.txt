@@ -5,10 +5,10 @@ find - search for files in a directory hierarchy
 $ find . -name *hello*
 
 # Get number of files with .h or .c extension:
-$ find /usr/include -name "*.[hc]" | wc
+$ find /usr/include -name '*.[hc]' | wc
   8085        8085        378708
 newlines | word count | characters
-"find" outputs file paths, so this means there are 8085 files (first col)
+'find' outputs file paths, so this means there are 8085 files (first col)
 
 # Case insensitive find for file names containing 'hello':
 $ find . -iname *hello*
@@ -51,10 +51,16 @@ USER - search file owner
 $ find . -user 'root'
 
 TYPE - search file type.
-f = plaintext, d = directory
+f = plaintext, d = directory, l = symbolic link
 
 # Find all directories:
 $ find . -type d
+
+# Find all symbolic links:
+$ touch a.txt
+$ ln -s a.txt a.lnk
+$ find . -type l -ls
+2752605   0 lrwxrwxrwx  1 kali  5 Mar 25 16:06 ./a.lnk -> a.txt
 
 MAXDEPTH - stop at a specified recursion depth:
 $ find /usr -maxdepth 1

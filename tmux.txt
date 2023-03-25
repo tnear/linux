@@ -21,9 +21,9 @@ Ctrl + B then d          = detach tmux session (leaves running in bg)
 $ tmux attach            = reattach
 
 # Synchronize panes:
-1. Ctrl + B then ':' to enter command mode
-2. :setw synchronize-panes  # Toggle on
-<use panes here>
-3. :setw synchronize-panes  # Toggle off
+Step 1: Ctrl + B then ':' to enter command mode
+Step 2: :setw synchronize-panes  # Toggle on
+Step 3: use synchronized panes
+Step 4: :setw synchronize-panes  # Toggle off
 
 ---

@@ -2,10 +2,11 @@ NC
 nc - netcat -TCP/IP swiss army knife
 
 Utility which reads and writes data across network connections.
-Uses TCP or UDP protocols. Note: executable is "ncat.exe" on Windows.
+Uses TCP or UDP protocols. Note: executable is 'ncat.exe' on Windows.
 
 stdin is sent to host and stdout is received
 
+Syntax:
 $ nc <options> <host> <port>
 
 # Read from host 33.173... and port 9999:
@@ -19,7 +20,7 @@ Host: www.google.com^M
 ^M
 
 # Alt syntax (without ^M):
-printf "GET / HTTP/1.1\r\nHost: www.google.com\r\n\r\n" | nc google.com 80
+$ printf 'GET / HTTP/1.1\r\nHost: www.google.com\r\n\r\n' | nc google.com 80
 
 Copying files:
 Note: transferred data is NOT encrypted (unlike with SSH)

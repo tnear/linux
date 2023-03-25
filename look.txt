@@ -15,7 +15,7 @@ metropolis
 
 
 # Search a particular file:
-$ look "#include" Main.c
+$ look '#include' Main.c
 
 #include <stdio.h>
 #include <string.h>

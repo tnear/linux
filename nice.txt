@@ -12,7 +12,7 @@ $ nice
 # Run 'ls' with a different priority (5):
 $ nice -n5 ls  # or -n 5
 
-# Shows niceness value of a process in "NI" column:
+# Shows niceness value of a process in 'NI' column:
 $ ps -axl
 
 ---

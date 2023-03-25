@@ -1,0 +1,39 @@
+PERMISSIONS
+
+# Basic syntax:
+-rwxrwxrwx
+
+-            = special permissions (if any)
+rwx (first)  = user      read/write/execute
+rwx (second) = group     read/write/execute
+rwx (third)  = all users read/write/execute
+
+# b = block device file:
+$ ll /dev/sda
+brw-rw---- 1 root disk 8, 0 Feb 27 21:07 /dev/sda
+
+# c = character device file:
+$ ll /dev/zero
+crw-rw-rw-
+
+# d = directory:
+$ ll -d ~
+drwxr-xr-x 33 kali kali 4096 Mar 25 15:33 /home/kali
+
+# l = link:
+$ touch a.txt
+$ ln -s a.txt a.lnk
+$ ll a.lnk
+lrwxrwxrwx 1 kali kali 5 Mar 25 16:08 a.lnk -> a.txt
+
+# s = setuid bit:
+$ ll /usr/bin/passwd
+-rwsr-xr-x
+
+# t = sticky bit:
+$ mkdir tmp
+$ chmod +t tmp  # 't' denotes sticky
+$ ll -d tmp
+drwxr-xr-t
+
+---
