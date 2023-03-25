@@ -1,7 +1,7 @@
 QUOTE
 
-'Single' quotes are known as hard quotes.
-"Double" quotes are known as soft quotes.
+'Single' quotes are known as hard quotes (safer).
+"Double" quotes are known as soft quotes (use when substitution is needed).
 
 # Single quotes preserve the literal value of each character:
 $ var=hello

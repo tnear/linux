@@ -6,7 +6,7 @@ Globally search for a Regular Expression and Print matching lines
 $ grep -options 'pattern' <file>
 
 # Common flags:
--A = show X lines after. Space is optional: "-A 3" or "-A3"
+-A = show X lines after. Space is optional: '-A 3' or '-A3'
 -B = show X lines before
 -C = show X lines before and after
 -c = count number of occurrences
@@ -35,7 +35,7 @@ $ grep -c system /etc/passwd
 4
 
 # Show 3 lines before and 4 lines after pattern:
-grep -B3 -A4 "pattern" <file>
+$ grep -B3 -A4 'pattern' <file>
 
 # Only print matched text:
 $ grep -o kali /etc/passwd
@@ -43,6 +43,6 @@ kali
 kali
 
 # PCRE example (fails without -P):
-$ echo "1 2" | grep -P '\d'
+$ echo '1 2' | grep -P '\d'
 
 ---

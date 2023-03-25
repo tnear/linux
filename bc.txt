@@ -23,11 +23,11 @@ bc — basic calculator - arbitrary-precision arithmetic language
 9
 
 # Here String:
-$ bc <<< "1 <= 2"
+$ bc <<< '1 <= 2'
 1
 
 # Pipe string into to be executed by bc:
-$ echo "236 % 15" | bc
+$ echo '41 % 15' | bc
 11
 
 ---

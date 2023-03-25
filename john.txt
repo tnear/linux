@@ -7,7 +7,7 @@ $ john --show passwd.list
 0 password hashes cracked, 10 left
 
 # Reverse "mypassword" hash value:
-$ echo -n "34819d7beeabb9260a5c854bc85b3e44" > md5hash.txt
+$ echo -n '34819d7beeabb9260a5c854bc85b3e44' > md5hash.txt
 $ john --format=raw-md5 md5hash.txt
 
 Using default input encoding: UTF-8
@@ -37,4 +37,5 @@ i[4-9A-D][a-z0-9&!]
 
 # Deletes chars at indexes 4-14:
 D[4-9A-D]
+
 ---
