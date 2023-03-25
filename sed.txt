@@ -1,0 +1,45 @@
+SED
+
+sed - stream editor for filtering and transforming text
+
+# Usage:
+sed <flag1 flag2 etc> <pattern> <file>
+
+# Pattern:
+<pattern> = 's/SEARCH_REGEX/REPLACEMENT/gi'
+s = substitute
+g = global replacement
+i = case insensitive
+d = (not shown) delete line
+
+# Common flags:
+-i = in-place (write to file) intead of stdout
+-E = -r = extended regex, do not need to escape '(', ')', '+', '?'
+
+# Detect 'a' followed by digits then replace 'a' with 'abc'.
+# Note: uses [0-9] because '\d' is not supported:
+$ echo 'a123 a456 a' > file.txt
+$ sed -i -E 's/a([0-9]+)/abc\1/g' file.txt
+$ cat file.txt
+abc123 abc456 a
+
+# stdout example (no file).
+# Replace "colord" process name with 'C----->':
+$ ps -aux | grep colord | sed -E 's/colord\s+/C----->/g'
+C----->1372  0.0  0.3 242300 15400 ?    Ssl  Mar24   0:00 /usr/libexec/colord
+
+# Case insensitive replace of 'ZSH' -> 'bash' (note the 'i' suffix):
+$ ps | sed -E 's/ZSH/bash/gi'
+    PID TTY          TIME CMD
+ 679036 pts/1    00:00:48 bash
+
+# Chain commands using ';'. Replace 'abc' and '123':
+$ echo 'abc 123' > file.txt
+$ sed 's/abc/xyz/g; s/123/789/g' file.txt
+
+# Delete lines beginning with 'Hello' using 'd' suffix:
+$ echo 'Hello\nWorld!' > file.txt
+$ sed '/^Hello/d' file.txt
+World!
+
+---

@@ -1,0 +1,15 @@
+XARGS
+
+xargs - eXtended ARGumentS - build and execute command lines from standard input
+
+Often simpler than find + -exec.
+
+# Find .c files containing 'int main':
+$ find . -name '*.c' | xargs grep 'int main'
+
+# Print detailed listing of zero byte files:
+$ find . -size 0c | xargs ls -la
+-rw-r--r-- 1 kali 0 ./lec1/my_file.txt
+-rw-r--r-- 1 kali 0 ./temp_folder/file5.txt
+
+---
