@@ -1,0 +1,13 @@
+RMDIR
+
+rmdir - remove empty directories
+
+# Remove empty directory:
+$ mkdir myDir
+$ rmdir myDir
+
+# rmdir errors when directory is not empty:
+$ rmdir nonEmptyDir
+rmdir: failed to remove 'nonEmptyDir': Directory not empty
+
+---

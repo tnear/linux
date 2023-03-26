@@ -1,0 +1,47 @@
+VIM
+
+vim - Vi IMproved, a programmer's text editor
+
+Cheat sheet: https://vim.rtorr.com/
+
+--COMMAND MODE--
+# CURSOR MOVEMENT:
+h   = left
+j   = down
+k   = up
+l   = right
+25j = down 25 lines
+
+0   = start of line
+^   = first non-blank character of line
+$   = end of line
+w   = next word
+b   = back one word
+gg  = first line
+G   = last line
+7gg = go to line 7
+{   = previous paragraph
+}   = next paragraph
+
+# EDITING:
+u      = undo
+Ctrl-R = redo
+
+# INSERT MODE:
+i = insert at cursor
+a = insert (append) after cursor
+
+# DELETING
+:dd   = delete line
+:2dd  = delete current line and line under
+:1,$d = delete line 1 through end ($)
+
+
+# SAVING & EXITING:
+:q  = quit (prompt to save)
+:q! = quit without saving
+:w  = save
+:wq = save and quit
+:x  = save and quit
+
+---

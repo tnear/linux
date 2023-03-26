@@ -1,0 +1,47 @@
+TR
+
+tr - translate or delete characters
+
+Syntax:
+tr [OPTION]... STRING1 [STRING2]
+
+# Source code: https://github.com/coreutils/coreutils/blob/master/src/tr.c
+
+# Convert lowercase to uppercase:
+$ tr a-z A-Z <<< 'hello'
+HELLO
+
+# Alt syntax for above (translates better for different locales):
+$ tr [:lower:] [:upper:]
+
+# Convert braces to brackets:
+$ tr '{}' '[]' <<< '{hello}{world}'
+
+# -d = delete text. Delete spaces:
+$ tr -d ' ' <<< 'a b c 1 2 3'
+abc123
+
+# Remove digits:
+$ tr -d 0-9 <<< 'a b c 1 2 3'
+
+# -s = squeeze. Remove consecutive 'a' or 'b' characters:
+$ tr -s 'ab' <<< 'aaaccbbbaa'
+accba
+
+# Get gedit process ID by squeezing consecutive spaces in out put of 'ps'.
+# Note: this uses grep -v to avoid self-matching of the grep command:
+$ ps -aux | grep gedit | grep -v grep | tr -s ' ' | cut -f2 -d ' '
+643415
+
+# -c = complement, operate on everything BUT [SET1].
+# Delete all non-lowercase letters:
+$ tr -cd a-z <<< 'keep12_only lowercaseZZ'
+keeponlylowercase
+
+# Caesar cipher:
+$ tr a-z b-za <<< 'caesar cipher'
+dbftbs djqifs
+$ tr b-za a-z <<< 'dbftbs djqifs'
+caesar cipher
+
+---

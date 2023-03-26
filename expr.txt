@@ -1,0 +1,25 @@
+EXPR
+
+expr - evaluate expressions
+
+# Add two numbers:
+$ expr 2 + 8
+10
+
+# Multiply two numbers:
+$ expr 2 * 10
+20
+
+# Increment value using command substitution:
+$ a=10
+$ a=$(expr $a + 1)
+$ echo a
+11
+
+# Get length of string:
+$ str='hello'
+$ len=$(expr length $str)
+$ echo $len
+5
+
+---
