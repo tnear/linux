@@ -5,6 +5,9 @@ rm - remove files or directories
 # Remove file:
 $ rm file.txt
 
+# Remove multiple files:
+$ rm f1 f2 f3
+
 # Remove non-empty directory:
 $ rm -r my_directory
 

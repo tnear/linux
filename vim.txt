@@ -10,6 +10,7 @@ h   = left
 j   = down
 k   = up
 l   = right
+# These 4 can be combined with a number to move:
 25j = down 25 lines
 
 0   = start of line
@@ -28,14 +29,13 @@ u      = undo
 Ctrl-R = redo
 
 # INSERT MODE:
-i = insert at cursor
+i = insert before cursor
 a = insert (append) after cursor
 
 # DELETING
 :dd   = delete line
-:2dd  = delete current line and line under
+:2dd  = delete two lines: 1. current line and 2. line underneath
 :1,$d = delete line 1 through end ($)
-
 
 # SAVING & EXITING:
 :q  = quit (prompt to save)

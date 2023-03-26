@@ -80,4 +80,37 @@ $ find -print0
 $ find -print0 | hd
 2e 00 2e 2f 61 20 31 00  2e 2f 61 5c 6e 32 00     |.../a 1../a\n2.|
 
+
+--EXEC--
+# Syntax.
+# {}: placeholder for the result found
+# \; = command delimiter ('\' is used to escape the semicolon):
+$ find <find_cmd> -exec <exec_cmd> {} \;
+
+# Find zero byte files then call 'ls -la' on each one:
+$ find . -size 0c -exec ls -la {} \;
+
+# Simpler syntax using xargs: $ find . -size 0c | xargs ls -la
+
+# Use -exec placeholder to rename files.
+# {} is mapped to {}_renamed, thus adding '_renamed' suffix all file names:
+$ touch file1 file2 file3
+$ find . -name 'file*' -exec mv {} {}_renamed \;
+$ ls
+file1_renamed  file2_renamed ...
+
+# Alt syntax using xargs:
+# find -name 'file*' | xargs -I{} mv {} {}_renamed
+
+# COMMAND DELIMITER
+# Two delimiters exist: \; and +
+
+# \; example:
+# Calls grep N times, one for each result: grep result1; grep result2; ...
+$ find . -type f -exec grep 'hello' {} \;
+
+# + example:
+# Calls grep one time and passes in all results: grep result1 result2 result2 ...
+$ find . -type f -exec grep 'hello' {} +
+
 ---
