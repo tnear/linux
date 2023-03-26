@@ -2,7 +2,7 @@ PRINTF
 
 printf - format and print data
 
-Unlike 'echo', 'printf' does not include a newline at the end.
+'printf', unlike 'echo', does not include a newline at the end.
 
 # Print hex characters:
 $ printf '\x41\x42\x43'

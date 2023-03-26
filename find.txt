@@ -69,4 +69,15 @@ $ find /usr -maxdepth 1
 /usr/local
 <...>
 
+# -print0 = print name followed by a null byte.
+# Useful to process file names containing whitespace characters.
+# Often used on conjunction with 'xargs -0':
+$ touch 'a 1' 'a\n2'
+$ find -print0
+../a 1./a\n2
+
+# Use hexdump to see the two null bytes (0x00):
+$ find -print0 | hd
+2e 00 2e 2f 61 20 31 00  2e 2f 61 5c 6e 32 00     |.../a 1../a\n2.|
+
 ---

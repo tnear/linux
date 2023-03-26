@@ -2,10 +2,16 @@ TOUCH
 
 touch - change file timestamps
 
+Syntax:
+$ nc [OPTION] [FILE1] [FILE2] ...
+
 # Create empty file:
 $ touch empty_file.txt
 
 # Update timestamp of file:
 $ touch existing_file.txt
+
+# Create three empty files:
+$ touch a b c
 
 ---

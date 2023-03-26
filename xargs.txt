@@ -12,4 +12,43 @@ $ find . -size 0c | xargs ls -la
 -rw-r--r-- 1 kali 0 ./lec1/my_file.txt
 -rw-r--r-- 1 kali 0 ./temp_folder/file5.txt
 
+# -n = max-args. Echo 'hello' plus file name, one at a time:
+$ touch a b
+$ ls * | xargs -n1 echo 'hello'
+hello a
+hello b
+
+# -I = replace-str. Replace string at specified location.
+# '{}' is a placeholder for string to be replaced.
+# Note: -I implies -n1:
+$ touch a b
+$ ls * | xargs -I{} cp {} {}.bak
+$ ls
+a  a.bak  b  b.bak
+
+# -0 = input items are terminated by a null character:
+$ touch 'a 1' 'a\n2'
+$ find -print0 | xargs -0 -n1
+.
+./a 1
+./a\n2
+
+# --no-run-if-empty = prevent running when finding 0 results.
+# Without this command, xargs will run command with 0 args.
+# For example, 'ls' no args lists everything. Therefore, xargs
+# uses 'ls' with no args and outputs everything for zero results:
+$ touch a b
+$ find | grep fake_str | xargs ls
+a  b
+
+# To prevent this behavior, use --no-run-if-empty:
+$ find | grep fake_str | xargs --no-run-if-empty ls
+<no output>
+
+# Interactive mode tip: use 'echo' first to see what xargs will do.
+# Before removing, use echo to see what command xargs will run:
+$ touch a b
+$ find . -type f | xargs echo rm
+rm ./a ./b
+
 ---

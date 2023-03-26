@@ -7,6 +7,6 @@ $ open file.jpg
 
 OR
 
-$ xdg-oen file.jpg
+$ xdg-open file.jpg
 
 ---
