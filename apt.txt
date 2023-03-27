@@ -1,0 +1,16 @@
+APT
+
+apt - Advanced Package Tool
+
+# Install package:
+$ sudo apt install <pkg_name>
+
+# Update packages:
+$ sudo apt-get update
+
+# Upgrade packages (slow):
+$ sudo apt-get dist-upgrade # slow
+
+See also: dpkg
+
+---
