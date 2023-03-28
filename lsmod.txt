@@ -1,0 +1,14 @@
+LSMOD
+
+lsmod - Show the status of modules in the Linux Kernel
+
+# Col 3 shows downstream module dependencies:
+
+$ lsmod
+Module                  Size  Used by
+nft_chain_nat          16384  3
+xt_MASQUERADE          20480  2
+nf_nat                 57344  2 nft_chain_nat,xt_MASQUERADE
+nf_conntrack_netlink   57344  0
+
+---

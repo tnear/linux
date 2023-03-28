@@ -7,6 +7,7 @@ $ bash -c 'echo hello; echo hi 1>&2'
 hello
 hi
 
+# '|&' is shorthand for '2>&1 |'.
 # Search stdout AND stderr using '|&':
 $ bash -c 'echo hello; echo hi 1>&2' |& grep ^h
 hi
