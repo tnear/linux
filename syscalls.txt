@@ -2,8 +2,12 @@ SYSCALLS
 
 Searchable Linux Syscall Table for x86 and x86_64
 
-Common system calls (sycalls):
+# Register order for syscalls:
+$ man syscall
+i386        ebx   ecx   edx   esi   edi   ebp   -
+x86-64      rdi   rsi   rdx   r10   r8    r9    -
 
+# Common system calls (sycalls):
 brk     Change data segment size. Old, use mmap or malloc instead.
 chdir	Change working directory.
 chmod	Change file's protection bits.

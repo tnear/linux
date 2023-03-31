@@ -32,4 +32,14 @@ brk(NULL)                               = 0x55788b70c000
 brk(0x55788b72d000)                     = 0x55788b72d000
 +++ exited with 0 +++
 
+# -p = pid attach
+# Start inf ping:
+$ ping 8.8.8.8
+# In another terminal, attach by strace:
+$ sudo strace -p $(pidof ping)
+strace: Process 84304 attached
+restart_syscall(<... resuming interrupted read ...>) = 0
+sendto(3, "\10\0\367c\207\374\0r\205_'d\0\0\0\0\10\227\4\0\0\0\0\0\20\21\22\23"...,
+64, 0, {sa_family=AF_INET, sin_port=htons(0), sin_addr=inet_addr("8.8.8.8")}, 16)
+
 ---

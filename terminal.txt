@@ -8,4 +8,8 @@ Ctrl - E: Move cursor to end of line
 
 Ctrl - L: Clear screen without clearing scrollback (command form: clear -x)
 
+# Tabs:
+Ctrl + Tab        : Previous tab
+Ctrl + Shift + Tab: Next tab
+
 ---

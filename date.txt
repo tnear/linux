@@ -1,0 +1,9 @@
+DATE
+
+date - print or set the system date and time
+
+# Output current date:
+$ date
+Fri Mar 31 05:36:27 PM CDT 2023
+
+---

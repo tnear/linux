@@ -1,0 +1,19 @@
+SOURCE
+
+Reads and executes the contents of a file (generally a set of commands)
+
+# Reload .zshrc:
+source ~/.zshrc
+
+# Run txt file with a list of commands:
+$ cat cmds.txt
+echo 'a'
+echo 'b'
+echo 'c'
+
+$ source cmds.txt
+a
+b
+c
+
+---
