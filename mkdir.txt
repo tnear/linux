@@ -1,0 +1,16 @@
+MKDIR
+
+mkdir - make directories
+
+# Basic usage:
+$ mkdir myNewDir
+
+# -p = parent. Allows creating nested folders in one command:
+$ mkdir -p top/med/bot
+$ cd top/med/bot
+
+# Without -p, mkdir errors
+$ mkdir top/med/bot
+mkdir: cannot create directory ‘top/med/bot’: No such file or directory
+
+---

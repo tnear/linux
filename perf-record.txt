@@ -1,0 +1,15 @@
+PERF-RECORD
+
+$ man perf record
+# perf-record - Run a command and record its profile into perf.data
+
+# Record statistics for 'ls' to perf.data:
+$ perf record ls
+
+$ perf report
+Samples: 2  of event 'cpu-clock:pppH', Event count (approx.): 500000
+Overhead  Command  Shared Object      Symbol
+  50.00%  ls       [kernel.kallsyms]  [k] queue_work_on
+  50.00%  ls       libc.so.6          [.] __GI___libc_write
+
+---

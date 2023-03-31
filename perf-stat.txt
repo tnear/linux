@@ -1,0 +1,43 @@
+PERF-STAT
+
+$ man perf stat
+# perf-stat - Run a command and gather performance counter statistics
+
+# Collect statistics for 'ls':
+$ perf stat ls
+ Performance counter stats for 'ls':
+
+              1.46 msec task-clock          #    0.562 CPUs utilized
+                 3      context-switches    #    2.051 K/sec
+                 0      cpu-migrations      #    0.000 /sec
+               104      page-faults         #   71.118 K/sec
+   <not supported>      cycles
+   <not supported>      instructions
+   <not supported>      branches
+   <not supported>      branch-misses
+
+       0.002599947 seconds time elapsed
+
+       0.002403000 seconds user
+       0.000000000 seconds sys
+
+# -a = all CPUs
+# If you have more than one CPU (lscpu | grep CPU), use -a to collect on ALL CPUs:
+$ perf stat -a <cmd>
+
+# -e = event to select (use 'perf list' to list events).
+# perf stat [-e <event>] <cmd>
+$ perf stat -e page-faults find /usr/include -name '*.[hc]' | xargs grep 'int main'
+177      page-faults
+
+       0.107765408 seconds time elapsed
+
+# -p = process ID
+$ perf stat -a -p <pid>
+<Ctrl-C to end>
+
+    2,359.18 msec task-clock               #    0.403 CPUs utilized
+        7,599      context-switches        #  133.945 /sec
+    14,451      page-faults                #    6.125 K/sec
+
+---

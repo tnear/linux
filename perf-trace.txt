@@ -1,0 +1,20 @@
+PERF-TRACE
+
+$ man perf trace
+perf-trace - strace inspired tool
+
+Note: perf trace writes to STDERR.
+
+Syntax:
+# perf trace <cmd>
+
+# Trace 'ls' command (ignoring stdout):
+$ sudo perf trace ls > /dev/null
+        ? (         ): ls/47874  ... [continued]: execve())                           = 0
+    0.041 ( 0.005 ms): ls/47874 brk()                                                 = 0x55dfdde8b000
+    0.141 ( 0.009 ms): ls/47874 mmap(len: 8192, prot: READ|WRITE, flags: PRIVATE)     = 0x7f8e6e5e6000
+    0.159 ( 0.009 ms): ls/47874 access(filename: 0x6e611290, mode: R)                 = -1 ENOENT
+    0.176 ( 0.009 ms): ls/47874 openat(dfd: CWD, filename: 0x6e6100b1, flags: RDONLY) = 3
+    0.190 ( 0.006 ms): ls/47874 newfstatat(dfd: 3, filename: 0x6e610c99, flag: 4096)  = 0
+
+---

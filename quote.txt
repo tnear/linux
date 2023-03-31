@@ -8,10 +8,14 @@ $ var=hello
 $ echo '$var'
 $var
 
-# Double quotes preserve the special meaning of characters ($, `, ", \):
+# Double quotes preserve the special meaning of characters ($, `, ", !, \):
 $ var=hello
 $ echo "$var"
 hello
+
+# Error from unintentional lookup of previous usage of 'fake_cmd':
+$ echo "!fake_cmd"
+zsh: event not found: fake_cmd
 
 # Use single quote character inside single quotes:
 $ echo 'Single quote:' "'" 'example'

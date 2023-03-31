@@ -1,0 +1,21 @@
+PERF-REPORT
+
+$ man perf report
+perf-report - Read perf.data (created by perf record) and display the profile
+
+Syntax:
+perf report [-i <file>]
+
+# Record statistics for 'ls' to perf.data:
+$ perf record ls
+
+$ perf report
+Samples: 2  of event 'cpu-clock:pppH', Event count (approx.): 500000
+Overhead  Command  Shared Object      Symbol
+  50.00%  ls       [kernel.kallsyms]  [k] queue_work_on
+  50.00%  ls       libc.so.6          [.] __GI___libc_write
+
+# -i = input file to read:
+$ perf report -i perf2.data
+
+---
