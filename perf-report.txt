@@ -6,9 +6,10 @@ perf-report - Read perf.data (created by perf record) and display the profile
 Syntax:
 perf report [-i <file>]
 
-# Record statistics for 'ls' to perf.data:
-$ perf record ls
+# Record statistics for 'benchmark' program:
+$ perf record ./benchmark
 
+# Open report:
 $ perf report
 Samples: 2  of event 'cpu-clock:pppH', Event count (approx.): 500000
 Overhead  Command  Shared Object      Symbol
@@ -17,5 +18,12 @@ Overhead  Command  Shared Object      Symbol
 
 # -i = input file to read:
 $ perf report -i perf2.data
+
+# Navigating the report:
+- Scroll wheel moves up and down
+- Up/down arrow keys
+- Enter on a row to enter into it
+    - Annotate ___ to see its disassembly
+        - Tab key cycles through hottest (slowest) assembly lines
 
 ---
