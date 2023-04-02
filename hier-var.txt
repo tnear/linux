@@ -1,0 +1,9 @@
+HIER-VAR
+
+/var
+Writable, persistent files. Can be used for logging (see /var/log).
+
+/var/www/html
+Locally hosted web files
+
+---
