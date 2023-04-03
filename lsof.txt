@@ -1,4 +1,5 @@
 LSOF
+
 lsof - list open files
 
 $ lsof -u root	# -u: list files opened by a particular user
