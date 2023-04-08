@@ -26,4 +26,12 @@ End                 Bottom of output
 n                   Next match during search
 N                   Previous match during search
 
+
+# Find user names ending with a digit.
+# do not add trailing slash, ex: /<regex>/
+$ less /etc/passwd (note: \w and \d are not supported)
+$ /^[a-z]+[0-9]:
+user1:x:998:998:...
+test2:x:999:999:...
+
 ---

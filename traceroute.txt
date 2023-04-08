@@ -1,0 +1,12 @@
+TRACEROUTE
+
+traceroute - print the route packets trace to network host
+
+Known as 'tracert' on Windows.
+
+$ traceroute example.com
+
+# -m = max hops
+$ traceroute -m5 <domain>
+
+---

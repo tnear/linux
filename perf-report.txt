@@ -19,6 +19,23 @@ Overhead  Command  Shared Object      Symbol
 # -i = input file to read:
 $ perf report -i perf2.data
 
+# -n = show number of samples column (between 'Self' and 'Command'
+
+# --stdio (tree) output:
+$ perf report --stdio
+    87.68%     0.00%             0  swapper          [kernel.kallsyms]
+            |
+            ---secondary_startup_64_no_verify
+               |          
+               |--64.65%--start_secondary
+               |          cpu_startup_entry
+               |          do_idle
+               |          |          
+               |           --64.29%--default_idle_call
+               |                     __cpuidle_text_start
+               |                     native_safe_halt
+
+
 # Navigating the report:
 - Scroll wheel moves up and down
 - Up/down arrow keys
