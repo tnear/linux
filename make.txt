@@ -1,0 +1,149 @@
+MAKE
+
+make - GNU make utility to maintain groups of programs
+
+# Make expects tabs instead of spaces for indentation:
+:set noexpandtab
+
+# Define a target of <name> followed by ':' followed by what it depends on.
+# This defines a target named 'all' which depends on 'main'.
+# .PHONY tells make that 'all' is a target, NOT a file whose name is 'all':
+.PHONY: all
+all: main
+
+# Define main which depends on two compiled c files (main.c and lib.c):
+main: main.o lib.o
+
+# This recipe compiles the 'main' executable using gcc.
+# Note: recipes are indented with a tab after target:
+main: main.o lib.o
+	gcc -o main main.o lib.o
+
+# Compile main.o (use -c compiles without linking) and lib.o:
+main.o: main.c
+	gcc -c main.c -o main.o
+
+lib.o: lib.c
+	gcc -c lib.c -o lib.o
+
+# Create a 'clean' rule to delete build artifacts.
+# Note: -f forces remove (and suppresses errors):
+.PHONY: clean
+clean:
+	rm -f *.o main
+
+# With this makefile, can now build any of the targets:
+$ make  # 'make' with no targets runs first target ('all')
+gcc -c lib.c -o lib.o
+gcc -o main main.o lib.o
+
+# Just build 'main.o':
+$ make main.o
+gcc -c main.c -o main.o
+
+# Delete build artifacts:
+$ make clean
+rm -f *.o main
+
+# Specify multiple targets. This does 'clean' first then 'all':
+$ make clean all
+
+
+--Automatic variables--
+$@ = the target of the rule
+# Ex: if you have...
+main: main.o lib.o
+	gcc -o main main.o lib.o
+
+# ..., you can back reference 'main' using $@:
+main: main.o lib.o
+	gcc -o $@ main.o lib.o
+
+
+$< = name of first prerequisite
+# Ex: if you have...
+main.o: main.c
+	gcc -c main.c -o $@
+
+# ..., you can back reference 1st prereq 'main.c' using $<:
+main.o: main.c
+	gcc -c $< -o $@
+
+
+$^ = the names of all prerequisites
+# Ex: if you have...
+main: main.o lib.o
+	gcc -o $@ main.o lib.o
+
+#..., you can reference the second set of 'main.o lib.o' using $^:
+main: main.o lib.o
+	gcc -o $@ $<
+
+--Substitution reference--
+# Can use '%' to substitute
+# Ex, if you have multiple rules of the same pattern:
+main: main.o lib.o
+	gcc -o $@ main.o lib.o
+
+main.o: main.c
+	gcc -c $< -o $@
+
+lib.o: lib.c
+	gcc -c $< -o $@
+
+# ..., you can replace with '%' to build them all:
+main: main.o lib.o
+	gcc -o $@ main.o lib.o
+
+%.o: %.c
+	gcc -c $< -o $@
+
+--Makefile variables--
+# Define compiler one time:
+CC = gcc
+
+# Then reference in rule:
+%.o: %.c
+	${CC} -c $< -o $@
+
+
+--Applying all these rules creates a simplified makefile--
+CC = gcc
+
+.PHONY: all
+all: main
+
+main: main.o lib.o
+	${CC} -o $@ main.o lib.o
+
+%.o: %.c
+	${CC} -c $< -o $@
+
+.PHONY: clean
+clean:
+	rm -f *.o main
+
+
+
+--Source files--
+$ head *			 
+==> lib.c <==
+#include "lib.h"
+#include <stdio.h>
+void hello_world(char *name)
+{
+	printf("hello, %s", name);
+}
+
+==> lib.h <==
+void hello_world(char*);
+
+==> main.c <==
+#include "lib.h"
+int main()
+{
+	hello_world("tnear");
+	return 0;
+}
+
+---

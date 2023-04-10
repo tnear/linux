@@ -44,4 +44,7 @@ a = insert (append) after cursor
 :wq = save and quit
 :x  = save and quit
 
+# SET COMMANDS:
+:set noexpandtab # use tabs instead of spaces
+
 ---
