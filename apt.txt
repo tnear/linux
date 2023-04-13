@@ -9,6 +9,9 @@ $ sudo apt install <pkg_name>
 $ sudo apt-get update
 
 # Upgrade packages (slow):
+$ sudo apt-get upgrade
+
+# Upgrade and handle dependency changes (slow):
 $ sudo apt-get dist-upgrade # slow
 
 See also: dpkg
