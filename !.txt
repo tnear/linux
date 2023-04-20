@@ -1,0 +1,43 @@
+!
+
+Fetch commands from history.
+
+# Return previous command by prefix (!<cmd>):
+$ gcc formatString.c -o formatString -g -m32 -Wall
+$ !gcc
+
+# Reload previous command (!!):
+$ printf hello
+hello
+$ !!
+$ printf hello
+
+# Fetch last word of previous command (!$):
+$ touch long_file_name.txt
+$ vi !$
+"long_file_name.txt" 0L, 0B
+
+# Run previously executed command (!-#):
+$ echo abc
+$ echo abcd
+$ !-2
+echo abc
+abc
+
+# Fetch argument number (!<cmd>:<num>).
+# !cp:1 => a.txt, !cp:2 => b.txt
+$ cp a.txt b.txt
+$ echo !cp:2
+echo b.txt
+b.txt
+
+# Run command by number (!<num>):
+$ history
+ 5689  cd linux
+ 5690  echo abc
+# Rerun command number:
+$ !5690
+echo abc
+abc
+
+---

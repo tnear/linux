@@ -1,0 +1,14 @@
+! Keyboard remapping
+! To load this script: xmodmap ~/.Xmodmap
+
+! Remap Delete to Home
+keycode 119 = Home
+
+! Remap Pause/Break to Page Up
+keycode 127 = Prior
+
+! Remap PrtSc to Page Down
+keycode 107 = Next
+
+! Remap Home to End
+keycode 110 = End

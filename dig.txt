@@ -1,0 +1,27 @@
+DIG
+
+dig - DNS lookup utility
+
+# Lookup domain:
+$ dig example.edu
+
+; <<>> DiG 9.18.8-1-Debian <<>> example.edu
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 36981
+;; flags: qr rd ra ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 512
+;; QUESTION SECTION:
+;example.edu.                   IN      A
+
+;; ANSWER SECTION:
+example.edu.            86400   IN      A       93.184.216.34
+
+;; Query time: 152 msec
+;; SERVER: 192.168.0.1#53(192.168.0.1) (UDP)
+;; WHEN: Thu Apr 20 18:27:07 CDT 2023
+;; MSG SIZE  rcvd: 56
+
+---

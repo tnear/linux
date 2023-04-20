@@ -42,6 +42,8 @@ SIZE - search file sizes
 c = byes suffix
 # Find all files larger than 1000 bytes:
 $ find . -size +1000c
+# Find all files larger than 1 GB:
+$ find / -size +1G 2> /dev/null
 
 # Find zero byte files:
 $ find . -size 0c
