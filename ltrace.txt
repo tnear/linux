@@ -15,4 +15,9 @@ strrchr("echo", '/')                                     = nil
 setlocale(LC_ALL, "")                                    = "en_US.UTF-8"
 bindtextdomain("coreutils", "/usr/share/locale")         = "/usr/share/locale"
 
+# -x = filter for expression.
+# Show ALL output using '*':
+# (sometimes needed when not seeing any output)
+$ ltrace -x '*' ./malloc.o
+
 ---
