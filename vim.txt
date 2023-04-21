@@ -29,6 +29,8 @@ u      = undo
 Ctrl-R = redo
 
 # INSERT MODE:
+Ctrl-C = exit insert mode
+Escape = exit insert mode
 i = insert before cursor
 a = insert (append) after cursor
 
@@ -40,9 +42,9 @@ a = insert (append) after cursor
 # SAVING & EXITING:
 :q  = quit (prompt to save)
 :q! = quit without saving
-:w  = save
-:wq = save and quit
-:x  = save and quit
+:w  = write (save)
+:wq = write and quit
+:x  = write and quit
 
 # SET COMMANDS:
 :set noexpandtab # use tabs instead of spaces
