@@ -2,6 +2,7 @@
 
 Ctrl - U: Delete line to left
 Ctrl - K: Delete line to right
+Ctrl - W: Delete word (equivalent to Ctrl-Backspace)
 
 Ctrl - A: Move cursor to beginning of line
 Ctrl - E: Move cursor to end of line

@@ -280,9 +280,18 @@ alias vscode='code'
 alias explorer='xdg-open'
 alias countryroads='cd ~'
 
-# key bindings
-# (use 'showkey -a' or 'cat' to locate key identifier code)
-bindkey '^?'       backward-kill-word  # ctrl + backspace
+# Update settings for tmux
+# https://unix.stackexchange.com/questions/457986/tmux-backspace-and-ctrl-backspace-send-both
+stty ek # Erase and kill characters to their default values
+
+# key bindings, use 'showkey -a' or 'cat' to locate key identifier code
+if [ "$TERM_PROGRAM" = vscode ]; then
+    # vscode maps backspace to ctrl+backspace and ctrl+backspace to ctrl+w,
+    # therefore no additional config is needed for ctrl+backspace
+else
+    bindkey '^?'       backward-kill-word  # ctrl + backspace
+fi
+
 bindkey '^[[24;5~' kill-word           # ctrl + delete (without remapping delete)
 bindkey '^[[3~'    beginning-of-line   # home
 #bindkey '^[[H'    end-of-line         # end (not working)
