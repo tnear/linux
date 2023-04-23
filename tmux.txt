@@ -11,6 +11,9 @@ Ctrl + B then "          = split horizontally
 Ctrl + B then <arr keys> = switch left/right
 Ctrl + B then o          = switch to Other
 
+# Rotating:
+Ctrl + B + O = rotate panes clockwise 
+
 # Creating (tab numbers are on bottom panel):
 Ctrl + B then c          = create new tab
 Ctrl + B then <num>      = switch to tab number
@@ -23,7 +26,7 @@ $ tmux attach            = reattach
 # Synchronize panes:
 Step 1: Ctrl + B then ':' to enter command mode
 Step 2: :setw synchronize-panes  # Toggle on
-Step 3: use synchronized panes
+Step 3: <use synchronized panes>
 Step 4: :setw synchronize-panes  # Toggle off
 
 ---

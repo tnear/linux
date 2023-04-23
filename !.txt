@@ -7,10 +7,10 @@ $ gcc formatString.c -o formatString -g -m32 -Wall
 $ !gcc
 
 # Reload previous command (!!):
-$ printf hello
-hello
-$ !!
-$ printf hello
+$ apt install ltrace
+E: Permission denied, are you root?
+$ sudo !!
+# success!
 
 # Fetch last word of previous command (!$):
 $ touch long_file_name.txt

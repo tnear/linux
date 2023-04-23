@@ -1,0 +1,30 @@
+Chaining commands in Linux
+
+&, &&, ;, ||, |, >, >>, <, \
+
+# & = run command in background:
+$ gedit &
+
+# && = run 2nd command only if first succeeds:
+$ gcc example.c && ./a.out
+
+# >> = append to file:
+$ echo 'hello world' >> filename.tex
+
+# ; = run multiple commands regardless of success:
+$ whoami; fake_cmd; ls
+
+# || = run 2nd command only if first fails:
+$ fake_cmd || echo 'Unable to run command'
+fake_cmd: command not found
+Unable to run command
+
+# | = pipe:
+$ cat /etc/passwd | grep 'root'
+
+# \ = line continuation.
+# cd to /etc/perl/Net:
+cd /etc/perl\
+> /Net
+
+---
