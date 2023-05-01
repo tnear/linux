@@ -1,0 +1,22 @@
+FZF
+
+fzf - a command-line fuzzy finder
+
+# List files: Ctrl-T
+$ code <ctrl-T>
+# Select multiple files with <TAB> key
+$ code env.txt sync.txt
+
+# History: Ctrl-R
+
+# Search syntax:
+'query = exact match (non-fuzzy)
+^query = prefix exact match
+query$ = suffix exact match
+!.txt  = inverse exact match (find all files which do not end with .txt)
+
+# Command substitution:
+# Use vim to open results of fzf:
+$ vim $(fzf)
+
+---
