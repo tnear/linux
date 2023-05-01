@@ -309,4 +309,4 @@ bindkey "${terminfo[kcud1]}" history-search-forward # only checks first word (co
 alias gdb='gdb -q'
 
 # Allow unlimited core dump sizes
-ulimit -c unlimited
+ulimit -c 1000000
