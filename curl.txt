@@ -25,4 +25,7 @@ $ curl -o example.html example.com
                                  Dload  Upload   Total   Spent    Left  Speed
 100  1256  100  1256    0     0  17091      0 --:--:-- --:--:-- --:--:-- 17444
 
+# FTP example:
+$ curl ftp://ftp.slackware.com/welcome.msg
+
 ---
