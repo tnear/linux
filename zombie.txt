@@ -1,0 +1,12 @@
+ZOMBIE
+
+Zombie process: A process which has completed but still has entry
+in process table. Occurs for child processes which have exited but
+kept alive so parent process can read its exit status .
+
+# Zombie processes are denoted by 'Z' in STAT column of ps:
+$ ps -aux | grep ' Z '
+USER  STAT COMMAND
+kali  Z    <zombie>
+
+---

@@ -4,12 +4,13 @@ ls - list directory contents
 
 # Flags:
 -a = list all files (including hidden)
+-d = list directory itself (instead of directory contents)
+-h = human-readable sizes (ex: 977K instead of 1000000)
 -i = include inode number (ex: $ ls -li)
 -l = long format
 -r = reverse output order
 -R = recursive search of sub-driectories, ex: $ ls -lR
 -t = sort by timestamp, ex: $ ls -ltr shows oldest contents on top
--d = list directory itself (instead of directory contents)
 
 # List all symbolic links in sub-directories of pwd:
 $ ls -lR | grep '^l'
@@ -17,7 +18,7 @@ $ ls -lR | grep '^l'
 # Note: a better way is using 'find':
 # find . -type l -ls
 
-# -d = list directory itself. This has the letter 'd' at the front:
+# -d = list directory itself. Directories have the letter 'd' at the front:
 $ ls -ld /tmp
 drwxrwxrwt 14 root 4096 /tmp
 
