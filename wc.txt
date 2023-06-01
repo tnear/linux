@@ -32,8 +32,8 @@ $ wc -l * | sort -n
 
 
 # Get number of files with .h or .c extension:
-$ find /usr/include -name '*.[hc]' | wc
-  9834        9834       445552
+$ find /usr/include -name '*.[hc]' | xargs wc
+  466181     1934876     17536397
 newlines | word count | characters
 
 ---

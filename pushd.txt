@@ -3,15 +3,15 @@ PUSHD
 Push directory onto directory stack.
 
 # Push pwd onto stack:
-[~] $ pushd
-~
+[/var] $ pushd .
+/var
 
-# Navigate away:
+# Next, navigate away:
 $ cd /etc
 
-# Return to old pwd (~):
+# Then return to old pwd (/var):
 [/etc] $ popd
-[~] $
+[/var] $
 
 # Push pwd onto stack and navigate elsewhere in one step:
 [~] $ pushd /var/www

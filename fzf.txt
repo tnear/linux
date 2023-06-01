@@ -1,10 +1,12 @@
 FZF
 
 fzf - a command-line fuzzy finder
+https://github.com/junegunn/fzf
 
-# List files: Ctrl-T
+# List files: Ctrl-T:
 $ code <ctrl-T>
-# Select multiple files with <TAB> key
+
+# Select multiple files with <TAB> key:
 $ code env.txt sync.txt
 
 # History: Ctrl-R
