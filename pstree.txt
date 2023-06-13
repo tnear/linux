@@ -25,6 +25,7 @@ $ pstree <userid>
 
 # Flags:
 # -a = show command line arguments
+# -h = highlight current process and ancestors (in bold)
 # -p = show PIDs
 # -s = show parent processes
 

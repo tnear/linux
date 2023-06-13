@@ -1,0 +1,12 @@
+Command substitution in Linux
+$(cmd)
+
+# Interpreted as string 'date' instead of command:
+$ echo date
+date
+
+# Use command substitution to interpret as 'date' command:
+$ echo $(date)
+Tue Jun 13 08:14:06 AM CDT 2023
+
+---

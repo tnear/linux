@@ -16,12 +16,12 @@ $ seq 3 2 7
 5
 7
 
-# Separator character (':') [no space between -s and <separator>]:
-$ seq -s: 10
+# -s = separator character (':'):
+$ seq -s ':' 10
 1:2:3:4:5:6:7:8:9:10
 
 # Prod: generates 1*2*3*4*5*6*7 piped into calculator:
-$ seq -s* 7 | bc
+$ seq -s '*' 7 | bc
 5040
 
 ---
