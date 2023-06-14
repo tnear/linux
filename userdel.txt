@@ -1,0 +1,13 @@
+USERDEL
+
+userdel - delete a user account and related files
+
+# Delete existing user 'new_user':
+$ sudo userdel new_user
+
+# -r = remove user's home directory:
+$ sudo useradd -m new_user  # -m to create user with home dir
+$ sudo userdel -r new_user
+(this might warn about no mail spool)
+
+---

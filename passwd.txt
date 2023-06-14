@@ -8,4 +8,7 @@ Enter new UNIX password:
 Retype new UNIX password:
 passwd: password updated successfully
 
+# Change another user's password:
+$ sudo passwd user_name
+
 ---
