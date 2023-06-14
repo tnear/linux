@@ -1,0 +1,13 @@
+EXPORT
+
+export — set the export attribute for variables
+
+# Show all exported variables:
+$ export
+
+# Create new exported variable and assign value:
+$ export QQQQ=101
+$ printenv QQQQ
+101
+
+---

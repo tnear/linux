@@ -1,0 +1,23 @@
+Common environment variables:
+
+$ echo $SHELL
+/usr/bin/zsh
+
+$ echo $USER (or: $ printenv USER)
+kali
+
+$ echo $HOME
+/home/kali
+
+# Directories searched when running commands:
+$ printenv PATH
+/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# Locale:
+$ printenv LANG
+en_US.UTF-8
+
+# Create permanent environemnt variable (use .zshenv file for env vars):
+$ echo 'export MY_VAR=1234' >> ~/.zshenv
+
+---

@@ -1,5 +1,5 @@
 Command substitution in Linux
-$(cmd)
+Syntax: $(cmd)
 
 # Interpreted as string 'date' instead of command:
 $ echo date
@@ -8,5 +8,14 @@ date
 # Use command substitution to interpret as 'date' command:
 $ echo $(date)
 Tue Jun 13 08:14:06 AM CDT 2023
+
+# (older style using backticks)
+$ echo `date`
+
+# Run program without output from Python:
+$ ./a.out $(python -c 'print("A" * 8)')
+
+# Run program in gdb using output from Python:
+(gdb) run $(python -c 'print("A" * 8)')
 
 ---

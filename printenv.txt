@@ -1,0 +1,15 @@
+PRINTENV
+
+printenv - print all or part of environment
+
+# List all environment variables:
+$ printenv
+
+# Print specified env variables:
+$ printenv SHELL
+/usr/bin/zsh
+
+# Search env variables:
+$ printenv | grep <pattern>
+
+---
