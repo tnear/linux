@@ -1,0 +1,29 @@
+BASH
+
+bash - GNU Bourne-Again SHell
+
+# -c = command to run:
+$ bash -c 'echo hello'
+hello
+
+# OR:
+$ zsh -c 'echo hello'
+
+# -x = execution trace (xtrace) mode. Useful for debugging scripts:
+$ cat script.sh 
+#!/bin/bash
+echo 'Starting script'
+echo 'Hello, world!'
+echo 'Script completed'
+
+$ bash -x script.sh
++ echo 'Starting script'
+Starting script
++ echo 'Hello, world!'
+Hello, world!
++ echo 'Script completed'
+Script completed
+
+^The '+' sign denotes the command about to be run
+
+---

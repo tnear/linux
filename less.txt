@@ -9,7 +9,7 @@ daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
 bin:x:2:2:bin:/bin:/usr/sbin/nologin
 sys:x:3:3:sys:/dev:/usr/sbin/nologin
 
-COMMANDS:
+KEYS:
 /[regex_pattern]    Find beneath
 ?[regex_pattern]    Find above
 <Down Arrow>        One line down
@@ -26,6 +26,8 @@ End                 Bottom of output
 n                   Next match during search
 N                   Previous match during search
 
+COMMANDS: press '-' to enter commmand mode
+-I    Ignore case in searches and in patterns
 
 # Find user names ending with a digit.
 # do not add trailing slash, ex: /<regex>/
