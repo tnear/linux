@@ -5,5 +5,18 @@ $ name() { echo $(whoami); }
 $ name
 kali
 
+# Function arguments are $1, $2, ...:
+hello() {
+    echo "Hello, $1 and $2"
+    return 101
+}
+
+# Call function with space-separated arguments:
+$ hello you me
+Hello, you and me
+
+# Return value accessed through '$?':
+echo $?
+101
 
 ---

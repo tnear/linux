@@ -1,0 +1,31 @@
+SHELLCODE
+
+Notes on shellcode:
+Used as the payload in the exploitation of a vulnerability
+Shellcode typically starts a command shell on the compromised machine
+Shellcode cannot contain NULL values because it is often injected by null-terminated strings
+Because shellcode contains machine code, it is specific to one architecture
+
+Alphanumeric shellcode:
+Usage of characters 0-9, A-Z, and a-z help to hide working machine code
+Used to avoid detection and pass through filters
+Self-modifying shellcode can aid in creating alphanumeric characters
+
+Shellcode execution:
+Shellcode cannot be executed directly. Instead, it often appears as a buffer in a C program
+then utilizes a function pointer to transfer execution to it.
+
+Objdump to bytecode:
+$ for i in $(objdump -D myObj -M intel | grep '""^ +[0-9]' | cut -f2); do echo -n '\\x'$i; done
+\xeb\x18\x5e\x31\xc0\x88\x46\x09...
+
+- https://www.cyberpunk.rs/buffer-overflow-linux-gdb
+- for loop iterates over all tokens
+- objdump gets instructions
+- grep isolates the .data section
+- cut gets the 2nd field (the byte code instruction column)
+- '\\x' outputs '\x' (escaped) along with the byte token ($i) into one long string
+- This hex string can be used as shellcode in a C file:
+char shellcode[] = "\xeb\x18\x53\..."
+
+---

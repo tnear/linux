@@ -1,0 +1,32 @@
+ARGUMENTS
+
+Command-line arguments in shell scripting
+
+# $0 is the file name
+# $1, $2, ... are the command line arguments
+# $# is the number of arguments (nargin)
+# $* is an iterable form of all input arguments (except $0)
+
+# Script to test:
+$ cat args.sh   
+echo "Num args: $#"
+echo "File: $0"
+echo "1st arg: $1"
+echo "2nd arg: $2"
+
+for TOKEN in $*
+do
+    echo $TOKEN
+done
+
+# Script's output:
+$ ./args.sh ab cd ef   
+Num args: 3
+File: ./args.sh
+1st arg: ab
+2nd arg: cd
+ab
+cd
+ef
+
+---
