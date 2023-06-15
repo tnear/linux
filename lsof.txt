@@ -2,9 +2,9 @@ LSOF
 
 lsof - list open files
 
-$ lsof -u root	# -u: list files opened by a particular user
-$ lsof -c cron	# -c: list files opened by a command ('cron' in example to left)
-$ lsof -p <pid>	# -p: list files opened by PID
+$ lsof -u root  # -u: list files opened by a particular user
+$ lsof -c cron  # -c: list files opened by a command ('cron' in example to left)
+$ lsof -p <pid> # -p: list files opened by PID
 
 $ lsof -u root | less
 COMMAND      PID USER   FD      TYPE DEVICE SIZE/OFF NODE NAME

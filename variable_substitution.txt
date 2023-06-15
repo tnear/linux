@@ -1,0 +1,32 @@
+VARIABLE_SUBSTITUTION
+
+# Substitute the value of var:
+$ a='hello'       
+$ echo "${a} world"
+hello world
+
+# OR:
+$ echo "$a world"
+
+# ':-': if var is unset, 'word' is substituted for var. var does not change:
+$ unset var
+$ echo ${var:-word}
+word
+
+$ echo $var
+<empty>
+
+# Now set var and show that 'word' is no longer used:
+$ var='var'
+$ echo ${var:-word}
+var
+
+# ':=' if var is null or unset, var is set to the value of word:
+$ unset var
+$ echo ${var:=word}
+word
+
+$ echo $var
+word
+
+---
