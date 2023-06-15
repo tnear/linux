@@ -2,7 +2,6 @@ CHATTR
 
 chattr - change file attributes on a Linux file system
 
-
 $ touch file.txt
 $ lsattr file.txt
 --------------e------- file.txt

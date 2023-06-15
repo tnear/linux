@@ -1,4 +1,5 @@
 KILL
+
 kill - send a signal to a process
 
 $ kill <pid>

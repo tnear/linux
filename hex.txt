@@ -1,4 +1,6 @@
-# Helpful hex tips
+HEX
+
+Helpful hex tips.
 
 Hex table:
 Decimal Binary Hex

@@ -7,7 +7,7 @@ $ expr 2 + 8
 10
 
 # Multiply two numbers:
-$ expr 2 * 10
+$ expr 2 \* 10
 20
 
 # Increment value using command substitution:

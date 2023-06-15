@@ -1,0 +1,28 @@
+BOOLEAN_OPERATORS
+
+$ cat bool_ops.sh
+# '!' is 'NOT' operator:
+if [ !false ]
+then
+    echo 'true'
+fi
+
+# -a = AND
+if [ 5 -lt 100 -a 20 -gt 10 ]  # if 5 < 10 && 20 > 10
+then
+    echo '5 < 10 && 20 > 10'
+fi
+
+# -o = OR
+if [ false -o true ]
+then
+    echo 'false || true'
+fi
+
+# Run script above:
+$ ./bool_ops.sh
+true
+5 < 10 && 20 > 10
+false || true
+
+---

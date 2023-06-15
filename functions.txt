@@ -1,3 +1,5 @@
+FUNCTIONS
+
 Information on shell functions:
 
 # Create a function called name which echoes your username:

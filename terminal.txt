@@ -1,4 +1,6 @@
-# Useful tips and tricks for using a terminal
+TERMINAL
+
+Useful tips and tricks for using a terminal
 
 Ctrl + U: Delete line to left
 Ctrl + K: Delete line to right

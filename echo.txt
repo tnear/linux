@@ -6,7 +6,7 @@ echo - display a line of text
 $ echo hello
 hello\n
 
-# Use -n to avoid newline:
+# Use -n to avoid newline suffix:
 $ echo -n hello
 hello
 

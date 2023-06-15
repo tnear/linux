@@ -1,3 +1,5 @@
+SPECIAL_VARIABLES
+
 Special shell variables.
 
 # Exit status of last command: $?. 0 = no error:

@@ -1,3 +1,5 @@
+ENVIRONMENT_VARIABLES
+
 Common environment variables:
 
 $ echo $SHELL

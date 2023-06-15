@@ -1,4 +1,5 @@
 PASSWD
+
 passwd - change user password
 
 $ passwd
