@@ -1,0 +1,28 @@
+LET
+
+Used to evaluate arithmetic expressions on shell variables.
+
+# Assign variable:
+$ let 'var = 1'
+$ echo $var
+1
+
+# Multiplication:
+$ let 'var = 2' 'var2 = var * 5'
+$ echo $var2
+10
+
+# Increment:
+$ let 'var = 1' 'var++'
+OR
+$ let 'var += 1'
+
+# Exponents (**):
+let 'var = 2 ** 5'
+
+# 'let' does not support big integers:
+$ let 'var = 2 ** 1024'
+$ echo $var
+0
+
+---

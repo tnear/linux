@@ -10,6 +10,10 @@ $ expr 2 + 8
 $ expr 2 \* 10
 20
 
+# Divide two numbers (rounds down):
+$ expr 8 / 3
+2
+
 # Increment value using command substitution:
 $ a=10
 $ a=$(expr $a + 1)

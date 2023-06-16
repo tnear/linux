@@ -1,0 +1,15 @@
+NASM
+
+nasm - the Netwide Assembler, a portable 80x86 assembler
+
+# -f = format
+# -g = debug symbols:
+$ nasm -f elf32 -g file.s
+
+# Dump bytecode:
+$ objdump -d -M intel file.o
+
+# Get shellcode as string:
+$ for i in $(objdump -D shellObj -M intel | grep "^ +[0-9]" | cut -f2); do echo -n '\\x'$i; done
+
+---

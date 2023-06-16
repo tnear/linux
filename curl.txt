@@ -13,18 +13,21 @@ $ curl example.com
 # Output to file using redirect:
 $ curl example.com > example.html
 
-# Get header only (-I, --head):
+# -I = Get header only (-I, --head):
 $ curl -I google.com
 Location: http://www.google.com/
 Content-Type: text/html; charset=UTF-8
 Server: gws
 Content-Length: 219
 
-# Output to file using -o:
+# -o = output to file using:
 $ curl -o example.html example.com
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
 100  1256  100  1256    0     0  17091      0 --:--:-- --:--:-- --:--:-- 17444
+
+# -v = verbose (shows header information):
+$ curl -v example.com > /dev/null
 
 # FTP example:
 $ curl ftp://ftp.slackware.com/welcome.msg

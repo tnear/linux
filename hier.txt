@@ -9,8 +9,8 @@ hier - description of the filesystem hierarchy
     /bin   Essential binaries. Needed in single user mode and to
             bring the system up or repair it.
 
-    /boot  Contains static files for the boot loader. This directory
-            holds only the files which are needed during the boot
+    /boot  Contains static files for the boot loader.
+            Holds only the files which are needed during the boot
             process. Ex: GNU GRUB bootloader.
 
     /dev   Special or device files. Usually hardware represented as a file.
@@ -19,16 +19,16 @@ hier - description of the filesystem hierarchy
 
     /home  Root home directory for users.
 
-    /lib   This directory should hold those shared libraries that are
+    /lib   Should hold those shared libraries that are
             necessary to boot the system and to run the commands in
             the root filesystem.
 
     /lost+found
-           This directory contains items lost in the filesystem.
+           Contains items lost in the filesystem.
             These items are usually chunks of files mangled as a
             consequence of a faulty disk or a system crash.
 
-    /media This directory contains mount points for removable media
+    /media Contains mount points for removable media
             such as CD and DVD disks or USB sticks.
 
     /mnt   Mount point for file systems or devices (ex: CDs, flash drives).
@@ -41,6 +41,7 @@ hier - description of the filesystem hierarchy
     /root  The home directory for the root user.
 
     /run   Contains information which describes the system since it was booted.
+            All saved in RAM, not to disk.
 
     /sbin  System administration binaries. Intended to be run as ROOT.
 
@@ -49,16 +50,15 @@ hier - description of the filesystem hierarchy
 
     /sys   This is a mount point for the sysfs filesystem, which
             provides information about the kernel like /proc, but
-            better structured, following the formalism of kobject
-            infrastructure.
+            better structured. Saved in RAM, not to disk.
 
-    /tmp   This directory contains temporary files which may be
-            deleted with no notice, such as by a regular job or at
-            system boot up.
+    /tmp   Contains temporary files which may be deleted with no notice,
+            such as by a regular job or at system boot up.
 
     /usr   Holds only shareable, read-only data, so that it
             can be mounted by various machines running Linux.
 
-    /var   Writable, persistent files. Can be used for logging (see /var/log).
+    /var   Variable directory. Writable, persistent files.
+            Can be used for logging (see /var/log).
 
 ---
