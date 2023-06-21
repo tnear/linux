@@ -7,8 +7,6 @@ $ mesg
 is n
 
 # Enable messages from other users:
-$ whoami
-kali
 $ mesg y
 
 ---
