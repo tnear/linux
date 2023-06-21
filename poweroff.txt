@@ -1,0 +1,8 @@
+POWEROFF
+
+halt, poweroff, reboot - Halt, power-off or reboot the machine
+
+# Power off machine (warning: does not prompt):
+$ poweroff
+
+---

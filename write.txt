@@ -1,0 +1,20 @@
+WRITE
+
+write - send a message to another user
+
+# Login as 2nd user:
+$ sudo login travis
+
+# Enable messages:
+$ travis@kali $ mesg y
+
+# Send message from kali to travis:
+$ kali@kali $ write travis
+hello, travis!
+
+# 2nd user's receipt of message above:
+$ travis@kali $ 
+Message from kali@kali on pts/3 at 06:36 ...
+hello, travis!
+
+---

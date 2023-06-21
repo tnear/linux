@@ -34,25 +34,13 @@ $ strace -c ./malloc.o
   5.88    0.000170          56         3           newfstatat
   5.71    0.000165          55         3           mprotect
   5.54    0.000160          53         3           brk
-  4.36    0.000126          63         2           openat
-  4.08    0.000118          59         2         1 arch_prctl
-  3.70    0.000107         107         1           munmap
-  2.42    0.000070          35         2           close
-  2.28    0.000066          66         1         1 access
-  1.59    0.000046          46         1           write
-  1.49    0.000043          43         1         1 ioctl
-  1.49    0.000043          43         1           prlimit64
-  1.35    0.000039          39         1           read
-  1.11    0.000032          32         1           rseq
-  1.07    0.000031          31         1           set_tid_address
-  1.04    0.000030          30         1           set_robust_list
-  1.04    0.000030          30         1           getrandom
+  <truncated>
 ------ ----------- ----------- --------- --------- ----------------
 100.00    0.002889          72        40         5 total
 
-# -p = pid attach
-# Start inf ping:
+# -p = pid attach, start inf ping:
 $ ping 8.8.8.8
+
 # In another terminal, attach by strace:
 $ sudo strace -p $(pidof ping)
 strace: Process 84304 attached
