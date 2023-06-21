@@ -1,0 +1,23 @@
+LL
+
+Long List. Alias for 'ls -l'.
+
+$ alias ll                           
+ll='ls -l'
+
+# Field meaning:
+-rwxrw-r--    10    root   root 2048    Jan 13 07:11 afile.exe
+?UUUGGGOOOS   00  UUUUUU GGGGGG ####    MON DD XX:XX FILENAME
+^ ^  ^  ^ ^    ^      ^      ^    ^      ^           ^- Filename
+| |  |  | |    |      |      |    |      \------------- Time of last modification
+| |  |  | |    |      |      |    \-------------------- File Size OR for directory size of the metadata
+| |  |  | |    |      |      \------------------------- Group Name (for example, Users, Administrators, etc)
+| |  |  | |    |      \-------------------------------- Owner Acct
+| |  |  | |    \--------------------------------------- Link count
+| |  |  | \-------------------------------------------- Alternative access (blank means none defined)
+| \--\--\---------------------------------------------- Read, Write, Special access modes for User, Group, Others
+\------------------------------------------------------ File type flag  
+
+(source: https://unix.stackexchange.com/questions/103114/what-do-the-fields-in-ls-al-output-mean)
+
+---

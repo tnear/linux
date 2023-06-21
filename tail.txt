@@ -5,7 +5,6 @@ tail - output the last part of files
 # Output last 10 lines (default) of /etc/passwd:
 $ tail /etc/passwd
 
-
 # n = num lines
 # Output last two lines of /etc/passwd:
 $ tail -n2 /etc/passwd
