@@ -15,8 +15,9 @@ Overhead  Command  Shared Object      Symbol
 # -F = frequency (Hertz). Sample CPU 99 times/second:
 $ perf record -F 99 <command>
 
-# -a = all CPUs
-# -g = Enable call-graph (stack chain/backtrace)
+# More flags:
+# -a             = all CPUs
+# -g             = Enable call-graph (stack chain/backtrace)
 # -- sleep <num> = run for <num> seconds
 
 # Sample 99Hz, all CPUs, get call graphs, run for 5 seconds:

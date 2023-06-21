@@ -1,0 +1,45 @@
+SQLITE3
+
+sqlite3 - A command line interface for SQLite version 3
+
+Syntax: sqlite3 [options] [databasefile] [SQL]
+
+# Create in-memory database:
+$ sqlite3
+
+# Create file:
+$ sqlite3 data.db
+
+# Exit sqlite3 CLI:
+sqlite> .exit  # or .quit or Ctrl-D
+
+# Create table with one text (string) column:
+sqlite> create table table1(name text);
+
+# List tables:
+sqlite> .tables
+table1 table2
+
+# Insert data:
+sqlite> insert into table1 values ('hello');
+
+# Select data:
+sqlite> select * from table1
+hello
+
+# Run commands from terminal:
+$ sqlite3 data.db 'select * from table1;'
+hello
+
+# Schema: show the complete schema for the database
+sqlite> .schema
+CREATE TABLE table1(name text);
+CREATE TABLE table2(name text);
+
+# Toggle headers (column name) for tables:
+sqlite> .headers on  # 'off' to disable
+sqlite> select * from table1;
+name
+hello
+
+---

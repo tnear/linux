@@ -29,6 +29,9 @@ $ ls * | xargs -I{} cp {} {}.bak
 $ ls
 a  a.bak  b  b.bak
 
+# Bulk insert into sqlite database:
+$ seq 10 | xargs -I{} sqlite3 data.db 'insert into table1 values ({});'
+
 # -0 = input items are terminated by a null character:
 $ touch 'a 1' 'a\n2'
 $ find -print0 | xargs -0 -n1
@@ -53,5 +56,8 @@ $ find | grep fake_str | xargs --no-run-if-empty ls
 $ touch a b
 $ find . -type f | xargs echo rm
 rm ./a ./b
+
+# -P = max number of processes to use:
+$ seq 10 | xargs -P 5 -I{} echo {}
 
 ---
