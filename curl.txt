@@ -32,4 +32,7 @@ $ curl -v example.com > /dev/null
 # FTP example:
 $ curl ftp://ftp.slackware.com/welcome.msg
 
+# -u = user <user:password>, used to specify user name and password for authentication:
+$ curl -u demo:password ftp://test.rebex.net
+
 ---

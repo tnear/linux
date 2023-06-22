@@ -10,7 +10,7 @@ $ cd ~
 # Change to previous directory:
 $ cd /tmp
 $ cd
-$ cd - # this line returns to /tmp
+$ cd -  # this line returns to /tmp
 
 # cd is a shell builtin (not an executable).
 # Each process has its own working directory.

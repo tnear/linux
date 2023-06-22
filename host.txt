@@ -1,0 +1,15 @@
+HOST
+
+host - DNS lookup utility
+
+# Lookup by name:
+$ host example.com 
+example.com has address 93.184.216.34
+example.com has IPv6 address 2606:2800:220:1:248:1893:25c8:1946
+example.com mail is handled by 0 .
+
+# Lookup by IP address:
+$ host 52.25.109.230
+230.109.25.52.in-addr.arpa domain name pointer ec2-52-25-109-230.us-west-2.compute.amazonaws.com.
+
+---

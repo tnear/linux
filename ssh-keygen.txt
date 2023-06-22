@@ -1,0 +1,27 @@
+SSH-KEYGEN
+
+ssh-keygen — OpenSSH authentication key utility
+
+$ ssh-keygen
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/kali/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/kali/.ssh/id_rsa
+Your public key has been saved in /home/kali/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:ZOx7UOv+hd4PfYpJ/OFzrWZjUCGUqt5KS3DqJDvLp+c kali@kali
+The key's randomart image is:
++---[RSA 3072]----+
+|           ...   |
+|       .    o .  |
+|        + .. . . |
+|       + ...  .  |
+|      . S..  .   |
+|       +.+  .. . |
+|    . o.+.o +.+ +|
+|   ..=oo.+.o B*++|
+|    =BE o...=+**.|
++----[SHA256]-----+
+
+---

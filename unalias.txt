@@ -1,0 +1,11 @@
+UNALIAS
+
+unalias — remove alias definitions
+
+# Create temporary alias:
+$ alias myalias='echo myalias'
+
+# Unalias:
+$ unalias myalias
+
+---

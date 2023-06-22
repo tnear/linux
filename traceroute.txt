@@ -2,11 +2,16 @@ TRACEROUTE
 
 traceroute - print the route packets trace to network host
 
-Known as 'tracert' on Windows.
+Note: known as 'tracert' on Windows.
 
+# Basic usage:
 $ traceroute example.com
+traceroute to example.com (93.184.216.34), 30 hops max, 60 byte packets
+ 1  10.0.2.2 (10.0.2.2)  0.279 ms  0.220 ms  0.190 ms
+ 2  * * *
+ <truncated>
 
 # -m = max hops:
-$ traceroute -m5 <domain>
+$ traceroute -m 5 <domain>
 
 ---
