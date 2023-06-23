@@ -10,7 +10,7 @@ stdin is sent to host and stdout is received
 Syntax:
 $ nc <options> <host> <port>
 
-# Read from host 33.173... and port 9999:
+# Read from host ip 33.173.133.43, port 9999:
 $ nc 33.173.133.43 9999
 
 # Read web page source
@@ -31,7 +31,7 @@ $ nc -l -p 1234 > file.txt
 
 -l: listen mode for inbound connects. Often used with -p flag.
 -p: port number to receive data
--v: verbose (-vv additional verbosity)
+-v: verbose (-vv for additional verbosity)
 -e: specifies a file name to execute after connect, ex: "-e /bin/bash"
 file.txt: file to listen for
 

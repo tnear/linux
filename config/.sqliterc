@@ -1,2 +1,5 @@
 # Show column names in SQLite:
 .headers on
+
+# Show data in columnar mode
+.mode column

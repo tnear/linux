@@ -1,10 +1,12 @@
 NETSTAT
 
-netstat - Print network connections, routing tables, interface statistics,
-          masquerade connections, and multicast memberships
-
+netstat - Network Statistics - Print network connections,
+          routing tables, interface statistics, masquerade
+          connections, and multicast memberships
 
 Display network connections. Often used for diagnosing problems or determining traffic.
+
+*Note: Deprecated in favor of ss. See ss.txt.*
 
 $ netstat
 Active Internet connections (w/o servers)

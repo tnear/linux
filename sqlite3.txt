@@ -14,32 +14,59 @@ $ sqlite3 data.db
 sqlite> .exit  # or .quit or Ctrl-D
 
 # Create table with one text (string) column:
-sqlite> create table table1(name text);
+sqlite> create table table1(id int, name text);
 
 # List tables:
 sqlite> .tables
 table1 table2
 
 # Insert data:
-sqlite> insert into table1 values ('hello');
+sqlite> insert into table1 values (1, 'hello');
+sqlite> insert into table1 values (2, 'world');
 
 # Select data:
-sqlite> select * from table1
-hello
+sqlite> select * from table1;
+id  name 
+--  -----
+1   hello
+2   world
 
 # Run commands from terminal:
 $ sqlite3 data.db 'select * from table1;'
-hello
+id  name 
+--  -----
+1   hello
+2   world
 
-# Schema: show the complete schema for the database
+# Schema: show the complete structure for the database
 sqlite> .schema
-CREATE TABLE table1(name text);
+CREATE TABLE table1(id int, name text);
 CREATE TABLE table2(name text);
+
+# Create index:
+sqlite> create table table1(id int, name text);
+sqlite> create index table1_index on table1(id);
+
+# Show indexes:
+sqlite> .indexes
+table1_index
 
 # Toggle headers (column name) for tables:
 sqlite> .headers on  # 'off' to disable
 sqlite> select * from table1;
 name
 hello
+
+# Toggle mode for tables ('list' is default):
+sqlite> .mode list
+id|name
+1|hello
+2|world
+
+sqlite> .mode column
+id  name 
+--  -----
+1   hello
+2   world
 
 ---
