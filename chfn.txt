@@ -3,10 +3,10 @@ CHFN
 chfn - change finger - change real user name and information
 
 $ chfn
-Password: 
+Password:
 Changing the user information for kali
 Enter the new value, or press ENTER for the default
-        Full Name: 
+        Full Name:
         Room Number []:
 
 ---

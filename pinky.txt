@@ -3,7 +3,7 @@ PINKY
 pinky - lightweight finger
 
 # Lookup currently logged in users:
-$ pinky   
+$ pinky
 Login    Name      TTY      Idle   When             Where
 kali               tty7     4d     2023-06-16 14:51 :0
 

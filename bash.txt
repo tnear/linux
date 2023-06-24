@@ -10,7 +10,7 @@ hello
 $ zsh -c 'echo hello'
 
 # -x = execution trace (xtrace) mode. Useful for debugging scripts:
-$ cat script.sh 
+$ cat script.sh
 #!/bin/bash
 echo 'Starting script'
 echo 'Hello, world!'

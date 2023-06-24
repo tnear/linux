@@ -1,7 +1,7 @@
 VARIABLE_SUBSTITUTION
 
 # Substitute the value of var:
-$ a='hello'       
+$ a='hello'
 $ echo "${a} world"
 hello world
 

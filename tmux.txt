@@ -12,7 +12,7 @@ Ctrl + B then <arr keys> = switch left/right
 Ctrl + B then o          = switch to Other
 
 # Rotating:
-Ctrl + B + O = rotate panes clockwise 
+Ctrl + B + O = rotate panes clockwise
 
 # Creating (tab numbers are on bottom panel):
 Ctrl + B then c          = create new tab

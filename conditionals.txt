@@ -4,7 +4,7 @@ How conditionals operate in shell scripting.
 
 Note: spaces around '[' and ']' are required.
 
-$ cat conditionals.sh      
+$ cat conditionals.sh
 if [ $1 = $2 ]
 then
    echo "$1 equals $2"

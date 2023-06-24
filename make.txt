@@ -126,7 +126,7 @@ clean:
 
 
 --Source files--
-$ head *			 
+$ head *
 ==> lib.c <==
 #include "lib.h"
 #include <stdio.h>

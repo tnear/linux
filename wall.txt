@@ -4,8 +4,8 @@ wall - write to all - write a message to all users
 
 $ sudo wall 'hello, all!'
 
-Broadcast message from root@kali (pts/1) (Wed Jun 21 06:25:21 2023):           
-                                                                               
+Broadcast message from root@kali (pts/1) (Wed Jun 21 06:25:21 2023):
+
 hello, all!
 
 ---

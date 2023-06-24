@@ -50,8 +50,8 @@ $ echo '1 2' | grep -P '\d'
 $ cat patterns.txt
 ^a$
 b\.txt
-                                                                                         
-$ cat a.txt       
+
+$ cat a.txt
 a
 b.txt
 c

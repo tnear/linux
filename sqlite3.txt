@@ -26,14 +26,14 @@ sqlite> insert into table1 values (2, 'world');
 
 # Select data:
 sqlite> select * from table1;
-id  name 
+id  name
 --  -----
 1   hello
 2   world
 
 # Run commands from terminal:
 $ sqlite3 data.db 'select * from table1;'
-id  name 
+id  name
 --  -----
 1   hello
 2   world
@@ -64,7 +64,7 @@ id|name
 2|world
 
 sqlite> .mode column
-id  name 
+id  name
 --  -----
 1   hello
 2   world

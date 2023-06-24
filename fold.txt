@@ -3,14 +3,14 @@ FOLD
 fold - wrap each input line to fit in specified width
 
 # Display file with a long line:
-$ cat long_line.txt 
+$ cat long_line.txt
 0123456789 0123456789 0123456789 0123456789 0123456789 0123456789 0123456789 0123456789
 
 # Fold line at 80 characters:
-$ fold long_line.txt 
+$ fold long_line.txt
 0123456789 0123456789 0123456789 0123456789 0123456789 0123456789 0123456789 012
 3456789
-                                                                                                   
+
 # -w = width (default = 80), fold at 20 characters:
 $ fold -w 20 long_line.txt
 0123456789 012345678

@@ -15,6 +15,6 @@ mkdir: cannot create directory ‘top/med/bot’: No such file or directory
 
 # Create a directory if it doesn't already exist:
 $ mkdir -p new_dir # creates new directory
-$ mkdir -p new_dir # does nothing 
+$ mkdir -p new_dir # does nothing
 
 ---

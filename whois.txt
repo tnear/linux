@@ -3,7 +3,7 @@ WHOIS
 whois - client for the whois directory service
 
 # Basic usage:
-$ whois example.edu       
+$ whois example.edu
 This Registry database contains ONLY .EDU domains.
 The data in the EDUCAUSE Whois database is provided
 by EDUCAUSE for information purposes in order to

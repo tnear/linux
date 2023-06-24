@@ -8,7 +8,7 @@ Command-line arguments in shell scripting
 # $* is an iterable form of all input arguments (except $0)
 
 # Script to test:
-$ cat args.sh   
+$ cat args.sh
 echo "Num args: $#"
 echo "File: $0"
 echo "1st arg: $1"
@@ -20,7 +20,7 @@ do
 done
 
 # Script's output:
-$ ./args.sh ab cd ef   
+$ ./args.sh ab cd ef
 Num args: 3
 File: ./args.sh
 1st arg: ab

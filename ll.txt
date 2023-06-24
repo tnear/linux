@@ -2,7 +2,7 @@ LL
 
 Long List. Alias for 'ls -l'.
 
-$ alias ll                           
+$ alias ll
 ll='ls -l'
 
 # Field meaning:
@@ -16,7 +16,7 @@ ll='ls -l'
 | |  |  | |    \--------------------------------------- Link count
 | |  |  | \-------------------------------------------- Alternative access (blank means none defined)
 | \--\--\---------------------------------------------- Read, Write, Special access modes for User, Group, Others
-\------------------------------------------------------ File type flag  
+\------------------------------------------------------ File type flag
 
 (source: https://unix.stackexchange.com/questions/103114/what-do-the-fields-in-ls-al-output-mean)
 

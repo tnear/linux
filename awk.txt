@@ -37,7 +37,7 @@ $ awk '$2 > 2' ll.txt
 # Sum 1 to 100:
 $ seq 1 100 > seq.txt
 # ($1 = field 1, END statements are executed after input is exhausted)
-$ awk '{s+=$1} END {print s}' seq.txt 
+$ awk '{s+=$1} END {print s}' seq.txt
 5050
 
 # --MATCH-- #
