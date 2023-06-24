@@ -1,0 +1,23 @@
+HASHCAT
+
+hashcat - Advanced CPU-based password recovery utility
+
+# Create some easy-to-recover MD5 hashes:
+$ echo -n 'Password' | md5sum | tr -d ' -' >> target_hashes.txt
+$ echo -n 'hello'    | md5sum | tr -d ' -' >> target_hashes.txt
+
+# Locate John's word list:
+$ locate wordlists | grep john
+/usr/share/wordlists/john.lst
+
+# -m, --hash-type. 0 = md5 (no salt)
+# -a, --attack-mode. 0 = straight dictionary attack
+# -0, --outfile
+$ hashcat -m 0 -a 0 -o recovered.txt target_hashes.txt /usr/share/wordlists/john.lst
+
+# Show recovered passwords:
+$ cat recovered.txt
+dc647eb65e6711e155375218212b3964:Password
+5d41402abc4b2a76b9719d911017c592:hello
+
+---
