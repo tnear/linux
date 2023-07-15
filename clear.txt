@@ -5,7 +5,6 @@ clear - clear the terminal screen
 # Clear screen and scrollback:
 $ clear
 
-
 # Clear screen without clearing scrollback (or use Ctrl-L):
 $ clear -x
 

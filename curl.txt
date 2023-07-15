@@ -20,7 +20,7 @@ Content-Type: text/html; charset=UTF-8
 Server: gws
 Content-Length: 219
 
-# -o = output to file using:
+# -o = output to file:
 $ curl -o example.html example.com
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed

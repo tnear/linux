@@ -11,7 +11,7 @@ $ cp file dir/
 # Copy multiple files to directory:
 $ cp file1 file2 file3 dir/
 
-# Copy directory:
+# -r, --recursive = copy recursively (can be used for copying directories):
 $ cp -r srcDir newDir
 
 ---

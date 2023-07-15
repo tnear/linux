@@ -24,13 +24,13 @@ a
 # Col 2: content unique to f2
 # Col 3: content in both f1 and f2
 
-# Suppress columns 1 and 2 to print commonality (col 3):
+# Suppress columns 1 and 2 to print commonality (just col 3):
 $ comm -1 -2 f1.txt f2.txt
 b
 c
 
 
-# Requires sorted inputs (warns if misused):
+# comm requires sorted inputs (warns if misused. Use 'sort' to fix):
 $ comm f1.txt f2.txt
 a
 b

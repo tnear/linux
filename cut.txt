@@ -3,8 +3,8 @@ CUT
 cut - remove sections from each line of files
 Source code: https://github.com/coreutils/coreutils/blob/master/src/cut.c
 
-Cut types: b, c, f (most common), d
-Where -b = byte, -c = char, -f = fields, -d = delimiter (default is <TAB>)
+# Cut types: b, c, f (most common), d
+# Where -b = byte, -c = char, -f = fields, -d = delimiter (default is <TAB>)
 
 $ echo 'a bb c c\nd e ff g' >> file.txt
 $ cat file.txt

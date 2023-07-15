@@ -18,7 +18,7 @@ drwxr-xr-x kali
 brw-r--r-- root
 
 # NF = number of fields
-# Print the number of fields and the last field of each record (separated by '-'):
+# Print the number of fields and the last field ('$NF') of each record (separated by '-'):
 $ awk '{print NF " - " $NF}' ll.txt
 2 - 56
 9 - ll.txt
@@ -31,7 +31,7 @@ total 56
 -rw-r--r-- 1 kali kali    0 Jun 21 10:08 ll.txt
 -rw-r--r-- 1 kali kali  547 Jun 21 10:07 ls.txt
 
-# Print lines whose field two (# links) is greater than 2:
+# Print lines whose second field ($2) is greater than 2 (i.e., number of hard/soft links > 2):
 $ awk '$2 > 2' ll.txt
 
 # Sum 1 to 100:
@@ -42,10 +42,10 @@ $ awk '{s+=$1} END {print s}' seq.txt
 
 # --MATCH-- #
 # Print morning timestamps:
-# ($0 = search entire line)
-# (pattern = /0[0-9]:[0-9]{2}/)
-# (arr = variable array to accumulate data)
-# (arr[0] = entire matched string. Higher indexes are for capture groups)
+#   $0            = search entire line
+#   regex pattern = /0[0-9]:[0-9]{2}/
+#   arr           = variable array to accumulate data
+#   arr[0]        = Zero index is entire matched string (higher indexes are the capture groups)
 $ awk 'match($0, /0[0-9]:[0-9]{2}/, arr) { print arr[0] }' ll.txt
 08:24
 09:58

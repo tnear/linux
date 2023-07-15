@@ -3,7 +3,7 @@ COMMAND_SUBSTITUTION
 Command substitution in Linux
 Syntax: $(cmd)
 
-# Interpreted as string 'date' instead of command:
+# Without command substitution, 'date' is interpreted as a string instead of command:
 $ echo date
 date
 
@@ -11,10 +11,10 @@ date
 $ echo $(date)
 Tue Jun 13 08:14:06 AM CDT 2023
 
-# (older style using backticks)
+# (older syntax style using backticks)
 $ echo `date`
 
-# Run program without output from Python:
+# Run program using output from Python:
 $ ./a.out $(python -c 'print("A" * 8)')
 
 # Run program in gdb using output from Python:

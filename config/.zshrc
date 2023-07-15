@@ -296,6 +296,7 @@ bindkey '^[[24;5~' kill-word           # ctrl + delete (without remapping delete
 bindkey '^[[3~'    beginning-of-line   # home
 #bindkey '^[[H'    end-of-line         # end (not working)
 bindkey '^[[24~'   delete-char         # Map delete to F12
+# bindkey '^M'     beginning-of-line   # home (breaks Enter key)
 
 # up arrow history
 #bindkey "${terminfo[kcuu1]}" history-beginning-search-backward
@@ -309,4 +310,6 @@ bindkey "${terminfo[kcud1]}" history-search-forward # only checks first word (co
 alias gdb='gdb -q'
 
 # Allow unlimited core dump sizes
-ulimit -c 1000000
+ulimit -c 1000000 # bytes
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
