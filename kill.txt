@@ -1,6 +1,7 @@
 KILL
 
 kill - send a signal to a process
+See also: pkill
 
 $ kill <pid>
 

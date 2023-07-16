@@ -5,7 +5,7 @@ Long List. Alias for 'ls -l'.
 $ alias ll
 ll='ls -l'
 
-# Field meaning:
+# Field meanings:
 -rwxrw-r--    10    root   root 2048    Jan 13 07:11 afile.exe
 ?UUUGGGOOOS   00  UUUUUU GGGGGG ####    MON DD XX:XX FILENAME
 ^ ^  ^  ^ ^    ^      ^      ^    ^      ^           ^- Filename

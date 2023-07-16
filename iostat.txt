@@ -1,9 +1,8 @@
 IOSTAT
 
-iostat - Report Central Processing Unit (CPU) statistics and input/output statistics
-         for devices and partitions.
+iostat - Report CPU and input/output statistics for devices and partitions.
 
-# Output I/O statistics:
+# Print I/O statistics:
 $ iostat
 Linux 6.1.0-kali7-amd64 (kali)  03/31/2023      _x86_64_        (4 CPU)
 

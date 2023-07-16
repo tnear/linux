@@ -7,7 +7,7 @@ htop, pcp-htop - interactive process viewer
 $ htop
 
 (2)
-# Show processes for a user, ex: top -u root:
+# Show processes for a user, ex: htop -u root:
 $ htop -u <user>
 
 (3)
@@ -15,7 +15,7 @@ $ htop -u <user>
 Click column headers.
 
 (4)
-# Search (F3), Kill (F9), and other shortcut keys:
+# Quit (q), Search (F3), Kill (F9), and other shortcut keys:
 See bottom banner for shortcuts.
 
 ---

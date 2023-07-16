@@ -12,8 +12,8 @@ sys:x:3:3:sys:/dev:/usr/sbin/nologin
 KEYS:
 /[regex_pattern]    Find beneath
 ?[regex_pattern]    Find above
-<Down Arrow>        One line down
-<Up Arrow>          One line up
+j                   One line down
+k                   One line up
 d                   Page down
 u                   Page up
 q                   Quit

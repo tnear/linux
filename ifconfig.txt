@@ -2,6 +2,6 @@ IFCONFIG
 
 ifconfig - interface config - configure a network interface
 
-*Deprecated in favor of ip. See ip.txt.*
+*Deprecated in favor of ip. See ip.txt.
 
 ---
