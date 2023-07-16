@@ -5,7 +5,7 @@ Common environment variables:
 $ echo $SHELL
 /usr/bin/zsh
 
-$ echo $USER (or: $ printenv USER)
+$ echo $USER  # or: $ printenv USER
 kali
 
 $ echo $HOME

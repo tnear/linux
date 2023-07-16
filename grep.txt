@@ -3,6 +3,7 @@ GREP
 grep - print lines that match patterns
 Globally search for a Regular Expression and Print matching lines
 
+# Syntax:
 $ grep -options 'pattern' <file>
 
 # Common flags:

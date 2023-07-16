@@ -6,7 +6,7 @@ dirname - strip last component from file name
 $ dirname /home/user/file.c
 /home/user
 
-$ dirname /home/user
+$ dirname /home/user/
 /home
 
 ---

@@ -5,7 +5,7 @@ dpkg - package manager for Debian
 Syntax:
 dpkg [option...] action
 
-# -s = status, check if package is installed:
+# -s, --status: check if package is installed:
 $ dpkg -s coreutils
 Package: coreutils
 Essential: yes

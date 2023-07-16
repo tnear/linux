@@ -10,7 +10,7 @@ $ history
 # View command history of 'grep':
 $ history | grep grep
 
-# Search history:
+# Search history (see also 'fzf'):
 Ctrl+R
 # type string to history search
 # Ctrl+R finds previous match (bck-i-search)
