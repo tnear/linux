@@ -9,7 +9,7 @@ mkswap [options] device [size]
 $ sudo fallocate -l 10MB /testswap
 
 # Update permissions:
-$ suod chmod 600 /testswap
+$ sudo chmod 600 /testswap
 
 # Setup swap area for file:
 $ sudo mkswap /testswap

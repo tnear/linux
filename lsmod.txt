@@ -3,7 +3,6 @@ LSMOD
 lsmod - Show the status of modules in the Linux Kernel
 
 # Col 3 shows downstream module dependencies:
-
 $ lsmod
 Module                  Size  Used by
 nft_chain_nat          16384  3

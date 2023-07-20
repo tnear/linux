@@ -2,7 +2,7 @@ LTRACE
 
 ltrace - A library call tracer
 
-Note: strace writes to stderr (not stdout).
+Note: ltrace writes to stderr (not stdout).
 
 $ ltrace ./license
 printf("Checking License: ")

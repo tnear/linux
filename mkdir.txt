@@ -5,7 +5,7 @@ mkdir - make directories
 # Basic usage:
 $ mkdir myNewDir
 
-# -p = parent. Allows creating nested folders in one command:
+# -p = parent. Allows creating nested directories in one command:
 $ mkdir -p top/med/bot
 $ cd top/med/bot
 
@@ -13,7 +13,7 @@ $ cd top/med/bot
 $ mkdir top/med/bot
 mkdir: cannot create directory ‘top/med/bot’: No such file or directory
 
-# Create a directory if it doesn't already exist:
+# -p also allows creating a directory if it doesn't already exist:
 $ mkdir -p new_dir # creates new directory
 $ mkdir -p new_dir # does nothing
 

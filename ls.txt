@@ -2,7 +2,7 @@ LS
 
 ls - list directory contents
 
-# Flags:
+# Common flags:
 -a = list all files (including hidden)
 -d = list directory itself (instead of directory contents)
 -h = human-readable sizes (ex: 977K instead of 1000000)

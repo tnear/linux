@@ -8,7 +8,7 @@ battery                28672  0
 wmi                    36864  1 video
 button                 24576  0
 
-# Get more information about one:
+# Get more information about a particular kernel module:
 $ modinfo battery
 filename:       /lib/modules/6.1.0-kali7-amd64/kernel/drivers/acpi/battery.ko
 license:        GPL

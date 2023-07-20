@@ -17,7 +17,7 @@ $ grep -options 'pattern' <file>
 -n = show line numbers
 -o = only print matched text
 -P = PCRE. For example, if left off must use [0-9] for \d.
--r = recursively search folders
+-r = recursively search directories
 -v = invert-select. Return lines NOT containing pattern.
 -w = match whole word
 

@@ -13,7 +13,7 @@ $ find /usr/include -name '*.[hc]' | xargs grep 'int main'
 # Print detailed listing of zero byte files:
 $ find . -size 0c | xargs ls -la
 -rw-r--r-- 1 kali 0 ./lec1/my_file.txt
--rw-r--r-- 1 kali 0 ./temp_folder/file5.txt
+-rw-r--r-- 1 kali 0 ./temp_directory/file5.txt
 
 # -n = max-args. Echo 'hello' plus file name, one at a time:
 $ touch a b

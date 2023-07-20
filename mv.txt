@@ -5,10 +5,10 @@ mv - move (rename) files
 # Rename file:
 $ mv oldName newName
 
-# Move file to folder:
+# Move file to directory (dir):
 $ mv file.txt dir/
 
-# Move multiple files:
+# Move multiple files to directory:
 $ mv file1 file2 file3 dir/
 
 # Rename directory:
