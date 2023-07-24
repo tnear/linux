@@ -3,6 +3,7 @@ READELF
 readelf - display information about ELF files
 
 ELF file (Executable and Linkable Format): Standard file format for executables, libraries, and core dumps
+
 .text: code to execute
 .data: initialized variable values
 

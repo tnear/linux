@@ -18,12 +18,12 @@ $ gcc -g hello.c -o hello
 $ ./hello
 hello world
 
-# Show that the executable is not stripped
+# Use 'file' to show that the executable is not stripped:
 $ file hello
 hello: ELF 64-bit LSB pie executable, x86-64, dynamically linked,
 for GNU/Linux 3.2.0, with debug_info, not stripped
 
-# strip file of debug info:
+# strip file of debug info then show stripped file metadata:
 $ strip hello
 $ file hello
 hello: ELF 64-bit LSB pie executable, x86-64, dynamically linked,

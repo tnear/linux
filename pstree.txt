@@ -16,7 +16,7 @@ systemd-+-ModemManager---2*[{ModemManager}]
 # Tree of processes rooted at <pid>, ex: $ pstree 2:
 $ pstree <pid>
 
-# Tree of current process ID:
+# Tree of current process ID (shell):
 $ pstree $$
 zsh───pstree
 

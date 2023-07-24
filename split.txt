@@ -7,7 +7,7 @@ split [OPTION]... [FILE [PREFIX]]
 # Create sequence of 100 lines:
 $ seq 100 > file.txt
 
-# Split lines into 5 files using l/N syntax (l = lines).
+# Split lines into 5 files using l/N syntax (l = lines, N = num files).
 # This creates 5 files called xaa, xab, xac, xad, xae:
 $ split -n l/5 file.txt
 

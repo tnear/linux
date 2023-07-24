@@ -3,7 +3,8 @@ SETUID
 A special file permission allowing users to run certain programs with elevated permissions.
 
 # /usr/bin/passwd is a common example where regular users
-# temporarily need root permissions to change their password:
+# temporarily need root permissions to change their password.
+# (Note the 's' permissions flag):
 $ ll /usr/bin/passwd
 -rwsr-xr-x 1 root root 68248 Nov 11 02:28 /usr/bin/passwd
 

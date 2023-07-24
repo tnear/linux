@@ -2,6 +2,8 @@ SOURCE
 
 Reads and executes the contents of a file (generally a set of commands)
 
+'source' runs one line after another.
+
 # Reload .zshrc:
 source ~/.zshrc
 

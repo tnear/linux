@@ -19,7 +19,7 @@ PING 127.0.0.1 (127.0.0.1) 56(84) bytes of data.
 64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.075 ms
 
 
-# Limit ping count (-c) to one:
+# Limit ping count (-c) to 1:
 $ ping -c 1 google.com
 
 ---

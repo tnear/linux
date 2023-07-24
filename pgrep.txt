@@ -2,12 +2,11 @@ PGREP
 
 pgrep -  look up, signal, or wait for processes based on name and other attributes
 
-
 # Find gedit process ID:
 $ pgrep gedit
 643415
 
-# More difficult syntax using ps.
+( # More difficult syntax using ps.
 # First, find gedit processes (this includes the self-match):
 $ ps -aux | grep gedit
 kali      643415  0.5  1.4 630856 57700 pts/1    SNl  16:15   0:00 gedit
@@ -18,5 +17,6 @@ kali      644772  0.0  0.0   6396  2080 pts/0    S+   16:17   0:00 grep --color=
 # Note2: this uses grep -v to avoid self-matching of the grep command
 $ ps -aux | grep gedit | grep -v grep | tr -s ' ' | cut -f2 -d ' '
 643415
+)
 
 ---

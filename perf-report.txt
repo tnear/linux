@@ -19,7 +19,7 @@ Overhead  Command  Shared Object      Symbol
 # -i = input file to read:
 $ perf report -i perf2.data
 
-# -n = show number of samples column (between 'Self' and 'Command'
+# -n = show number of samples column (between 'Self' and 'Command')
 
 # --stdio (tree) output:
 $ perf report --stdio
