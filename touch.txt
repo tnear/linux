@@ -8,7 +8,7 @@ $ touch [OPTION]... FILE...
 # Create empty file:
 $ touch empty_file.txt
 
-# Update timestamp of file:
+# Update timestamp of existing file:
 $ touch existing_file.txt
 
 # Create three empty files:

@@ -9,7 +9,7 @@ y
 y
 ^C
 
-# Customzie output text:
+# Customize output text:
 $ yes no
 no
 no

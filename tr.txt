@@ -16,13 +16,15 @@ $ tr [:lower:] [:upper:]
 
 # Convert braces to brackets:
 $ tr '{}' '[]' <<< '{hello}{world}'
+[hello][world]
 
 # -d = delete text. Delete spaces:
 $ tr -d ' ' <<< 'a b c 1 2 3'
 abc123
 
 # Remove digits:
-$ tr -d 0-9 <<< 'a b c 1 2 3'
+$ tr -d 0-9 <<< 'a 1 b 2 c 3'
+a b c
 
 # -s = squeeze. Remove consecutive 'a' or 'b' characters:
 $ tr -s 'ab' <<< 'aaaccbbbaa'
@@ -35,7 +37,7 @@ $ ps -aux | grep gedit | grep -v grep | tr -s ' ' | cut -f2 -d ' '
 
 # -c = complement, operate on everything BUT [SET1].
 # Delete all non-lowercase letters:
-$ tr -cd a-z <<< 'keep12_only lowercaseZZ'
+$ tr -cd a-z <<< 'keep12_only lowerZcaseZ'
 keeponlylowercase
 
 # Caesar cipher:

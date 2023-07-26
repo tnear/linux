@@ -10,4 +10,6 @@ $ sudo useradd -m new_user  # -m to create user with home dir
 $ sudo userdel -r new_user
 (this might warn about no mail spool)
 
+See also: useradd.txt
+
 ---

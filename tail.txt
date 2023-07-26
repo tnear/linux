@@ -7,6 +7,6 @@ $ tail /etc/passwd
 
 # n = num lines
 # Output last two lines of /etc/passwd:
-$ tail -n2 /etc/passwd
+$ tail -n 2 /etc/passwd
 
 ---

@@ -1,7 +1,7 @@
 TAR
 
 tar - Tape ARchive - an archiving utility
-Combines files, does not compress by default.
+Combines files. Does not compress by default.
 
 Syntax:
 $ tar [options] [archive-file] [file1 file2 ...]
@@ -10,14 +10,14 @@ $ tar [options] [archive-file] [file1 file2 ...]
 $ tar -cf my_tar.tar f1.txt f2.txt
 
 # Flags:
--c (--create) = Create
--f (--file) = Specify file name
--t (--list) = List contents of archive
--v (--verbose) = Verbose output
--x (--extract) = Extract archive
--z (--gzip) = Compress directories and files
+-c, --create  = Create
+-f, --file    = Specify file name
+-t, --list    = List contents of archive
+-v, --verbose = Verbose output
+-x, --extract = Extract archive
+-z, --gzip    = Compress directories and files
 
-# Display contents without extracing:
+# Display contents without extracting:
 $ tar -tf my_tar.tar
 f1.txt
 f2.txt
