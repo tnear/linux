@@ -2,7 +2,7 @@ STICKY
 
 Only file owner can rename or delete files inside directory with sticky bit.
 
-# Use chmod to set ticky bit.
+# Use chmod to set sticky bit.
 $ chmod +t my_dir
 OR
 $ chmod 1777 my_dir

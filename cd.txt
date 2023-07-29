@@ -14,7 +14,7 @@ $ cd -  # this line returns to /tmp
 
 # cd is a shell builtin (not an executable).
 # Each process has its own working directory.
-# One process cannot change another's cwd.
+# One process cannot change another process's cwd.
 $ type cd
 cd is a shell builtin
 

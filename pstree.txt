@@ -44,7 +44,7 @@ python,1087170
 $ pstree -as 2192
 systemd splash
   └─code
-      └─code --ms-enable-electron-run-as-node --inspect-port=0/usr/share/code/resourc
+      └─code --ms-enable-electron-run-as-node --inspect-port=0/usr/share/code/resource
           └─code --ms-enable-electron-run-as-node/home/kali/.vscode/extensions/ms-python.
               └─8*[{code}]
 

@@ -1,0 +1,15 @@
+ASPELL
+
+aspell - interactive spell checker
+
+# -a = check individual words
+$ aspell -a
+@(#) calender  # misspelling of "calendar"
+& calender 12 0: calendar, colander, ca lender, ca-lender, slender, Calder
+
+-c = check file
+$ aspell -c file.txt
+# <follow the menu items>
+# <'a', 'l', and 'i' are most commonly used>
+
+---

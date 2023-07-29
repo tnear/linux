@@ -2,7 +2,7 @@ LD
 
 ld - linker - link editor - The GNU linker
 
-# Create exectable file (file) from object file (file.o):
+# Create executable file (file) from object file (file.o):
 $ ld -o file file.o
 
 # -m = emulation, needed for 32-bit apps when assembled with --32:

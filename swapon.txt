@@ -23,7 +23,7 @@ Filename       Type    Size       Used    Priority
 # Disable swapping when done:
 $ sudo swapoff /testswap
 
-# Remove sawp file:
+# Remove swap file:
 $ sudo rm /testswap
 
 ---

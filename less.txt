@@ -26,7 +26,7 @@ End                 Bottom of output
 n                   Next match during search
 N                   Previous match during search
 
-COMMANDS: press '-' to enter commmand mode
+COMMANDS: press '-' to enter command mode
 -I    Ignore case in searches and in patterns
 
 # Find user names ending with a digit.

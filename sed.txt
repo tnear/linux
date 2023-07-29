@@ -13,7 +13,7 @@ i = case insensitive
 d = (not shown) delete line
 
 # Common flags:
--i = in-place (write to file) intead of stdout
+-i = in-place (write to file) instead of stdout
 -E = -r = extended regex, do not need to escape '(', ')', '+', '?'
 
 # Replace multiple consecutive spaces with single space:

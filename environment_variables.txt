@@ -19,7 +19,7 @@ $ printenv PATH
 $ printenv LANG
 en_US.UTF-8
 
-# Create permanent environemnt variable (use .zshenv file for env vars):
+# Create permanent environment variable (use .zshenv file for env vars):
 $ echo 'export MY_VAR=1234' >> ~/.zshenv
 
 # Prompt string:

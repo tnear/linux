@@ -8,7 +8,7 @@ of code that contains multi-line strings that will be redirected to a command.
 
 
 Here documents are denoted by '<<' followed by a token.
-Reading stops upon encountering that oken.
+Reading stops upon encountering that token.
 
 # Count number of lines between EOF/EOF:
 $ wc -l << EOF

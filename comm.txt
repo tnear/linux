@@ -1,7 +1,7 @@
 COMM
 
 comm - (common) compare two sorted files line by line
-Peforms set difference between files with sorted lines.
+Performs set difference between files with sorted lines.
 
 $ cat f1.txt
 a

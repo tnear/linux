@@ -65,7 +65,7 @@ $< = name of first prerequisite
 main.o: main.c
 	gcc -c main.c -o $@
 
-# ..., you can back reference 1st prereq 'main.c' using $<:
+# ..., you can back reference 1st prerequisite 'main.c' using $<:
 main.o: main.c
 	gcc -c $< -o $@
 

@@ -2,7 +2,7 @@ ARRAYS
 
 Arrays in shell scripts.
 
-# Create array using parens (no comma):
+# Create array using parentheses (no comma):
 $ arr=(2 3 4)
 
 # Arrays are 1-indexed and accessed by variable substitution, ${var}:
