@@ -15,7 +15,7 @@ Data sink. Discards everything written to it. Useful to suppress output.
 # Produces messy output due to permission denied errors:
 $ grep -r hello /sys/
 
-# Direct stderror to /dev/null to ignore permission errors:
+# Direct stderr to /dev/null to ignore permission errors:
 $ grep -r hello /sys/ 2> /dev/null
 
 # Suppress successful pings so that only errors appear in terminal:

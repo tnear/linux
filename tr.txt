@@ -30,6 +30,9 @@ a b c
 $ tr -s 'ab' <<< 'aaaccbbbaa'
 accba
 
+# Read from file:
+$ tr -s 'ab' < file.txt
+
 # Get gedit process ID by squeezing consecutive spaces in out put of 'ps'.
 # Note: this uses grep -v to avoid self-matching of the grep command:
 $ ps -aux | grep gedit | grep -v grep | tr -s ' ' | cut -f2 -d ' '

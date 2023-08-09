@@ -25,4 +25,11 @@ a
 b
 c
 
+# -c, --count = show count of occurrences:
+$ $ sort file.txt | uniq -c        
+    4 aa
+    2 b
+    1 bc
+    1 d
+
 ---
