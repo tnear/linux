@@ -1,8 +1,9 @@
 " Enable syntax highlighting:
 "syntax on
 
-" Show line numbers:
-set number
+" Show relative line numbers:
+" set number
+set number relativenumber
 
 " Set line number color to Cyan:
 highlight LineNr ctermfg=Cyan

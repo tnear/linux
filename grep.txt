@@ -62,4 +62,9 @@ $ \grep -f patterns.txt a.txt
 a
 b.txt
 
+# -r flag (recursive):
+$ cd ~
+# recursively search all sub-directories for 'test' starting in pwd ('.'):
+$ grep -r 'test' .
+
 ---

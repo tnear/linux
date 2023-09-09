@@ -24,20 +24,36 @@ G   = last line
 {   = previous paragraph
 }   = next paragraph
 
+# SCROLLING:
+Ctrl+U = scroll up adn move cursor
+Ctrl+D = scroll down and move cursor
+
 # EDITING:
 u      = undo
-Ctrl-R = redo
-
-# INSERT MODE:
-Ctrl-C = exit insert mode
-Escape = exit insert mode
-i = insert before cursor
-a = insert (append) after cursor
+Ctrl+R = redo
+o      = insert line under cursor and enter insert mode
+O      = insert line above cursor and enter insert mode
 
 # DELETING
+:dw   = delete word
+:2dw  = delete next two words
+:de   = delete end of word
+:db   = delete beginning of word
 :dd   = delete line
 :2dd  = delete two lines: 1. current line and 2. line underneath
 :1,$d = delete line 1 through end ($)
+:x    = delete (cut) current character
+:rQ   = replace current character with Q
+
+# COPYING (yank) (p=paste)
+:yy   = copy current line
+:2yy  = copy current line and next line
+:yiw  = copy current word (iw = inner word)
+
+# CHANGE (delete and enter insert mode)
+:ce   = delete end of word and enter insert mode
+:cb   = delete beginning of word and enter insert mode
+:cc   = delete line and enter insert mode
 
 # SAVING & EXITING:
 :q  = quit (prompt to save)
@@ -45,6 +61,19 @@ a = insert (append) after cursor
 :w  = write (save)
 :wq = write and quit
 :x  = write and quit
+
+--INSERT MODE--
+Ctrl+C = exit insert mode
+Escape = exit insert mode
+i = insert mode
+a = insert (append) after cursor
+
+--VISUAL MODE-- (used for selecting text)
+v = enter visual mode
+Many of the regular cursor movement commands function the same in Visual mode.
+
+--VISUAL BLOCK MODE-- (selects text block)
+Ctrl+V = enter visual block mode
 
 # SET COMMANDS:
 :set noexpandtab # use tabs instead of spaces

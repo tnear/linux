@@ -25,4 +25,11 @@ $ echo 'export MY_VAR=1234' >> ~/.zshenv
 # Prompt string:
 $ echo $PS1
 
+# Pass environment variables to subprocesses:
+$ bash -c 'echo $QQQQ'
+<no output>
+# Now, pass in space-separated variables and echo their values:
+$ QQQQ=101 ZZZZ=102 bash -c 'echo $QQQQ $ZZZZ'
+101 102
+
 ---
