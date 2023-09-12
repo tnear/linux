@@ -20,6 +20,8 @@ d = (not shown) delete line
 $ ps | sed -E 's/ +/ /g'
 
 # Detect 'a' followed by digits then replace 'a' with 'abc'.
+# This matches the digits in a capture group using '()' then
+# backreferences the first group using \1.
 # Note: uses [0-9] because '\d' is not supported:
 $ echo 'a123 a456 a' > file.txt
 $ sed -i -E 's/a([0-9]+)/abc\1/g' file.txt
@@ -39,5 +41,19 @@ $ sed 's/abc/xyz/g; s/123/789/g' file.txt
 $ echo 'Hello\nWorld!' > file.txt
 $ sed '/^Hello/d' file.txt
 World!
+
+# Get word counts of a file. This pattern replaces spaces (\s) with newlines (\n).
+# Once the data is newline delimited, tools such as sort/uniq work natively:
+$ sed -E 's/\s/\n/g' < file.c | sort | uniq -c
+    1 enough
+    3 entries
+    2 Entries
+    9 entry
+
+# Trim everything after colon in timestamp by using an empty replacement:
+ll | awk '{print $8}' | sed -E 's/:.*//'
+17
+10
+<truncated>
 
 ---

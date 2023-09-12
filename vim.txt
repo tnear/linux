@@ -17,6 +17,7 @@ l   = right
 ^   = first non-blank character of line
 $   = end of line
 w   = next word
+e   = end of word
 b   = back one word
 gg  = first line
 G   = last line
@@ -33,6 +34,7 @@ u      = undo
 Ctrl+R = redo
 o      = insert line under cursor and enter insert mode
 O      = insert line above cursor and enter insert mode
+.      = repeat last command. Useful for repetitive tasks
 
 # DELETING
 :dw   = delete word
@@ -44,6 +46,9 @@ O      = insert line above cursor and enter insert mode
 :1,$d = delete line 1 through end ($)
 :x    = delete (cut) current character
 :rQ   = replace current character with Q
+:di{  = delete inside { }, deletes text between current { and } scope
+:di[  = same as above but between [ ]
+:da(  = delete ( and ) scope, including '(' and ')'
 
 # COPYING (yank) (p=paste)
 :yy   = copy current line
@@ -54,6 +59,7 @@ O      = insert line above cursor and enter insert mode
 :ce   = delete end of word and enter insert mode
 :cb   = delete beginning of word and enter insert mode
 :cc   = delete line and enter insert mode
+:ci{  = change inside { }, deletes text between current { and } scope and enters insert mode
 
 # SAVING & EXITING:
 :q  = quit (prompt to save)
@@ -68,7 +74,7 @@ Escape = exit insert mode
 i = insert mode
 a = insert (append) after cursor
 
---VISUAL MODE-- (used for selecting text)
+--VISUAL MODE-- (selects text)
 v = enter visual mode
 Many of the regular cursor movement commands function the same in Visual mode.
 

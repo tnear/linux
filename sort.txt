@@ -21,4 +21,11 @@ $ sort -r
 # -u = sort unique (alternate for sort | uniq):
 $ sort -u file.txt
 
+# -k (POS1,POS2) = sort key 
+# Sort based on 2nd field:
+$ sort -k 2,2
+
+# Can leave off POS2 if it's the same as POS1:
+$ sort -k 2
+
 ---

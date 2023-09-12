@@ -11,7 +11,7 @@ ghi
 123
 456
 
-# Combine lines using '-' as delimiter:
+# -d = delimiter. Combine lines using '-' as delimiter:
 $ paste -d '-' file1.txt file2.txt
 abc-123
 def-456
@@ -22,8 +22,12 @@ $ paste -d '-' -s file1.txt file2.txt
 abc-def-ghi
 123-456
 
-# Join lines of file with comma:
+# Join lines of file to create comma separated list:
 $ paste -d ',' -s file1.txt
 abc,def,ghi
+
+# Count the number of words appearing 10+ times. This uses paste to create a '+' separated list:
+$ sed -E 's/\s/\n/g' < mlx3_ib.c | sort | uniq -c | sort -n | awk '$1 >= 10 {print $1}' | paste -sd+ | bc -l
+37565
 
 ---

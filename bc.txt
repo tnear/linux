@@ -11,13 +11,21 @@ bc — basic calculator - arbitrary-precision arithmetic language
 11579208923731619542357098500868790785326998466564056403945758400791\
 3129639936
 
-# Scaling:
-(bc) scale = 20
+# -l, --mathlib: load the standard math library
+# Without -l:
+$ echo '1/3' | bc
+0
+
+# With -l:
+$ echo '1/3' | bc -l
+.33333333333333333333
+
+# Sqrt (-l needed):
+$ bc -l
 (bc) sqrt(2)
 1.41421356237309504880
 
 # Creating variables:
-(bc) scale = 0
 (bc) a = 5 % 3 + 7
 (bc) a
 9
@@ -29,5 +37,9 @@ $ bc <<< '1 <= 2'
 # Pipe string into to be executed by bc:
 $ echo '41 % 15' | bc
 11
+
+# Count the number of words appearing 10+ times. This uses 'bc' to sum the '+' separated list:
+$ sed -E 's/\s/\n/g' < mlx3_ib.c | sort | uniq -c | sort -n | awk '$1 >= 10 {print $1}' | paste -sd+ | bc -l
+37565
 
 ---
