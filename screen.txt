@@ -9,7 +9,7 @@ $ screen
 
 # Detach screen:
 $ screen
-# press Ctrl-A, D on keyboard
+# press Ctrl+A, D on keyboard
 [detached from 228806.pts-1.user]
 
 # Set screen name. Useful to distinguish multiple screens:

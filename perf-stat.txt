@@ -33,7 +33,7 @@ $ perf stat -e page-faults find /usr/include -name '*.[hc]' | xargs grep 'int ma
 
 # -p = process ID
 $ perf stat -a -p <pid>
-<Ctrl-C to end>
+<Ctrl+C to end>
 
     2,359.18 msec task-clock              #    0.403 CPUs utilized
     7,599         context-switches        #  133.945 /sec

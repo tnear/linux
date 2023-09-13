@@ -3,13 +3,13 @@ FZF
 fzf - a command-line fuzzy finder
 https://github.com/junegunn/fzf
 
-# List files: Ctrl-T:
-$ code <ctrl-T>
+# List files: Ctrl+T:
+$ code <Ctrl+T>
 
 # Select multiple files with <TAB> key:
 $ code env.txt sync.txt
 
-# History: Ctrl-R
+# History: Ctrl+R
 
 # Search syntax:
 'query = exact match (non-fuzzy)

@@ -4,6 +4,7 @@ kill - send a signal to a process
 See also: pkill
 
 $ kill <pid>
+$ kill <job#>
 
 # (1/2) Search for process id and kill:
 $ ps | grep gedit
@@ -16,5 +17,10 @@ $ kill 220421
 $ kill -9 <processID>
 OR
 $ kill -SIGKILL <processID>
+
+# Kill by job number:
+$ jobs
+[1]  + suspended  sleep 1000
+$ kill %1
 
 ---

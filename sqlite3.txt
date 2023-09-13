@@ -11,7 +11,7 @@ $ sqlite3
 $ sqlite3 data.db
 
 # Exit sqlite3 CLI:
-sqlite> .exit  # or .quit or Ctrl-D
+sqlite> .exit  # or .quit or Ctrl+D
 
 # Create table with one text (string) column:
 sqlite> create table table1(id int, name text);

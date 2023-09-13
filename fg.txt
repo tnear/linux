@@ -5,7 +5,7 @@ fg — foreground - run jobs in the foreground
 # Create a long running process:
 $ sleep 1000
 
-$ Ctrl-Z  # Suspend sleep job
+$ Ctrl+Z  # Suspend sleep job
 
 $ Use 'jobs' to show suspended state
 [1]  + suspended  sleep 1000
