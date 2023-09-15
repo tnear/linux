@@ -9,7 +9,10 @@ $ code <Ctrl+T>
 # Select multiple files with <TAB> key:
 $ code env.txt sync.txt
 
-# History: Ctrl+R
+# History: Ctrl+R (fzf overrides default history shortcut)
+
+# Search list of active processes:
+$ ps -aux | fzf
 
 # Search syntax:
 'query = exact match (non-fuzzy)

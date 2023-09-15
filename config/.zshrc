@@ -313,3 +313,6 @@ alias gdb='gdb -q'
 ulimit -c 1000000 # bytes
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Git Status (note: this shadows Ghostscript's 'gs' command. Use '\gs' to run Ghostscript.
+alias gs='git status'

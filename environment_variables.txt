@@ -22,7 +22,7 @@ en_US.UTF-8
 # Create permanent environment variable (use .zshenv file for env vars):
 $ echo 'export MY_VAR=1234' >> ~/.zshenv
 
-# Prompt string:
+# Prompt string (PS):
 $ echo $PS1
 
 # Pass environment variables to subprocesses:
