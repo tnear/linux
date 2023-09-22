@@ -81,6 +81,25 @@ Many of the regular cursor movement commands function the same in Visual mode.
 --VISUAL BLOCK MODE-- (selects text block)
 Ctrl+V = enter visual block mode
 
+# SUBSTITUTE (s) (used for find/replace):
+Syntax:
+$ :[range]s/{pattern}/{string}/[flags] [count]
+
+Options:
+g = global
+i = case insensitive
+c = confirmation
+
+# Replace all occurrences of 'print' on current line with 'printf':
+:s/print/printf/g
+
+# Replace entire document using '%' symbol:
+:%s/print/printf/g
+
+# Delete all occurrences of 'printf' on current line by using empty replacement:
+:s/printf//g
+
+
 # SET COMMANDS:
 :set noexpandtab # use tabs instead of spaces
 

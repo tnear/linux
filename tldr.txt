@@ -25,4 +25,7 @@ find
   - Find directories matching a given name, in case-insensitive mode:
     find root_path -type d -iname '*lib*'
 
+# tldr on multi-arg command:
+$ tldr git clone
+
 ---
