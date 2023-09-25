@@ -14,6 +14,12 @@ $ sudo apt-get upgrade
 # Upgrade and handle dependency changes (slow):
 $ sudo apt-get dist-upgrade # slow
 
+# Remove (uninstall) package:
+$ sudo apt remove <pkg_name>
+
+# List all packages (long output):
+$ apt list
+
 See also: dpkg
 
 ---

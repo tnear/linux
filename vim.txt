@@ -26,7 +26,7 @@ G   = last line
 }   = next paragraph
 
 # SCROLLING:
-Ctrl+U = scroll up adn move cursor
+Ctrl+U = scroll up and move cursor
 Ctrl+D = scroll down and move cursor
 
 # EDITING:

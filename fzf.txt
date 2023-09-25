@@ -21,6 +21,7 @@ query$ = suffix exact match
 !.txt  = inverse exact match (find all files which do not end with .txt)
 
 # Command substitution:
+# (Not normally needed. Ctrl+T is often easier, plus it adds to your history)
 # Use vim to open results of fzf:
 $ vim $(fzf)
 

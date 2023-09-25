@@ -12,4 +12,8 @@ test
 # Print all .c files in home directory (~) or beneath:
 $ tree -P '*.c' ~
 
+# -L = level
+# Print up to two levels:
+$ tree -L 2
+
 ---
