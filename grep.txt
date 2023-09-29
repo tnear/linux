@@ -20,17 +20,12 @@ $ grep -options 'pattern' <file>
 -r = recursively search directories
 -v = invert-select. Return lines NOT containing pattern.
 -w = match whole word
+--exclude-dir=GLOB = ignore specified directories
 
 # Find lines NOT containing the letter 'e' using invert-select (-v):
 $ lscpu | grep -v e
 CPU(s):                4
 CPU family:            6
-BogoMIPS:              5183.99
-
-# Line number example:
-$ grep -n root /etc/passwd
-1:root:x:0:0:root:/root:/usr/bin/zsh
-33:nm-openvpn:x:114:120:NetworkManager
 
 # Count number of occurrences:
 $ grep -c system /etc/passwd
@@ -47,7 +42,7 @@ kali
 # PCRE example (fails without -P):
 $ echo '1 2' | grep -P '\d'
 
-# -f flag:
+# -f, --file:
 $ cat patterns.txt
 ^a$
 b\.txt
@@ -62,9 +57,12 @@ $ \grep -f patterns.txt a.txt
 a
 b.txt
 
-# -r flag (recursive):
+# -r, --recursive = recursively search all sub-directories:
+# recursive search starting in pwd:
 $ cd ~
-# recursively search all sub-directories for 'test' starting in pwd ('.'):
-$ grep -r 'test' .
+$ grep -r 'test'
+
+# Exclude '.git' directory:
+$ grep -r --exclude-dir='.git' 'test'
 
 ---
