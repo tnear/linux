@@ -1,0 +1,26 @@
+BAT
+
+bat - a cat(1) clone with syntax highlighting and Git integration.
+
+Command name defaults to 'batcat' but can be aliased to 'bat' or 'cat'
+
+# Display .c file:
+$ batcat rmdir.c 
+───────┬───────────────────────────────────────────────────────────────────────────────────────────
+       │ File: rmdir.c
+───────┼───────────────────────────────────────────────────────────────────────────────────────────
+   1   │ /*
+   2   │ RMDIR
+   4   │ rmdir - delete an empty directory
+   7   │ int rmdir(const char *pathname);
+   8   │ */
+  10   │ #include <stdio.h>
+  12   │ int main()
+  13   │ {
+  14   │     // See mkdir.c for example usage
+  15   │     printf(__FILE__ " tests passed!\n");
+  16   │     return 0;
+  17   │ }
+───────┴───────────────────────────────────────────────────────────────────────────────────────────
+
+---
