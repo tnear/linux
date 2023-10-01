@@ -316,3 +316,12 @@ ulimit -c 1000000 # bytes
 
 # Git Status (note: this shadows Ghostscript's 'gs' command. Use '\gs' to run Ghostscript.
 alias gs='git status'
+
+# bat file viewer ('cat' alternative):
+alias bat='batcat'
+alias cat='batcat' # replace 'cat'
+export BAT_THEME='Monokai Extended Light'
+
+# zoxide ('cd' alternative):
+eval "$(zoxide init zsh)"
+alias cd='z'
