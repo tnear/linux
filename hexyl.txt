@@ -1,0 +1,8 @@
+HEXYL
+
+hexyl - command-line hex viewer with colored output
+Repository: https://github.com/sharkdp/hexyl
+
+$ hexyl <file>
+
+---

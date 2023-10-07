@@ -3,7 +3,7 @@ FIND
 find - search for files in a directory hierarchy
 
 # Case sensitive recursive find in pwd (.) for file names containing 'hello':
-$ find . -name *hello*
+$ find . -name '*hello*'
 
 # Get number of files with .h or .c extension:
 $ find /usr/include -name '*.[hc]' | wc
@@ -12,7 +12,7 @@ newlines | word count | characters
 'find' outputs file paths, so this means there are 8085 files (first col)
 
 # Case insensitive find for file names containing 'hello':
-$ find . -iname *hello*
+$ find . -iname '*hello*'
 
 MTIME - modification time
 +2 = more than 2

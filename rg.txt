@@ -23,4 +23,4 @@ $ rg hello -r world
 # Replace 'hello <word>' with 'goodbye <word>':
 $ rg 'hello (\w+)' -r 'goodbye $1'
 
-----
+---

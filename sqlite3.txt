@@ -2,18 +2,18 @@ SQLITE3
 
 sqlite3 - A command line interface for SQLite version 3
 
-Syntax: sqlite3 [options] [databasefile] [SQL]
+Syntax: sqlite3 [options] [databaseFile] [SQL]
 
 # Create in-memory database:
 $ sqlite3
 
-# Create file:
+# Create file database:
 $ sqlite3 data.db
 
 # Exit sqlite3 CLI:
 sqlite> .exit  # or .quit or Ctrl+D
 
-# Create table with one text (string) column:
+# Create table with two columns: id (int) column and text (string):
 sqlite> create table table1(id int, name text);
 
 # List tables:
@@ -42,6 +42,19 @@ id  name
 sqlite> .schema
 CREATE TABLE table1(id int, name text);
 CREATE TABLE table2(name text);
+
+# Primary key:
+sqlite> create table table1(id int primary key, name text);
+sqlite> insert into table1 values(1, 'hello');
+sqlite> insert into table1 values(2, 'world');
+sqlite> .schema
+CREATE TABLE table1(id int primary key, name text);
+
+# Composite key (multiple columns):
+sqlite> create table table1(id1 int, id2 int, name text, primary key (id1, id2));
+sqlite> insert into table1 values(1, 2, '3');
+sqlite> .schema
+CREATE TABLE table1(id1 int, id2 int, name text, primary key (id1, id2));
 
 # Create index:
 sqlite> create table table1(id int, name text);

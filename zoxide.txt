@@ -1,6 +1,7 @@
 ZOXIDE
 
 zoxide - A faster way to navigate your filesystem
+Repository: https://github.com/ajeetdsouza/zoxide
 
 # Init for zsh (should done in .zshrc):
 $ eval "$(zoxide init zsh)"
