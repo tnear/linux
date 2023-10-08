@@ -82,4 +82,9 @@ id  name
 1   hello
 2   world
 
+# Read external file:
+sqlite> .read file.sql
+OR
+$ sqlite3 db.db '.read file.sql'
+
 ---
