@@ -99,6 +99,18 @@ c = confirmation
 # Delete all occurrences of 'printf' on current line by using empty replacement:
 :s/printf//g
 
+# Substitute (find/replace) 'line' with 'newline' in selection:
+# - Make a selection
+# - Press ':'. This opens a command prompt with default: :'<,'>
+# - Enter your substitute command: :'<,'>s/line/newline/g
+
+# Special characters: `^$.*[~)+/
+# ^These characters need to be escaped in vim substitute.
+# Add underscore after all digits:
+# Pattern: (\d+)  # '+', '(', and ')' need to be escaped
+# Replace: \1_    # \1 is the first capture group
+:%s/\(\d\+\)/\1_/g
+
 
 # SET COMMANDS:
 :set noexpandtab # use tabs instead of spaces
