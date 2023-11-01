@@ -4,10 +4,10 @@ cmp - compare two files byte by byte
 
 # Create two different files:
 $ printf 'hello' > a.txt
-$ printf 'hey' > b.txt  
+$ printf 'hey' > b.txt
 
 # Compare them with cmp:
-$ cmp a.txt b.txt    
+$ cmp a.txt b.txt
 a.txt b.txt differ: byte 3, line 1
 
 # Compare same file (no different shows no output):

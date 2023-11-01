@@ -3,7 +3,7 @@ BRACE EXPANSION
 Brace expansion is a mechanism by which arbitrary strings may be generated.
 
 # Generate 1 to 10 with 2 stride:
-$ echo {1..10..2}  
+$ echo {1..10..2}
 1 3 5 7 9
 
 # Generate a to f:

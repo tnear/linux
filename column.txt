@@ -6,7 +6,7 @@ column - columnate lists
 $ printf 'header1 header2\ndata1 data2' > file.txt
 
 # cat does not align columns:
-$ cat file.txt       
+$ cat file.txt
 header1 header2
 data1 data2
 

@@ -5,7 +5,7 @@ bat - a cat(1) clone with syntax highlighting and Git integration.
 Command name defaults to 'batcat' but can be aliased to 'bat' or 'cat'
 
 # Display .c file:
-$ batcat rmdir.c 
+$ batcat rmdir.c
 ───────┬───────────────────────────────────────────────────────────────────────────────────────────
        │ File: rmdir.c
 ───────┼───────────────────────────────────────────────────────────────────────────────────────────

@@ -24,8 +24,8 @@ int main() {
 
 ```
 =========================================================
-==938296==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7ffe55264bdc at pc 0x55a1dd91133d bp 0x7ffe55264b60 sp 0x7ffe55264b58                                                           
-WRITE of size 4 at 0x7ffe55264bdc thread T0                                                        
+==938296==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7ffe55264bdc at pc 0x55a1dd91133d bp 0x7ffe55264b60 sp 0x7ffe55264b58
+WRITE of size 4 at 0x7ffe55264bdc thread T0
     #0 0x55a1dd91133c in main (/tmp/overflow+0x133c)
     #1 0x7ff129446189 in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
     #2 0x7ff129446244 in __libc_start_main_impl ../csu/libc-start.c:381

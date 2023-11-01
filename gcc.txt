@@ -29,6 +29,7 @@ gcc f1.c f2.c -o objfile
 -z execstack                  Indicates that the target needs an executable stack
 -fno-pic                      PIC=position independent code. Jumps can be relative w/ PIC
 -mpreferred-stack-boundary=#  Set stack boundary alignment to 2 ^ #. Ex: 2^3 = 8
+-nostdlib                     Do not standard startup files or libraries when linking
 
 --Assemble using gcc--
 # Step 1: -c does not link. Assemble and create file.o:

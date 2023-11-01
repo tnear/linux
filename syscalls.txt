@@ -4,8 +4,9 @@ Searchable Linux Syscall Table for x86 and x86_64
 
 # Register order for syscalls:
 $ man syscall
-i386        ebx   ecx   edx   esi   edi   ebp   -
-x86-64      rdi   rsi   rdx   r10   r8    r9    -
+Arch     arg1  arg2  arg3  arg4  arg5  arg6  arg7
+i386     ebx   ecx   edx   esi   edi   ebp   -
+x86-64   rdi   rsi   rdx   r10   r8    r9    -
 
 # Common system calls:
 brk       Change data segment size. Old, use mmap or malloc instead.
