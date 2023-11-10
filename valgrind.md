@@ -11,7 +11,7 @@ int main() {
     arr[0] = 123;
 
     // free(arr); without free, this causes a memory leak
-    
+
     return 0;
 }
 ```
@@ -35,7 +35,7 @@ Valgrind produces output about memory usage. This indicates that 40 bytes of mem
 ==932954==    still reachable: 0 bytes in 0 blocks
 ==932954==         suppressed: 0 bytes in 0 blocks
 ==932954== Rerun with --leak-check=full to see details of leaked memory
-==932954== 
+==932954==
 ==932954== For lists of detected and suppressed errors, rerun with: -s
 ==932954== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 ```

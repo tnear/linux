@@ -36,7 +36,7 @@ $ ll example.out*
 
 ### Analyze coverage with `gcov`
 ```bash
-$ gcov example.c                                         
+$ gcov example.c
 File 'example.c'
 Lines executed:100.00% of 6
 Creating 'example.c.gcov'
@@ -46,7 +46,7 @@ Lines executed:100.00% of 6
 
 ### Show how many times each line was executed
 ```bash
-$  cat example.c.gcov    
+$  cat example.c.gcov
 -:    0:Source:example.c
 -:    0:Graph:example.gcno
 -:    0:Data:example.gcda

@@ -21,7 +21,7 @@ $ sort -r
 # -u = sort unique (alternate for sort | uniq):
 $ sort -u file.txt
 
-# -k (POS1,POS2) = sort key 
+# -k (POS1,POS2) = sort key
 # Sort based on 2nd field:
 $ sort -k 2,2
 
