@@ -10,7 +10,7 @@ $ Ctrl+Z  # Suspend sleep job
 $ Use 'jobs' to show suspended state
 [1]  + suspended  sleep 1000
 
-# Place sleep job in background (state changes to 'continued':
+# Place sleep job in background (state changes to 'continued'):
 $ bg
 [1]  + continued  sleep 1000
 

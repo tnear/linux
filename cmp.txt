@@ -10,7 +10,7 @@ $ printf 'hey' > b.txt
 $ cmp a.txt b.txt
 a.txt b.txt differ: byte 3, line 1
 
-# Compare same file (no different shows no output):
+# Compare same file:
 $ cmp a.txt a.txt
 <no output for same contents>
 
