@@ -6,7 +6,7 @@ md5sum - compute and check MD5 message digest
 $ echo -n 'my string' | md5sum
 3d212b21fad7bed63c1fb560c6a5c5d0  -
 
-# printf also avoid the trailing newline
+# printf also avoids the trailing newline
 $ printf 'my string' | md5sum
 32aecc42aaab562503a187440fb4637d  -
 

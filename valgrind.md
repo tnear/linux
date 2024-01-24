@@ -11,7 +11,6 @@ int main() {
     arr[0] = 123;
 
     // free(arr); without free, this causes a memory leak
-
     return 0;
 }
 ```

@@ -20,12 +20,12 @@ int main() {
 ### Compile program with coverage flag
 `$ gcc -fprofile-arcs -ftest-coverage example.c -o example`
 
-Note: `gcov` works best when the exectuable does not have an extension.
+Note: `gcov` works best when the executable does not have an extension.
 
 ### Run executable
 `$ ./example.out`
 
-Execution crates gcov data files (.gcda and .gcno) in pwd:
+Execution creates gcov data files (`.gcda` and `.gcno`) in pwd:
 
 ```bash
 $ ll example.out*

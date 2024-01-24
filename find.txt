@@ -96,7 +96,7 @@ $ find . -size 0c -exec ls -la {} \;
 # Simpler syntax using xargs: $ find . -size 0c | xargs ls -la
 
 # Use -exec placeholder to rename files.
-# {} is mapped to {}_renamed, thus adding '_renamed' suffix all file names:
+# {} is mapped to {}_renamed, thus adding '_renamed' suffix to all file names:
 $ touch file1 file2 file3
 $ find . -name 'file*' -exec mv {} {}_renamed \;
 $ ls

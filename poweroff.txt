@@ -2,7 +2,7 @@ POWEROFF
 
 halt, poweroff, reboot - Halt, power-off or reboot the machine
 
-# Power off machine (warning: does not prompt):
-$ poweroff
+# Power off machine:
+$ poweroff  # warning: does not prompt
 
 ---
