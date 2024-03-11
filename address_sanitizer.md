@@ -6,12 +6,10 @@ AddressSanitizer (ASan) is a programming tool which uses shadow memory to detect
 
 ```c++
 #include <iostream>
-
 int main() {
     int arr[10] = {0};
 
     arr[15] = 25; // out-of-bounds write
-
     return 0;
 }
 ```
