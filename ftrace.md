@@ -2,6 +2,15 @@
 
 ftrace (Function Tracer) is a tracing framework for the Linux kernel. It allows developers and system administrators to analyze and debug what's happening inside the kernel at runtime. ftrace can trace almost every function in the kernel, making valuable for performance analysis, debugging, and understanding kernel behavior.
 
+![](images/ftrace.png)
+
+*Image: https://youtu.be/JRyrhsx-L5Y*
+
+## Things `ftrace` shows that `strace` does not
+- Page faults: `__do_page_fault()`
+- System calls: `do_syscall_64()`
+- Interrupts
+
 ## Function Graph Tracer
 This mode allows you to see the graph of function calls that happen within the kernel. It's useful for understanding the flow of execution through different functions.
 
@@ -57,6 +66,16 @@ echo 1 > /sys/kernel/debug/tracing/events/kprobes/my_probe/enable
 # for user-space function
 echo 'p:my_uprobe /path/to/binary:0x12345' > /sys/kernel/debug/tracing/uprobe_events
 echo 1 > /sys/kernel/debug/tracing/events/uprobes/my_uprobe/enable
+```
+
+## trace-cmd
+An easier approach to using `ftrace`.
+```bash
+root> trace-cmd start -p function
+root> trace-cmd show
+
+root> trace-cmd record -e syscalls -F <program>
+root> trace-cmd report
 ```
 
 ## Usage Tips
