@@ -11,7 +11,7 @@ $ cd top/med/bot
 
 # Without -p, mkdir errors
 $ mkdir top/med/bot
-mkdir: cannot create directory ‘top/med/bot’: No such file or directory
+mkdir: cannot create directory 'top/med/bot': No such file or directory
 
 # -p also allows creating a directory if it doesn't already exist:
 $ mkdir -p new_dir # creates new directory

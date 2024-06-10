@@ -2,7 +2,7 @@ STRACE
 
 strace - trace system calls and signals
 
-Note:  ALL strace outputs begin with 'execve'. This 'execve' syscall runs an executable.
+Note: ALL strace outputs begin with 'execve'. This 'execve' syscall runs an executable.
 Note2: strace writes to stderr (not stdout).
 
 $ strace pwd

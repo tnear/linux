@@ -3,7 +3,7 @@ GZIP
 gzip, gunzip, zcat - compress or expand files
 
 # Common flags:
--k = keep original file (default behavior is to delete file)
+-k = keep original file (default behavior is to delete the source file)
 -v = verbose. Shows percent compression
 -# = level of compression, ex: -9
 -f = force operation if file already exists

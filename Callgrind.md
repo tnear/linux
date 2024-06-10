@@ -36,7 +36,7 @@ valgrind --tool=callgrind ./factorial
 ```
 
 ### KCachegrind
-KCacheGrind is a UI used for analyzing Callgrind results.
+KCachegrind is a UI used for analyzing Callgrind results.
 ```bash
 $ kcachegrind callgrind.out.XXXX
 ```

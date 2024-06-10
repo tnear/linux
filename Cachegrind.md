@@ -1,6 +1,6 @@
 # Cachegrind
 
-Cachegrind is a cache and branch-prediction profiler tool that's part of the Valgrind suite of tools for debugging and profiling Linux programs. It simulates how your program interacts with a computer's cache hierarchy and branch predictor to identify inefficient memory access patterns and predictability of branches. By providing detailed information about cache hits, misses, and the effectiveness of branch prediction, cachegrind helps developers optimize their code for better performance and efficiency.
+Cachegrind is a cache and branch-prediction profiler tool that's part of the Valgrind suite of tools for debugging and profiling Linux programs. It simulates how your program interacts with a computer's cache hierarchy and branch predictor to identify inefficient memory access patterns and predictability of branches.
 
 ## Example
 C++ source code:
@@ -47,8 +47,8 @@ Events recorded:  Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw
 Events shown:     Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw
 Event sort order: Ir I1mr ILmr Dr D1mr DLmr Dw D1mw DLmw
 Thresholds:       0.1 100 100 100 100 100 100 100 100
-Include dirs:     
-User annotated:   
+Include dirs:
+User annotated:
 Auto-annotation:  on
 ```
 - `I1 cache`: level 1 instruction cache
@@ -56,7 +56,7 @@ Auto-annotation:  on
 - `LL cache`: last level (often L3) cache
 
 ```
-Ir       I1mr      Dr       D1mr      Dw       D1mw 
+Ir       I1mr      Dr       D1mr      Dw       D1mw
 100,123  2,345     50,000   1,234     25,000   567  PROGRAM TOTALS
 ```
 
