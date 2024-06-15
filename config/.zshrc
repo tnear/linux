@@ -29,6 +29,9 @@ bindkey '^[[6~' end-of-buffer-or-history          # page down
 bindkey '^[[F' end-of-line                        # end
 bindkey '^[[Z' undo                               # shift + tab undo last action
 
+# zsh-autocomplete (travis)
+source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+
 # enable completion features
 autoload -Uz compinit
 compinit -d ~/.cache/zcompdump
@@ -225,33 +228,30 @@ precmd() {
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     export LS_COLORS="$LS_COLORS:ow=30;44:" # fix ls color for folders with 777 permissions
-
-    alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
-    #alias grep='grep --color=auto'
-    alias grep='grep --color=auto -P' # always add PCRE flag (travis)
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-    alias diff='diff --color=auto'
-    alias ip='ip --color=auto'
-
-    # see FgColors for color codes
-    export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
-    #export LESS_TERMCAP_md=$'\E[1;36m'    # begin bold
-    export LESS_TERMCAP_md=$'\E[1;35m'     # begin bold (travis)
-    export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink
-    #export LESS_TERMCAP_so=$'\E[01;33m'   # begin reverse video
-    export LESS_TERMCAP_so=$'\E[01;34m'    # begin reverse video (find coloring -- travis)
-    export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
-    export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
-    export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
-
-    # Take advantage of $LS_COLORS for completion as well
-    zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-    zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 fi
+
+alias ls='ls --color=auto'
+
+alias grep='grep --color=auto -E' # always add PCRE flag (travis)
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias diff='diff --color=auto'
+alias ip='ip --color=auto'
+
+# see FgColors for color codes
+export LESS_TERMCAP_mb=$'\E[1;31m'     # begin blink
+#export LESS_TERMCAP_md=$'\E[1;36m'    # begin bold
+export LESS_TERMCAP_md=$'\E[1;35m'     # begin bold (travis)
+export LESS_TERMCAP_me=$'\E[0m'        # reset bold/blink
+#export LESS_TERMCAP_so=$'\E[01;33m'   # begin reverse video
+export LESS_TERMCAP_so=$'\E[01;34m'    # begin reverse video (find coloring -- travis)
+export LESS_TERMCAP_se=$'\E[0m'        # reset reverse video
+export LESS_TERMCAP_us=$'\E[1;32m'     # begin underline
+export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
+
+# Take advantage of $LS_COLORS for completion as well
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 
 # some more ls aliases
 alias ll='ls -l'
@@ -284,11 +284,13 @@ alias countryroads='cd ~'
 # https://unix.stackexchange.com/questions/457986/tmux-backspace-and-ctrl-backspace-send-both
 stty ek # Erase and kill characters to their default values
 
+platform=$(uname)
 # key bindings, use 'showkey -a' or 'cat' to locate key identifier code
 if [ "$TERM_PROGRAM" = vscode ]; then
     # vscode maps backspace to ctrl+backspace and ctrl+backspace to ctrl+w,
     # therefore no additional config is needed for ctrl+backspace
-else
+elif [[ "$platform" == "Linux" ]]; then
+    # mac still needs configuration
     bindkey '^?'       backward-kill-word  # ctrl + backspace
 fi
 
@@ -325,3 +327,15 @@ export BAT_THEME='Monokai Extended Light'
 # zoxide ('cd' alternative):
 eval "$(zoxide init zsh)"
 alias cd='z'
+
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+plugins=( 
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+)
+
+# add colors for 'ls' (mac)
+if [[ "$platform" == "Darwin" ]]; then
+    export CLICOLOR=1
+fi
