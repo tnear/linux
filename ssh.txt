@@ -11,6 +11,7 @@ $ ssh tnear@example.edu
 -X    Enables X11 forwarding
 -Y    Enables trusted X11 forwarding (less secure)
 -L    Local port forwarding tunnel
+-N    Do not execute a remote command. This is useful for just forwarding ports.
 
 # Connect and allow trusted X11 forwarding:
 $ ssh -Y tnear@example.edu
