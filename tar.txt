@@ -1,6 +1,6 @@
 TAR
 
-tar - Tape ARchive - an archiving utility
+tar - Tape Archive - an archiving utility
 Combines files. Does not compress by default.
 
 Syntax:

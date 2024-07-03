@@ -2,7 +2,7 @@
 
 Callgrind, a part of the Valgrind framework, is a profiling tool that records the call history, number of instructions executed, cache utilization, and branch prediction data of an executed program.
 
-Callgrind extends the functionality of Cachegrind by adding detailed call graphs, making it useful for understanding the flow of execution and identifying bottlenecks. Callgrind's output can be analyzed with tools like KCachegrind or QCachegrind, offering visual representations of the program's performance metrics and call relationships.
+Callgrind extends the functionality of Cachegrind by adding detailed call graphs, making it useful for understanding the flow of execution and identifying bottlenecks. Callgrind's output can be analyzed with tools like KCachegrind or QCachegrind to visualize a program's performance metrics.
 
 ## Example
 
@@ -22,7 +22,7 @@ unsigned long factorial_iterative(unsigned int n) {
 }
 
 int main() {
-    unsigned int number = 12; // Example number
+    unsigned number = 12; // Example number
     cout << "Recursive factorial of " << number << " is " << factorial_recursive(number) << endl;
     cout << "Iterative factorial of " << number << " is " << factorial_iterative(number) << endl;
     return 0;
@@ -35,7 +35,7 @@ g++ -g -o factorial factorial.cpp
 valgrind --tool=callgrind ./factorial
 ```
 
-### KCachegrind
+### Visualizing with KCachegrind
 KCachegrind is a UI used for analyzing Callgrind results.
 ```bash
 $ kcachegrind callgrind.out.XXXX

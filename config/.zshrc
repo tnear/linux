@@ -278,7 +278,6 @@ fi
 alias cls='clear'
 alias vscode='code'
 alias explorer='xdg-open'
-alias countryroads='cd ~'
 
 # Update settings for tmux
 # https://unix.stackexchange.com/questions/457986/tmux-backspace-and-ctrl-backspace-send-both
@@ -321,7 +320,7 @@ alias gs='git status'
 
 # bat file viewer ('cat' alternative):
 alias bat='batcat'
-alias cat='batcat' # replace 'cat'
+# alias cat='batcat' # replace 'cat'
 export BAT_THEME='Monokai Extended Light'
 
 # zoxide ('cd' alternative):

@@ -6,4 +6,8 @@ uname - print system information
 $ uname -a
 Linux kali 6.1.0-kali7-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.20-1kali1 (2023-03-22) x86_64 GNU/Linux
 
+# -m: show machine information
+$ uname -m
+arm64
+
 ---
