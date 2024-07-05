@@ -2,6 +2,8 @@ DU
 
 du - disk usage - estimate file space usage
 
+See also: df
+
 Syntax:
 du [OPTION]... [FILE]..
 

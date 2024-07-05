@@ -2,6 +2,8 @@ DF
 
 df - disk free - report file system space usage
 
+See also: du
+
 # -h = human readable: G=gigabyte, M=megabyte:
 $ df -h
 Filesystem      Size  Used Avail Use% Mounted on

@@ -7,7 +7,7 @@ $ PERSON='tnear'
 $ echo $PERSON
 tnear
 
-# Remove variable:
+# Unset (remove) environment variable:
 $ unset PERSON
 
 # Show that it has been removed:
