@@ -4,7 +4,7 @@ HIER-ETC
 System-wide configuration files, often editable in a text editor.
 
 /etc/fstab
-File systems table. Used by 'mount'.
+File Systems TABle. Used by 'mount'.
 
 /etc/passwd
 Accounts, IDs, and home directories.

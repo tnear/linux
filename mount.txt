@@ -12,4 +12,7 @@ proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
 $ mkdir /media/photos
 $ mount /dev/flash_sdd /media/photos
 
+## Flags
+-t = type, ex: mount -t tmpfs
+
 ---
