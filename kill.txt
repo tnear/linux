@@ -6,6 +6,17 @@ See also: pkill
 $ kill <pid>
 $ kill <job#>
 
+## Commonly used signals
+```
+1       HUP (hang up)
+2       INT (interrupt)
+3       QUIT (quit)
+6       ABRT (abort)
+9       KILL (non-catchable, non-ignorable kill)
+14      ALRM (alarm clock)
+15      TERM (software termination signal)
+```
+
 # (1/2) Search for process id and kill:
 $ ps | grep gedit
  220421 pts/3    00:00:06 gedit
@@ -13,7 +24,7 @@ $ ps | grep gedit
 # (2/2) Kill process ID above:
 $ kill 220421
 
-# Force-kill an unresponsive service:
+# Force-kill (-9) an unresponsive service:
 $ kill -9 <processID>
 OR
 $ kill -SIGKILL <processID>
