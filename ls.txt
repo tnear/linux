@@ -23,4 +23,19 @@ $ ls -lR | grep '^l'
 $ ls -ld /tmp
 drwxrwxrwt 14 root 4096 /tmp
 
+## Wildcard
+Use a '*' character for wildcards.
+```
+$ ls /tmp/*Data*
+/tmp/MyData.txt
+/tmp/TheData.log
+```
+
+## Case insensitive
+To do a case insensitive listing, use `find` with the `-ls` flag.
+```
+$ find /tmp/ -iname '*data*' -ls
+2853037        8 -rw-r--r--    1 tnear    wheel        756 Jul 11 09:10 /tmp//MyData.txt
+```
+
 ---

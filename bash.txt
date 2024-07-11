@@ -9,7 +9,7 @@ hello
 # OR:
 $ zsh -c 'echo hello'
 
-# -x = execution trace (xtrace) mode. Useful for debugging scripts:
+# -x = execution trace (xtrace) mode. Verbose output for debugging scripts:
 $ cat script.sh
 #!/bin/bash
 echo 'Starting script'

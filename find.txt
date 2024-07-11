@@ -14,6 +14,13 @@ newlines | word count | characters
 # Case insensitive find for file names containing 'hello':
 $ find . -iname '*hello*'
 
+## Case insensitive `ls`
+To do a case insensitive listing, use `find` with the `-ls` flag.
+```
+$ find /tmp/ -iname '*data*' -ls
+2853037        8 -rw-r--r--    1 tnear    wheel        756 Jul 11 09:10 /tmp//MyData.txt
+```
+
 MTIME - modification time
 +2 = more than 2
 -2 = less than 2

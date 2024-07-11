@@ -24,10 +24,10 @@ zsh───pstree
 $ pstree <userid>
 
 # Flags:
-# -a = show command line arguments
-# -h = highlight current process and ancestors (in bold)
-# -p = show PIDs
-# -s = show parent processes
+-a = show command line arguments
+-h = highlight current process and ancestors (in bold)
+-p = show PIDs
+-s = show parent processes
 
 # Monitor child processes for a given process ID:
 $ watch pstree -ap 1087170
