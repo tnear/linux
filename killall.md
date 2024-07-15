@@ -1,14 +1,16 @@
-KILLALL
+# killall
 
-killall - kill processes by name
+`killall` - kill processes by name
 
-# Send SITERM (terminal) signal to ALL gedit processes:
-$ killall gedit
+## Send `SIGTERM` (terminal) signal to ALL gedit processes
+`$ killall gedit`
 
-# Send SIGKILL gedit processes:
+## Send SIGKILL to all gedit processes
+```
 $ killall -9 gedit
 or
 $ killall -SIGKILL gedit
+```
 
 ## Commonly used signals
 ```
@@ -20,5 +22,3 @@ $ killall -SIGKILL gedit
 14      ALRM (alarm clock)
 15      TERM (software termination signal)
 ```
-
----

@@ -6,7 +6,7 @@ netstat - Network Statistics - Print network connections,
 
 Display network connections. Often used for diagnosing problems or determining traffic.
 
-*Note: Deprecated in favor of [ss](ss.txt).*
+*Note: Deprecated in favor of [ss](ss.md).*
 
 ## Common flags
 ```
@@ -34,7 +34,7 @@ unix  2      [ ]    DGRAM              15465  /run/systemd/journal/syslog
 This is a useful command to find which process ID (PID) is listening on a port number.
 
 ```
-$ sudo netstat -anpt # sudo needed to get PID
+$ sudo netstat -pant # sudo needed to get PID
 
 Active Internet connections (servers and established)
 Proto Recv-Q Send-Q Local Address      Foreign Address  PID/Program name

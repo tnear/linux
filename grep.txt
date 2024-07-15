@@ -58,9 +58,8 @@ a
 b.txt
 
 # -r, --recursive = recursively search all sub-directories:
-# recursive search starting in pwd:
-$ cd ~
-$ grep -r 'test'
+# recursive search starting in ~:
+$ grep -r 'test' ~
 
 # Exclude '.git' directory:
 $ grep -r --exclude-dir='.git' 'test'

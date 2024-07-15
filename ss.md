@@ -22,10 +22,10 @@ u_str ESTAB  0      0                        * 21885              * 21886
 ```
 
 ## List all sockets with numeric value and process ID
-This is a useful command to find which process ID (PID) is listening on a port number.
+Useful for finding which process ID (PID) is listening on a port number (ex: 9100).
 
 ```
-$ sudo ss -anpt | grep 9100
+$ sudo ss -pant | grep 9100
 
 LISTEN     0   4096   0.0.0.0:9100      0.0.0.0:*     users:(("java",pid=16605,fd=60))
 CLOSE-WAIT 1   0    127.0.0.1:48636   127.0.0.1:9100  users:(("java",pid=16607,fd=42))
