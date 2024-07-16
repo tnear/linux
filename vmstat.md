@@ -1,15 +1,19 @@
-VMSTAT
+# vmstat
 
 vmstat - Report virtual memory statistics
 
-Virtual Memory STATistics
-Reports information about processes, memory, paging, block IO, traps, disks and CPU activity.
+Virtual Memory STATistics. Reports information about processes, memory, paging, block IO, traps, disks and CPU activity.
 
+## Basic usage
+```
 $ vmstat
-procs -----------memory-----------  ---swap-- -----io---- -system-- ------cpu-----
- r  b   swpd   free   buff  cache     si   so    bi    bo   in   cs us sy id wa st
- 0  0      0 5509736 147568 1021156    0    0    15     3  175  195  2  2 96  0  0
+procs ---------memory---- --swap-- ---io-- -system-- ------cpu-----
+ r  b swpd   free   buff   si   so  bi  bo   in   cs us sy id wa st
+ 0  0    0 5509736 147568   0    0  15   3  175  195  2  2 96  0  0
+```
 
+Annotation:
+```
 Procs:
 r = # runnable processes
 b = # blocked
@@ -40,11 +44,12 @@ sy: Time spent running kernel code. (system time)
 id: Time spent idle.
 wa: Time spent waiting for IO.
 st: Time stolen from a virtual machine.
+```
 
-# Add new row every 2 seconds:
-$ vmstat 2
+## Show statistics
+Use `-s` to show detailed statistics such as total RAM (total memory) and interrupt information.
 
-# -s = statistics
+```
 $ vmstat -s
     8126716 K total memory
     1450132 K used memory
@@ -72,5 +77,9 @@ $ vmstat -s
    12486962 CPU context switches
  1686738949 boot time
      132692 forks
+```
 
----
+## Add new row every 2 seconds
+```
+$ vmstat 2
+```

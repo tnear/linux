@@ -31,6 +31,36 @@ $ ls /tmp/*Data*
 /tmp/TheData.log
 ```
 
+## File types
+When doing `ls -l`, the first character denotes the file type.
+
+```
+'-' regular file
+'b' block special file
+'c' character special file
+'C' high performance (“contiguous data”) file
+'d' directory
+'D' door (Solaris 2.5 and up)
+'l' symbolic link
+'M' off-line (“migrated”) file (Cray DMF)
+'n' network special file (HP-UX)
+'p' FIFO (named pipe)
+'P' port (Solaris 10 and up)
+'s' socket
+'?' some other file type
+```
+
+For example,
+```
+$ ll
+total 12
+-rw-r--r--. 1 user1 access-login 905 Jul 15 19:15 asan_suppression_file
+drwxr-xr-x. 2 root  root           6 Jun 29 00:52 repo_helper_cache
+srwxr-xr-x. 1 user1 access-login   0 Jul 15 19:24 socketFile
+```
+
+The `s` in `srwxr-xr-x` denotes a socket file.
+
 ## Case insensitive
 To do a case insensitive listing, use `find` with the `-ls` flag.
 ```
