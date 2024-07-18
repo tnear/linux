@@ -1,4 +1,4 @@
-# Objcopy
+# objcopy
 
-objcopy - copy and translate object files
+`objcopy` - copy and translate object files
 

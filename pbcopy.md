@@ -1,6 +1,6 @@
 # pbcopy
 
-pbcopy, pbpaste - provide copying and pasting to the pasteboard (the Clipboard) from command line
+`pbcopy`, `pbpaste` - provide copying and pasting to the pasteboard (the Clipboard) from command line
 
 Command for macOS.
 

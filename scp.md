@@ -1,6 +1,6 @@
 # SCP
 
-scp — OpenSSH secure file copy
+`scp` — OpenSSH secure file copy
 
 ## Copy file 'file1.txt' from local to remote machine
 ```

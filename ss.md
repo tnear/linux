@@ -1,6 +1,6 @@
 # ss
 
-ss - socket statistics - another utility to investigate sockets
+`ss` - socket statistics - another utility to investigate sockets
 
 *Prefer `ss` over [`netstat`](netstat.md).*
 

@@ -1,8 +1,8 @@
 # tmpfs
 
-tmpfs - (temporary file system) a virtual memory filesystem
+`tmpfs` - (temporary file system) a virtual memory filesystem
 
-The `tmpfs` facility allows the creation of file systems whose contents reside in virtual memory. Since the files on such file systems typically reside in RAM, file access is extremely fast. `tmpfs` can be used to create a RAM disk.
+`tmpfs` allows the creation of file systems whose contents reside in virtual memory. Since the files on such file systems typically reside in RAM, file access is extremely fast. `tmpfs` can be used to create a RAM disk.
 
 ## Creation
 

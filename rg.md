@@ -1,6 +1,6 @@
 # rg
 
-rg - ripgrep recursively searches directories for a regex pattern while respecting your gitignore.
+`rg` - ripgrep recursively searches directories for a regex pattern while respecting your gitignore.
 
 Repository: https://github.com/BurntSushi/ripgrep
 

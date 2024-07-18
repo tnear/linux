@@ -1,6 +1,6 @@
 # netstat
 
-netstat - Network Statistics - Print network connections,
+`netstat` - Network Statistics - Print network connections,
           routing tables, interface statistics, masquerade
           connections, and multicast memberships
 

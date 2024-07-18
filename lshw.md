@@ -1,6 +1,6 @@
 # lshw
 
-lshw - list hardware
+`lshw` - list hardware
 
 ## Get PCI address
 ```

@@ -1,18 +1,31 @@
 UMASK
 
-umask — get or set the file mode creation mask
+`umask` — get or set the file mode creation mask
 
 Masks RWX permission bits during file creation. 022 is a common default.
 
-# Get current umask (in octal):
+## Get current umask (in octal)
+```
 $ umask
 022
+```
 
 022 / RWX means:
 - mask no bits for user
 - mask 2nd bit (W) for group
 - mask 2nd bit (W) for all
 
+## Change mask (symbolic)
+Set RWS bits for *all* files for `u`ser, `g`roup, and `o`ther.
+
+```
+$ umask u=rwx,g=rwx,o=rwx  # no space after comma
+$ umask
+000
+```
+
+## Change mask (octal)
+```
 $ umask 022
 $ touch file.txt
 $ ll file.txt
@@ -30,5 +43,4 @@ $ umask 777
 $ touch file.txt
 $ ll file.txt
 ---------- 1 kali kali 0 file.txt
-
----
+```
