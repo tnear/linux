@@ -77,7 +77,7 @@ main: main.o lib.o
 
 #..., you can reference the second set of 'main.o lib.o' using $^:
 main: main.o lib.o
-	gcc -o $@ $<
+	gcc -o $@ $^
 
 --Substitution reference--
 # Can use '%' to substitute
