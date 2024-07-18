@@ -16,9 +16,12 @@ $ journalctl
 
 -- Logs begin at Tue 2024-07-02 21:06:50 GMT, end at Thu 2024-07-18 14:05:01 GMT. --
 Jul 02 21:06:50 localhost kernel: Linux version 5.15.el8uek.x86_64 (mockbuild@host-0-0-255-5)>
-Jul 02 21:06:50 localhost kernel: Command line: BOOT_IMAGE=(hd0,gpt2)/vmlinuz-5.15.0-206.153.7.el8uek.x86_64 >
-Jul 02 21:06:50 localhost kernel: BIOS-provided physical RAM map:
 <truncated>
+```
+
+## Query for text
+```
+$ journalctl | grep root
 ```
 
 ## Get between two times
@@ -34,6 +37,13 @@ $ journalctl --since 09:00 --until "1 hour ago"
 ```
 $ journalctl _PID=8088
 $ journalctl _UID=33 --since today
+```
+
+## Get size of journal
+Use the `--disk-usage` flag to get the total journal size.
+```
+$ journalctl --disk-usage
+Archived and active journals take up 344.0M in the file system.
 ```
 
 ## Resources

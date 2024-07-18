@@ -2,6 +2,16 @@
 
 The `/proc` directory includes information on system hardware and processes. `/proc` is a virtual file system.
 
+
+Many `/proc` files show as 0 bytes despite having data due to their virtual nature:
+```
+$ ls -l /proc/meminfo
+-r--r--r-- 1 root 0 /proc/meminfo
+
+$ cat /proc/meminfo | wc -l
+53
+```
+
 ## `/proc/cpuinfo`
 Contains detailed hardware information such as # processors and processor speed.
 
@@ -33,17 +43,24 @@ MemFree:        494231856 kB
 MemAvailable:   503907080 kB
 ```
 
-Many `/proc` files show as 0 bytes despite having data due to their virtual nature:
-```
-$ ls -l /proc/meminfo
--r--r--r-- 1 root 0 /proc/meminfo
-
-$ cat /proc/meminfo | wc -l
-53
-```
-
 ## `/proc/<pid>`
 Contains the file representation of process id.
+
+Import sub-directories:
+
+### `/proc/<pid>/cmdline`
+Contains the command that started the process and its parameters.
+```
+$ cat cmdline
+-bash
+```
+
+### `/proc/<pid>/fd`
+Contains all file descriptors used by that process.
+```
+$ ls fd
+0  1  2  255
+```
 
 ## `/proc/<pid>/fd`
 All file descriptors in use by a process. `0=stdin, 1=stdout, 2=stderr`.
