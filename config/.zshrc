@@ -289,7 +289,8 @@ if [ "$TERM_PROGRAM" = vscode ]; then
     # vscode maps backspace to ctrl+backspace and ctrl+backspace to ctrl+w,
     # therefore no additional config is needed for ctrl+backspace
 elif [[ "$platform" == "Linux" ]]; then
-    # mac still needs configuration
+    # mac still needs configuration. this command deletes entire
+    # words on regular (non-ctrl) backspace on mac
     bindkey '^?'       backward-kill-word  # ctrl + backspace
 fi
 
@@ -327,14 +328,45 @@ export BAT_THEME='Monokai Extended Light'
 eval "$(zoxide init zsh)"
 alias cd='z'
 
+alias python='python3'
+
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-plugins=( 
-    zsh-syntax-highlighting
-    zsh-autosuggestions
+plugins=(
+   zsh-syntax-highlighting
+   zsh-autosuggestions
 )
 
 # add colors for 'ls' (mac)
-if [[ "$platform" == "Darwin" ]]; then
+if [ "$platform" == "Darwin" ]; then
     export CLICOLOR=1
 fi
+
+# delete words on mac
+host=$(hostname)
+if [ "$host" == "tnear-mac" ]; then
+    bindkey '^[[3~' kill-word   # ctrl + Delete
+    bindkey '^[('   kill-word   # start/opt + Delete
+fi
+
+# vpn on mac
+if [ "$host" == "tnear-mac" ]; then
+    # check if connected to Cisco Secure Client
+    usingVPN=$(/opt/cisco/secureclient/bin/vpn status | grep Connected)
+    if [ -n "$usingVPN" ]; then
+        export http_proxy=http://www-proxy.us.oracle.com:80
+        export https_proxy=http://www-proxy.us.oracle.com:80
+    else
+        unset http_proxy
+        unset https_proxy
+    fi
+fi
+
+# autocomplete shortcut config
+
+## this makes the left and right shortcut keys always move cursor on command line
+bindkey -M menuselect  '^[[D' .backward-char  '^[OD' .backward-char
+bindkey -M menuselect  '^[[C'  .forward-char  '^[OC'  .forward-char
+
+## this makes enter always submit
+bindkey -M menuselect '^M' .accept-line

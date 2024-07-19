@@ -2,6 +2,11 @@
 
 `chown` - change owner - change file owner and group
 
+## Common flags
+```
+-R -> change ownership recursively on directory contents
+```
+
 ## Change owner to nobody
 The `nobody` user in Linux owns no files, is in no privileged groups, and has the smallest subset of abilities.
 
