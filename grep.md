@@ -1,12 +1,17 @@
-GREP
+# grep
 
 grep - print lines that match patterns
 Globally search for a Regular Expression and Print matching lines
 
-# Syntax:
-$ grep -options 'pattern' <file>
+Syntax:
+```
+$ grep -options 'pattern' <file_or_directory>
+```
 
-# Common flags:
+See also [ripgrep](rg.md).
+
+## Common flags
+```
 -A = show X lines after. Space is optional: '-A 3' or '-A3'
 -B = show X lines before
 -C = show X lines before and after
@@ -21,8 +26,29 @@ $ grep -options 'pattern' <file>
 -v = invert-select. Return lines NOT containing pattern.
 -w = match whole word
 --exclude-dir=GLOB = ignore specified directories
+```
 
-# Find lines NOT containing the letter 'e' using invert-select (-v):
+## -r, --recursive = recursively search all sub-directories
+Use `-r` to recursive search starting in a directory.
+```
+$ grep -r 'test' ~
+
+# Exclude '.git' directory from 'test' directory
+$ grep -r --exclude-dir='.git' 'test'
+```
+
+Note: [`rg`](rg.md) does this natively.
+
+## Only print matched text
+This uses `.*` to match from desired text (`user`) to the end of the line. Nothing before `user` is printed.
+```
+$ grep -o 'user.*' /etc/passwd
+user mode.  At other times this information is provided by
+user:*:248:248:Setup User:/var/setup:/bin/bash
+```
+
+## Find lines NOT containing the letter 'e' using invert-select (-v)
+```
 $ lscpu | grep -v e
 CPU(s):                4
 CPU family:            6
@@ -30,19 +56,15 @@ CPU family:            6
 # Count number of occurrences:
 $ grep -c system /etc/passwd
 4
+```
 
-# Show 3 lines before and 4 lines after pattern:
-$ grep -B3 -A4 'pattern' <file>
-
-# Only print matched text:
-$ grep -o kali /etc/passwd
-kali
-kali
-
-# PCRE example (fails without -P):
+## PCRE example (fails without -P)
+```
 $ echo '1 2' | grep -P '\d'
+```
 
-# -f, --file:
+## Match patterns in a file, -f, --file
+```
 $ cat patterns.txt
 ^a$
 b\.txt
@@ -56,12 +78,9 @@ c
 $ \grep -f patterns.txt a.txt
 a
 b.txt
+```
 
-# -r, --recursive = recursively search all sub-directories:
-# recursive search starting in ~:
-$ grep -r 'test' ~
-
-# Exclude '.git' directory:
-$ grep -r --exclude-dir='.git' 'test'
-
----
+## Show 3 lines before and 4 lines after pattern
+```
+$ grep -B3 -A4 'pattern' <file>
+```
