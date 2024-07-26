@@ -15,7 +15,7 @@ cpio – copy files to and from archives
 ## Basic example
 ```
 # create files
-$ echo 'one' >> file.txt; echo 'two' >> file2.txt; 
+$ echo 'one' >> file.txt; echo 'two' >> file2.txt;
 
 # list files
 $ ls file*

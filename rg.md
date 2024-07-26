@@ -16,7 +16,7 @@ Find trailing whitespace:
 ```
 $ rg ' $'
 scp.md
-8:``` 
+8:```
 
 rg.md
 14:$ rg --hidden git

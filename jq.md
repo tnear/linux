@@ -32,6 +32,7 @@ $ jq '.fruit' fruits.json
 }
 ```
 
+### Nested fields
 ```
 $ jq '.fruit.price' fruits.json
 1.20
@@ -80,7 +81,7 @@ $ jq '.[0]' fruits.json
 }
 ```
 
-### Get price of idx=2 in array
+### Get price of `idx=2` in array
 ```
 $ jq '.[2].price' fruits.json
 1.25

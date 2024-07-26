@@ -1,10 +1,17 @@
-KILL
+# kill
 
 kill - send a signal to a process
+
 See also: pkill
 
+Syntax:
+```
 $ kill <pid>
+$ kill -signal_num <pid>
 $ kill <job#>
+```
+
+todo: multiple process IDs, plus show pkill
 
 ## Commonly used signals
 ```
@@ -17,21 +24,30 @@ $ kill <job#>
 15      TERM (software termination signal)
 ```
 
-# (1/2) Search for process id and kill:
+## Search for process id and kill
+```
 $ ps | grep gedit
- 220421 pts/3    00:00:06 gedit
+220421 pts/3    00:00:06 gedit
 
-# (2/2) Kill process ID above:
+# Kill process ID above:
 $ kill 220421
+```
 
-# Force-kill (-9) an unresponsive service:
+## Force-kill using KILL signal (-9)
+```
 $ kill -9 <processID>
 OR
 $ kill -SIGKILL <processID>
+```
 
-# Kill by job number:
+## Kill multiple processes
+```
+$ kill <pid1> <pid2> <pid...>
+```
+
+## Kill by job number
+```
 $ jobs
 [1]  + suspended  sleep 1000
 $ kill %1
-
----
+```

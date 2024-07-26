@@ -8,7 +8,7 @@ The `nproc` command prints the number of processors (cores) available to the cur
 
 This process has 11 processors available:
 ```
-$ nproc      
+$ nproc
 11
 ```
 

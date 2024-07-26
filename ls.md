@@ -10,7 +10,7 @@
 -i = include inode number (ex: $ ls -li)
 -l = long format
 -r = reverse output order
--R = recursive search of sub-directories, ex: $ ls -lR
+-R = recursive list of sub-directories, ex: $ ls -lR
 -S = sort by size (largest first)
 -t = sort by timestamp, ex: $ ls -ltr shows oldest contents on top
 ```

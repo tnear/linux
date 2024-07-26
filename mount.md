@@ -40,7 +40,7 @@ $ mount --bind /bin /home/chroot/bin
 $ chroot /home/chroot
 
 # show that /bin is accessible through bind mount despite being in chroot
-$ ls -l / 
+$ ls -l /
 total 16
 drwxr-xr-x 2 0 0  4096 Oct 29 21:47 bin
 ```
