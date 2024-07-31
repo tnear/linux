@@ -16,7 +16,6 @@ Use the `-c` flag to use a custom config file:
 yum install -c /etc/compute/vmi/snapshot.yum.conf <pkg_name>
 ```
 
-
 ## Search for a package
 Use `search`:
 ```
@@ -25,4 +24,22 @@ $ yum search rdma
 ========== Name & Summary Matched: rdma ==========
 librdmacm.x86_64 : Userspace RDMA Connection Manager
 rdma-core.x86_64 : RDMA core userspace libraries and daemons
+```
+
+## View information
+Use `info`:
+```
+$ sudo yum info rdma-core
+
+Installed Packages
+Name         : rdma-core
+Architecture : x86_64
+Size         : 109 k
+Source       : rdma-core-48.0-1.el8.src.rpm
+Repository   : @System
+Summary      : RDMA core userspace libraries and daemons
+URL          : https://github.com/linux-rdma/rdma-core
+Description  : RDMA core userspace infrastructure and documentation, including
+             : initialization scripts, kernel driver-specific modprobe override configs,
+             : IPoIB network scripts, dracut rules, and the rdma-ndd utility.
 ```
