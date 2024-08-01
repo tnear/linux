@@ -24,7 +24,7 @@ $ ls -lR | grep '^l'
 ```
 
 ### List directory itself
-The `-d` lists the directory itself instead of the files it contians. Directories have the letter 'd' at the front.
+The `-d` lists the directory itself instead of the files it contains. Directories have the letter 'd' at the front.
 ```
 $ ls -ld /tmp
 drwxrwxrwt 14 root 4096 /tmp

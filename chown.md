@@ -36,3 +36,6 @@ Use `:<group>` to change group without changing owner.
 ```
 $ sudo chown :team file.txt
 ```
+
+## `lchown`
+`lchown` is the same as `chown` except in the case of symbolic links. `lchown` changes the link itself, while `chown` changes the file which the symlink refers to.

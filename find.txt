@@ -123,4 +123,13 @@ $ find . -type f -exec grep 'hello' {} \;
 # Calls grep one time and passes in all results: grep result1 result2 result2 ...
 $ find . -type f -exec grep 'hello' {} +
 
----
+## Get lines of code (LOC)
+This example gets lines of code for files with a .cpp or .h extension. It uses `-o` to do an OR constraint.
+The parentheses need to be escaped because they have a separate
+meaning in bash.
+```
+$ find . -type f \( -name '*.cpp' -o -name '*.h' \) | xargs wc
+
+  224233  736557 9406531 total
+newlines | word count | characters
+```
