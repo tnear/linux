@@ -58,8 +58,17 @@ $ cat cmdline
 ### `/proc/<pid>/fd`
 Contains all file descriptors used by that process.
 ```
-$ ls fd
-0  1  2  255
+$ ls /proc/<pid>/fd
+0 12 17 18 2 20 22
+ 
+$ ll /proc/<pid>/fd
+lr-x------ 1 travis travis 64 Aug  4 15:23 0 -> 'pipe:[68332]'
+lrwx------ 1 travis travis 64 Aug  4 15:23 12 -> 'anon_inode:[eventfd]'
+lr-x------ 1 travis travis 64 Aug  4 15:23 17 -> /dev/null
+lrwx------ 1 travis travis 64 Aug  4 15:23 18 -> 'socket:[76829]'
+l-wx------ 1 travis travis 64 Aug  4 15:23 2 -> 'pipe:[68334]'
+lrwx------ 1 travis travis 64 Aug  4 15:23 20 -> 'socket:[76831]'
+lr-x------ 1 travis travis 64 Aug  4 15:23 22 -> anon_inode:inotify
 ```
 
 ## `/proc/<pid>/fd`
