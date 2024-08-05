@@ -1,0 +1,74 @@
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+
+# Path to your Oh My Zsh installation.
+export ZSH=$HOME/.oh-my-zsh
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time Oh My Zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+ZSH_THEME="robbyrussell"
+
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in $ZSH/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+plugins=(
+            git
+            colored-man-pages
+            web-search
+        )
+
+source $ZSH/oh-my-zsh.sh
+
+## User configuration ##
+# aliases
+alias l.='ls -d .* --color=auto'
+
+# prompt string (ps1)
+#PROMPT='%F{green}%n@%m%f:%F{blue}%~%f$ '
+# more colorful version:
+PROMPT='%F{magenta}%n%F{yellow}@%F{green}%m%F{248}:%F{blue}%~%F{red}$%f '
+
+# start zsh-autosuggestions
+source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# zsh-history-substring search
+source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+# zsh substring up and down arrow
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+
+# to remove: unset http_proxy; unset https_proxy;
+export http_proxy=http://www-proxy.us.oracle.com:80
+export https_proxy=http://www-proxy.us.oracle.com:80
+
+# zoxide
+eval "$(zoxide init zsh)"
+alias cd='z'
+
+# allow deleting words
+bindkey '^[[3~' kill-word   # ctrl + Delete
+bindkey '^[('   kill-word   # start/opt + Delete
+
+# python
+alias python='python3'
+# run python startup script
+export PYTHONSTARTUP="/Users/tnear/Documents/startup.py"
+
+# zsh-syntax-highlighting (should be last)
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

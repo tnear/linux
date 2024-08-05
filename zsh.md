@@ -27,3 +27,21 @@ $ ll -<tab>
 -L    -- list referenced file for sym link
 -O    -- display file flags
 ```
+
+## Autocomplete
+Example to get autocomplete working for `bazel`.
+
+```bash
+# create oh-my-zsh completions directory if it doesn't exist
+mkdir -p ~/.oh-my-zsh/completions/
+cd ~/.oh-my-zsh/completions/
+
+# download _bazel autocomplete file
+curl https://raw.githubusercontent.com/bazelbuild/bazel/master/scripts/zsh_completion/_bazel -o _bazel
+
+# rebuild autocompletions
+rm -f ~/.zcompdump; compinit
+```
+
+## Resources
+- https://stackoverflow.com/questions/58331977/bazel-tab-auto-complete-in-zsh-not-working
