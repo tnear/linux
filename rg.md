@@ -28,7 +28,7 @@ $ rg --hidden git
 ```
 
 ## Glob (wildcard) search
-Use `-g, --glob` to wildcard search only certain file names.
+Use `-g, --glob` to wildcard search only certain file name patterns.
 ```
 $ rg 'int main' -g 'a*.c'
 alignof.c
@@ -41,10 +41,15 @@ alloca.c
 47:int main()
 ```
 
-## -i, --ignore-case
-`$ rg -i 'Int Main'`
+## Case insensitive search
+Use `-i, --ignore-case`:
+```
+$ rg -i 'Int Main'
+```
 
-## Replace with -r, --replace
+## Replace text
+Use `-r, --replace` to replace output.
+
 This example replaces 'hello' with 'world' (note: this only affects stdout. It does not modify any files).
 
 `$ rg hello -r world`
