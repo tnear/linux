@@ -46,7 +46,7 @@ $ find /usr/include -name '*.[hc]' | xargs wc
 newlines | word count | characters
 ```
 
-This example gets lines of code for files with a .cpp or .h extension. It uses `-o` to do an OR constraint. 
+This example gets lines of code for files with a .cpp or .h extension. It uses `-o` to do an OR constraint.
 ```
 $ find . -type f \( -name '*.cpp' -o -name '*.h' \) | xargs wc
 

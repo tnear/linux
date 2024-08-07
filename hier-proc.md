@@ -60,7 +60,7 @@ Contains all file descriptors used by that process.
 ```
 $ ls /proc/<pid>/fd
 0 12 17 18 2 20 22
- 
+
 $ ll /proc/<pid>/fd
 lr-x------ 1 travis travis 64 Aug  4 15:23 0 -> 'pipe:[68332]'
 lrwx------ 1 travis travis 64 Aug  4 15:23 12 -> 'anon_inode:[eventfd]'

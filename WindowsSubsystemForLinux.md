@@ -35,7 +35,7 @@ PS> wsl --terminate OracleLinux_9_1
 The operation completed successfully.
 PS > wsl --list --verbose
   NAME               STATE           VERSION
-* OracleLinux_9_1    Stopped 
+* OracleLinux_9_1    Stopped
 ```
 
 ## Paths

@@ -1,28 +1,46 @@
-TIME
+# time
 
-time — time a simple command
+`time` — time a simple command
 
+## Basic usage
+Prefix a command to run with `time`:
+```
 $ time ping -c3 example.com
 real    2.08s
 user    0.00s
 sys     0.01s
 cpu     0%
+```
 
-# Time multiple commands defined in file:
-$ time (source fileWithCmds.txt) > /dev/null
+## Measure compilation
+```
+$ time g++ main.cc
+g++ main.cc  0.16s user, 0.05s system, 89% cpu, 0.227 total
+```
 
-# Time is a reserved shell keyword.
-# The shell interprets it before it can go to an external command:
+- 0.16s user: the time spent in user mode (outside of kernel)
+- 0.5s system: time spent in kernel
+- 89% cpu: CPU utilization. This number will be low for I/O bound tasks
+- 0.227 total: user time + system time
+
+## Time multiple commands defined in file
+`$ time (source fileWithCmds.txt) > /dev/null`
+
+## Time is a reserved shell keyword
+The shell interprets it before it can go to an external command:
+```
 $ type time
 time is a reserved word
+```
 
+## `/bin/time`
+`/bin/time` is another timing command which can display detailed diagnostics such as memory usage and page faults.
 
--- /bin/time --
-$ sudo apt install time
+Installation: `$ sudo apt install time`
 
-# /bin/time can display detailed diagnostics such as:
-# memory usage (Maximum resident set size) and page faults
-
+### Python printing
+Use `-v` for verbose output.
+```
 $ /bin/time -v python -c 'print("hello world")'
 hello world
         Command being timed: "python -c print("hello world")"
@@ -45,5 +63,4 @@ hello world
         Signals delivered: 0
         Page size (bytes): 4096
         Exit status: 0
-
----
+```

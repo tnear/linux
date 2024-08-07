@@ -9,9 +9,9 @@ $ sudo ethtool enp0s3
 
 Settings for enp0s3:
 	Supported ports: [ TP ]
-	Supported link modes:   10baseT/Half 10baseT/Full 
-	                        100baseT/Half 100baseT/Full 
-	                        1000baseT/Full 
+	Supported link modes:   10baseT/Half 10baseT/Full
+	                        100baseT/Half 100baseT/Full
+	                        1000baseT/Full
 	Supported pause frame use: No
 	Supports auto-negotiation: Yes
 	Advertised pause frame use: No
