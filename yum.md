@@ -4,6 +4,8 @@ yum - redirecting to DNF Command Reference
 
 The Yellowdog Updater Modified (YUM) is a package manager commonly used on Fedora, Red Hat, and Oracle Linux.
 
+See also [yum-config-manager](yum-config-manager.md).
+
 ## Install a package
 ```
 $ sudo yum install <pkg_name>
@@ -42,4 +44,21 @@ URL          : https://github.com/linux-rdma/rdma-core
 Description  : RDMA core userspace infrastructure and documentation, including
              : initialization scripts, kernel driver-specific modprobe override configs,
              : IPoIB network scripts, dracut rules, and the rdma-ndd utility.
+```
+
+## List packages
+
+### List all packages
+```
+$ yum list installed
+```
+
+### Check if package is installed
+Use `yum list installed <pkg_name>` to check if a package is installed. This syntax supports wildcards (globs):
+
+```
+$ yum list installed perl*
+Installed Packages
+perl-Carp.noarch     1.42-396.el8   @ol8_baseos_latest
+perl-Digest.noarch   1.17-395.el8   @ol8_baseos_latest
 ```

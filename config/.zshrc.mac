@@ -38,9 +38,7 @@ source $ZSH/oh-my-zsh.sh
 # aliases
 alias l.='ls -d .* --color=auto'
 
-# prompt string (ps1)
-#PROMPT='%F{green}%n@%m%f:%F{blue}%~%f$ '
-# more colorful version:
+# colorful prompt string (ps1)
 PROMPT='%F{magenta}%n%F{yellow}@%F{green}%m%F{248}:%F{blue}%~%F{red}$%f '
 
 # start zsh-autosuggestions
@@ -68,7 +66,13 @@ bindkey '^[('   kill-word   # start/opt + Delete
 # python
 alias python='python3'
 # run python startup script
-export PYTHONSTARTUP="/Users/tnear/Documents/startup.py"
+export PYTHONSTARTUP='/Users/tnear/Documents/startup.py'
+
+# do not prompt for expansion operators (ex: !$, !!, !*)
+set +o histverify
+
+# set extended flag (-E) (everything else is mac-default)
+alias grep='grep -E --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
 
 # zsh-syntax-highlighting (should be last)
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
