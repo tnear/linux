@@ -62,3 +62,18 @@ Installed Packages
 perl-Carp.noarch     1.42-396.el8   @ol8_baseos_latest
 perl-Digest.noarch   1.17-395.el8   @ol8_baseos_latest
 ```
+
+## List repositories
+```
+$ yum repolist
+repo id            repo name
+ol8_appstream      Oracle Linux 8 Application Stream
+ol8_baseos_latest  Oracle Linux 8 BaseOS Latest (x86_64)
+```
+
+## Remove (uninstall)
+```
+$ sudo yum remove <pkg_name>
+# or
+$ sudo yum erase <pkg_name>
+```

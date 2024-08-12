@@ -21,7 +21,7 @@ $ echo $HOME
 ```
 
 ## Path
-These are directories searched when running commands
+These are directories searched when running commands.
 ```
 $ printenv PATH
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin

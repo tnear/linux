@@ -1,2 +1,5 @@
-# Ignore VSCode crashes
+# VSCode crashes
 code.core
+
+# macOS metadata
+.DS_Store
