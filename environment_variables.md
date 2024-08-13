@@ -52,3 +52,17 @@ $ bash -c 'echo $QQQQ'
 $ QQQQ=101 ZZZZ=102 bash -c 'echo $QQQQ $ZZZZ'
 101 102
 ```
+
+## Shell version
+
+### Bash
+```
+$ echo $BASH_VERSION
+4.4.20(1)-release
+```
+
+### Zsh
+```
+$ zsh --version
+zsh 5.9 (x86_64-apple-darwin23.0)
+```

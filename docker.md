@@ -30,15 +30,28 @@ Docker containers are applications which reuse the OS, while VMs package the ent
 
 **Docker Containers**: A container is a runtime instance of a Docker image. It runs isolated from the host environment by default, only accessing host files and networks if configured to do so.
 
-**Dockerfile**: This is a text file that contains all the commands a user would otherwise call on the command line to assemble an image.
+## Dockerfile
+A `Dockerfile` is a text file that contains all the commands a user would otherwise call on the command line to assemble an image.
 
 Example `Dockerfile`:
 ```
-# Use the official Ubuntu as a parent image
+# Use the official Ubuntu as a parent image.
+# 'FROM' is typically the first line in a Dockerfile.
 FROM ubuntu:latest
 
-# Update packages and install Python
+# change the working directory. Subsequent statements
+# which use relative paths will start from here.
+WORKDIR /app
+
+# RUN runs a command inside the image being built.
+# RUN is commonly used to install and configure packages
 RUN apt-get update && apt-get install -y python3
+
+# COPY adds files and folders to your image's file system
+COPY main.js /app/main.js
+
+# ENV sets environment variables available to containers
+ENV PATH=$PATH:/app/bin
 ```
 
 ## API
@@ -115,3 +128,6 @@ Use the `stop` command.
 `$ docker container stop my_container`
 
 Use `docker container ps -a` to check on its status.
+
+## Resources
+- https://spacelift.io/blog/dockerfile
