@@ -36,10 +36,10 @@ source $ZSH/oh-my-zsh.sh
 
 ## User configuration ##
 # aliases
-alias l.='ls -d .* --color=auto'
+alias l.='ls --color=auto -d .*'
 
 # colorful prompt string (ps1)
-PROMPT='%F{magenta}%n%F{yellow}@%F{green}%m%F{248}:%F{blue}%~%F{red}$%f '
+PROMPT='%F{magenta}%n%F{yellow}@%F{0;32}%m%F{248}:%F{blue}%~%F{red}$%f '
 
 # start zsh-autosuggestions
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -60,8 +60,9 @@ eval "$(zoxide init zsh)"
 alias cd='z'
 
 # allow deleting words
-bindkey '^[[3~' kill-word   # ctrl + Delete
-bindkey '^[('   kill-word   # start/opt + Delete
+bindkey '^[[3~' kill-word   # ctrl + delete
+bindkey '^[('   kill-word   # start/opt + delete
+bindkey '^[[3;2~' kill-line  # ctrl + shift + delete
 
 # python
 alias python='python3'
@@ -73,6 +74,9 @@ set +o histverify
 
 # set extended flag (-E) (everything else is mac-default)
 alias grep='grep -E --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
+
+# fzf
+source <(fzf --zsh)
 
 # zsh-syntax-highlighting (should be last)
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

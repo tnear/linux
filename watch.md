@@ -1,14 +1,20 @@
-WATCH
+# watch
 
-watch - execute a program periodically, showing output fullscreen
-Run command at specified interval
+`watch` - execute a program periodically, showing output fullscreen
 
-# -n, --interval = update interval in seconds
+`watch` runs a command at specified interval.
 
-# Run 'ps -aux' every 3 seconds (default is 2 seconds) (Ctrl+C to cancel):
-$ watch -n3 'ps -aux'
+## Specify interval
+Use `-n, --interval` to specify the update interval in seconds. The minimum value is 0.1. The default is 2 seconds.
 
-# Watch a process tree in real time:
+Use `Ctrl+C` to cancel.
+```
+# Run 'ps -aux' every 0.5 seconds (default is 2 seconds)
+$ watch -n0.5 'ps -aux'
+```
+
+## Watch a process tree in real time
+Note: the example does not specify `-n`, so it defaults to updating every 2 seconds.
+```
 $ watch pstree -ahp $(pidof <name>)
-
----
+```
