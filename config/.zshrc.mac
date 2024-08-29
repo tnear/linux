@@ -72,8 +72,8 @@ export PYTHONSTARTUP='/Users/tnear/Documents/startup.py'
 # do not prompt for expansion operators (ex: !$, !!, !*)
 set +o histverify
 
-# set extended flag (-E) (everything else is mac-default)
-alias grep='grep -E --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
+# set extended flag (-E) and line numbers (everything else is mac-default)
+alias grep='grep -E -n --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
 
 # fzf
 source <(fzf --zsh)

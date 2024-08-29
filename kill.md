@@ -15,13 +15,13 @@ todo: multiple process IDs, plus show pkill
 
 ## Commonly used signals
 ```
-1       HUP (hang up)
-2       INT (interrupt)
-3       QUIT (quit)
-6       ABRT (abort)
-9       KILL (non-catchable, non-ignorable kill)
-14      ALRM (alarm clock)
-15      TERM (software termination signal)
+-1       HUP (hang up)
+-2       INT (interrupt)
+-3       QUIT (quit)
+-6       ABRT (abort)
+-9       KILL (non-catchable, non-ignorable kill)
+-14      ALRM (alarm clock)
+-15      TERM (software termination signal)
 ```
 
 ## Search for process id and kill
@@ -33,11 +33,14 @@ $ ps | grep gedit
 $ kill 220421
 ```
 
-## Force-kill using KILL signal (-9)
+## Force-kill using SIGKILL or SIGTERM
 ```
 $ kill -9 <processID>
 OR
 $ kill -SIGKILL <processID>
+
+$ kill -15 <processID>
+$ kill -SIGTERM <processID>
 ```
 
 ## Kill multiple processes
