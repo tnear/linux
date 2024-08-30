@@ -1,15 +1,19 @@
-BASH
+# bash
 
-bash - GNU Bourne-Again SHell
+`bash` - GNU Bourne-Again SHell
 
-# -c = command to run:
+## -c = command to run
+```
 $ bash -c 'echo hello'
 hello
 
 # OR:
 $ zsh -c 'echo hello'
+```
 
-# -x = execution trace (xtrace) mode. Verbose output for debugging scripts:
+## -x = execution trace (xtrace) mode
+The `-x` flag creates verbose output for debugging scripts:
+```
 $ cat script.sh
 #!/bin/bash
 echo 'Starting script'
@@ -23,7 +27,14 @@ Starting script
 Hello, world!
 + echo 'Script completed'
 Script completed
+```
 
 ^The '+' sign denotes the command about to be run
 
----
+## subshell
+To create a subshell, which is a child process of current shell, enclose statements in parentheses:
+```
+(cd path/to/dir && make)
+```
+
+This will change directory in a subshell then `make`. This does not change the directory of the current shell.

@@ -16,13 +16,15 @@ See also [ripgrep](rg.md).
 -B = show X lines before
 -C = show X lines before and after
 -c = count number of occurrences
--E = extended regexp, supports a few extra characters such as '|'
+-E = extended regexp, supports extra characters such as '|'
 -f = match patterns defined in file
 -i = case insensitive
 -n = show line numbers
 -o = only print matched text
--P = PCRE. For example, if left off must use [0-9] for \d.
+-P = PCRE. For example, if left off must use '[0-9]' for '\d'
+-q = quiet, do not write anything to stdout
 -r = recursively search directories
+-R = recursively search directories while following symlinks
 -v = invert-select. Return lines NOT containing pattern.
 -w = match whole word
 --exclude-dir=GLOB = ignore specified directories
