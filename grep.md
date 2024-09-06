@@ -33,10 +33,13 @@ See also [ripgrep](rg.md).
 ## -r, --recursive = recursively search all sub-directories
 Use `-r` to recursive search starting in a directory.
 ```
-$ grep -r 'test' ~
+$ grep -r 'repo' ~
 
-# Exclude '.git' directory from 'test' directory
-$ grep -r --exclude-dir='.git' 'test'
+# Exclude '.git' directory from 'repo' directory
+$ grep -r --exclude-dir='.git' 'repo'
+
+# exclude multiple directories
+$ grep -r --exclude-dir={.git,.vscode} 'log'
 ```
 
 Note: [`rg`](rg.md) does this natively.
