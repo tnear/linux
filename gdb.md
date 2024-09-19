@@ -37,7 +37,7 @@ Use the `frame` command to change stack frames.
 ```
 
 ### Up/down
-Use `down` to decrement one from the frame. Use `up` to increment.
+Use `up` to increment one from the frame. Use `down` to decrement.
 
 ```
 (gdb) frame 3  # switch to frame 3

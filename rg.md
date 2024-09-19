@@ -58,3 +58,12 @@ This example replaces 'hello' with 'world' (note: this only affects stdout. It d
 This example replaces 'hello <word>' with 'goodbye <word>'.
 
 `$ rg 'hello (\w+)' -r 'goodbye $1'`
+
+## Multiline
+Use the multiline flag, `-U, --multiline`, to search multiple lines. Note: `ripgrep` supports this, but `grep` does not.
+```
+$ rg 'abc\ndef' -U
+lines.txt
+1:abc
+2:def
+```

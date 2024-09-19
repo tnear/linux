@@ -89,3 +89,6 @@ b.txt
 ```
 $ grep -B3 -A4 'pattern' <file>
 ```
+
+## Multiline
+`grep` does not support multiline patterns. Use [ripgrep](rg.md) instead.
