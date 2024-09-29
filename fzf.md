@@ -8,7 +8,7 @@ https://github.com/junegunn/fzf
 $ code <Ctrl+T>
 ```
 
-### Select multiple files with <TAB> key
+### Select multiple files with the `<TAB>` key
 ```
 $ code env.txt sync.txt
 ```

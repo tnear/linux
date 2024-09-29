@@ -2,6 +2,14 @@
 
 ## Breakpoints
 
+### Breakpoint information
+Use `info breakpoints` or `info b` to display information about breakpoints.
+```
+(gdb) info b
+Num   Type         Disp Enb Address            What
+3     breakpoint   keep y   0x04108b0 in MyFcn::TestBody() at test/testWrite.cpp:121
+```
+
 ### Setting breakpoints
 To set a breakpoint, use any combination of these commands:
 ```
@@ -13,16 +21,14 @@ To set a breakpoint, use any combination of these commands:
 ### Clearing (removing/deleting) breakpoints
 Use gdb's `clear` command:
 ```
-(gdb) clear 100
+(gdb) clear      # clear all breakpoints
+(gdb) clear 100  # clear breakpoint on line 100
 ```
 
-### Breakpoint information
-Use `info breakpoints` or `info b` to display information about breakpoints.
-```
-(gdb) info b
-Num   Type         Disp Enb Address            What
-3     breakpoint   keep y   0x04108b0 in MyFcn::TestBody() at test/testWrite.cpp:121
-```
+### Enable/disable
+Use `enable` / `disable` to toggle availability.
+
+Use `enable N` / `disable N` to toggle a particular breakpoint index.
 
 ## Backtrace
 Use `bt` or `backtrace` to examine the call stack.
@@ -76,9 +82,30 @@ main () at a.cpp:8
 ### List watchpoints
 ```
 (gdb) info watchpoints
-Num   Type           Disp Enb Address   What
-2     hw watchpoint  keep y             x
-3     hw watchpoint  keep y             y
+Num   Type           Disp  Enb Address   What
+2     hw watchpoint  keep  y             x
+3     hw watchpoint  keep  y             y
+```
+
+## Pretty printers
+
+### List all pretty printers
+To list all pretty printers,
+```
+(gdb) info pretty-printer
+global pretty-printers:
+  builtin
+    mpx_bound128
+  objfile /lib64/libstdc++.so.6 pretty-printers:
+  libstdc++-v6
+    __gnu_cxx::__8::__normal_iterator
+```
+
+### `filesystem::path`
+```
+# workingFolder_ is std::filesystem::path
+(gdb) p workingFolder_._M_pathname
+$1 = "/tmp/myWorkingPath"
 ```
 
 ## Resources
