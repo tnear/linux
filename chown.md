@@ -2,9 +2,11 @@
 
 `chown` - change owner - change file owner and group
 
-## Common flags
+## Recursive change
+Use `-R` to change the ownership recursively of a directory contents.
 ```
--R -> change ownership recursively on directory contents
+# sudo chown <user> <dir> -R
+sudo chown tnear .ssh -R
 ```
 
 ## Change owner to nobody
