@@ -29,7 +29,7 @@ world
 ```
 
 ### Interpret backslashes
-Use the `-e` flag to interpret backslashes:
+Use the `-e` flag to interpret backslashes. Useful for writing newlines to a file.
 
 ```bash
 $ echo 'a\nbc'    # does not insert newline

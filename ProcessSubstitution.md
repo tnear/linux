@@ -35,6 +35,15 @@ $ ls /usr/bin/ > usrbindir
 $ diff bindir usrbindir
 ```
 
+## Read disks into string array
+
+```bash
+$ mapfile disks < <(lsblk -o PATH | grep -v 'PATH')
+$ echo ${disks[@]}
+/dev/sda /dev/sda1 /dev/sda2 /dev/sda3 /dev/nvme1n1
+```
+
 ## Resources
 - https://en.wikipedia.org/wiki/Process_substitution
 - https://medium.com/factualopinions/process-substitution-in-bash-739096a2f66d
+- https://medium.com/@linuxadminhacks/understanding-mapfile-command-in-linux-9a13a2e2008a
