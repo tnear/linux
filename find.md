@@ -2,9 +2,19 @@
 
 `find` - search for files in a directory hierarchy
 
-## Case sensitive recursive find in pwd (.) for file names containing 'hello'
+## Case sensitive recursive find in pwd (.) for file names containing 'hello' using a glob
 ```
 $ find . -name '*hello*'
+```
+
+### Regex
+Use `-regex` to match more complex patterns. It matches the entire path, not just the file name.
+
+```
+$ touch file1 file12
+$ find . -regex '\./file[0-9][0-9]*' # no '+' support on all versions
+./file12
+./file1
 ```
 
 ## Get number of files with .h or .c extension
@@ -14,7 +24,7 @@ $ find /usr/include -name '*.[hc]' | wc
 newlines | word count | characters
 ```
 
-'find' outputs file paths, so this means there are 8085 files (first col)
+`find` outputs file paths, so this means there are 8085 files (first col)
 
 ## Case insensitive find for file names containing 'hello'
 ```
@@ -80,7 +90,7 @@ $ find . -user 'root'
 ```
 
 ## TYPE - search file type.
-f = plaintext, d = directory, l = symbolic link
+`f` = plaintext, `d` = directory, `l` = symbolic link
 
 ```
 # Find all directories
@@ -178,8 +188,8 @@ find . -type f -printf "%s %p\n"
 896 ./.git/hooks/commit-msg.sample
 ```
 
-### sort -rn
+### `sort -rn`
 Sorts by Number in Reverse order
 
-### awk
+### `awk`
 Prints the second field followed by the first field.

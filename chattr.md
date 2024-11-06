@@ -18,7 +18,7 @@ $ sudo chattr +i file.txt
 $ sudo rm file.txt
 rm: cannot remove 'file.txt': Operation not permitted
 
-# Remove 'i' attribute then delete file:
+# Remove `i` attribute then delete file:
 $ sudo chattr -i file.txt
 $ rm file.txt
 ```

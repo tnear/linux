@@ -19,4 +19,5 @@ echo ${lines[*]} # outputs "Line 1 Line 2 Line 3"
 ```
 
 ## Resources
+- https://medium.com/@linuxadminhacks/understanding-mapfile-command-in-linux-9a13a2e2008a
 - https://www.shellcheck.net/wiki/SC2207

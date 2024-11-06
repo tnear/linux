@@ -4,7 +4,7 @@
 System-wide configuration files, often editable in a text editor.
 
 ## `/etc/fstab`
-File Systems TABle. Used by 'mount'.
+File Systems TABle. Used by `mount`.
 
 ## `/etc/groups`
 A group file which defines teh groups on a system.
@@ -25,3 +25,6 @@ Accounts, IDs, and home directories.
 
 ## `/etc/shadow`
 Hashed passwords. Root-only file access.
+
+## `/etc/environment`
+A system-wide configuration file used by all users. Requires administrator privileges to modify.
