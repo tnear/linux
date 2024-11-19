@@ -19,6 +19,7 @@ See also [ripgrep](rg.md).
 -E = extended regexp, supports extra characters such as '|'
 -f = match patterns defined in file
 -i = case insensitive
+-m NUM, --max-count=NUM = stop after NUM results, ex: grep -m 1 'pattern'
 -n = show line numbers
 -o = only print matched text
 -P = PCRE. For example, if left off must use '[0-9]' for '\d'

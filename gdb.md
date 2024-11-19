@@ -87,6 +87,11 @@ Num   Type           Disp  Enb Address   What
 3     hw watchpoint  keep  y             y
 ```
 
+## Threading
+List current threads using `info threads`.
+
+Switch to a thread using `thread <thread_num>`, ex: `thread 2`.
+
 ## Pretty printers
 
 ### List all pretty printers
