@@ -35,11 +35,12 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 ## User configuration ##
-# aliases
-alias l.='ls --color=auto -d .*'
+# aliases (-G for color output on macOS)
+alias l.='ls -G -d .*'
 
 # colorful prompt string (ps1)
-PROMPT='%F{magenta}%n%F{yellow}@%F{0;32}%m%F{248}:%F{blue}%~%F{red}$%f '
+#PROMPT='%F{magenta}%n%F{yellow}@%F{0;32}%m%F{248}:%F{blue}%~%F{red}$%f '
+PROMPT='%F{magenta}%n%F{yellow}@%F{cyan}%m%F{248}:%F{blue}%~%F{red}$%f '
 
 # start zsh-autosuggestions
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -51,16 +52,20 @@ source /opt/homebrew/share/zsh-history-substring-search/zsh-history-substring-se
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 
-# to remove: unset http_proxy; unset https_proxy;
-export http_proxy=http://www-proxy.us.oracle.com:80
-export https_proxy=http://www-proxy.us.oracle.com:80
 
 # zoxide
 eval "$(zoxide init zsh)"
 alias cd='z'
 
 # allow deleting words
-bindkey '^[[3~' kill-word   # ctrl + delete
+if [ "$TERM_PROGRAM" = vscode ]; then
+    # vscode maps backspace to delete to ctrl + delete.
+    # this may be a bug. for bindkey purposes, vscode
+    # needs no extra configuration
+else
+    bindkey '^[[3~' kill-word   # ctrl + delete
+fi
+
 bindkey '^[('   kill-word   # start/opt + delete
 bindkey '^[[3;2~' kill-line  # ctrl + shift + delete
 
@@ -77,6 +82,9 @@ alias grep='grep -E -n --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,
 
 # fzf
 source <(fzf --zsh)
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 # zsh-syntax-highlighting (should be last)
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

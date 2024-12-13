@@ -113,5 +113,10 @@ global pretty-printers:
 $1 = "/tmp/myWorkingPath"
 ```
 
+## Attach to existing process ID
+Use `gdb -p pid`.
+
+If there is one instance running: `gdb -p $(pidof <process_name>)`.
+
 ## Resources
 - https://sourceware.org/gdb/current/onlinedocs/gdb.html/Set-Watchpoints.html
