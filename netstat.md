@@ -10,10 +10,11 @@ Display network connections. Often used for diagnosing problems or determining t
 
 ## Common flags
 ```
--a, --all     -> Show both listening and non-listening sockets
--n, --numeric -> Show numeric addresses
--p, --program -> show process ID (PID)
--t, --tcp     -> show TCP sockets
+-a, --all             => Show both listening and non-listening socket
+-n, --numeric         => Show numeric addresses
+-p, --program         => show process ID (PID)
+-t, --tcp             => Show TCP sockets
+-A, --protocol=family => Filter family, ex: inet or unix
 ```
 
 ## Basic usage (no flags)
