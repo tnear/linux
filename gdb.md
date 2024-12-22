@@ -1,5 +1,21 @@
 # gdb
 
+## Source code
+Use `list` to see print code lines.
+
+### Common `list` usages
+```
+(gdb) list  # print lines
+(gdb) list <line_num>  # print lines centered around line_num
+(gdb) list function  # print lines of function
+```
+
+### Other lines of code usages
+```
+(gdb) frame  # show current line
+(gdb) tui enable  # enter tui mode
+```
+
 ## Breakpoints
 
 ### Breakpoint information
@@ -30,6 +46,11 @@ Use `enable` / `disable` to toggle availability.
 
 Use `enable N` / `disable N` to toggle a particular breakpoint index.
 
+## Stepping
+- Use `next` or `n` to step over the current line.
+- Use `step` or `s` to step into the current line.
+- Use `finish` or `fin` to step out of the current function.
+
 ## Backtrace
 Use `bt` or `backtrace` to examine the call stack.
 
@@ -54,15 +75,24 @@ Use `up` to increment one from the frame. Use `down` to decrement.
 ## Text user interface
 Text user interface (TUI) is a gdb mode which shows the source file, command pane, and breakpoint locations in one view.
 
-To fix ncurses rendering issues (common in TUI mode), press `Ctrl+L`.
-
-### Enabling TUI
+### Toggling TUI
+Use either the command below or shortcut key (`Ctrl + X + A`).
 ```
 (gdb) tui enable
+(gdb) tui disable
 ```
 
+### Fix rendering issues
+To fix ncurses rendering issues (common in TUI mode), press `Ctrl+L`.
+
+### Cycling command history (without arrow keys)
+Use `Ctrl+P` for previous and `Ctrl+N` for next. Note: VSCode may intercept these shortcuts if using gdb through a terminal pane in VSCode.
+
 ### Support using arrow keys for history
-Use `Ctrl+X O` to move focus to the command window. This enables the arrow keys to access the command history. The mouse scroll wheel will continue to function.
+Use either `focus cmd` or shortcut `Ctrl+X O` to move focus to the command window. This enables the arrow keys to access the command history. The mouse scroll wheel will continue to function.
+
+- Use `focus next` to cycle between.
+- Use `focus src` to set focus back to source.
 
 ## Watchpoints
 A watchpoint (or *data breakpoint*) is a way to pause execution when the value of an expression changes.
@@ -118,5 +148,35 @@ Use `gdb -p pid`.
 
 If there is one instance running: `gdb -p $(pidof <process_name>)`.
 
+## Python
+gdb includes a built-in Python interpreter.
+
+### Run simple command
+```
+(gdb) python print('hello world')
+hello world
+```
+
+### Run complex commands
+To run more complex commands, enter into `python` mode. Type `end` when done.
+```
+(gdb) python
+for item in [1, 2, 3]:
+    print(item)
+end
+```
+
+## Shell commands
+To run shell commands from `gdb`, type `shell <cmd>`. Ex:
+
+```
+(gdb) shell ps
+  PID TTY          TIME CMD
+ 1024 pts/6    00:00:00 zsh
+25575 pts/6    00:00:00 gdb
+25670 pts/6    00:00:00 ps
+```
+
 ## Resources
 - https://sourceware.org/gdb/current/onlinedocs/gdb.html/Set-Watchpoints.html
+- https://youtu.be/-n9Fkq1e6sg
