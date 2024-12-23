@@ -13,6 +13,7 @@ See also [ripgrep](rg.md).
 ## Common flags
 ```
 -A = show X lines after. Space is optional: '-A 3' or '-A3'
+-a = treat binary files as ASCII. Useful to see more than 'binary file matches'
 -B = show X lines before
 -C = show X lines before and after
 -c = count number of occurrences
