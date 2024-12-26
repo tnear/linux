@@ -72,6 +72,18 @@ Use `up` to increment one from the frame. Use `down` to decrement.
 (gdb) down 3   # subtract (frame 4 - 3) to change to frame 1
 ```
 
+### Full backtrace
+Use `backtrace full` to see the backtrace with local variable names and values.
+```
+(gdb) bt full
+#0  recursive_func (depth=2) at debug.cpp:13
+        local_var = 32767
+#1  0x0000000000401227 in main () at debug.cpp:25
+        head = {
+          next = 0x416eb0
+        }
+```
+
 ## Text user interface
 Text user interface (TUI) is a gdb mode which shows the source file, command pane, and breakpoint locations in one view.
 
@@ -117,12 +129,51 @@ Num   Type           Disp  Enb Address   What
 3     hw watchpoint  keep  y             y
 ```
 
+### Other watchpoint capabilities
+```
+watch foo             # stop when foo is modified
+watch -l foo          # watch location (address)
+rwatch foo            # stop when foo is read (read watchpoint)
+watch foo thread 3    # stop when thread 3 modifies foo
+watch foo if foo > 10 # stop when foo is > 10
+```
+
 ## Threading
 List current threads using `info threads`.
 
 Switch to a thread using `thread <thread_num>`, ex: `thread 2`.
 
+## Macros
+
+### Display macro by name
+Use `info macro <name>`.
+```
+(gdb) info macro MULTIPLY
+Defined at /home/user/debug.cpp:3
+#define MULTIPLY(x, y) ((x) * (y))
+```
+
+## Dynamic printf (dprintf)
+`dprintf` creates `printf` printing without recompilation.
+
+```
+(gdb) dprintf <loc>, "String length: %d\n", s->length
+
+# where <loc> is a regular gdb breakpoint location, ex:
+(gdb) dprintf example.c:15 ...
+(gdb) dprintf func ...
+```
+
 ## Pretty printers
+
+### Enable pretty print
+Add this to `.gdbinit`: `set print pretty on`
+
+### Query pretty print status
+```
+(gdb) show print pretty
+Pretty formatting of structures is on.
+```
 
 ### List all pretty printers
 To list all pretty printers,
@@ -143,10 +194,19 @@ global pretty-printers:
 $1 = "/tmp/myWorkingPath"
 ```
 
-## Attach to existing process ID
+## Process ID (PID)
+
+### Attach to existing process ID
 Use `gdb -p pid`.
 
 If there is one instance running: `gdb -p $(pidof <process_name>)`.
+
+## Get PID of inferior (attached) process
+```
+(gdb) info inferior
+  Num  Description       Connection      Executable
+* 1    process 11126     1 (native)      /home/user/debug.out
+```
 
 ## Python
 gdb includes a built-in Python interpreter.
@@ -180,3 +240,4 @@ To run shell commands from `gdb`, type `shell <cmd>`. Ex:
 ## Resources
 - https://sourceware.org/gdb/current/onlinedocs/gdb.html/Set-Watchpoints.html
 - https://youtu.be/-n9Fkq1e6sg
+- https://youtu.be/V1t6faOKjuQ

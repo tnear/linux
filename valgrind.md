@@ -38,3 +38,19 @@ Valgrind produces output about memory usage. This indicates that 40 bytes of mem
 ==932954== For lists of detected and suppressed errors, rerun with: -s
 ==932954== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
 ```
+
+## Valgrind with `gdb`
+Syntax top stop after zero errors:
+
+```
+valgrind --vgdb=full -vgdb-error=0 ./a.out
+```
+
+This will print to `stdout` instructions for attaching gdb, ex:
+
+```
+TO DEBUG THIS PROCESS USING GDB: start GDB like thi
+    /path/to/gdb ./a.out
+and then give GDB the following command
+  target remote | /usr/lib/valgrind/.. --pid=1234
+```
