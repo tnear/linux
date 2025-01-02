@@ -129,6 +129,9 @@ Num   Type           Disp  Enb Address   What
 3     hw watchpoint  keep  y             y
 ```
 
+### Delete (remove) watchpoints
+Use `delete <idx>` to remove a watchpoint.
+
 ### Other watchpoint capabilities
 ```
 watch foo             # stop when foo is modified
@@ -235,6 +238,54 @@ To run shell commands from `gdb`, type `shell <cmd>`. Ex:
  1024 pts/6    00:00:00 zsh
 25575 pts/6    00:00:00 gdb
 25670 pts/6    00:00:00 ps
+```
+
+## `gdb-dashboard`
+
+https://github.com/cyrus-and/gdb-dashboard
+
+GDB dashboard is a useful debugger TUI for gdb. These are useful commands to set in `.gdbinit`:
+
+```bash
+# hide certain sections using '!' before section name
+dashboard -layout !assembly breakpoints expressions history !memory !registers stack variables source !threads
+# show more source code lines (default is 10)
+dashboard source -style height 18
+# full variables view
+dashboard variables -style compact False
+dashboard variables -style align True
+# bold current line
+dashboard source -style highlight-line True
+# highlight current line in gray:
+dashboard -style style_selected_1 '47;3;1'
+# syntax coloring
+dashboard -style syntax_highlighting 'xcode'
+```
+
+### Expressions
+Expressions are a way to see (watch) variables or expressions. Unlike watchpoints, execution does not stop when they change. This makes them more similar to vscode's `watch` section than gdb's watchpoint.
+
+Syntax:
+```
+# add watch
+dashboard expressions watch myVariable
+dashboard expressions watch "ptr->value"
+dashboard expressions watch "array[i]"
+
+# remove watch
+dashboard expressions unwatch myVariable
+
+# clear all watches
+dashboard expressions clear
+```
+
+## `.gdbinit`
+The .gdbinit file contains a list of gdb commands to execute upon gdb startup.
+
+### Custom gdbinit location
+By default, gdb searches a user's home directory for a `.gdbinit` file to apply. To override this and provide a custom path, use the `-x` flag:
+```
+gdb -x /path/to/custom/gdbinit my_program
 ```
 
 ## Resources
