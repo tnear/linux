@@ -29,6 +29,7 @@ Click column headers.
 
 ## Shortcut keys
 See bottom banner for all shortcuts.
-- Quit (q)
-- Search (F3)
-- Kill (F9)
+- Quit (`q`)
+- Search (`F3`)
+- Kill (`F9`)
+- Setup (`F2`)
