@@ -49,6 +49,7 @@ O      = insert line above cursor and enter insert mode
 :di{  = delete inside { }, deletes text between current { and } scope
 :di[  = same as above but between [ ]
 :da(  = delete ( and ) scope, including '(' and ')'
+:%d   = delete all lines
 
 # COPYING (yank) (p=paste)
 :yy   = copy current line

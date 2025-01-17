@@ -43,6 +43,9 @@ MemFree:        494231856 kB
 MemAvailable:   503907080 kB
 ```
 
+## `/proc/cmdline`
+Shows the parameters passed to the kernel at boot time.
+
 ## `/proc/<pid>`
 Contains the file representation of process id.
 
