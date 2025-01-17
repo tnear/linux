@@ -46,10 +46,27 @@ Use `enable` / `disable` to toggle availability.
 
 Use `enable N` / `disable N` to toggle a particular breakpoint index.
 
+### Conditional breakpoints
+Use `break <location> if <condition>`.
+
+```
+(gdb) break recursive_func.cpp:25 if depth == 1
+```
+
 ## Stepping
 - Use `next` or `n` to step over the current line.
 - Use `step` or `s` to step into the current line.
 - Use `finish` or `fin` to step out of the current function.
+
+### `until`
+- Use `until` (no arguments) to move forward to next line. This is similar to `next`, but it will not backtrack.
+- Use `until <location>` to run until reaching a location.
+
+```
+(gdb) until  # move forward one statement without backtracking
+(gdb) until 25  # run until line 25
+(gdb) until main.cpp:15  # run until line 15 in main.cpp
+```
 
 ## Backtrace
 Use `bt` or `backtrace` to examine the call stack.
@@ -166,6 +183,35 @@ Defined at /home/user/debug.cpp:3
 (gdb) dprintf example.c:15 ...
 (gdb) dprintf func ...
 ```
+
+## `ptype`
+
+Use `ptype` to display data type information for a variable.
+
+```
+(gdb) ptype head
+type = struct Node<int> [with T = int] {
+    T data;
+    Node<T> *next;
+  public:
+    Node(T);
+}
+```
+
+### Offset and size information
+
+```
+(gdb) ptype /o struct Node<int>
+/* offset      |    size */  type = struct Node<int> [with T = int] {
+/*      0      |       4 */    T data;
+/* XXX  4-byte hole      */
+/*      8      |       8 */    Node<T> *next;
+
+                               /* total size (bytes):   16 */
+                             }
+```
+
+You can also use `/xo` to see offsets and size in hex.
 
 ## Pretty printers
 
