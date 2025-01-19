@@ -14,11 +14,25 @@ $ code env.txt sync.txt
 ```
 
 ## History
-Use Ctrl+R (fzf overrides default history shortcut).
+Use Ctrl+R (`fzf` overrides default history shortcut).
 
 ## Search list of active processes:
 ```
 $ ps -aux | fzf
+```
+
+## `**` (relevant data)
+Use `**` then `<TAB>` to show relevant data for a command.
+
+```
+# show processes (use the tab key in fzf to select multiple processes)
+kill **<TAB>
+
+# show hostnames
+ssh **<TAB>
+
+# show aliases
+unalias **<TAB>
 ```
 
 ## Search syntax
