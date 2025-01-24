@@ -39,8 +39,9 @@ source $ZSH/oh-my-zsh.sh
 alias l.='ls -G -d .*'
 
 # colorful prompt string (ps1)
-#PROMPT='%F{magenta}%n%F{yellow}@%F{0;32}%m%F{248}:%F{blue}%~%F{red}$%f '
 PROMPT='%F{magenta}%n%F{yellow}@%F{cyan}%m%F{248}:%F{blue}%~%F{red}$%f '
+# include time:
+# PROMPT='[%D{%H:%M:%S}] %F{magenta}%n%F{yellow}@%F{cyan}%m%F{248}:%F{blue}%~%F{red}$%f '
 
 # start zsh-autosuggestions
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -85,6 +86,24 @@ source <(fzf --zsh)
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
+# unlimited history
+HISTFILE=~/.zsh_history
+HISTSIZE=999999999
+SAVEHIST=$HISTSIZE
+
+# attempt to improve speed of paste
+# zstyle ':bracketed-paste-magic' active-widgets '.self-insert'
+## autoload -Uz bracketed-paste-magic
+## zle -N bracketed-paste bracketed-paste-magic
+
+# eza (ls replacement)
+alias l='eza -lah'
+alias ls='eza'
+alias ll='eza --long --group'
+alias lst='eza --long --tree --level=2'
+alias ls2='eza --long --tree --level=2'
+alias ls3='eza --long --tree --level=3'
 
 # zsh-syntax-highlighting (should be last)
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
