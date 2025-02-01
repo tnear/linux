@@ -33,6 +33,10 @@ ssh **<TAB>
 
 # show aliases
 unalias **<TAB>
+
+# show directories and sub-directories
+cd **<TAB>       # pwd
+cd /usr/**<TAB>  # /usr
 ```
 
 ## Search syntax
