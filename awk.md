@@ -1,8 +1,10 @@
-AWK
+# awk
 
-gawk - GNU AWK - pattern scanning and processing language
+`gawk` - GNU AWK - pattern scanning and processing language
 
-# Create a file:
+## Basic usage
+```bash
+# Create a file
 $ ll > ll.txt
 
 # Print each line of file:
@@ -33,14 +35,28 @@ total 56
 
 # Print lines whose second field ($2) is greater than 2 (i.e., number of hard/soft links > 2):
 $ awk '$2 > 2' ll.txt
+```
 
-# Sum 1 to 100:
-$ seq 1 100 > seq.txt
-# ($1 = field 1, END statements are executed after input is exhausted)
-$ awk '{s+=$1} END {print s}' seq.txt
+## Math
+
+### Sum 1 to 100
+```
+# $1 = field 1
+# END statements are executed after input is exhausted
+$ seq 1 100 | awk '{s+=$1} END {print s}'
 5050
+```
 
-# --MATCH-- #
+### Generate powers of 2
+```
+seq 0 2 | awk '{print 2^$1}'
+1
+2
+4
+```
+
+## Matches
+```
 # Print morning timestamps:
 #   $0            = search entire line
 #   regex pattern = /0[0-9]:[0-9]{2}/
@@ -49,5 +65,4 @@ $ awk '{s+=$1} END {print s}' seq.txt
 $ awk 'match($0, /0[0-9]:[0-9]{2}/, arr) { print arr[0] }' ll.txt
 08:24
 09:58
-
----
+```
