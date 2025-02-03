@@ -1,20 +1,20 @@
-HD
+# hexdump
 
-hexdump - display file contents in hexadecimal, decimal, octal, or ascii
+`hexdump` - display file contents in hexadecimal, decimal, octal, or ascii
 
-$ echo 'hello' > file.txt
-$ hd file.txt
-
-00000000  68 65 6c 6c 6f 0a         |hello.|
-00000006
-
-
-$ hexdump file.txt  # No right column
-0000000 6568 6c6c 0a6f
-0000006
-
+## hexdump
+Use the `-C` flag to show a right column (recommended).
+```
 $ hexdump -C file.txt  # Equivalent to 'hd'
 00000000  68 65 6c 6c 6f 0a         |hello.|
 00000006
+```
 
----
+### `hd`
+`hd` adds the right column by default.
+
+```
+$ echo 'hello' > file.txt
+$ hd file.txt
+00000000  68 65 6c 6c 6f 0a         |hello.|
+```
