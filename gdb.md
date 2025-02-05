@@ -58,7 +58,7 @@ Use `break <location> if <condition>`.
 - Use `step` or `s` to step into the current line.
 - Use `finish` or `fin` to step out of the current function.
 
-### `until`
+### Until
 - Use `until` (no arguments) to move forward to next line. This is similar to `next`, but it will not backtrack.
 - Use `until <location>` to run until reaching a location.
 
@@ -67,6 +67,8 @@ Use `break <location> if <condition>`.
 (gdb) until 25  # run until line 25
 (gdb) until main.cpp:15  # run until line 15 in main.cpp
 ```
+### Running
+Use `run` or `r` to run the application. If it has exited or crash, `run` will restart.
 
 ## Backtrace
 Use `bt` or `backtrace` to examine the call stack.
@@ -162,6 +164,9 @@ watch foo if foo > 10 # stop when foo is > 10
 List current threads using `info threads`.
 
 Switch to a thread using `thread <thread_num>`, ex: `thread 2`.
+
+## Source
+Use `info source` to see full path to file, debug information, and more.
 
 ## Macros
 
@@ -296,7 +301,7 @@ GDB dashboard is a useful debugger TUI for gdb. These are useful commands to set
 # hide certain sections using '!' before section name
 dashboard -layout !assembly breakpoints expressions history !memory !registers stack variables source !threads
 # show more source code lines (default is 10)
-dashboard source -style height 18
+dashboard source -style height 20
 # full variables view
 dashboard variables -style compact False
 dashboard variables -style align True
