@@ -29,7 +29,7 @@ wsl --set-default OracleLinux_9_1
 ## Shutdown
 Use `wsl --shutdown` to shutdown (stop) *all* instances.
 
-Use `wsl --terminate <distribution name> to terminate a particular instance:
+Use `wsl --terminate <distribution name>` to terminate a particular instance:
 ```
 PS> wsl --terminate OracleLinux_9_1
 The operation completed successfully.
