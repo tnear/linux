@@ -16,6 +16,19 @@ $ echo '{"fruit":{"name":"apple","color":"green","price":1.20}}' | jq '.'
 }
 ```
 
+### `-r, --raw-output`
+Use the `-r` flag to write to `stdout` instead of being formatted as a JSON string with quotes.
+
+```bash
+# with -r (no quotes)
+$ jq -r '.fruit.name' fruits.json
+apple
+
+# without
+$ jq '.fruit.name' fruits.json
+"apple"
+```
+
 ## `jq` on a file
 ```
 $ echo '{"fruit":{"name":"apple","color":"green","price":1.20}}' > fruits.json
