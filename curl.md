@@ -19,9 +19,13 @@ $ curl -I google.com
 Content-Length: 219
 
 ### Output to file
-Use `-o, --output` to output to a file
+Use `-O, --remote-name` to output to a file.
 ```bash
-$ curl -o example.html example.com
+# download index.html
+$ curl -O example.com/index.html
+
+# use lowercase -o to specify a custom file name
+$ curl -O example.html example.com
 ```
 
 ### Verbose
