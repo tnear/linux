@@ -7,7 +7,7 @@ An SSD runs a *command set* over a *transport*. For example, AHCI (the command s
 NVMe is faster and more parallel than SAS.
 
 ## List NVMe namespaces
-```
+```bash
 # nvme list
 Node          Generic      Namespace  Usage              Format
 ------------- -----------  ---------- ------------------ -------------

@@ -19,7 +19,7 @@ Its name comes from *Chronos*, the Greek word for time.
 ```
 
 ### Common patterns
-```
+```bash
 # Every minute:
 * * * * * /script.sh
 

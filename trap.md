@@ -6,7 +6,7 @@
 
 The script below uses `trap`to catch a few signals, including `SIGINT`. If a user presses Ctrl+C (`SIGINT`) while the script is running, the trap callback `cleanup()` will be executed.
 
-```
+```bash
 # file to clean up
 FILE='/tmp/tempfile.txt'
 

@@ -5,7 +5,7 @@
 ## Change default shell
 The `-s` flag is used to specify the new default shell.
 
-```
+```bash
 # change to bash
 chsh -s /bin/bash
 # or: chsh -s $(which bash)

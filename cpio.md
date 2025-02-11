@@ -6,14 +6,12 @@ cpio – copy files to and from archives
 
 ## Common flags
 
-```
--o -> output (copy-out)
--i -> input (copy-in)
--v -> verbose
-```
+- `o`: output (copy-out)
+- `i`: input (copy-in)
+- `v`: verbose
 
 ## Basic example
-```
+```bash
 # create files
 $ echo 'one' >> file.txt; echo 'two' >> file2.txt;
 

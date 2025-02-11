@@ -24,7 +24,7 @@ $ ps -aux | fzf
 ## `**` (relevant data)
 Use `**` then `<TAB>` to show relevant data for a command.
 
-```
+```bash
 # show processes (use the tab key in fzf to select multiple processes)
 kill **<TAB>
 
@@ -49,7 +49,7 @@ query$ = suffix exact match
 
 ## Command substitution
 Note: this is not normally needed. Ctrl+T is often easier, plus it adds to your history).
-```
+```bash
 # Use vim to open results of fzf
 $ vim $(fzf)
 ```

@@ -34,7 +34,7 @@ Docker containers are applications which reuse the OS, while VMs package the ent
 A `Dockerfile` is a text file that contains all the commands a user would otherwise call on the command line to assemble an image.
 
 Example `Dockerfile`:
-```
+```bash
 # Use the official Ubuntu as a parent image.
 # 'FROM' is typically the first line in a Dockerfile.
 FROM ubuntu:latest

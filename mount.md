@@ -29,7 +29,7 @@ A bind mount mounts one directory to another. They can be useful when working in
 ### `chroot` example
 `chroot` limits directory access. However, it is common to need common directories such as `/bin` and `/lib64`. A bind mount can help.
 
-```
+```bash
 # create directory in chroot location
 $ mkdir -p /home/chroot/bin
 

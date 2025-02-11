@@ -15,7 +15,7 @@ $ nl /etc/passwd
 ## `-v`, `--starting-line-number=NUMBER`
 Use the `-v` flag to choose the starting line number.
 
-```
+```bash
 # start at line 0
 $ nl /etc/passwd -v 0
 

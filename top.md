@@ -46,6 +46,7 @@ Tasks: 219 total,   1 running, 218 sleeping,   0 stopped,   0 zombie
 MiB Mem :   3921.2 total,    115.9 free,   1402.8 used,   2402.5 buff/cache
 MiB Swap:   1024.0 total,    477.1 free,    546.9 used.   2199.3 avail Mem
 ```
+
 #### `MiB Mem`: memory values are shown in Mebibytes (1 MiB = 1024 KiB)
 - `3921.2 total`: total physical RAM on system
 - `115.9 free`: unused RAM (see `buff/cache` for complete picture)
@@ -80,7 +81,7 @@ MiB Swap:   1024.0 total,    477.1 free,    546.9 used.   2199.3 avail Mem
 - `TIME+`: total CPU time used by process since starting, `minutes:seconds:hundredths`
 - `COMMAND`: program name
 
-```
+```bash
 ## Show processes for a user
 
 $ top -u <user>  # basic syntax

@@ -3,7 +3,7 @@
 Arrays in shell scripts.
 
 ## Example
-```
+```bash
 # Create array using parentheses (no comma)
 $ arr=(2 3 4)
 

@@ -13,7 +13,7 @@ See also: [scp](scp.md)
 ```
 
 ## Copy all files from dir/ to newDir/
-```
+```bash
 # (rsync will create newDir if it doesn't exist)
 $ rsync -av dir newDir/
 sending incremental file list

@@ -61,7 +61,7 @@ $ find . -perm -+x
 
 ## EXECUTABLE - search for executable files
 ### Find executable files and directories
-```
+```bash
 # (directories are executable if they are listable)
 $ find /usr/bin -executable | wc -l
 3093
@@ -74,7 +74,7 @@ $ find /usr/bin -executable -type f | wc -l
 ## SIZE - search file sizes
 c = byes suffix
 ### Find all files larger than 1000 bytes
-```
+```bash
 $ find . -size +1000c
 # Find all files larger than 1 GB:
 $ find / -size +1G 2> /dev/null
@@ -84,7 +84,7 @@ $ find . -size 0c
 ```
 
 ## USER - search file owner
-```
+```bash
 # Find all files owned by 'root':
 $ find . -user 'root'
 ```
@@ -92,7 +92,7 @@ $ find . -user 'root'
 ## TYPE - search file type.
 `f` = plaintext, `d` = directory, `l` = symbolic link
 
-```
+```bash
 # Find all directories
 $ find . -type d
 
@@ -114,7 +114,7 @@ $ find /usr -maxdepth 1
 
 ## -print0 = print name followed by a null byte
 This is useful to process file names containing whitespace characters.
-```
+```bash
 # Often used on conjunction with 'xargs -0'
 $ touch 'a 1' 'a\n2'
 $ find -print0
@@ -128,7 +128,7 @@ $ find -print0 | hd
 ## EXEC
 
 Syntax:
-```
+```bash
 # {}: placeholder for the result found
 # \; = command delimiter ('\' is used to escape the semicolon)
 ```

@@ -17,7 +17,7 @@ $ man 2 mkdir
 ## Specify pager
 Use `-P <pager>` to use a specified pager.
 
-```
+```bash
 # output with cat and filter contents
 $ man -P cat socket | grep name
 76:     correspondents named in send(2) calls.  Datagrams are generally received

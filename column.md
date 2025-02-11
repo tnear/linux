@@ -18,7 +18,7 @@ data1    data2
 ```
 
 ## `-s, --separator` = specify separator character (for inputs)
-```
+```bash
 # Create CSV-file:
 $ printf 'header1,header2\ndata1,data2' > file.csv
 

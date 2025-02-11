@@ -3,7 +3,7 @@
 `gcc` - GNU project C and C++ compiler
 
 ## Basic compilation
-```
+```bash
 # create executable a.out
 gcc file.c
 
@@ -45,7 +45,7 @@ The explicit language can be turned off with `-x none`.
 Supported languages include: `c, c++, assembler, go`
 
 ## Assemble using gcc
-```
+```bash
 # Step 1: -c does not link. Assemble and create file.o:
 $ gcc -c file.s
 

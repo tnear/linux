@@ -4,7 +4,7 @@
 
 ## Recursive change
 Use `-R` to change the ownership recursively of a directory contents.
-```
+```bash
 # sudo chown <user> <dir> -R
 sudo chown tnear .ssh -R
 ```
@@ -12,7 +12,7 @@ sudo chown tnear .ssh -R
 ## Change owner to nobody
 The `nobody` user in Linux owns no files, is in no privileged groups, and has the smallest subset of abilities.
 
-```
+```bash
 # create a file owned by self
 $ touch file.txt
 $ ll !$

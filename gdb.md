@@ -67,6 +67,7 @@ Use `break <location> if <condition>`.
 (gdb) until 25  # run until line 25
 (gdb) until main.cpp:15  # run until line 15 in main.cpp
 ```
+
 ### Running
 Use `run` or `r` to run the application. If it has exited or crash, `run` will restart.
 
@@ -242,9 +243,9 @@ global pretty-printers:
 ```
 
 ### `filesystem::path`
-```
-# workingFolder_ is std::filesystem::path
-(gdb) p workingFolder_._M_pathname
+```bash
+# workingFolder is type std::filesystem::path
+(gdb) p workingFolder._M_pathname
 $1 = "/tmp/myWorkingPath"
 ```
 
@@ -317,7 +318,7 @@ dashboard -style syntax_highlighting 'xcode'
 Expressions are a way to see (watch) variables or expressions. Unlike watchpoints, execution does not stop when they change. This makes them more similar to vscode's `watch` section than gdb's watchpoint.
 
 Syntax:
-```
+```bash
 # add watch
 dashboard expressions watch myVariable
 dashboard expressions watch "ptr->value"

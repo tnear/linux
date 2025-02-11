@@ -7,7 +7,7 @@ Syntax: `<(...command...)`
 ## File creation
 Process substitution creates temporary files which are automatically thrown away.
 
-```
+```bash
 # 'echo hey there' creates a temporary file with the contents 'hey there'
 # cat then echoes the file
 cat <(echo hey there)
@@ -18,7 +18,7 @@ echo <(echo hey there)
 ```
 
 ## Compare two directories
-```
+```bash
 diff <(ls /bin) <(ls /usr/bin)
 
 1,37c1,983

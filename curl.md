@@ -1,38 +1,64 @@
-CURL
+# curl
 
-curl - cURL - Client URL - transfer a URL
+`curl` - cURL - Client URL - transfer a URL
 
-# Output web page HTML:
+## Output web page HTML
+```bash
+# basic usage
 $ curl example.com
-<!doctype html>
-<html>
-<head>
-    <title>Example Domain</title>
-...(truncated)
 
 # Output to file using redirect:
 $ curl example.com > example.html
+```
 
-# -I = Get header only (-I, --head):
+### Get headers only
+Use `-I, --head` to fetch headers only.
+```
 $ curl -I google.com
-Location: http://www.google.com/
-Content-Type: text/html; charset=UTF-8
-Server: gws
+```
 Content-Length: 219
 
-# -o = output to file:
+### Output to file
+Use `-o, --output` to output to a file
+```bash
 $ curl -o example.html example.com
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-100  1256  100  1256    0     0  17091      0 --:--:-- --:--:-- --:--:-- 17444
+```
 
-# -v = verbose (shows header information):
+### Verbose
+Use `-v, --verbose` to show additional information (such as headers)
+
+```bash
+# show header information, dump html content to /dev/null
 $ curl -v example.com > /dev/null
+```
 
-# FTP example:
-$ curl ftp://ftp.slackware.com/welcome.msg
+### Silent
+Use `-s, --silent` to avoid printing progress meter or errors.
+```
+curl -s example.com
+```
 
-# -u = user <user:password>, used to specify user name and password for authentication:
+### Authentication
+Use `-u` to specify `user:password`.
+```bash
 $ curl -u demo:password ftp://test.rebex.net
+```
 
----
+### Header information
+Use `-H, --header` to send extra header information.
+```bash
+curl -H "X-First-Name: Joe" https://example.com
+```
+
+### Follow page moves to a different location
+Use `-L, --location` to make curl redo a request at the new location.
+
+```bash
+curl -L https://example.com
+```
+
+## FTP
+
+```bash
+$ curl ftp://ftp.slackware.com/welcome.msg
+```

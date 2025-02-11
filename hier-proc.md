@@ -8,8 +8,8 @@ Many `/proc` files show as 0 bytes despite having data due to their virtual natu
 $ ls -l /proc/meminfo
 -r--r--r-- 1 root 0 /proc/meminfo
 
-$ cat /proc/meminfo | wc -l
-53
+$ wc -l /proc/meminfo
+53 /proc/meminfo
 ```
 
 ## `/proc/cpuinfo`
@@ -37,7 +37,7 @@ Contains detailed memory information such as amount of used and available RAM.
 
 ### Get RAM usage
 ```
-$ cat /proc/meminfo | grep Mem
+$ grep Mem /proc/meminfo
 MemTotal:       527570896 kB    # 527 M KB = 527 GB total RAM
 MemFree:        494231856 kB
 MemAvailable:   503907080 kB

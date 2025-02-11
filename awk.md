@@ -40,7 +40,7 @@ $ awk '$2 > 2' ll.txt
 ## Math
 
 ### Sum 1 to 100
-```
+```bash
 # $1 = field 1
 # END statements are executed after input is exhausted
 $ seq 1 100 | awk '{s+=$1} END {print s}'
@@ -56,7 +56,7 @@ seq 0 2 | awk '{print 2^$1}'
 ```
 
 ## Matches
-```
+```bash
 # Print morning timestamps:
 #   $0            = search entire line
 #   regex pattern = /0[0-9]:[0-9]{2}/

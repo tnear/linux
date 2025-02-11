@@ -8,7 +8,7 @@
 Use `-n, --interval` to specify the update interval in seconds. The minimum value is 0.1. The default is 2 seconds.
 
 Use `Ctrl+C` to cancel.
-```
+```bash
 # Run 'ps -aux' every 0.5 seconds (default is 2 seconds)
 $ watch -n0.5 'ps -aux'
 ```
