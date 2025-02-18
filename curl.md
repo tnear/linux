@@ -25,7 +25,7 @@ Use `-O, --remote-name` to output to a file.
 $ curl -O example.com/index.html
 
 # use lowercase -o to specify a custom file name
-$ curl -O example.html example.com
+$ curl -o example.html example.com
 ```
 
 ### Verbose

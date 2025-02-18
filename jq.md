@@ -29,7 +29,19 @@ $ jq '.fruit.name' fruits.json
 "apple"
 ```
 
-## `jq` on a file
+## Files
+### No file
+Use the `-n` flag to construct JSON without a file.
+
+```bash
+$ jq -n '{"name": "John", "age": 30}'
+{
+  "name": "John",
+  "age": 30
+}
+```
+
+### `jq` on a file
 ```
 $ echo '{"fruit":{"name":"apple","color":"green","price":1.20}}' > fruits.json
 $ jq '.' fruits.json
