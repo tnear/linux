@@ -4,7 +4,7 @@
 
 ## Example
 
-The script below uses `trap`to catch a few signals, including `SIGINT`. If a user presses Ctrl+C (`SIGINT`) while the script is running, the trap callback `cleanup()` will be executed.
+The script below uses `trap` to catch a few signals, including `SIGINT`. If a user presses Ctrl+C (`SIGINT`) while the script is running, the trap callback `cleanup()` will be executed.
 
 ```bash
 # file to clean up
@@ -18,7 +18,7 @@ cleanup() {
     exit 0
 }
 
-# create trap. Execute 'callback' when SIGINT, SIGTERM, or EXIT signals are sent
+# create trap. Execute 'cleanup()' when SIGINT, SIGTERM, or EXIT signals are sent
 # note that EXIT is sent when the program completes normally
 trap cleanup SIGINT SIGTERM EXIT
 
