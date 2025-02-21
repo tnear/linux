@@ -249,12 +249,17 @@ global pretty-printers:
 $1 = "/tmp/myWorkingPath"
 ```
 
-## Process ID (PID)
+## Attaching
 
 ### Attach to existing process ID
 Use `gdb -p pid`.
 
 If there is one instance running: `gdb -p $(pidof <process_name>)`.
+
+If gdb is already running, use `(gdb) attach <pid>` to attach.
+
+### Detaching
+Use the `detach` command to detach. gdb can now be exited while the process remains running.
 
 ## Get PID of inferior (attached) process
 ```

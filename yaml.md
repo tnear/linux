@@ -67,6 +67,5 @@ task2:
     - custom command     # adds extra command
 ```
 
-
 ## Resources
 - https://en.wikipedia.org/wiki/YAML
