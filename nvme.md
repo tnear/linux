@@ -6,8 +6,25 @@ An SSD runs a *command set* over a *transport*. For example, AHCI (the command s
 
 NVMe is faster and more parallel than SAS.
 
+## NVMe subsystems
+A subsystem is a top-level logical entity in NVMe. It contains one or more controllers. A subsystem had a unique identifier (nqn = nvme qualified name).
+
+### Connecting to a subsystem
+Use [`nvme connect`](nvme-connect.md).
+
+Possible hierarchy:
+```
+Subsystem (NQN: nqn.example.com:subsystem1)
+├── Controller 1 (/dev/nvme0)
+│   ├── Namespace 1 (/dev/nvme0n1)
+│   └── Namespace 2 (/dev/nvme0n2)
+└── Controller 2 (/dev/nvme1)
+    ├── Namespace 1 (/dev/nvme1n1) → Can be the same namespace as nvme0n1
+    └── Namespace 3 (/dev/nvme1n3)
+```
+
 ## NVMe controllers
-A controller is the physical hardware component which manages communication between the host system and the actual flash memory.
+A controller is the physical hardware component which manages communication between the host system and the actual flash memory. Ex: `/dev/nvme0`.
 
 ### Responsibilities for controller
 - Hardware management: each NVMe device has at least one controller which handles command processing, wear leveling, and garbage collection
@@ -23,18 +40,13 @@ nn        : 32  # number of namespaces
 ```
 
 ## NVMe namespaces
-Namespaces are logical divisions of the storage space that can be separately addressed. One controller can manage many namespaces.
+Namespaces are logical divisions of the storage space that can be separately addressed. One controller can manage many namespaces. Ex: `/dev/nvme0n1`.
 
 ### Responsibilities of namespace
 Namespaces provide addressing and isolation.
 
 ### List NVMe namespaces
-```
-sudo nvme list
-Node          Generic      Namespace  Usage              Format
-------------- -----------  ---------- ------------------ -------------
-/dev/nvme2n1  /dev/ng2n1   0x1        2.20 TB / 2.20 TB  4 KiB +  0 B
-```
+See [nvme-list.md](nvme-list.md).
 
 ### NVMe Identify Namespace (`id-ns`)
 Prints information about a namespace, which belongs to a controller. Information includes block size and capacity.
@@ -67,18 +79,6 @@ $ sudo nvme write /dev/nvme0n1 --start-block=0 --data-size=4096 --data-file=inpu
 $ sudo nvme read /dev/nvme0n1 --start-block=0 --data-size=4096
 hello world
 ```
-
-## NVMe reservations
-NVME reservations provide access control that enable multiple hosts to coordinate shared access to an NVMe namespace. A reservation allows a host to acquire exclusive access to a namespace. It also allows the reservation holder to grant specific types of access to other registered hosts.
-
-### Acquiring a reservation
-1. Host registers with a namespace using a unique registration key
-    - `nvme resv-register`
-1. Host acquires a reservation of a specified type
-    - `nvme resv-acquire`
-    - Different reservation types include exclusive, write exclusive
-1. Host releases registration when done
-    - `nvme resv-release`
 
 ## Resources
 - https://www.youtube.com/watch?v=Qy1q4qT7b2M

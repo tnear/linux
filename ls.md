@@ -66,12 +66,12 @@ drwxr-xr-x. 2 root  root           6 Jun 29 00:52 repo_dir
 srwxr-xr-x. 1 user1 access-login   0 Jul 15 19:24 socketFile
 ```
 
-- asan_out.txt is a regula rfile
+- asan_out.txt is a regular file
 - repo_dir is a directory
 - socketFile is a Unix domain socket indicated by the `s` in `srwxr-xr-x`.
 
 ## Case insensitive
-To do a case insensitive listing, use `find` with the `-ls` flag.
+`ls` by itself does not do case insensitive searches. Instead, use `find` with the `-ls` flag.
 ```
 $ find /tmp/ -iname '*data*' -ls
 2853037    8 -rw-r--r--    1 tnear   dev    756 Jul 11 09:10 /tmp//MyData.txt
