@@ -2,9 +2,9 @@
 
 `nvme-list-ctrl` - Send NVMe Identify List Controllers, return result and structure
 
+- Hierarchy: Subsystem -> Controller -> Namespace
 - To list all subsystems, see [`nvme list-subsys`](nvme-list-subsys.md).
 - To list all namespaces, see [`nvme list`](nvme-list.md).
-- Hierarchy: Subsystem -> Controller -> Namespace
 
 Syntax: `nvme list-ctrl <device>`
 
@@ -22,7 +22,7 @@ num of ctrls present: 2
 [   1]:0x42
 ```
 
-To verify they belong to the same subsystem, use `nvme list-subsys`
+To verify they belong to the same subsystem, use [`nvme list-subsys`](nvme-list-subsys.md):
 ```bash
 # note that subsys1 and subsys2 have the same nqn
 nvme-subsys1 - NQN=nqn.1994-11.com.samsung:nvme:PM1733:2.5-inch:S5RTNC0TA06272

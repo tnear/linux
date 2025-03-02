@@ -1,6 +1,6 @@
 # nvme-list
 
-`nvme-list` - List all recognized NVMe devices
+`nvme-list` - List all recognized NVMe devices (ex: namespaces)
 
 - `nvme list` lists all namespaces (ex: `/dev/nvme2n1`).
 - To list all subsystems, see [`nvme list-subsys`](nvme-list-subsys.md).

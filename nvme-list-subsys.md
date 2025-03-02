@@ -2,7 +2,7 @@
 
 `nvme-list-subsys` - List all NVMe subsystems
 
-- `nvme list-subsys` lists all subsystems (ex: nqn).
+- `nvme list-subsys` lists all subsystems (which are uniquely identified by nqn).
 - To list all controllers, see [`nvme list-ctrl`](nvme-list-ctrl.md).
 - To list all namespaces, see [`nvme list`](nvme-list.md).
 - Hierarchy: Subsystem -> Controller -> Namespace

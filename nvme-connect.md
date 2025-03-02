@@ -2,7 +2,7 @@
 
 `nvme-connect` - Connect to a Fabrics controller.
 
-`nvme connect` connects to a **controller** (ex: `/dev/nvme1`) (not a subsystem or namespace). See [nvme.md](nvme.md) for more information on the NVMe hierarchy.
+This NVMe API connects to a **controller** (ex: `/dev/nvme1`) (not a subsystem or namespace). See [nvme.md](nvme.md) for more information on the NVMe hierarchy.
 
 ## Basic usage
 ```bash

@@ -1,18 +1,15 @@
 # NVMe
 
-Non-Volatile Memory is a specification for accessing a computer's non-volatile storage attached via a PCI Express bus.
+Non-Volatile Memory Express (NVMe) is a specification for accessing a computer's non-volatile storage attached via a PCI Express bus.
 
 An SSD runs a *command set* over a *transport*. For example, AHCI (the command set) runs over SATA. SCSI runs over SAS. NVMe runs over PCIe (local) or RoCE (remote).
 
 NVMe is faster and more parallel than SAS.
 
 ## NVMe subsystems
-A subsystem is a top-level logical entity in NVMe. It contains one or more controllers. A subsystem had a unique identifier (nqn = nvme qualified name).
+A subsystem is a top-level logical entity in NVMe. It contains one or more controllers. A subsystem has a unique identifier called an *nqn* (nvme qualified name).
 
-### Connecting to a subsystem
-Use [`nvme connect`](nvme-connect.md).
-
-Possible hierarchy:
+Possible subsystem, controller, namespace hierarchy:
 ```
 Subsystem (NQN: nqn.example.com:subsystem1)
 ├── Controller 1 (/dev/nvme0)
@@ -22,6 +19,9 @@ Subsystem (NQN: nqn.example.com:subsystem1)
     ├── Namespace 1 (/dev/nvme1n1) → Can be the same namespace as nvme0n1
     └── Namespace 3 (/dev/nvme1n3)
 ```
+
+### Connecting to a subsystem
+Use [`nvme connect`](nvme-connect.md).
 
 ## NVMe controllers
 A controller is the physical hardware component which manages communication between the host system and the actual flash memory. Ex: `/dev/nvme0`.
@@ -46,7 +46,7 @@ Namespaces are logical divisions of the storage space that can be separately add
 Namespaces provide addressing and isolation.
 
 ### List NVMe namespaces
-See [nvme-list.md](nvme-list.md).
+See [`nvme list`](nvme-list.md).
 
 ### NVMe Identify Namespace (`id-ns`)
 Prints information about a namespace, which belongs to a controller. Information includes block size and capacity.
