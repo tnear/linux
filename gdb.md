@@ -141,6 +141,15 @@ New value = 7
 main () at a.cpp:8
 ```
 
+## Watch an address
+This is useful if the variable (but not its memory) leaves the scope of the current function:
+```
+(gdb) print &(cls->member)
+$1 = (MyClass *) 0x7fffe80747bc
+
+(gdb) watch *(MyClass *)0x7fffe80747bc
+```
+
 ### List watchpoints
 ```
 (gdb) info watchpoints
