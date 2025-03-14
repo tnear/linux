@@ -79,3 +79,12 @@ All file descriptors in use by a process. `0=stdin, 1=stdout, 2=stderr`.
 
 ## `/proc/interrupts`
 Shows how many times an interrupt number (0, 1, 6, 17) ran on a CPU.
+
+## `/proc/sys/kernel/core_pattern`
+Contains the core dump pattern.
+```bash
+# note: the '|' symbol at the beginning means that
+# core dumps are being managed by systemd (coredumpctl)
+cat /proc/sys/kernel/core_pattern
+|/usr/lib/systemd/systemd-coredump %P %u %g %s %t %c %h
+```

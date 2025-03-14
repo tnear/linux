@@ -354,6 +354,14 @@ By default, gdb searches a user's home directory for a `.gdbinit` file to apply.
 gdb -x /path/to/custom/gdbinit my_program
 ```
 
+## Crash dumps
+To debug a crash dump, use `gdb <binary> <path/to/coredump>`. Ex:
+```
+$ gdb my_crash /path/to/dump
+```
+
+Note: if crash dumps are managed by `coredumpctl`, use `coredumpctl debug <id>`. See [coredumpctl]().
+
 ## Resources
 - https://sourceware.org/gdb/current/onlinedocs/gdb.html/Set-Watchpoints.html
 - https://youtu.be/-n9Fkq1e6sg
