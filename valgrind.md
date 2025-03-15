@@ -39,7 +39,7 @@ Syntax to stop after zero errors:
 valgrind --vgdb=full -vgdb-error=0 ./a.out
 ```
 
-This will print to `stdout` instructions for attaching gdb, ex:
+This will print instructions to `stdout` for attaching gdb, ex:
 
 ```
 TO DEBUG THIS PROCESS USING GDB: start GDB like this
@@ -49,7 +49,7 @@ and then give GDB the following command
 ```
 
 ## Threading
-Valgrind supports threads by serializing all execution. Only one thread is run at a time using a Valgrind lock. Valgrind's locking scheme is pipe-based and does not guarantee fairness between threads. An alternative locking mechanism is available using `--fair-sched=yes`.
+Valgrind supports threads by *serializing* all execution. Only one thread is run at a time using a Valgrind lock. Valgrind's locking scheme is pipe-based and does not guarantee fairness between threads. An alternative locking mechanism is available using `--fair-sched=yes`.
 
 ## Resources
 - https://valgrind.org/docs/manual/manual-core.html

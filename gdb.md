@@ -1,7 +1,7 @@
 # gdb
 
 ## Source code
-Use `list` to see print code lines.
+Use `list` to print code lines.
 
 ### Common `list` usages
 ```
@@ -16,7 +16,17 @@ Use `list` to see print code lines.
 (gdb) tui enable  # enter tui mode
 ```
 
+See also gdb-dashboard.
+
 ## Breakpoints
+
+### Setting breakpoints
+To set a breakpoint, use any combination of these commands:
+```
+(gdb) b main         # break in the main function
+(gdb) b 100          # break on line 100 of current file
+(gdb) b file.cpp:100 # break in file.cpp at line 100
+```
 
 ### Breakpoint information
 Use `info breakpoints` or `info b` to display information about breakpoints.
@@ -24,14 +34,6 @@ Use `info breakpoints` or `info b` to display information about breakpoints.
 (gdb) info b
 Num   Type         Disp Enb Address            What
 3     breakpoint   keep y   0x04108b0 in MyFcn::TestBody() at test/testWrite.cpp:121
-```
-
-### Setting breakpoints
-To set a breakpoint, use any combination of these commands:
-```
-(gdb) b main         # break in the main function
-(gdb) b 100          # break on line 100 of current file
-(gdb) b file.cpp:100 # break in file name at line number
 ```
 
 ### Clearing (removing/deleting) breakpoints
@@ -44,7 +46,7 @@ Use gdb's `clear` command:
 ### Enable/disable
 Use `enable` / `disable` to toggle availability.
 
-Use `enable N` / `disable N` to toggle a particular breakpoint index.
+Use `enable N` / `disable N` to toggle a particular breakpoint number (index).
 
 ### Conditional breakpoints
 Use `break <location> if <condition>`.
@@ -71,7 +73,9 @@ Use `break <location> if <condition>`.
 ### Running
 Use `run` or `r` to run the application. If it has exited or crash, `run` will restart.
 
-## Backtrace
+Use `start` to enter into the first line of executable code (such as beginning of `int main()`).
+
+## Call stack
 Use `bt` or `backtrace` to examine the call stack.
 
 ### Frame
@@ -188,7 +192,7 @@ Defined at /home/user/debug.cpp:3
 #define MULTIPLY(x, y) ((x) * (y))
 ```
 
-## Dynamic printf (dprintf)
+## Dynamic printf (`dprintf`)
 `dprintf` creates `printf` printing without recompilation.
 
 ```
@@ -221,7 +225,6 @@ type = struct Node<int> [with T = int] {
 /*      0      |       4 */    T data;
 /* XXX  4-byte hole      */
 /*      8      |       8 */    Node<T> *next;
-
                                /* total size (bytes):   16 */
                              }
 ```
@@ -268,7 +271,7 @@ If there is one instance running: `gdb -p $(pidof <process_name>)`.
 If gdb is already running, use `(gdb) attach <pid>` to attach.
 
 ### Detaching
-Use the `detach` command to detach. gdb can now be exited while the process remains running.
+Use the `detach` command to detach. `gdb` can now be exited while the process remains running.
 
 ## Get PID of inferior (attached) process
 ```
@@ -278,7 +281,7 @@ Use the `detach` command to detach. gdb can now be exited while the process rema
 ```
 
 ## Python
-gdb includes a built-in Python interpreter.
+`gdb` includes a built-in Python interpreter.
 
 ### Run simple command
 ```
@@ -310,7 +313,7 @@ To run shell commands from `gdb`, type `shell <cmd>`. Ex:
 
 https://github.com/cyrus-and/gdb-dashboard
 
-GDB dashboard is a useful debugger TUI for gdb. These are useful commands to set in `.gdbinit`:
+GDB dashboard is a useful debugger TUI for `gdb`. These are useful commands to set in `.gdbinit`:
 
 ```bash
 # hide certain sections using '!' before section name
@@ -329,7 +332,7 @@ dashboard -style syntax_highlighting 'xcode'
 ```
 
 ### Expressions
-Expressions are a way to see (watch) variables or expressions. Unlike watchpoints, execution does not stop when they change. This makes them more similar to vscode's `watch` section than gdb's watchpoint.
+Expressions are a way to see (watch) variables. Unlike watchpoints, execution does not stop when they change. This makes them more similar to vscode's `watch` section than gdb's watchpoint.
 
 Syntax:
 ```bash
@@ -349,7 +352,7 @@ dashboard expressions clear
 The .gdbinit file contains a list of gdb commands to execute upon gdb startup.
 
 ### Custom gdbinit location
-By default, gdb searches a user's home directory for a `.gdbinit` file to apply. To override this and provide a custom path, use the `-x` flag:
+By default, gdb searches a user's home directory for a `.gdbinit` file to apply. To override this and provide a custom path, start `gdb` with the `-x` flag:
 ```
 gdb -x /path/to/custom/gdbinit my_program
 ```
