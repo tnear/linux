@@ -7,6 +7,12 @@
 coredumpctl list
 ```
 
+### Query executable name
+```bash
+# coredumpctl list <name>
+coredumpctl list my_binary
+```
+
 ## Analyze a core dump
 Use `coredumpctl dump -o /path/to/bin PID`.
 
@@ -37,12 +43,4 @@ coredumpctl debug 180111
 coredumpctl dump 180111 > /tmp/core.dump
 # debug dump with gdb
 gdb /path/to/your/program /tmp/core.dump
-```
-
-## Clean (remove) older core dumps
-Use the `clean` subcommand to remove certain core dumps.
-
-```bash
-# remove all core dumps older 30 days
-coredumpctl clean --older-than=30d
 ```
