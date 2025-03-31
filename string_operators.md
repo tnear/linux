@@ -9,7 +9,7 @@ string
 ```
 
 ## String concatenation
-There are multiple ways to concateneate strings.
+There are multiple ways to concatenate strings.
 
 ```bash
 s1='hello'
