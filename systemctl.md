@@ -8,5 +8,5 @@
 systemctl start my_app
 
 # configure service to start automatically at boot
-systemctl enable my_app 
+systemctl enable my_app
 ```

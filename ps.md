@@ -12,7 +12,7 @@ root     2  0.0  0.0      0     0 ?     S    Jan22   0:00 [kthreadd]
 
 ### Columns
 - `VSZ`: virtual memory size in kilobytes (total allocated memory)
-- `TTY`: terminal type (may show '?' for processes not associated 
+- `TTY`: terminal type (may show '?' for processes not associated
 with a terminal)
 - `TIME`: the cumulative CPU time used by the process
 - `RSS`: resident size set - physical memory used in KB (actual RAM usage)
