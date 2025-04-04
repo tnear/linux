@@ -21,11 +21,14 @@ See also gdb-dashboard.
 ## Breakpoints
 
 ### Setting breakpoints
-To set a breakpoint, use any combination of these commands:
+Example commands to set breakpoints:
 ```
 (gdb) b main         # break in the main function
 (gdb) b 100          # break on line 100 of current file
 (gdb) b file.cpp:100 # break in file.cpp at line 100
+(gdb) b 'MyFunction<*>::push_back' # C++ template function (wildcard)
+(gdb) b MyFunction<int>::push_back # C++ template function (only integer)
+(gdb) b *0x00007ffff7d048a0 # function address (must prefix with '*')
 ```
 
 ### Breakpoint information
@@ -108,28 +111,6 @@ Use `backtrace full` to see the backtrace with local variable names and values.
         }
 ```
 
-## Text user interface
-Text user interface (TUI) is a gdb mode which shows the source file, command pane, and breakpoint locations in one view.
-
-### Toggling TUI
-Use either the command below or shortcut key (`Ctrl + X + A`).
-```
-(gdb) tui enable
-(gdb) tui disable
-```
-
-### Fix rendering issues
-To fix ncurses rendering issues (common in TUI mode), press `Ctrl+L`.
-
-### Cycling command history (without arrow keys)
-Use `Ctrl+P` for previous and `Ctrl+N` for next. Note: VSCode may intercept these shortcuts if using gdb through a terminal pane in VSCode.
-
-### Support using arrow keys for history
-Use either `focus cmd` or shortcut `Ctrl+X O` to move focus to the command window. This enables the arrow keys to access the command history. The mouse scroll wheel will continue to function.
-
-- Use `focus next` to cycle between.
-- Use `focus src` to set focus back to source.
-
 ## Watchpoints
 A watchpoint (or *data breakpoint*) is a way to pause execution when the value of an expression changes.
 
@@ -181,6 +162,16 @@ Switch to a thread using `thread <thread_num>`, ex: `thread 2`.
 
 ## Source
 Use `info source` to see full path to file, debug information, and more.
+
+## Functions
+```
+# query function names: info functions <name>
+(gdb) info functions push_back
+std::string::push_back(char)
+
+# regex query
+(gdb) info functions vector.*push_back
+```
 
 ## Macros
 
@@ -364,6 +355,28 @@ $ gdb my_crash /path/to/dump
 ```
 
 Note: if crash dumps are managed by `coredumpctl`, use `coredumpctl debug <id>`. See [coredumpctl]().
+
+## Text user interface
+Text user interface (TUI) is a gdb mode which shows the source file, command pane, and breakpoint locations in one view.
+
+### Toggling TUI
+Use either the command below or shortcut key (`Ctrl + X + A`).
+```
+(gdb) tui enable
+(gdb) tui disable
+```
+
+### Fix rendering issues
+To fix ncurses rendering issues (common in TUI mode), press `Ctrl+L`.
+
+### Cycling command history (without arrow keys)
+Use `Ctrl+P` for previous and `Ctrl+N` for next. Note: VSCode may intercept these shortcuts if using gdb through a terminal pane in VSCode.
+
+### Support using arrow keys for history
+Use either `focus cmd` or shortcut `Ctrl+X O` to move focus to the command window. This enables the arrow keys to access the command history. The mouse scroll wheel will continue to function.
+
+- Use `focus next` to cycle between.
+- Use `focus src` to set focus back to source.
 
 ## Resources
 - https://sourceware.org/gdb/current/onlinedocs/gdb.html/Set-Watchpoints.html
