@@ -18,6 +18,11 @@ $ lscpu | grep '^CPU(s)'
 CPU(s):              11
 ```
 
+```bash
+# multithreaded build
+$ make -j$(nproc)
+```
+
 ## --all
 To show the total number of processors available, use the `--all` flag:
 

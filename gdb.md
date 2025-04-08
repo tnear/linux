@@ -18,6 +18,17 @@ Use `list` to print code lines.
 
 See also gdb-dashboard.
 
+## Printing
+
+## Elements
+```bash
+# elements controls number of items in a vector (or string) to print
+# set string display length to unlimited
+# (default behavior is to truncate)
+(gdb) set print elements unlimited
+(gdb) set print elements 0  # equivalent to 'unlimited'
+```
+
 ## Breakpoints
 
 ### Setting breakpoints

@@ -18,8 +18,8 @@ $ timeout 0.5h <command>
 ```
 
 ### Send SIGKILL to ping after a 2 second timeout
-Use `-s` to send a signal. 
-```
+Use `-s` to send a signal.
+```bash
 $ timeout -s SIGKILL 2s ping 8.8.8.8
 PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 64 bytes from 8.8.8.8: icmp_seq=1 ttl=54 time=17.4 ms

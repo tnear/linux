@@ -17,6 +17,12 @@ $ find . -regex '\./file[0-9][0-9]*' # no '+' support on all versions
 ./file1
 ```
 
+### Symlinks
+Use `-L` to follow symlinks.
+```bash
+find -L /path/to/search -type f
+```
+
 ## Get number of files with .h or .c extension
 ```
 $ find /usr/include -name '*.[hc]' | wc
