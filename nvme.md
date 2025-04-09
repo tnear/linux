@@ -16,7 +16,7 @@ Subsystem (NQN: nqn.example.com:subsystem1)
 │   ├── Namespace 1 (/dev/nvme0n1)
 │   └── Namespace 2 (/dev/nvme0n2)
 └── Controller 2 (/dev/nvme1)
-    ├── Namespace 1 (/dev/nvme1n1) → Can be the same namespace as nvme0n1
+    ├── Namespace 1 (/dev/nvme1n1) # Can be the same namespace as nvme0n1
     └── Namespace 3 (/dev/nvme1n3)
 ```
 

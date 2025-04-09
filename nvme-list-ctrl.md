@@ -10,7 +10,7 @@ Syntax: `nvme list-ctrl <device>`
 
 ## Basic usage
 ```bash
-# these two examples show the same output because they belong to the same subsystem
+# the examples show the same output because they belong to the same subsystem
 sudo nvme list-ctrl /dev/nvme1
 num of ctrls present: 2
 [   0]:0x41

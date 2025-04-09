@@ -2,7 +2,7 @@
 
 `nvme-connect` - Connect to a Fabrics controller.
 
-This NVMe API connects to a **controller** (ex: `/dev/nvme1`) (not a subsystem or namespace). See [nvme.md](nvme.md) for more information on the NVMe hierarchy.
+This NVMe API connects to a **controller** (ex: `/dev/nvme1`) (not a subsystem or namespace). See [`nvme.md`](nvme.md) for more information on the NVMe hierarchy.
 
 ## Basic usage
 ```bash
@@ -15,7 +15,7 @@ sudo nvme disconnect -n nqn.2024-08.io.spdk:cnode1
 
 ## Common flags
 ### `-t <tr_type>, --transport=<trtype>`
-Transport type. Permitted values include `rdma` (RoCE, iWARP, Infiniband), `fc` (fibre channel), `tcp` (for tcp/ip), `loop` (connect on local host.
+Transport type. Permitted values include `rdma` (RoCE, iWARP, Infiniband), `fc` (fibre channel), `tcp` (for tcp/ip), `loop` (loopback connection on local host).
 
 ### `-n <subnqn>, --nqn <subnqn>`
 Specifies the name (nqn = nvme qualified name) of the NVMe subsystem to connect to.
