@@ -2,6 +2,10 @@
 
 Non-Volatile Memory Express (NVMe) is a specification for accessing a computer's non-volatile storage attached via a PCI Express bus.
 
+```
+[NVMe] <-> [PCIe bus] <-> [CPU]
+```
+
 An SSD runs a *command set* over a *transport*. For example, AHCI (the command set) runs over SATA. SCSI runs over SAS. NVMe runs over PCIe (local) or RoCE (remote).
 
 NVMe is faster and more parallel than SAS.
@@ -85,3 +89,4 @@ hello world
 - NVM Express over Fabrics with SPDK for Intel® Ethernet Products with RDMA (May 2021)
 - https://narasimhan-v.github.io/2020/06/12/Managing-NVMe-Namespaces.html
 - https://nvmexpress.org/resource/nvme-namespaces/
+- "Understanding NVMe Namespaces", https://youtu.be/7MYw-0qfpH8
