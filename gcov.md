@@ -1,8 +1,11 @@
 # GCOV
 
-gcov - GNU coverage testing tool
+`gcov` - GNU coverage testing tool
 
-### Create example.c
+`lcov` - a graphical GCOV front-end
+
+## Simple example
+### example.c
 ```c
 #include <stdio.h>
 
@@ -18,12 +21,16 @@ int main() {
 ```
 
 ### Compile program with coverage flag
-`$ gcc -fprofile-arcs -ftest-coverage example.c -o example`
+```bash
+gcc -fprofile-arcs -ftest-coverage example.c -o example
+```
 
 Note: `gcov` works best when the executable does not have an extension.
 
 ### Run executable
-`$ ./example.out`
+```
+./example.out
+```
 
 Execution creates gcov data files (`.gcda` and `.gcno`) in pwd:
 
@@ -40,7 +47,6 @@ $ gcov example.c
 File 'example.c'
 Lines executed:100.00% of 6
 Creating 'example.c.gcov'
-
 Lines executed:100.00% of 6
 ```
 
@@ -63,3 +69,14 @@ $  cat example.c.gcov
 1:   10:    return 0;
 -:   11:}
 ```
+
+## `gcov`/`lcov` files
+### .gcno (notes) files
+- Created during *compilation* when using `-ftest-coverage`
+- Contain *static* information about line numbers and source code
+- Generated once per source file during build time
+
+### .gcda (data) files
+- Created during *execution* of instrumented programs
+- Contain *dynamic* information about actual code execution such as number of times a line was executed
+- Generated or updated each time the instrumented program runs
