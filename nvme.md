@@ -84,6 +84,16 @@ $ sudo nvme read /dev/nvme0n1 --start-block=0 --data-size=4096
 hello world
 ```
 
+## Logical block addressing
+Logical block addressing (LBA) specifies the location of blocks of data on secondary storage. LBA is a simple sequential number. Block 0 is the first on the drive, block 1 is the second, etc. Data is requested and written in block sizes.
+
+NVMe drives typically use 4 KB block sizes (as compared to HDDs which often use 512-bytes). This larger size is more efficient for flash memory.
+
+Each namespace has its own LBA. NVMe commands specify the LBA number.
+
+### Read-modify-write
+Read-modify-write happens when a drive *reads* an existing block into memory, *modifies* the portion to change, then *writes* the entire block back to storage.
+
 ## Resources
 - https://www.youtube.com/watch?v=Qy1q4qT7b2M
 - NVM Express over Fabrics with SPDK for Intel® Ethernet Products with RDMA (May 2021)
