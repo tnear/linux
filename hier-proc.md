@@ -33,14 +33,20 @@ cpu cores       : 18
 ```
 
 ## `/proc/meminfo`
-Contains detailed memory information such as amount of used and available RAM.
+Contains detailed memory information such as amount of RAM and hugepages.
 
-### Get RAM usage
+### Get RAM and hugepages
 ```
-$ grep Mem /proc/meminfo
-MemTotal:       527570896 kB    # 527 M KB = 527 GB total RAM
-MemFree:        494231856 kB
-MemAvailable:   503907080 kB
+$ egrep '^(Huge|Mem)' /proc/meminfo
+MemTotal:       263451024 kB  # 263 M KB = 263 GB total RAM
+MemFree:        199482876 kB
+MemAvailable:   243022872 kB
+HugePages_Total:       4
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:    1048576 kB
+Hugetlb:         4194304 kB
 ```
 
 ## `/proc/cmdline`
