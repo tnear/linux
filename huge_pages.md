@@ -2,6 +2,10 @@
 
 HugePages are a Linux kernel feature that allows the system to allocate memory in large chunks (typically 2MB or 1GB) instead of the default 4KB pages. This improves performance for applications that use large amounts of memory by reducing TLB misses.
 
+## Benefits
+- Reduced TLB Misses: The TLB is a cache that stores virtual-to-physical address mappings. With larger pages, fewer TLB entries are needed to map the same amount of memory, reducing TLB misses and improving performance.
+- Lower Overhead: Managing fewer, larger pages reduces the CPU overhead associated with page table management.
+
 ## Query hugepage info
 This machine has 4 hugepages of size 1 GB (1048567 kB):
 ```bash
@@ -10,7 +14,7 @@ HugePages_Total:       4
 HugePages_Free:        0
 HugePages_Rsvd:        0
 HugePages_Surp:        0
-Hugepagesize:    1048576 kB
+Hugepagesize:    1048576 kB  # 1 GB
 Hugetlb:         4194304 kB
 ```
 
@@ -24,20 +28,20 @@ vm.nr_hugepages = 4
 
 ### Method 1: temporary configuration (until reboot)
 ```bash
-# for 2MB HugePages (set 1024 pages = 2GB)
+# create 1024 HugePages of size 2 MB (1024 * 2 MB = 2 GB)
 sudo sysctl -w vm.nr_hugepages=1024
 
-# for 1GB HugePages
+# create 4 HugePages of size 1 GB
 sudo sysctl -w vm.nr_hugepages_1GB=4
 ```
 
 ### Method 2: permanent configuration
 Add one of these lines to `/etc/sysctl.conf`:
 ```bash
-# for 2MB pages (default size)
+# for 2 MB pages (default size)
 vm.nr_hugepages = 1024
 
-# for 1GB pages
+# for 1 GB pages
 vm.nr_hugepages_1GB = 4
 ```
 
