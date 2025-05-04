@@ -1,4 +1,4 @@
-# nvme resv
+# nvme-resv
 
 NVME reservations provide access control that enable multiple hosts to coordinate shared access to an NVMe namespace. A reservation allows a host to acquire exclusive access to a namespace. It also allows the reservation holder to grant specific types of access to other registered hosts.
 

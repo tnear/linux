@@ -4,7 +4,7 @@
 
 ## `-H, --human-readable`
 ```bash
-sudo nvme id-ns -H /dev/nvme2n1
+$ sudo nvme id-ns -H /dev/nvme2n1
 
 NVME Identify Namespace 1:
 nsze    : 0x20000000
