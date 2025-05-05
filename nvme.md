@@ -35,13 +35,8 @@ A controller is the physical hardware component which manages communication betw
 - Command queues: controllers implement multiple submission and completion queues for parallel command processing
 - Identification: each controller has a unique identifier
 
-### NVMe Identify Controller (`id-ctrlr`)
-Prints information about a device, such as number of namespaces supported and model number.
-```
-sudo nvme id-ctrl /dev/nvme2
-mn        : SAMSUNG MZWLJ7T6HALA-00AU3  # model number
-nn        : 32  # number of namespaces
-```
+### NVMe Identify Controller (`id-ctrl`)
+See [`id-ctrl`](nvme-id-ctrl.md).
 
 ## NVMe namespaces
 Namespaces are logical divisions of the storage space that can be separately addressed. One controller can manage many namespaces. Ex: `/dev/nvme0n1`.
@@ -53,23 +48,10 @@ Namespaces provide addressing and isolation.
 See [`nvme list`](nvme-list.md).
 
 ### NVMe Identify Namespace (`id-ns`)
-Prints information about a namespace, which belongs to a controller. Information includes block size and capacity.
-```
-sudo nvme id-ns /dev/nvme2n1
-NVME Identify Namespace 1:
-nsze    : 0x20000000
-ncap    : 0x20000000
-nuse    : 0x20000000
-```
+See [`id-ns`](nvme-id-ns.md).
 
 ### Create and attach namespace
-```bash
-sudo nvme create-ns /dev/nvme0 --nsze=6104741 --ncap=6104741 --flbas=0 -dps=0
-create-ns: Success, created nsid:1
-
-sudo nvme attach-ns /dev/nvme0 --namespace-id=1 -controllers=0x41
-attach-ns: Success, nsid:1
-```
+See [`nvme-create-ns`](nvme-create-ns.md).
 
 ### Read and write
 ```bash

@@ -9,7 +9,7 @@
 
 ## Basic usage
 ```bash
-sudo nvme list
+$ sudo nvme list
 Node          Generic     Namespace  Usage    Format
 ------------- ----------- ---------- -------- -------
 /dev/nvme2n1  /dev/ng2n1  0x1        2.20 TB  4 KiB

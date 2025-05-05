@@ -92,7 +92,7 @@ lbaf  3 : ms:8   lbads:12 rp:0x2
 lbaf  4 : ms:64  lbads:12 rp:0x3
 ```
 
-### Most common parameters
+### Most common fields
 - `nsze`: namespace size: total capacity of the namespace in logical blocks
 - `lbaf`: (logical block size format) shows which LBA is `in use`
 - `nguid`: unique identifier for namespace

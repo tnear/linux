@@ -22,7 +22,7 @@ $ hello you me
 Hello, you and me
 ```
 
-## Return value (exit code) accessed through '$?':
+## Return value (exit code, error code, status code) accessed through '$?':
 echo $?
 101
 
