@@ -50,7 +50,7 @@ hier - description of the filesystem hierarchy
 
     /sys   This is a mount point for the sysfs filesystem, which
             provides information about the kernel like /proc, but
-            better structured. Saved in RAM, not to disk.
+            better structured. Virtual filesystem.
 
     /tmp   Contains temporary files which may be deleted with no notice,
             such as by a regular job or at system boot up.

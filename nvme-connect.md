@@ -2,7 +2,7 @@
 
 `nvme-connect` - Connect to a Fabrics controller.
 
-This NVMe API is run on an initiator to establish a connection with an existing NVMe-OF target.
+This NVMe API is run on an **initiator** to establish a connection with an existing NVMe-OF **target**.
 
 ## Basic usage
 ```bash

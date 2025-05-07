@@ -35,6 +35,8 @@ $ sudo yum info rdma-core
 
 Installed Packages
 Name         : rdma-core
+Version      : 48.0
+Release      : 1.el9
 Architecture : x86_64
 Size         : 109 k
 Source       : rdma-core-48.0-1.el8.src.rpm

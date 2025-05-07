@@ -15,7 +15,7 @@ $ wc -l /proc/meminfo
 ## `/proc/cpuinfo`
 Contains detailed hardware information such as # processors and processor speed.
 
-```
+```bash
 $ less /proc/cpuinfo
 processor       : 0
 vendor_id       : GenuineIntel
@@ -36,7 +36,7 @@ cpu cores       : 18
 Contains detailed memory information such as amount of RAM and hugepages.
 
 ### Get RAM and hugepages
-```
+```bash
 $ egrep '^(Huge|Mem)' /proc/meminfo
 MemTotal:       263451024 kB  # 263 M KB = 263 GB total RAM
 MemFree:        199482876 kB
@@ -59,7 +59,7 @@ Import sub-directories:
 
 ### `/proc/<pid>/cmdline`
 Contains the command that started the process and its parameters.
-```
+```bash
 $ cat cmdline
 -bash
 ```
@@ -86,11 +86,20 @@ All file descriptors in use by a process. `0=stdin, 1=stdout, 2=stderr`.
 ## `/proc/interrupts`
 Shows how many times an interrupt number (0, 1, 6, 17) ran on a CPU.
 
-## `/proc/sys/kernel/core_pattern`
+## `/proc/sys`
+
+### `/proc/sys/kernel/core_pattern`
 Contains the core dump pattern.
 ```bash
 # note: the '|' symbol at the beginning means that
 # core dumps are being managed by systemd (coredumpctl)
-cat /proc/sys/kernel/core_pattern
+$ cat /proc/sys/kernel/core_pattern
 |/usr/lib/systemd/systemd-coredump %P %u %g %s %t %c %h
+```
+
+### `/proc/sys/kernel/pid_max`
+Contains the highest PID the system can assign to a PID. PIDs can potentially be reused if this number is low enough.
+```bash
+$ cat /proc/sys/kernel/pid_max
+4194304
 ```
