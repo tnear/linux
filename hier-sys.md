@@ -1,6 +1,6 @@
 # hier-sys
 
-The `/sys` directory is a virtual filesystem called sysfs that provides a structured interface to kernel data structures, device information, and configuration options
+The `/sys` directory is a virtual filesystem called `sysfs` that provides a structured interface to kernel data structures, device information, and configuration options.
 
 ## `/sys/fs`
 

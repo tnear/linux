@@ -1,10 +1,10 @@
 # hier-proc
 
-The `/proc` directory includes information on system hardware and processes. `/proc` is a virtual file system.
+The `/proc` directory includes information on system hardware, processes, and other kernel information. `/proc` is a virtual file system.
 
 
 Many `/proc` files show as 0 bytes despite having data due to their virtual nature:
-```
+```bash
 $ ls -l /proc/meminfo
 -r--r--r-- 1 root 0 /proc/meminfo
 
@@ -103,3 +103,6 @@ Contains the highest PID the system can assign to a PID. PIDs can potentially be
 $ cat /proc/sys/kernel/pid_max
 4194304
 ```
+
+## `/proc/self`
+Process information for current process (shell).
