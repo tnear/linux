@@ -49,3 +49,14 @@ Apply changes after configuring:
 ```bash
 sudo sysctl --load
 ```
+
+## `/dev/hugepages`
+This directory provides a special interface to the kernel's huge page memory management. These are binary files.
+
+```bash
+$ ll /dev/hugepages
+.rw-------@ 1.1G root root 14 May 17:51 app_with_huge_pages_0
+.rw-------@ 1.1G root root 14 May 17:51 app_with_huge_pages_1
+.rw-------@ 1.1G root root 14 May 17:51 app_with_huge_pages_2
+.rw-------@ 1.1G root root 14 May 17:51 app_with_huge_pages_3
+```

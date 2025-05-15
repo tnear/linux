@@ -29,6 +29,12 @@ See also gdb-dashboard.
 (gdb) set print elements 0  # equivalent to 'unlimited'
 ```
 
+### `info locals`
+Use `info locals` to print all local variables.
+
+### `info variables`
+Use `info variables` to see both local and global variables (may dump pages of data).
+
 ## Breakpoints
 
 ### Setting breakpoints

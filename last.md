@@ -15,3 +15,8 @@ abc1234  pts/337      10.105.230.180   Thu Apr 11 16:29 - 16:35  (00:05)
 ```bash
 last username
 ```
+
+## Show reboot history
+```bash
+last reboot
+```

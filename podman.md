@@ -15,4 +15,7 @@ sudo podman image list
 
 # remove image by id
 sudo podman rmi <checksum>
+
+# -f to force remove
+sudo podman rmi -f <checksum>
 ```
