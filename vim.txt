@@ -115,5 +115,6 @@ c = confirmation
 
 # SET COMMANDS:
 :set noexpandtab # use tabs instead of spaces
-
+:set number # set line numbers
+:set nonumber # disable line numbers
 ---
