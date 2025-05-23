@@ -15,6 +15,12 @@ $ watch -n0.5 'ps -aux'
 
 ## Watch a process tree in real time
 Note: the example does not specify `-n`, so it defaults to updating every 2 seconds.
-```
+```bash
 $ watch pstree -ahp $(pidof <name>)
+```
+
+## Complex command
+Wrap long commands in quotes. Escape internal quotes if necessary.
+```bash
+watch 'ps -aux'
 ```

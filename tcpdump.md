@@ -12,6 +12,7 @@ sudo tcpdump -i eth0 -nn -s0 -v port 80
 
 - `-i`: select interface to capture. This will typically be an ethernet card or wireless adapter.
 - `-nn`: disable resolving hostnames and ports
+    - ex: instead of `example.com`, show `192.168.64.1`
 - `-s0`: size of packet to capture. `-s0` sets the size to unlimited.
 - `-v`: verbose
 

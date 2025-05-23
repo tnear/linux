@@ -18,7 +18,7 @@ Display network connections. Often used for diagnosing problems or determining t
 ```
 
 ## Basic usage (no flags)
-```
+```bash
 $ netstat
 
 Active Internet connections (w/o servers)
@@ -34,7 +34,7 @@ unix  2      [ ]    DGRAM              15465  /run/systemd/journal/syslog
 ## List all sockets with numeric value and process ID
 This is a useful command to find which process ID (PID) is listening on a port number.
 
-```
+```bash
 $ sudo netstat -pant # sudo needed to get PID
 
 Active Internet connections (servers and established)
@@ -52,4 +52,10 @@ tcp        0      0 0.0.0.0:9011       0.0.0.0:*        16609/java
 tcp        0      0 0.0.0.0:9010       0.0.0.0:*        16609/java
 tcp        0      0 0.0.0.0:9000       0.0.0.0:*        16605/java
 tcp        0      0 0.0.0.0:9100       0.0.0.0:*        16605/java
+```
+
+## Verify number of TCP connections a PID has
+```bash
+sudo netstat -tnp | grep $(pidof my_app) | wc -l
+128
 ```
