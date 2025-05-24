@@ -2,7 +2,7 @@
 
 `strace` - trace system calls and signals
 
-- ALL strace outputs begin with `execve`. This `execve` syscall runs an executable.
+- *All* `strace` outputs begin with `execve`. The `execve` syscall runs an executable.
 - `strace` writes to `stderr` (not `stdout`).
 
 ## Basic usage
@@ -15,13 +15,13 @@ mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fc
 ```
 
 ## Files
-### Write `strace` output (`stderr`) to file
+### Write `strace` output to file
 ```bash
+# strace output goes to stdout, so use '2>' to capture it to a file
 $ strace ls 2> ls.out
+
+# print strace output
 $ cat ls.out
-execve("/usr/bin/ls", ["ls"], 0x7ffe594fc6e0 /* 55 vars */) = 0
-brk(NULL)                               = 0x562c2dfed000
-mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7fe92661b000
 ```
 
 ### Write `ls` output to ls.out and `strace` output to stderr (screen)
@@ -33,7 +33,7 @@ bc.txt
 ```
 
 ## `-c, --summary-only`
-Count time, calls, and errors for each syscall and report a summary.
+Count time, calls, and errors for each syscall and report a summary. Can be used for basic profiling.
 ```bash
 $ strace -c ./malloc.o
 % time     seconds  usecs/call     calls    errors syscall
@@ -52,9 +52,10 @@ $ strace -c ./malloc.o
 ## `-p pid, --attach=pid`
 Use `-p` to attach to a process ID.
 ```bash
+# terminal 1: start command
 $ ping 8.8.8.8
 
-# In another terminal, attach by strace:
+# terminal 2: attach to strace
 $ sudo strace -p $(pidof ping)
 strace: Process 84304 attached
 restart_syscall(<... resuming interrupted read ...>) = 0
@@ -71,3 +72,15 @@ brk(NULL)                = 0x55788b70c000
 brk(0x55788b72d000)      = 0x55788b72d000
 +++ exited with 0 +++
 ```
+
+## Timing information
+- Use the flag `-ttt` to print a first column showing time-since-epoch with microsecond accuracy
+- Use the `-T` flag to print the last field, which is the duration of the system call in microseconds.
+
+```bash
+$ strace -ttt -T ls
+1748108167.146366 execve("/usr/bin/ls", ["ls"], /* 36 vars */) = 0 <0.000632>
+1748108167.147278 brk(NULL)             = 0x561f00cb5000 <0.000089>
+```
+
+This shows that `execve` took 632 us and `brk` took 89 us. `strace` has built-in overhead, so these numbers may be slower than in production runs.

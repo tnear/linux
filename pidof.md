@@ -2,6 +2,8 @@
 
 `pidof` - find the process ID of a running program
 
+See also: [`pgrep`](pgrep.md)
+
 ## Get all process IDs of VSCode
 ```bash
 $ pidof code
@@ -21,3 +23,15 @@ pidof process_name | xargs kill -9
 sudo netstat -tnp | grep $(pidof my_app) | wc -l
 128
 ```
+
+## `pgrep` vs. `pidof`
+
+### `pgrep` summary
+- Simpler and faster than `pgrep` because it does not do regex
+- Requires knowing exact process name
+- Returns space separated PIDs
+
+### `pgrep` summary
+- Supports pattern matching
+- Supports advanced filtering and detailed output
+- Returns one PID per line
