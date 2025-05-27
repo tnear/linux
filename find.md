@@ -3,14 +3,14 @@
 `find` - search for files in a directory hierarchy
 
 ## Case sensitive recursive find in pwd (.) for file names containing 'hello' using a glob
-```
+```bash
 $ find . -name '*hello*'
 ```
 
 ### Regex
 Use `-regex` to match more complex patterns. It matches the entire path, not just the file name.
 
-```
+```bash
 $ touch file1 file12
 $ find . -regex '\./file[0-9][0-9]*' # no '+' support on all versions
 ./file12
@@ -24,7 +24,7 @@ find -L /path/to/search -type f
 ```
 
 ## Get number of files with .h or .c extension
-```
+```bash
 $ find /usr/include -name '*.[hc]' | wc
   466181     1934876     17536397
 newlines | word count | characters
@@ -33,35 +33,37 @@ newlines | word count | characters
 `find` outputs file paths, so this means there are 8085 files (first col)
 
 ## Case insensitive find for file names containing 'hello'
-```
+```bash
 $ find . -iname '*hello*'
 ```
 
 ## Case insensitive `ls`
 To do a case insensitive listing, use `find` with the `-ls` flag.
-```
+```bash
 $ find /tmp/ -iname '*data*' -ls
 2853037   8 -rw-r--r--    1 tnear    wheel   756 Jul 11 09:10 /tmp//MyData.txt
 ```
 
 ## MTIME - modification time
+```
 +2 = more than 2
 -2 = less than 2
 2  = exactly 2
+```
 
 ### Find all files modified within last 1 day
-```
+```bash
 $ find . -mtime -2
 ```
 
 ### Find all files modified more than 3 days ago
-```
+```bash
 $ find . -mtime +3
 ```
 
 ## PERM - search file permissions
 ### Find executable (+x) files:
-```
+```bash
 $ find . -perm -+x
 ```
 
@@ -110,7 +112,7 @@ $ find . -type l -ls
 ```
 
 ## MAXDEPTH - stop at a specified recursion depth
-```
+```bash
 $ find /usr -maxdepth 1
 /usr
 /usr/games
@@ -140,7 +142,7 @@ Syntax:
 ```
 
 Examples:
-```
+```bash
 $ find <find_cmd> -exec <exec_cmd> {} \;
 
 # Find zero byte files then call 'ls -la' on each one:
@@ -174,7 +176,7 @@ $ find . -type f -exec grep 'hello' {} +
 This example gets lines of code for files with a .cpp or .h extension. It uses `-o` to do an OR constraint.
 
 The parentheses need to be escaped because they have a separate meaning in bash.
-```
+```bash
 $ find . -type f \( -name '*.cpp' -o -name '*.h' \) | xargs wc
 
   224233  736557 9406531 total
@@ -182,13 +184,12 @@ newlines | word count | characters
 ```
 
 ## Get 5 largest (biggest) files in a directory recursively
-```
+```bash
 find . -type f -printf "%s %p\n" 2> /dev/null | sort -rn | head -n5 | awk '{print $2 " - " $1 " bytes"}'
 ```
 
-Explanation:
 ### printf: uses '%s' to get size and %p' to get path. Ex:
-```
+```bash
 find . -type f -printf "%s %p\n"
 478 ./.git/hooks/applypatch-msg.sample
 896 ./.git/hooks/commit-msg.sample

@@ -5,7 +5,7 @@
 `watch` runs a command at specified interval.
 
 ## Specify interval
-Use `-n, --interval` to specify the update interval in seconds. The minimum value is 0.1. The default is 2 seconds.
+Use `-n, --interval` to specify the update interval in seconds. The minimum value is 0.1 seconds. The default is 2 seconds.
 
 Use `Ctrl+C` to cancel.
 ```bash
