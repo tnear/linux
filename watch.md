@@ -10,7 +10,7 @@ Use `-n, --interval` to specify the update interval in seconds. The minimum valu
 Use `Ctrl+C` to cancel.
 ```bash
 # Run 'ps -aux' every 0.5 seconds (default is 2 seconds)
-$ watch -n0.5 'ps -aux'
+$ watch -n 0.5 'ps -aux'
 ```
 
 ## Watch a process tree in real time
