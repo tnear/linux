@@ -9,6 +9,7 @@
 
 ## Basic usage
 ```bash
+$ sudo nvme list-subsys
 nvme-subsys1 - NQN=nqn.1994-11.com.samsung:nvme:PM1733:2.5-inch:S5RTNC0TA06272
                hostnqn=nqn.2014-08.org.nvmexpress:uuid:33f8eeea-1355-484b-bc27-daf944ab2db1
                iopolicy=numa

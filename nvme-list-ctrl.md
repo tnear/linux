@@ -24,6 +24,7 @@ num of ctrls present: 2
 
 To verify they belong to the same subsystem, use [`nvme list-subsys`](nvme-list-subsys.md):
 ```bash
+$ sudo nvme list-subsys
 # note that subsys1 and subsys2 have the same nqn
 nvme-subsys1 - NQN=nqn.1994-11.com.samsung:nvme:PM1733:2.5-inch:S5RTNC0TA06272
                hostnqn=nqn.2014-08.org.nvmexpress:uuid:33f8eeea-1355-484b-bc27-daf944ab2db1

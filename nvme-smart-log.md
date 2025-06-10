@@ -6,7 +6,7 @@
 `smart-log` lists health stats about an NVMe controller.
 
 ```bash
-sudo nvme smart-log /dev/nvme2
+$ sudo nvme smart-log /dev/nvme2
 Smart Log for NVME device:nvme2 namespace-id:ffffffff
 critical_warning                   : 0
 temperature                        : 36 °C (309 K)
