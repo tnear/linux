@@ -59,10 +59,6 @@ Import sub-directories:
 
 ### `/proc/<pid>/cmdline`
 Contains the command that started the process and its parameters.
-```bash
-$ cat cmdline
--bash
-```
 
 ### `/proc/<pid>/fd`
 Contains all file descriptors used by that process.
@@ -80,8 +76,7 @@ lrwx------ 1 travis travis 64 Aug  4 15:23 20 -> 'socket:[76831]'
 lr-x------ 1 travis travis 64 Aug  4 15:23 22 -> anon_inode:inotify
 ```
 
-## `/proc/<pid>/fd`
-All file descriptors in use by a process. `0=stdin, 1=stdout, 2=stderr`.
+`0=stdin, 1=stdout, 2=stderr`.
 
 ## `/proc/interrupts`
 Shows how many times an interrupt number (0, 1, 6, 17) ran on a CPU.

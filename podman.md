@@ -10,7 +10,7 @@ Its cli is almost identical to [`docker`](docker.md).
 # pull new image
 sudo podman pull <url>
 
-# list images
+# list images (including their checksum)
 sudo podman image list
 
 # remove image by id

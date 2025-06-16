@@ -84,3 +84,10 @@ $ strace -ttt -T ls
 ```
 
 This shows that `execve` took 632 us and `brk` took 89 us. `strace` has built-in overhead, so these numbers may be slower than in production runs.
+
+## `-f, --follow-forks`
+The `-f` flag follows child processes.
+
+```bash
+strace -f $(pidof my_app)
+```

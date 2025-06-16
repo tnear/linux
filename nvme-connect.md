@@ -7,10 +7,10 @@ This NVMe API is run on an **initiator** to establish a connection with an exist
 ## Basic usage
 ```bash
 # tcp connection to controller
-sudo nvme connect -t tcp -n nqn.2024-08.io.spdk:cnode1 -a 10.11.12.13 -s 4420
+sudo nvme connect -t tcp -n nqn.2024-08.io.app:cnode1 -a 10.11.12.13 -s 4420
 
 # disconnect when done
-sudo nvme disconnect -n nqn.2024-08.io.spdk:cnode1
+sudo nvme disconnect -n nqn.2024-08.io.app:cnode1
 ```
 
 ## Common flags
