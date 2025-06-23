@@ -12,7 +12,7 @@ travis
 ```
 
 ## Get IP address
-Use the `-I, --all-ip-addresses` flag to get an IP address.
+Use `-I, --all-ip-addresses` to get a machine's IP address.
 ```
 $ hostname -I
 192.168.122.236

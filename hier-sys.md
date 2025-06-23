@@ -30,8 +30,8 @@ sudo echo 12345 > /sys/fs/cgroup/cpu/my_cpu_group/cgroup.procs
 # check cgroups of a running process.
 # each line follows this format:
 # hierarchy-ID:controller-list:cgroup-path
-# /proc/<pid>/cgropu
-$ cat /proc/3299971/cgroup       
+# /proc/<pid>/cgroup
+$ cat /proc/3299971/cgroup
 0::/user.slice/user-1003.slice/session-1466.scope
 ```
 
