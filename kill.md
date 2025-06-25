@@ -2,7 +2,7 @@
 
 kill - send a signal to a process
 
-See also: pkill
+See also: [`pkill`](pkill.md)
 
 ## Basic syntax
 ```

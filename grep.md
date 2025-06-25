@@ -8,7 +8,7 @@ Syntax:
 $ grep -options 'pattern' <file_or_directory>
 ```
 
-See also [ripgrep](rg.md).
+See also [`ripgrep`](rg.md).
 
 ## Common flags
 ```

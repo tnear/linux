@@ -2,7 +2,7 @@
 
 `df` - disk free - report file system space usage
 
-See also: [du.md](du.md)
+See also: [`du`](du.md)
 
 ## Show disk usage of drive containing home directory (~)
 ```

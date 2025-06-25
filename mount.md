@@ -10,6 +10,9 @@ proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
 <truncated>
 ```
 
+### `noexec`
+The `noexec` flag prevents executing binaries in that mounted partition. However, simple workarounds exist.
+
 ## Mount flash drive
 Assume there is a flash drive located at `/dev/flash_sdd`. This mounts that flash drive to an existing `/media/photos` directory.
 ```

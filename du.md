@@ -2,7 +2,7 @@
 
 `du` - disk usage - estimate file space usage
 
-See also: [df](df.txt)
+See also: [`df`](df.txt)
 
 Syntax:
 

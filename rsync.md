@@ -2,7 +2,7 @@
 
 `rsync` - a fast, versatile, remote (and local) file-copying tool
 
-See also: [scp](scp.md)
+See also: [`scp`](scp.md)
 
 ## Common flags
 
@@ -12,7 +12,7 @@ See also: [scp](scp.md)
 -P            = partial + progress. Shows progress while preserving partially transferred files (recommended)
 ```
 
-## Copy all files from dir/ to newDir/
+## Copy all files from `dir/` to `newDir/`
 ```bash
 # (rsync will create newDir if it doesn't exist)
 $ rsync -av dir newDir/
@@ -27,7 +27,7 @@ total size is 6  speedup is 0.03
 
 ## Remote computer with partial and progress
 Using `rsync` for remote transfers because the `-P` flag will resume file transfer after recovering from a disconnect.
-```
+```bash
 $ rsync -P a.html tnear@100.101.102.103:/home/user
 a.html
            0 100%    0.00kB/s    0:00:00 (xfer#1, to-check=0/1)
