@@ -5,7 +5,7 @@ jq - Command-line JSON processor
 ## Pretty-print a JSON string
 The expression `jq '.'` converts input to output with no changes. The `'.'` portion can be left off in this example.
 
-```
+```bash
 $ echo '{"fruit":{"name":"apple","color":"green","price":1.20}}' | jq '.'
 {
   "fruit": {
@@ -42,13 +42,13 @@ $ jq -n '{"name": "John", "age": 30}'
 ```
 
 ### `jq` on a file
-```
+```bash
 $ echo '{"fruit":{"name":"apple","color":"green","price":1.20}}' > fruits.json
 $ jq '.' fruits.json
 ```
 
 ## Select fields
-```
+```bash
 $ jq '.fruit' fruits.json
 {
   "name": "apple",
@@ -58,14 +58,14 @@ $ jq '.fruit' fruits.json
 ```
 
 ### Nested fields
-```
+```bash
 $ jq '.fruit.price' fruits.json
 1.20
 ```
 
 ## Arrays
 The examples below all use this data:
-```
+```json
 [
   {
     "name": "apple",
@@ -85,25 +85,33 @@ The examples below all use this data:
 ]
 ```
 
+## Arrays
+
 ### Iterate over array
 The syntax `.[]` iterates over an array of data.
 
 This example iterates over the array and gets all the `name` fields:
-```
+```bash
 $ jq '.[].name' fruits.json
 "apple"
 "banana"
 "kiwi"
 ```
 
-## Index into array
+### Index into array
 The syntax `.[0]` gets the zeroth element of an array:
-```
+```bash
 $ jq '.[0]' fruits.json
   "name": "apple",
   "color": "green",
   "price": 1.2
 }
+```
+
+### Get array length (number of elements)
+```bash
+# get number of elements of 'commands' array
+$ cat file.json | jq '.commands | length'
 ```
 
 ### Get price of `idx=2` in array
