@@ -15,9 +15,10 @@ $ ssh tnear@example.edu
 -X    Enables X11 forwarding
 -Y    Enables trusted X11 forwarding (less secure)
 -L    Local port forwarding tunnel
--N    Do not execute a remote command. This is useful for just forwarding ports.
+-N    Do not execute a remote command. Useful for port forwarding
 -v    verbose mode. Use -vv or -vvv for extra verbosity
 -i    identity file. Used to specify a private key
+-G    print configuration information
 ```
 
 ## Connect and allow trusted X11 forwarding
@@ -51,3 +52,10 @@ ssh -i /path/to/private/key
 
 If unspecified, the he defaults are `~/.ssh/id_dsa`, `~/.ssh/id_ecdsa`,
 `~/.ssh/id_ed25519`, and `~/.ssh/id_rsa`.
+
+## Query IP address without connecting
+Use `-G` to print a remote machine's configuration information.
+
+```bash
+ssh -G machine_name | grep hostname
+```
