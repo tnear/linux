@@ -2,7 +2,7 @@
 
 `strace` - trace system calls and signals
 
-- *All* `strace` outputs begin with `execve`. The `execve` syscall runs an executable.
+- `strace` outputs begin with `execve`. The `execve` syscall runs an executable.
 - `strace` writes to `stderr` (not `stdout`).
 
 ## Basic usage
@@ -24,7 +24,7 @@ $ strace ls 2> ls.out
 $ cat ls.out
 ```
 
-### Write `ls` output to ls.out and `strace` output to stderr (screen)
+### Write `ls` output to file and `strace` output to stderr (screen)
 ```bash
 $ strace ls > ls.out
 $ cat ls.out
@@ -83,7 +83,7 @@ $ strace -ttt -T ls
 1748108167.147278 brk(NULL)             = 0x561f00cb5000 <0.000089>
 ```
 
-This shows that `execve` took 632 us and `brk` took 89 us. `strace` has built-in overhead, so these numbers may be slower than in production runs.
+This shows that `execve` took 632 microseconds and `brk` took 89 microseconds. `strace` has built-in overhead, so these numbers may be slower than in production runs.
 
 ## `-f, --follow-forks`
 The `-f` flag follows child processes.

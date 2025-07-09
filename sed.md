@@ -91,5 +91,5 @@ sed '23s/old/new'
 ## Filter python tests
 This adds `skip()` to the beginning of all python unit tests in a file.
 ```bash
-sed -i 's/^\(\s*\)\(def test_.*\)$/\1@unittest.skip("TODO: temporarily skipped")\n\1\2/' your_file.py
+sed -i 's/^\(\s*\)\(def test_.*\)$/\1@unittest.skip("Temporarily skipped")\n\1\2/' your_file.py
 ```
