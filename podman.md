@@ -41,3 +41,13 @@ The `-q` flag is for *quiet*, meaning only show the container ID.
 sudo podman stop $(sudo podman ps -q --filter ancestor="$image_name")
 sudo podman rm $(sudo podman ps -aq --filter ancestor="$image_name")
 ```
+
+### Copy file into container
+
+```bash
+# using container name
+sudo podman cp /path/to/file.txt container_name:/path/in/container
+
+# using checksum
+sudo podman cp /path/to/file.txt <checksum>:/path/in/container
+```

@@ -267,3 +267,5 @@ ps      0 : mp:25.00W operational enlat:0 exlat:0 rrt:0 rrl:0
             rwt:0 rwl:0 idle_power:7.00W active_power:19.00W
             active_power_workload:80K 128KiB SW
 ```
+
+- `mdts: 8`: Maximum Data Transfer Size. `8` means `2^8 * 4 KB` = 1 MB.
