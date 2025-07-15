@@ -6,7 +6,7 @@
 - `tasks: <num>`: total number of processes
 - `<num> thr`: total number of threads across all processes
 - `<num> kthr`: total number of kernel threads
-- `<num running`: number of processes currently executing in CPU
+- `<num> running`: number of processes currently executing in CPU
 
 ### Load average
 The load averages indicate the average number of CPU cores used. A value of 1.0 indicates full utilization of one CPU core.

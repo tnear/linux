@@ -11,9 +11,11 @@ scp file1.txt user@cs.example.edu:/home/user/path/file1.txt
 
 ## Copy `file1.txt` from remote machine to local
 
+This preserves the file name and copies to `pwd`.
+
 *Note: this must be run in the **local** machine.*
 ```bash
-scp user@cs.example.edu:/home/user/path/file1.txt file1.txt
+scp user@cs.example.edu:/home/user/path/file1.txt .
 ```
 
 ## `-r` = recursive copy. Copy directory `/tmp/d` and all its contents
@@ -21,4 +23,4 @@ scp user@cs.example.edu:/home/user/path/file1.txt file1.txt
 scp -r /tmp/d user@cs.example.edu:/home/user/d
 ```
 
-Note: it's often more efficient to [`tar`](tar.md) a directory first before `scp` (or `rsync`).
+Note: it's often more efficient to [`tar`](tar.md) files first before `scp` (or `rsync`).
