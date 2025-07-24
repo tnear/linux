@@ -2,7 +2,7 @@
 
 `systemd, init` - systemd system and service manager
 
-## Step-by-step example creating a systemd process (untested)
+## Step-by-step example creating a `systemd` process (untested)
 ### Create a service file in `/etc/systemd/system`
 
 ```bash
