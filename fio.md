@@ -13,10 +13,17 @@
 - `slat` (submission latency) - time to submit to kernel
 - `lat` (total latency) - total time for the I/O (slat + clat)
 
-## Command
+## Run FIO
+
+### Command
 This example uses a local file instead of a device, making it safe and easy to run.
-```
+```bash
 $ fio --name=test --filename=/tmp/fio_test --size=100M --readwrite=randrw --blocksize=4k --direct=1 --runtime=10 --numjobs=1  --group_reporting --disable_lat=1 --unlink=1
+```
+
+### Job file
+```bash
+$ fio jobfile.fio
 ```
 
 ### Common flags

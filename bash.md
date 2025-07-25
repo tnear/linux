@@ -3,17 +3,17 @@
 `bash` - GNU Bourne-Again SHell
 
 ## -c = command to run
-```
+```bash
 $ bash -c 'echo hello'
 hello
 
-# OR:
+# or with zsh
 $ zsh -c 'echo hello'
 ```
 
 ## -x = execution trace (xtrace) mode
 The `-x` flag creates verbose output for debugging scripts:
-```
+```bash
 $ cat script.sh
 #!/bin/bash
 echo 'Starting script'
@@ -29,11 +29,11 @@ Hello, world!
 Script completed
 ```
 
-^The '+' sign denotes the command about to be run
+^The `+` character denotes the command about to be run.
 
 ## subshell
-To create a subshell, which is a child process of current shell, enclose statements in parentheses:
-```
+To spawn a subshell, which is a child process of current shell, enclose statements in parentheses:
+```bash
 (cd path/to/dir && make)
 ```
 

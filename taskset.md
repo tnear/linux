@@ -7,6 +7,9 @@
 ```bash
 $ taskset -p <PID>                               
 pid <PID>'s current affinity mask: ffffffff
+
+$ taskset -cp $(pidof my_app)
+pid 217's current affinity list: 0-31
 ```
 
 - Each `f` represents 4 bits
