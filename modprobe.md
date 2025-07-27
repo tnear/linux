@@ -4,6 +4,8 @@
 
 Syntax: `sudo modprobe <options> <module name>`
 
+See also: [`lsmod`](lsmod.md)
+
 ## Add a module to Linux kernel
 ```
 $ sudo modprobe rdma_cm
