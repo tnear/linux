@@ -41,7 +41,7 @@ head files_*.txt
 ## Output all lines
 This can be useful if you want to output multiple files and see the file name for each (`cat`, for example, does not output file name).
 ```bash
-# large -n 
+# large -n
 head -n 99999 <file_glob>
 
 # using -n -0 (not as widely supported)

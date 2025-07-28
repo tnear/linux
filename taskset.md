@@ -5,7 +5,7 @@
 ## Get CPU affinity of a PID
 
 ```bash
-$ taskset -p <PID>                               
+$ taskset -p <PID>
 pid <PID>'s current affinity mask: ffffffff
 
 $ taskset -cp $(pidof my_app)
