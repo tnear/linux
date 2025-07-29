@@ -10,19 +10,20 @@ $ sudo -i
 
 ## Run commands as root
 ```bash
+# most common usage (no flags)
 $ sudo apt install <pkg_name>
 
 # -u = run command as a specified user
 $ sudo -u nobody whoami
 nobody
 
-# preserve your environment variables using -E
+# -E = preserve your environment variables
 $ export MY_VAR="hello"
 $ sudo -E env | grep MY_VAR  # outputs: "MY_VAR=hello"
 ```
 
 ### Run last command as 'root'
-Use `!!` to reload the previous command and prefix with `sudo`.
+Use [`!!`](!.md) to reload the previous command and prefix with `sudo`.
 ```bash
 $ sudo !!
 ```

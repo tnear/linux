@@ -1,9 +1,9 @@
 # Functions
 
-Information on shell functions:
+Information on shell functions.
 
 ## Create a function called name which echoes your username
-```
+```bash
 $ name() { echo $(whoami); }
 $ name
 kali
@@ -11,7 +11,7 @@ kali
 
 ## Function arguments
 Function arguments are $1, $2, ...:
-```
+```bash
 hello() {
     echo "Hello, $1 and $2"
     return 101
@@ -22,18 +22,21 @@ $ hello you me
 Hello, you and me
 ```
 
-## Return value (exit code, error code, status code) accessed through '$?':
+## Return value (exit code, error code, status code)
+Application exit codes are accessed through `$?`.
+```bash
+# typically, 0 is success and non-zero is failure
 echo $?
 101
+```
 
 ## Return values
-Only integers can be directly returns. To return strings, use `echo` and command substitution.
+Only integers can be directly returned. To return strings, use `echo` and command substitution.
 
 ```bash
 return_string() {
-    str = 'my return value'
-    echo "$str" # "return" the string via stdout
-    return 0 # success
+    str='my return value'
+    echo "$str" # echo to return the string via stdout
 }
 
 # use $(...) to capture stdout via command substitution.

@@ -2,12 +2,12 @@
 
 `ps` - process status - report a snapshot of the current processes.
 
-## Example processes
+## Basic usage
 ```bash
 $ ps -aux
-USER   PID %CPU %MEM    VSZ   RSS TTY   STAT START   TIME COMMAND
-root     1  0.0  0.2 167480 12028 ?     Ss   Jan22   0:03 /sbin/init splash
-root     2  0.0  0.0      0     0 ?     S    Jan22   0:00 [kthreadd]
+USER PID %CPU %MEM    VSZ   RSS TTY STAT START TIME COMMAND
+root   1  0.0  0.2 167480 12028 ?   Ss   Jan22 0:03 /sbin/init
+root   2  0.0  0.0      0     0 ?   S    Jan22 0:00 [kthreadd]
 ```
 
 ### Columns
@@ -23,8 +23,9 @@ with a terminal)
 - `-e` = show all processes
 - `-f` = full format listing
 - `-l` = long format: includes niceness value (NI).
-- `-u` = user-oriented (extra columns). Note: -u is incompatible with -l
+- `-u` = user-oriented (extra columns). `-u` is incompatible with `-l`
 - `-x` = include extra processes not attached to terminal
+- `-p` = filter for a pid, ex: `ps -p 1`
 
 ## Show niceness value (NI)
 ```bash
