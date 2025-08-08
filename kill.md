@@ -5,10 +5,11 @@ kill - send a signal to a process
 See also: [`pkill`](pkill.md)
 
 ## Basic syntax
-```
+```bash
 $ kill <pid1> <pid2> <pid3> <...>
 $ kill -signal_num <pid>
-$ kill <job#>
+$ kill -signal_name <pid>
+$ kill <job_num>
 ```
 
 ## Commonly used signals
@@ -21,6 +22,7 @@ $ kill <job#>
 -9    KILL (non-catchable, non-ignorable kill)
 -14   ALRM (alarm clock)
 -15   TERM (software termination signal, default)
+-19   STOP (stop a process)
 ```
 
 ## Search for process id and kill
@@ -34,15 +36,19 @@ $ kill 220421
 
 ## Force-kill using SIGKILL or SIGTERM
 ```bash
+# sigkill
 $ kill -9 <processID>
-$ kill -SIGKILL <processID>  # equivalent syntax
+$ kill -SIGKILL <processID>  # equivalent syntax using name
 
+# sigterm
 $ kill -15 <processID>
-$ kill -SIGTERM <processID>  # equivalent syntax
+$ kill -SIGTERM <processID>  # equivalent syntax using name
 $ kill <processID>  # SIGTERM is default
 ```
 
 ## Kill by job number
+Use `%<num>` to kill a job by number.
+
 ```bash
 $ jobs
 [1]  + suspended  sleep 1000

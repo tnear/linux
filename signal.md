@@ -11,8 +11,14 @@ Manual: `man 7 signal`
 | SIGQUIT | 3 | Ctrl+\  | Terminates process and dumps core
 | SIGKILL | 9 |         | Kills process (cannot be caught)
 | SIGTERM |15 |         | Terminates process (unlike SIGKILL, it can be caught)
-| SIGSTOP |15 |         | Stops a process
+| SIGSTOP |19 |         | Stops a process
 | SIGTSTP |20 | Ctrl+Z  | Suspends execution of process
+
+## Send signal
+```bash
+# send sigstop
+kill -SIGSTOP <pid>
+```
 
 ## Resources
 - https://en.wikipedia.org/wiki/Signal_(IPC)

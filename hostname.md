@@ -3,7 +3,7 @@
 `hostname` - show or set the system's host name
 
 ## Basic usage
-```
+```bash
 $ hostname  # SSH
 machine.cs.example.edu
 
@@ -12,8 +12,8 @@ travis
 ```
 
 ## Get IP address
-Use `-I, --all-ip-addresses` to get a machine's IP address.
-```
-$ hostname -I
+Use `-i` or `-I` to get a machine's IP addresses.
+```bash
+$ hostname -i
 192.168.122.236
 ```
