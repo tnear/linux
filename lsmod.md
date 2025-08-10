@@ -15,7 +15,7 @@ nf_nat                 57344  2 nft_chain_nat,xt_MASQUERADE
 nf_conntrack_netlink   57344  0
 ```
 
-## Query specific module
+## Query modules
 ```bash
 $ lsmod | grep nvme_fabrics
 nvme_fabrics           36864  1 nvme_tcp

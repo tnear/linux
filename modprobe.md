@@ -7,7 +7,7 @@ Syntax: `sudo modprobe <options> <module name>`
 See also: [`lsmod`](lsmod.md)
 
 ## Add a module to Linux kernel
-```
+```bash
 $ sudo modprobe rdma_cm
 
 # confirm it is added
@@ -17,6 +17,6 @@ rdma_cm               151552  1 nvme_rdma
 
 ## Remove a module from the Linux kernel
 Use `-r, --remove` to remove a module.
-```
+```bash
 sudo modprobe -r rdma_cm
 ```

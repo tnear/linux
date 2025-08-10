@@ -16,7 +16,7 @@ Use `list` to print code lines.
 (gdb) tui enable  # enter tui mode
 ```
 
-See also gdb-dashboard.
+See also: [`gdb-dashboard`](gdb.md#gdb-dashboard)
 
 ## Printing
 

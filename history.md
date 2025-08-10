@@ -1,19 +1,19 @@
-HISTORY
+# history
 
-history - GNU History Library
+`history` - GNU History Library
 
-(see also: !.txt)
+See also: [`!`](!.md), [`fzf`](fzf.md)
 
-# View command history:
+## View command history
+```bash
 $ history
+```
 
-# View command history of 'grep':
+### Search command history
+```bash
 $ history | grep grep
+```
 
-# Search history (see also 'fzf'):
-Ctrl+R
-# type string to history search
-# Ctrl+R finds previous match (bck-i-search)
-# Ctrl+S finds next match     (fwd-i-search)
-
----
+## Shortcuts
+- `Ctrl+R` finds previous match (`bck-i-search`) 
+- `Ctrl+S` finds next match     (`fwd-i-search`) (less widely supported)
