@@ -76,6 +76,46 @@ Each namespace has its own LBA. NVMe commands specify the LBA number.
 ### Read-modify-write
 Read-modify-write happens when a drive *reads* an existing block into memory, *modifies* the portion to change, then *writes* the entire block back to storage.
 
+## Persistent reservations
+NVME persistent reservations (PR) allow multiple hosts to coordinate shared access to an NVMe namespace. This prevents data corruption when multiple initiators access the same target storage.
+
+### Reservation types
+1. Write Exclusive (WE)
+    - Only the reservation holder can write
+    - All hosts can read
+1. Exclusive Access (EA)
+    - Only the reservation holder can read/write
+    - Other hosts are blocked completely
+1. (see NVMe spec for more)
+
+### CLI
+See [`nvme resv-register`](nvme-resv-register.md).
+
+### Preemption
+Preempt is a command feature that allows a forcible removal of an existing reservation from another host. Preemption operates on NVMe *namespaces*.
+
+Persistent reservations allow multiple hosts to coordinate exclusive access to storage resources (like a "lock"). A preempt *removes* existing reservations, essentially "breaking the lock" that another host has placed on storage.
+
+#### Use cases
+- Cluster failover. When a node fails, another node preempts its reservations to take over storage access.
+- Storage migration. Moving storage access from one host to another.
+- Stuck reservations. When a host crashed, it leaves "zombie" reservations that need cleanup.
+- Administrative override. Manual intervention to resolve storage conflicts.
+
+#### Types
+There are two types of preemption.
+
+1. Preempt
+    - Removes reservations held by specific reservation keys
+1. Preempt and abort
+    - Same as preempt, but also aborts outstanding I/O commands
+    - More aggressive than regular preempt
+
+#### Risks
+- Data corruption. If Host A was mid-write when it was preempted, the data might be inconsistent.
+- Split-brain scenarios. Both hosts might think they own the storage
+
+
 ## Resources
 - https://www.youtube.com/watch?v=Qy1q4qT7b2M
 - NVM Express over Fabrics with SPDK for Intel® Ethernet Products with RDMA (May 2021)
