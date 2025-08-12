@@ -28,3 +28,17 @@ Hashed passwords. Root-only file access.
 
 ## `/etc/environment`
 A system-wide configuration file used by all users. Requires administrator privileges to modify.
+
+## `/etc/os-release`
+Displays information about the operating system release version.
+
+```
+NAME="Oracle Linux Server"
+VERSION="9.4"
+ID="ol"
+ID_LIKE="fedora"
+VERSION_ID="9.4"
+PLATFORM_ID="platform:el9"
+PRETTY_NAME="Oracle Linux Server 9.4"
+CPE_NAME="cpe:/o:oracle:linux:9:4:server"
+```
