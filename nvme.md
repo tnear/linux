@@ -115,6 +115,15 @@ There are two types of preemption.
 - Data corruption. If Host A was mid-write when it was preempted, the data might be inconsistent.
 - Split-brain scenarios. Both hosts might think they own the storage
 
+## Asynchronous Event Notification
+Asynchronous Event Notification (AEN) allows NVMe devices to notify the host system about important events or status changes without the host having to poll the device.
+
+The NVMe controller can send these notifications about events such as errors or health status. They are sent *asynchronously*, meaning they do not interrupt normal I/O operations.
+
+AENs are *admin* commands.
+
+### Example use case
+If an NVMe SSD starts overheating, it can send an AEN to the host OS, which can take action like throttling I/O or triggering an alarm.
 
 ## Resources
 - https://www.youtube.com/watch?v=Qy1q4qT7b2M

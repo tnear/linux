@@ -5,10 +5,10 @@
 Consult the "Feature Support Requirements" section of the NVMe specification to see what every feature ID means.
 
 ## Asynchronous event configuration
-Feature ID 0x0b is asynchronous event configuration. It can be useful for understanding if certain actions send an event which.
+Feature ID `0x0b` is asynchronous event configuration. It can be useful for understanding if certain actions send an event.
 
 ```bash
-sudo nvme get-feature --feature-id=0x0b -H /dev/nvme0
+$ sudo nvme get-feature --feature-id=0x0b -H /dev/nvme0
 get-feature:0x0b (Async Event Configuration), Current value:0x00000200
 	Discovery Log Page Change Notices                  : Do not send async event
 	Endurance Group Event Aggregate Log Change Notices : Do not send async event

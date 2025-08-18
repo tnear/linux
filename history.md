@@ -15,5 +15,5 @@ $ history | grep grep
 ```
 
 ## Shortcuts
-- `Ctrl+R` finds previous match (`bck-i-search`) 
+- `Ctrl+R` finds previous match (`bck-i-search`)
 - `Ctrl+S` finds next match     (`fwd-i-search`) (less widely supported)

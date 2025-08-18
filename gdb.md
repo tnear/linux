@@ -143,7 +143,7 @@ New value = 7
 main () at a.cpp:8
 ```
 
-## Watch an address
+### Watch an address
 This is useful if the variable (but not its memory) leaves the scope of the current function:
 ```
 (gdb) print &(cls->member)
