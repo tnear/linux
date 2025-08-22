@@ -125,6 +125,24 @@ AENs are *admin* commands.
 ### Example use case
 If an NVMe SSD starts overheating, it can send an AEN to the host OS, which can take action like throttling I/O or triggering an alarm.
 
+## Queue pair
+NVMe uses queue pairs (qpairs) for communication between the host and controller. Each queue pair consists of:
+- Submission Queue (SQ): Where the host places commands
+- Completion Queue (CQ): Where the controller places completion entries
+
+### Admin queue pairs
+Each NVMe controller has exactly one admin QP, which has an ID of 0. It is created during controller initialization. The admin queue pair handles controller management (it is not involved in data transfer aka I/O).
+
+Responsibilities:
+- controller config (setting features, log pages, capability discovery)
+- namespace management
+- queue management: create and delete I/O qpairs
+
+### I/O queue pairs
+I/O queue pairs handle data operations (read, write, flush, etc.). NVMe controllers can support up to 65,535 I/O queue pairs (while admin qpair only has one). Their IDs range from [1, 65535]. Multiple I/O queue pairs enables parallelism.
+
+I/O queue pairs are created by the admin qpair.
+
 ## Resources
 - https://www.youtube.com/watch?v=Qy1q4qT7b2M
 - NVM Express over Fabrics with SPDK for Intel® Ethernet Products with RDMA (May 2021)

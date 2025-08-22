@@ -14,6 +14,8 @@ Tips and trips for the markdown markup language.
 - Use `**` for **bold**
 - Use `***` for ***bold and italics***
 
+Standard markdown does not support <u>underline</u>.
+
 ## Lists
 
 ### Unordered list
@@ -29,7 +31,8 @@ Lists can be numbered sequentially, ex: 1, 2, 3, ..., or all the same, ex: 1, 1,
 Example:
 1. First item
 1. Second item
-    1. Sub-numbered item
+    1. Sub-numbered item one
+    1. Sub-numbered item two
 1. Third item
 
 ## Links
@@ -39,6 +42,16 @@ Example:
 ### Links to sections in documents
 
 ## Tables
+
+Use `:` in separator row to control alignment.
+- No `:`: left align (default)
+- Right `:`: right align
+- Left and right `:`: center
+
+| Example table col | Column with long name | Another wide column |
+|-------------------|----------------------:|:-------------------:|
+| Left align 1      | Right align 1         | Center 1            |
+| Left align 4      | Right align 2         | Center 2            |
 
 ## Code blocks
 
@@ -53,3 +66,4 @@ To create a block quote, add `>` in front of a paragraph. Use `>` by itself to s
 
 ## Resources
 - https://www.markdownguide.org/basic-syntax/
+- https://www.codecademy.com/resources/docs/markdown/tables
