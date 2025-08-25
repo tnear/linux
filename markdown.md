@@ -13,8 +13,11 @@ Tips and trips for the markdown markup language.
 - Use `*` for *italics*
 - Use `**` for **bold**
 - Use `***` for ***bold and italics***
+- Use `~~` for ~~strikethrough~~
 
 Standard markdown does not support <u>underline</u>.
+
+Standard markdown does not support <mark>highlight</mark>.
 
 ## Lists
 
@@ -37,9 +40,34 @@ Example:
 
 ## Links
 
-### External links
+### Hyperlinks
+```
+[example web page](https://www.example.com)
+```
 
-### Links to sections in documents
+### URL or Email address
+Enclose in angle brackets.
+```
+<https://www.example.com/>
+
+<user@example.com>
+```
+
+Markup example:
+
+<https://www.example.com/>
+
+<user@example.com>
+
+### Links to sections in documents (internal link)
+```
+[Resources section](#resources)
+```
+
+### Images
+```
+![optional alt text](images/DockerArchitecture.png)
+```
 
 ## Tables
 
@@ -54,8 +82,14 @@ Use `:` in separator row to control alignment.
 | Left align 4      | Right align 2         | Center 2            |
 
 ## Code blocks
+```
+basic code block no language
+```
 
-## Images
+```bash
+# code block with language (bash) for syntax coloring
+echo 'hello world!'
+```
 
 ## Block quotes
 To create a block quote, add `>` in front of a paragraph. Use `>` by itself to separate block paragraphs.
@@ -66,4 +100,4 @@ To create a block quote, add `>` in front of a paragraph. Use `>` by itself to s
 
 ## Resources
 - https://www.markdownguide.org/basic-syntax/
-- https://www.codecademy.com/resources/docs/markdown/tables
+- https://www.codecademy.com/resources/docs/markdown
