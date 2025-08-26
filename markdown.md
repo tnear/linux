@@ -81,7 +81,10 @@ Use `:` in separator row to control alignment.
 | Left align 1      | Right align 1         | Center 1            |
 | Left align 4      | Right align 2         | Center 2            |
 
-## Code blocks
+## Code
+Use backticks to create a `code fragment`.
+
+### Code blocks
 ```
 basic code block no language
 ```
