@@ -3,7 +3,7 @@
 `ssh` — 'secure shell' - OpenSSH remote login client
 
 Basic syntax:
-```
+```bash
 $ ssh username@host
 
 # Ex:
@@ -21,21 +21,33 @@ $ ssh tnear@example.edu
 -G    print configuration information
 ```
 
-## Connect and allow trusted X11 forwarding
+## Run commands on machine without connecting
+
+```bash
+# print remote ip address
+ssh machine_name 'hostname'
+
+# print nvme devices
+ssh machine_name 'lspci | grep -i nvme'
 ```
+
+## Forwarding
+
+### Connect and allow trusted X11 forwarding
+```bash
 $ ssh -Y tnear@example.edu
 ```
 
 ## Forward port
 This example tells the SSH server at ssh-server.example.com to forward port 8080 on the localhost to port 80 on the desired, but restricted, server: social.example.org:
-```
+```bash
 $ ssh -L 8080:social.example.org:80 ssh-server.example.com
 ```
 
 This allows you to access the restricted server using the url http://localhost:8080/
 
 
-## X11: X Windows System v11
+### X11: X Windows System v11
 https://goteleport.com/blog/x11-forwarding/
 
 X11 forwarding: an SSH protocol that enables users to run graphical applications
@@ -46,16 +58,9 @@ remote machines across wide and heterogeneous server fleets.
 ## Identity file
 Use the `-i` flag to specify a path to an identity file (private key). Ex:
 
-```
+```bash
 ssh -i /path/to/private/key
 ```
 
 If unspecified, the he defaults are `~/.ssh/id_dsa`, `~/.ssh/id_ecdsa`,
 `~/.ssh/id_ed25519`, and `~/.ssh/id_rsa`.
-
-## Query IP address without connecting
-Use `-G` to print a remote machine's configuration information.
-
-```bash
-ssh -G machine_name | grep hostname
-```

@@ -131,6 +131,10 @@ Use `backtrace full` to see the backtrace with local variable names and values.
 ## Watchpoints
 A watchpoint (or *data breakpoint*) is a way to pause execution when the value of an expression changes.
 
+### Types
+- Hardware watchpoint: uses special CPU debug registers to monitor memory. x86 contains 4 of these debug registers (`DR0-DR3`). They have minimal performance impact.
+- Software watchpoint: after each instruction, gdb checks if watched memory changed. If so, it triggers pauses at the watchpoint. They have significant performance impact (often over 100x slowdown), but are always available.
+
 ### Watch the value of a single variable
 Execution will pause when the value of the variable `foo` changes.
 ```

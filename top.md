@@ -5,9 +5,15 @@
 Displays dynamic table of active processes
 
 ## Basic usage
+```bash
+# show all processes
+top
 
-```
-$ top
+# show specific pid
+top -p <pid>
+
+# show threads for a pid
+top -p <pid> -H
 ```
 
 ## Banner
@@ -87,7 +93,6 @@ MiB Swap:   1024.0 total,    477.1 free,    546.9 used.   2199.3 avail Mem
 $ top -u <user>  # basic syntax
 $ top -u root  # show for root user
 ```
-
 
 ## Interactive sort
 - Press `F` to open Fields Management

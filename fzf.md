@@ -4,12 +4,12 @@
 https://github.com/junegunn/fzf
 
 ## List files: Ctrl+T
-```
+```bash
 $ code <Ctrl+T>
 ```
 
 ### Select multiple files with the `<TAB>` key
-```
+```bash
 $ code env.txt sync.txt
 ```
 
@@ -17,7 +17,7 @@ $ code env.txt sync.txt
 Use Ctrl+R (`fzf` overrides default history shortcut).
 
 ## Search list of active processes:
-```
+```bash
 $ ps -aux | fzf
 ```
 
