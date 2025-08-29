@@ -56,12 +56,18 @@ $ zsh --version
 zsh 5.9 (x86_64-apple-darwin23.0)
 ```
 
-## Create permanent environment variable
-This should use the `.zshenv` file for env vars.
-```
-$ echo 'export MY_VAR=1234' >> ~/.zshenv
+## Creation
+Creating variables requires the 
+### Temporary (current session only)
+```bash
+export VAR_NAME="value"
 ```
 
+### Permanent
+This should use the `.zshenv` file for env vars.
+```bash
+$ echo 'export MY_VAR=1234' >> ~/.zshenv
+```
 
 ## Pass environment variables to subprocesses
 ```bash

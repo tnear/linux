@@ -1,11 +1,12 @@
-CLEAR
+# clear
 
-clear - clear the terminal screen
+`clear` - clear the terminal screen
 
-# Clear screen and scrollback:
+## Basic usage
+```bash
+# Clear screen and scrollback
 $ clear
 
-# Clear screen without clearing scrollback (or use Ctrl+L):
+# Clear screen without clearing scrollback (or use Ctrl+L)
 $ clear -x
-
----
+```

@@ -3,11 +3,16 @@
 `mount` - mount a filesystem
 
 ## Display all mounted partitions
-```
+```bash
 $ mount
 sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime)
 proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
 <truncated>
+```
+
+### Search for a mount directory
+```bash
+$ mount | grep <my_dir>
 ```
 
 ### `noexec`
@@ -15,7 +20,7 @@ The `noexec` flag prevents executing binaries in that mounted partition. However
 
 ## Mount flash drive
 Assume there is a flash drive located at `/dev/flash_sdd`. This mounts that flash drive to an existing `/media/photos` directory.
-```
+```bash
 $ mkdir /media/photos
 $ mount /dev/flash_sdd /media/photos
 ```

@@ -1,30 +1,33 @@
-EXPORT
+# export
 
-export — set the export attribute for variables
+`export` — set the export attribute for variables
 
-export can be used to make shell variables available to subprocesses.
+`export` can be used to make shell variables available to subprocesses.
 
-# Show all exported variables:
+## List all exported variables
+```bash
 $ export
+```
 
-# Create new exported variable and assign value:
+## Create environment variable
+```bash
 $ export QQQQ=101
 $ printenv QQQQ
 101
+```
 
-# Show that QQQQ is not available in sub-shell:
+## Make environment variable available sub-shell:
+```bash
+# alt two-line syntax to export
 $ QQQQ=101
-$ bash -c 'echo $QQQQ'
-<no output>
-
-# Now export QQQQ and see that '101' is displayed:
 $ export QQQQ
+
+# use bash -c flag to forward environment variable
 $ bash -c 'echo $QQQQ'
 101
+```
 
-# Clear environment variable when done:
+## Clear environment variable
+```bash
 $ unset QQQQ
-$ bash -c 'echo $QQQQ'
-<not output>
-
----
+```
