@@ -7,8 +7,8 @@ Syntax: `$ set [option] [argument]`
 ## Command options
 
 ### `-e`, exits script upon errors
-```
-set -e # set up error detection
+```bash
+set -e  # set up error detection
 cat fake_file
 echo 'execution does not reach here due to -e option'
 ```
@@ -16,7 +16,7 @@ echo 'execution does not reach here due to -e option'
 ### `-x`, annotates execution
 The `-x` flag is useful for debugging scripts.
 
-```
+```bash
 set -x
 
 <run script, see this debug output:>
@@ -36,7 +36,7 @@ $ bash debugging.sh
 ### `-a`, exports functions and variables in script
 The `-a` flag is useful for creating variables or functions in a script and then having them available after the script runs.
 
-```
+```bash
 set -a
 name='hello'
 

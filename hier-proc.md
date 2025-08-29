@@ -52,6 +52,20 @@ Hugetlb:         4194304 kB
 ## `/proc/cmdline`
 Shows the parameters passed to the kernel at boot time.
 
+### Modify value
+
+```bash
+# Modify GRUB_CMDLINE_LINUX line
+GRUB_CMDLINE_LINUX="existing_params new_param=value another_param"
+
+# Update GRUB
+sudo update-grub  # Debian/Ubuntu
+sudo grub2-mkconfig -o /boot/grub2/grub.cfg  # RHEL/CentOS
+
+# reboot for changes to take effect
+sudo reboot
+```
+
 ## `/proc/<pid>`
 Contains the file representation of process id.
 

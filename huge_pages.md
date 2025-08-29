@@ -9,7 +9,7 @@ HugePages are a Linux kernel feature that allows the system to allocate memory i
 ## Query hugepage info
 This machine has 4 hugepages of size 1 GB (1048567 kB):
 ```bash
-$ grep '^Huge' /proc/meminfo
+$ grep -i huge /proc/meminfo
 HugePages_Total:       4
 HugePages_Free:        0
 HugePages_Rsvd:        0

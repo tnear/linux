@@ -1,6 +1,4 @@
-HIER-SBIN
+# hier-sbin
 
-/sbin
-System administration binaries. Intended to be run as ROOT.
-
----
+## `/sbin`
+System administration binaries. Intended to be run as `root`.

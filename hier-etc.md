@@ -3,6 +3,15 @@
 ## `/etc`
 System-wide configuration files, often editable in a text editor.
 
+## `/etc/environment`
+A system-wide configuration file used by all users. Requires administrator privileges to modify.
+
+## `/etc/default/grub`
+Configuration file for GRUB bootloader. Used to modify `/proc/cmdline`.
+
+### Modify `/proc/cmdline`
+See [`hier-proc`](hier-proc.md)
+
 ## `/etc/fstab`
 File Systems TABle. Used by `mount`.
 
@@ -20,19 +29,10 @@ daemon:*:1:root
 <truncated>
 ```
 
-## `/etc/passwd`
-Accounts, IDs, and home directories.
-
-## `/etc/shadow`
-Hashed passwords. Root-only file access.
-
-## `/etc/environment`
-A system-wide configuration file used by all users. Requires administrator privileges to modify.
-
 ## `/etc/os-release`
 Displays information about the operating system release version.
 
-```
+```bash
 NAME="Oracle Linux Server"
 VERSION="9.4"
 ID="ol"
@@ -42,3 +42,10 @@ PLATFORM_ID="platform:el9"
 PRETTY_NAME="Oracle Linux Server 9.4"
 CPE_NAME="cpe:/o:oracle:linux:9:4:server"
 ```
+
+## `/etc/passwd`
+Accounts, user IDs, and home directories.
+
+## `/etc/shadow`
+Hashed passwords. Root-only file access.
+
