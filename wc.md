@@ -5,13 +5,13 @@
 Returns number of newlines, words, and characters in files
 
 Syntax:
-```
+```bash
 $ wc <file1> <file2> ...
 ```
 
 ## Get newlines | word count | num characters
 This example retrieves newlines, word count, and number of characters for files beginning with "w":
-```
+```bash
 $ wc w*
    0    0    0 wc.txt
    8   35  240 wget.txt
@@ -25,7 +25,7 @@ $ wc w*
 
 ## Number of lines
 Use `-l, --lines` to get the number of newline characters. This example also uses `sort` to get the most.
-```
+```bash
 $ wc -l * | sort -n
       0 config
       0 README.md
@@ -39,7 +39,7 @@ $ wc -l * | sort -n
 
 ## Get lines of code (LOC)
 This example gets the number of lines of code for files with a .h or .c extension:
-```
+```bash
 $ find /usr/include -name '*.[hc]' | xargs wc
 
   466181     1934876     17536397
@@ -47,7 +47,7 @@ newlines | word count | characters
 ```
 
 This example gets lines of code for files with a .cpp or .h extension. It uses `-o` to do an OR constraint.
-```
+```bash
 $ find . -type f \( -name '*.cpp' -o -name '*.h' \) | xargs wc
 
   224233  736557 9406531 total

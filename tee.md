@@ -5,17 +5,17 @@
 Source code: https://github.com/coreutils/coreutils/blob/master/src/tee.c
 
 ## Write to a read-only file as `sudo`
-```
+```bash
 echo 'text here' | sudo tee /path/to/read-only/file
 ```
 
 ## Display output of ps AND write to file
-```
+```bash
 $ ps | tee ps.txt
 ```
 
 ## Append to previous file (instead of overwrite)
-```
+```bash
 $ ps | tee -a ps.txt
 
 # Show appended output:

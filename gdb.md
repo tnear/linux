@@ -292,6 +292,14 @@ Use the `detach` command to detach. `gdb` can now be exited while the process re
 * 1    process 11126     1 (native)      /home/user/debug.out
 ```
 
+## `set` commands
+
+### `set substitute-path`
+Maps an old path to a new path to locate source files.
+```
+(gdb) set substitute-path /old/path/to/source /new/path/to/source
+```
+
 ## Python
 `gdb` includes a built-in Python interpreter.
 

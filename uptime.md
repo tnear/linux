@@ -3,7 +3,7 @@
 `uptime` - Tell how long the system has been running.
 
 ## Basic usage
-```
+```bash
 $ uptime
 17:20:05 up 58 min,  1 user,  load average: 0.36, 0.31, 0.29
 ```
