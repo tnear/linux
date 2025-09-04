@@ -39,11 +39,11 @@ $ ps -aux | grep gedit | grep -v grep | tr -s ' ' | cut -f2 -d ' '
 ## `pgrep` vs. `pidof`
 
 ### `pgrep` summary
-- Simpler and faster than `pgrep` because it does not do regex
-- Requires knowing exact process name
-- Returns space separated PIDs
-
-### `pgrep` summary
 - Supports pattern matching
 - Supports advanced filtering and detailed output
 - Returns one PID per line
+
+### `pidof` summary
+- Simpler and faster than `pgrep` because it does not support patterns
+- Requires knowing exact process name
+- Returns space separated PIDs
