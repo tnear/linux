@@ -4,6 +4,8 @@
 
 Syntax: `$ set [option] [argument]`
 
+See also: [`bash`](bash.md)
+
 ## Command options
 
 ### `-e`, exits script upon errors

@@ -25,7 +25,7 @@ See also [`ripgrep`](rg.md).
 -n = show line numbers
 -o = only print matched text
 -P = PCRE. For example, if left off must use '[0-9]' for '\d'
--q = quiet, do not write anything to stdout
+-q = quiet, do not write anything to stdout. Useful for conditionals.
 -r = recursively search directories
 -R = recursively search directories while following symlinks
 -v = invert-select. Return lines NOT containing pattern.

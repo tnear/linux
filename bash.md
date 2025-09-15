@@ -2,6 +2,8 @@
 
 `bash` - GNU Bourne-Again SHell
 
+See also: [`set`](set.md)
+
 ## -c = command to run
 ```bash
 $ bash -c 'echo hello'
@@ -11,7 +13,7 @@ hello
 $ zsh -c 'echo hello'
 ```
 
-## -x = execution trace (xtrace) mode
+## Execution trace (xtrace) mode
 The `-x` flag creates verbose output for debugging scripts:
 ```bash
 $ cat script.sh
