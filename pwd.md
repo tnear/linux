@@ -2,8 +2,8 @@
 
 `pwd` - print name of current/working directory
 
-## Basic usage
-```bash`
+## Print working directory
+```bash
 $ pwd
 /tmp
 ```

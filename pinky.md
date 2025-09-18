@@ -1,8 +1,9 @@
-PINKY
+# pinky
 
-pinky - lightweight finger
+`pinky` - lightweight finger
 
-# Lookup currently logged in users:
+## Lookup currently logged in users
+```bash
 $ pinky
 Login    Name      TTY      Idle   When             Where
 kali               tty7     4d     2023-06-16 14:51 :0
@@ -11,5 +12,4 @@ kali               tty7     4d     2023-06-16 14:51 :0
 $ pinky kali
 Login    Name      TTY      Idle   When             Where
 kali               tty7     4d     2023-06-16 14:51 :0
-
----
+```

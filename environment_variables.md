@@ -57,14 +57,14 @@ zsh 5.9 (x86_64-apple-darwin23.0)
 ```
 
 ## Creation
-Creating variables requires the 
+
 ### Temporary (current session only)
 ```bash
 export VAR_NAME="value"
 ```
 
 ### Permanent
-This should use the `.zshenv` file for env vars.
+This should use the `.zshenv` file for environment variables.
 ```bash
 $ echo 'export MY_VAR=1234' >> ~/.zshenv
 ```

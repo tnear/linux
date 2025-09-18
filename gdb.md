@@ -278,12 +278,11 @@ $1 = "/tmp/myWorkingPath"
 ### Attach to existing process ID
 Use `gdb -p pid`.
 
-If there is one instance running: `gdb -p $(pidof <process_name>)`.
-
-If gdb is already running, use `(gdb) attach <pid>` to attach.
+- If there is exactly one process running: `gdb -p $(pidof <process_name>)`.
+- If gdb is already running, use `(gdb) attach <pid>` to attach.
 
 ### Detaching
-Use the `detach` command to detach. `gdb` can now be exited while the process remains running.
+Use the `detach` command to detach. This leaves the process running.
 
 ## Get PID of inferior (attached) process
 ```

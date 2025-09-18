@@ -5,7 +5,7 @@
 ## Basic syntax
 Usage: `pwdx PID`.
 
-```
+```bash
 $ pwdx $(pidof zsh)
 1676: /home/user
 ```

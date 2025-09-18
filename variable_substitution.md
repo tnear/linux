@@ -1,5 +1,7 @@
 # Variable Substitution
 
+See also: [parameter expansion](parameter_expansion.md)
+
 ## Substitute the value of var
 ```bash
 $ a='hello'
