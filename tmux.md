@@ -1,50 +1,68 @@
-TMUX
+# tmux
 
-tmux — terminal multiplexer
+`tmux` — terminal multiplexer
 
-Hierarchy:
-Sessions have windows, windows have panes.
+Hierarchy: Sessions have windows, windows have panes.
 
-# Start tmux session:
+## Start session
+```bash
+# Start unnamed tmux session
 $ tmux
 
-# Start tmux session with name:
+# Start tmux session with name
 $ tmux new -t session_name
+```
 
-# Splitting:
-Ctrl+B then %          = split vertically
-Ctrl+B then "          = split horizontally
-Ctrl+B then <arr keys> = switch left/right
+## Navigating tmux sessions
+### Splitting
+```
+Ctrl+B then "            = split horizontally
+Ctrl+B then %            = split vertically
+Ctrl+B then <arrow keys> = switch panes left/right/up/down
+```
 
-# Moving panes:
+### Moving panes
+```
 Ctrl+B then O            = switch to Other
-Ctrl+B + O               = rotate panes clockwise
+Ctrl+B + Ctrl + O        = rotate panes clockwise
 Ctrl+B then <arrow keys> = move between panes
+```
 
-# Zoom:
+### Zoom into one pane
 Ctrl+B then Z = zoom into current pane. Same shortcut key exits zoom.
 
-# List tmux information:
+## List tmux information
+```bash
 $ tmux ls
 0: 1 windows (created Wed Sep 13 07:16:59 2023)
 1: 1 windows (created Wed Sep 13 07:17:41 2023)
 session3: 1 windows (created Wed Sep 13 07:20:38 2023) (attached)
+```
 
-# Creating (tab numbers are on bottom panel):
+## Tabs
+### Creating tabs
+Tab numbers are on bottom panel and are 0-indexed.
+```
 Ctrl+B then c          = create new tab
 Ctrl+B then <num>      = switch to tab number
     Ex: Ctrl+B then 0 switches to tab 0
+```
 
-# Attaching/detaching:
-Ctrl+B then d          = detach tmux session (leaves running in background)
-$ tmux attach            = reattach
-$ tmux a                 = <shorthand syntax to attach>
-$ tmux attach -t <name>  = attach by session name
+## Attaching/detaching sessions
+```
+Ctrl+B then d           = detach tmux session (leaves running in background)
+$ tmux attach           = reattach
+$ tmux a                = <shorthand syntax to attach>
+$ tmux attach -t <name> = attach by session name
+```
 
-# Synchronize panes:
-Step 1: Ctrl+B then ':' to enter command mode
-Step 2: :setw synchronize-panes  # Toggle on
-Step 3: <use synchronized panes>
-Step 4: :setw synchronize-panes  # Toggle off
+## Miscellaneous
 
----
+### View all keybindings
+`Ctrl+B then ?`
+
+### Synchronize panes
+1. `Ctrl+B` then `:` to enter command mode
+1. `:setw synchronize-panes`  # Toggle on
+1. Use synchronized panes
+1. `:setw synchronize-panes`  # Toggle off
