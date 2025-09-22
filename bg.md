@@ -1,7 +1,5 @@
-BG
+# bg
 
-bg — background - run jobs in the background
+`bg` — background - run jobs in the background
 
-See fg.txt for example usage.
-
----
+See [`fg`](fg.md) for example usage.
