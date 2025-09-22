@@ -2,7 +2,12 @@
 
 List of common environment variables.
 
-See also: [`printenv`](printenv.md)
+See also: [`env`](env.md), [`printenv`](printenv.md)
+
+## List all environment variables
+```bash
+$ env
+```
 
 ## Common environment variables
 ### Shell

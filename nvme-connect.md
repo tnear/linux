@@ -24,4 +24,4 @@ Specifies the name (nqn = nvme qualified name) of the NVMe subsystem to connect 
 Specifies the network address of the controller on the **target**. This value is typically an IPv4 address.
 
 ### `-s <trsvcid>, --trsvcid=<trsvcid>`
-Specifies the transport service ID. For TCP and RDMA, this is the port number. ex: `4420`.
+Specifies the transport service ID. For TCP and RDMA, this is the port number (commonly `4420`).
