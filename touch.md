@@ -1,24 +1,28 @@
-TOUCH
+# touch
 
-touch - change file timestamps
+`touch` - change file timestamps
 
-Syntax:
-$ touch [OPTION]... FILE...
+Syntax: `touch [OPTION]... FILE...`
 
-# Create empty file:
+## Basic usage
+```bash
+# Create empty file
 $ touch empty_file.txt
 
-# Update timestamp of existing file:
+# Update timestamp of existing file
 $ touch existing_file.txt
 
-# Create three empty files:
+# Create three empty files
 $ touch a b c
+```
 
--r, --reference = use a file's time instead of the current time
-# Set destFile timestamp to srcFile:
+## Use an existing file's time instead of the current time
+Use `-r, --reference` to reference an existing file's timestamp.
+
+```bash
+# Set destFile timestamp to srcFile's timestamp
 $ touch -r srcFile destFile
 
-# Hide changes to /etc/passwd
+# Hide changes to /etc/passwd by matching its timestamp with /etc/shadow
 $ touch -r /etc/shadow /etc/passwd
-
----
+```
