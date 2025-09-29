@@ -94,7 +94,7 @@ See [`nvme resv-register`](nvme-resv-register.md).
 ### Preemption
 Preempt is a command feature that allows a forcible removal of an existing reservation from another host. Preemption operates on NVMe *namespaces*.
 
-Persistent reservations allow multiple hosts to coordinate exclusive access to storage resources (like a "lock"). A preempt *removes* existing reservations, essentially "breaking the lock" that another host has placed on storage.
+Persistent reservations allow multiple hosts to coordinate exclusive access to storage resources. A preempt *removes* existing reservations, essentially "breaking the lock" that another host has placed on storage.
 
 #### Use cases
 - Cluster failover. When a node fails, another node preempts its reservations to take over storage access.

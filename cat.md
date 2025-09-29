@@ -1,13 +1,14 @@
-CAT
+# cat
 
-cat - concatenate files and print on the standard output
+`cat` - concatenate files and print on the standard output
 
 Display contents of file
 
-# Displays entire contents of passwd file:
+## Basic usage
+```bash
+# Display passwd file
 $ cat /etc/passwd
 
-# Filter output using grep:
+# Filter output using grep
 $ cat /etc/passwd | grep root
-
----
+```
