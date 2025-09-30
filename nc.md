@@ -13,7 +13,7 @@ $ nc <options> <host> <port>
 ```
 
 ### Read from host ip 33.173.133.43, port 9999
-```
+```bash
 $ nc 33.173.133.43 9999
 ```
 

@@ -11,7 +11,7 @@ Syntax:
 ## -h, --human-readable
 The `-h` flag shows file size in KB, MB, GB, TB.
 
-```
+```bash
 $ du -h /tmp/vim
 20K     /tmp/vim
 ```
@@ -19,13 +19,13 @@ $ du -h /tmp/vim
 ## -s, --summarize
 The `-s` flag is useful for querying the size of a directory (and its sub-directories).
 
-```
+```bash
 $ du -sh ~
 3.7G    /home/kali
 ```
 
 ## Find directories >1+ GB in size (ignoring permission errors)
-```
+```bash
 $ du -h / 2> /dev/null | grep '^[0-9.]+G'
 1.4G    /home
 3.8G    /usr/share

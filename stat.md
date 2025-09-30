@@ -1,11 +1,12 @@
-STAT
+# stat
 
-stat - display file or file system status
+`stat` - display file or file system status
 
-# Syntax:
-stat [OPTION]... FILE..
+Syntax: `stat [OPTION]... FILE..`
 
-# Display information about an empty file:
+## Basic usage
+```bash
+# display information about an empty file
 $ touch a
 $ stat a
   File: a
@@ -16,9 +17,11 @@ Access: 2023-03-26 15:30:21.635831143 -0500
 Modify: 2023-03-26 15:30:21.635831143 -0500
 Change: 2023-03-26 15:30:21.635831143 -0500
  Birth: 2023-03-26 15:30:21.635831143 -0500
+```
 
-# -f = file system. Display status about file system where a given file or
-# directory resides instead of about the file itself:
+## Common flags
+Use `-f` (file system) to display status about file system where a given file or directory resides instead of about the file itself.
+```bash
 $ mkdir myDir
 $ stat -f myDir
   File: "myDir"
@@ -26,5 +29,4 @@ $ stat -f myDir
 Block size: 4096       Fundamental block size: 4096
 Blocks: Total: 20520787   Free: 12880753   Available: 11826866
 Inodes: Total: 5251072    Free: 4504871
-
----
+```

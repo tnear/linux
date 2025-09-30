@@ -5,7 +5,7 @@ findmnt - find a filesystem
 ## Find all mounted file systems
 By default, it shows a tree structure. Use `findmnt -l` to output as a list.
 
-```
+```bash
 $ findmnt
 TARGET                        SOURCE     FSTYPE    OPTIONS
 /                             /dev/mapper/ocivolume-root

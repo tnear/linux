@@ -5,7 +5,7 @@
 ## Make immutable file (or directory)
 This example shows an example on a file, but the commands are identical for working with immutable directories.
 
-```
+```bash
 $ touch file.txt
 $ lsattr file.txt
 --------------e------- file.txt

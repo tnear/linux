@@ -4,7 +4,7 @@ The `zcat` command allows viewing the files within an archive without unzipping 
 
 ## Basic usage
 
-```
+```bash
 $ cat users.list
 1 - u1
 2 - user 2

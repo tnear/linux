@@ -5,7 +5,7 @@
 *Prefer `ss` over [`netstat`](netstat.md).*
 
 ## Basic usage
-```
+```bash
 $ ss
 
 Netid State  Recv-Q Send-Q       Local Address:Port    Peer Address:Port   Process
@@ -24,7 +24,7 @@ u_str ESTAB  0      0                        * 21885              * 21886
 ## List all sockets with numeric value and process ID
 Useful for finding which process ID (PID) is listening on a port number (ex: 9100).
 
-```
+```bash
 $ sudo ss -pant | grep 9100
 
 LISTEN     0   4096   0.0.0.0:9100      0.0.0.0:*     users:(("java",pid=16605,fd=60))

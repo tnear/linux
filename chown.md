@@ -28,14 +28,14 @@ $ ll file.txt
 ## Change owner and group
 Use `<owner>:<group>` to change both.
 
-```
+```bash
 $ sudo chown nobody:team file.txt
 ```
 
 ## Change group only
 Use `:<group>` to change group without changing owner.
 
-```
+```bash
 $ sudo chown :team file.txt
 ```
 

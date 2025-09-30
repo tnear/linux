@@ -3,7 +3,7 @@
 `column` - columnate lists
 
 ## `-t, --table` = format output as a table
-```
+```bash
 $ printf 'header1 header2\ndata1 data2' > file.txt
 
 # cat does not align columns:

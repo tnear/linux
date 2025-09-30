@@ -34,7 +34,7 @@ tar -cf my_tar.tar f1.txt f2.txt
 `tar -xzf my_tar.tar.gz`
 
 ## Display contents without extracting
-```
+```bash
 $ tar -tf my_tar.tar
 f1.txt
 f2.txt

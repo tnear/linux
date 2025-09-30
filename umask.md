@@ -5,7 +5,7 @@ UMASK
 Masks RWX permission bits during file creation. 022 is a common default.
 
 ## Get current umask (in octal)
-```
+```bash
 $ umask
 022
 ```
@@ -18,14 +18,14 @@ $ umask
 ## Change mask (symbolic)
 Set RWS bits for *all* files for `u`ser, `g`roup, and `o`ther.
 
-```
+```bash
 $ umask u=rwx,g=rwx,o=rwx  # no space after comma
 $ umask
 000
 ```
 
 ## Change mask (octal)
-```
+```bash
 $ umask 022
 $ touch file.txt
 $ ll file.txt

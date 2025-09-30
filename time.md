@@ -4,7 +4,7 @@
 
 ## Basic usage
 Prefix a command to run with `time`:
-```
+```bash
 $ time ping -c3 example.com
 real    2.08s
 user    0.00s
@@ -13,7 +13,7 @@ cpu     0%
 ```
 
 ## Measure compilation
-```
+```bash
 $ time g++ main.cc
 g++ main.cc  0.16s user, 0.05s system, 89% cpu, 0.227 total
 ```
@@ -28,7 +28,7 @@ g++ main.cc  0.16s user, 0.05s system, 89% cpu, 0.227 total
 
 ## Time is a reserved shell keyword
 The shell interprets it before it can go to an external command:
-```
+```bash
 $ type time
 time is a reserved word
 ```
@@ -40,7 +40,7 @@ Installation: `$ sudo apt install time`
 
 ### Python printing
 Use `-v` for verbose output.
-```
+```bash
 $ /bin/time -v python -c 'print("hello world")'
 hello world
         Command being timed: "python -c print("hello world")"

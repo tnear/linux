@@ -3,7 +3,7 @@
 `perf-stat` - Run a command and gather performance counter statistics
 
 ## Collect statistics for 'ls'
-```
+```bash
 $ perf stat ls
  Performance counter stats for 'ls':
               1.27 msec task-clock:u              #    0.036 CPUs utilized

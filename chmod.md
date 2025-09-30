@@ -3,12 +3,12 @@
 `chmod` - change mode - change file mode bits
 
 ## Allow all to read, write, and execute a file
-```
+```bash
 $ chmod 777 file.txt
 ```
 
 ### -v = verbose
-```
+```bash
 $ chmod -v 777 file.txt
 mode of 'file.txt' changed from 0644 (rw-r--r--) to 0777 (rwxrwxrwx)
 ```
@@ -16,7 +16,7 @@ mode of 'file.txt' changed from 0644 (rw-r--r--) to 0777 (rwxrwxrwx)
 ## Symbolic modes
 
 ### Syntax
-```
+```bash
 chmod [ugoa][+-=][rwxst]
 u = user, g = group, o = others, a = all
 + is add, - is remove, = is assign

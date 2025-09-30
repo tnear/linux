@@ -4,7 +4,7 @@
 
 ## Basic usage
 
-```
+```bash
 $ c++filt _ZN4Math10Calculator3addEdd
 
 Math::Calculator::add(double, double)
@@ -25,7 +25,7 @@ _ZN4Math10Calculator3addEdd
 - `dd`: two double parameters (for `double a` and `double b`)
 
 ## Another example
-```
+```bash
 $ c++filt _ZN9wikipedia7article8wikilinkC1ERKSs
 
 wikipedia::article::wikilink::wikilink(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)

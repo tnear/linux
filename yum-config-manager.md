@@ -6,7 +6,7 @@ See also [`yum`](yum.md).
 
 ## Enable
 Use `--enable` to enable a configuration.
-```
+```bash
 $ sudo yum-config-manager --enable ol8_developer
 ```
 

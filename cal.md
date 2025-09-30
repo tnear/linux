@@ -3,7 +3,7 @@
 `cal` - display a calendar
 
 ## Basic usage
-```
+```bash
 $ cal
 
    February 2025

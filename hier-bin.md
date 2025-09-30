@@ -4,7 +4,7 @@
 
 ### `/bin/false`
 Application that immediately exits and returns FALSE:
-```
+```bash
 $ /bin/false
 $ echo $?  # show non-zero exit status
 1

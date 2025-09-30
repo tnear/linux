@@ -5,7 +5,7 @@ A here document (heredoc) refers to a special block of code that contains multi-
 Here documents are denoted by `<<` followed by a token, often `EOF`. Reading stops upon encountering that token.
 
 ## Count number of lines between EOF/EOF
-```
+```bash
 $ wc -l << EOF
 heredoc> as sdf sdf awef
 heredoc> a wefwae fawe fawef

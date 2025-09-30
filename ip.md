@@ -3,7 +3,7 @@
 ip - show / manipulate routing, network devices, interfaces and tunnels
 
 ## Show current machine's ip address
-```
+```bash
 $ ip address
 2: eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
     link/ether 08:00:27:22:46:4f brd ff:ff:ff:ff:ff:ff
@@ -14,7 +14,7 @@ $ ip address
 ```
 
 ## Show ip routes
-```
+```bash
 $ ip route
 default via 10.0.2.2 dev eth0 proto dhcp src 10.0.2.15 metric 100
 10.0.2.0/24 dev eth0 proto kernel scope link src 10.0.2.15 metric 100
@@ -22,7 +22,7 @@ default via 10.0.2.2 dev eth0 proto dhcp src 10.0.2.15 metric 100
 ```
 
 ## Show all network devices (NICs)
-```
+```bash
 $ ip link
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00

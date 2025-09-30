@@ -5,7 +5,7 @@
 Virtual Memory STATistics. Reports information about processes, memory, paging, block IO, traps, disks and CPU activity.
 
 ## Basic usage
-```
+```bash
 $ vmstat
 procs ---------memory---- --swap-- ---io-- -system-- ------cpu-----
  r  b swpd   free   buff   si   so  bi  bo   in   cs us sy id wa st
@@ -49,7 +49,7 @@ st: Time stolen from a virtual machine.
 ## Show statistics
 Use `-s` to show detailed statistics such as total RAM (total memory) and interrupt information.
 
-```
+```bash
 $ vmstat -s
     8126716 K total memory
     1450132 K used memory
@@ -80,6 +80,6 @@ $ vmstat -s
 ```
 
 ## Add new row every 2 seconds
-```
+```bash
 $ vmstat 2
 ```

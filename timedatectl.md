@@ -4,7 +4,7 @@
 
 
 ## Show current date and time zone
-```
+```bash
 $ timedatectl
                Local time: Mon 2024-09-30 15:47:14 GMT
            Universal time: Mon 2024-09-30 15:47:14 UTC
@@ -17,7 +17,7 @@ System clock synchronized: yes
 
 ## List time zones
 Use the `list-timezones` argument.
-```
+```bash
 $ timedatectl list-timezones | grep Chicago
 88:America/Chicago
 ```

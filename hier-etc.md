@@ -20,7 +20,7 @@ A group file which defines teh groups on a system.
 
 Format: `<group_name>:<unused password>:<gid>:<group_list>`
 
-```
+```bash
 $ cat /etc/group
 # Group Database
 nobody:*:-2:

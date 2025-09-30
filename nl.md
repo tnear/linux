@@ -5,7 +5,7 @@
 Syntax: `nl [OPTION]... [FILE]...`
 
 ## Basic usage
-```
+```bash
 $ nl /etc/passwd
     1  root:x:0:0:root:/root:/usr/bin/zsh
     2  daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin

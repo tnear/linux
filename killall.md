@@ -6,7 +6,7 @@
 `$ killall gedit`
 
 ## Send SIGKILL to all gedit processes
-```
+```bash
 $ killall -9 gedit
 or
 $ killall -SIGKILL gedit

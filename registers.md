@@ -6,7 +6,7 @@ A register is a small storage location for data. Registers are limited in number
 Registers are typically 64-bits in 64 bit architectures.
 
 ### Register order for syscalls:
-```
+```bash
 $ man syscall
 
 |Arch   |  arg1 | arg2 | arg3 | arg4 | arg5 | arg6 | arg7 |

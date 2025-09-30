@@ -16,7 +16,7 @@
 ```
 
 ## List all symbolic links in sub-directories of pwd
-```
+```bash
 $ ls -lR | grep '^l'
 
 # Note: a better way is using 'find':
@@ -25,14 +25,14 @@ $ ls -lR | grep '^l'
 
 ### List directory itself
 The `-d` lists the directory itself instead of the files it contains. Directories have the letter 'd' at the front.
-```
+```bash
 $ ls -ld /tmp
 drwxrwxrwt 14 root 4096 /tmp
 ```
 
 ## Wildcard
 Use a '*' character for wildcards (glob).
-```
+```bash
 $ ls /tmp/*Data*
 /tmp/MyData.txt
 /tmp/TheData.log
@@ -58,7 +58,7 @@ The output `ls -l` uses the first character to denote the file type.
 ```
 
 For example,
-```
+```bash
 $ ll
 total 12
 -rw-r--r--. 1 user1 access-login 905 Jul 15 19:15 asan_out.txt
@@ -72,7 +72,7 @@ srwxr-xr-x. 1 user1 access-login   0 Jul 15 19:24 socketFile
 
 ## Case insensitive
 `ls` by itself does not do case insensitive searches. Instead, use `find` with the `-ls` flag.
-```
+```bash
 $ find /tmp/ -iname '*data*' -ls
 2853037    8 -rw-r--r--    1 tnear   dev    756 Jul 11 09:10 /tmp//MyData.txt
 ```

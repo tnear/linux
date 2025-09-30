@@ -3,7 +3,7 @@
 `lshw` - list hardware
 
 ## Get PCI address
-```
+```bash
 $ lshw -class network -businfo
 Bus info          Device       Class          Description
 =========================================================

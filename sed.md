@@ -23,7 +23,7 @@ sed <flag1 flag2 etc> <pattern> <file>
 - `-E` (or `-r`): extended regex, do not need to escape `(`, `)`, `+`, `?`
 
 ## Replace multiple consecutive spaces with single space
-```
+```bash
 $ ps | sed -E 's/ +/ /g'
 ```
 
@@ -42,7 +42,7 @@ abc123 abc456 a
 
 ## Case insensitive replace
 This example replaces 'ZSH' -> 'bash' (note the `i` suffix).
-```
+```bash
 $ ps | sed -E 's/ZSH/bash/gi'
     PID TTY          TIME CMD
  679036 pts/1    00:00:48 bash
@@ -50,14 +50,14 @@ $ ps | sed -E 's/ZSH/bash/gi'
 
 ## Chain commands using `;`
 This replaces 'abc' with 'xyz' and '123' with '789'.
-```
+```bash
 $ echo 'abc 123' > file.txt
 $ sed 's/abc/xyz/g; s/123/789/g' file.txt
 ```
 
 ## Delete lines
 This deletes lines beginning with 'Hello' using 'd' suffix.
-```
+```bash
 $ echo 'Hello\nWorld!' > file.txt
 $ sed '/^Hello/d' file.txt
 World!
@@ -65,7 +65,7 @@ World!
 
 ## Get word counts of a file
 This pattern replaces spaces (`\s`) with newlines (`\n`). Once the data is newline delimited, tools such as sort/uniq work natively:
-```
+```bash
 $ sed -E 's/\s/\n/g' < file.c | sort | uniq -c
     1 enough
     3 entries

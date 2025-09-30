@@ -17,7 +17,7 @@ Note: zsh-autocomplete is causing terminal crashes on mac at the moment.
 
 ### Auto-suggest for flags
 Type `-` then `<tab>` to see options for a flag:
-```
+```bash
 $ ll -<tab>
 -@    -- display extended attributes
 -A    -- list all except . and ..

@@ -29,7 +29,7 @@ diff <(ls /bin) <(ls /usr/bin)
 ```
 
 Without process substitution, this requires temporary files:
-```
+```bash
 $ ls /bin/ > bindir
 $ ls /usr/bin/ > usrbindir
 $ diff bindir usrbindir

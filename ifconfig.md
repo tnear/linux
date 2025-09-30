@@ -4,7 +4,7 @@ ifconfig - interface config - configure a network interface
 
 *Deprecated in favor of [`ip`](ip.md).*
 
-```
+```bash
 $ ifconfig
 
 ens300f0np0: flags=4419<UP,BROADCAST,RUNNING,PROMISC,MULTICAST>  mtu 9000

@@ -7,7 +7,7 @@
 Searchable Linux Syscall Table for x86 and x86_64.
 
 ## Register order for syscalls
-```
+```bash
 $ man syscall
 Arch     arg1  arg2  arg3  arg4  arg5  arg6  arg7
 i386     ebx   ecx   edx   esi   edi   ebp   -

@@ -7,7 +7,7 @@ Common information: CPUs, cache info, NUMA nodes, and known vulnerabilities.
 The `Flags` item includes CPU-supported features, such as fpu, mmx, sse, nx.
 
 ## Basic usage
-```
+```bash
 $ lscpu
 Architecture:        x86_64
 CPU op-mode(s):      32-bit, 64-bit

@@ -4,13 +4,13 @@
 Special or device files. Usually hardware represented as a file.
 
 ## `/dev/mem`
-```
+```bash
 $ man mem
 ```
 Main (physical) memory in file form. Root-protected.
 
 ## `/dev/null`
-```
+```bash
 $ man null
 ```
 Data sink. Discards everything written to it. Useful to suppress output.

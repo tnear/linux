@@ -378,7 +378,7 @@ gdb -x /path/to/custom/gdbinit my_program
 
 ## Crash dumps
 To debug a crash dump, use `gdb <binary> <path/to/coredump>`. Ex:
-```
+```bash
 $ gdb my_crash /path/to/dump
 ```
 

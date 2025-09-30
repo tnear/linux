@@ -76,7 +76,7 @@ Contains the command that started the process and its parameters.
 
 ### `/proc/<pid>/fd`
 Contains all file descriptors used by that process.
-```
+```bash
 $ ls /proc/<pid>/fd
 0 12 17 18 2 20 22
 

@@ -13,7 +13,7 @@ $ curl example.com > example.html
 
 ### Get headers only
 Use `-I, --head` to fetch headers only.
-```
+```bash
 $ curl -I google.com
 ```
 Content-Length: 219

@@ -4,7 +4,7 @@
 
 ## Query network interface by name
 
-```
+```bash
 $ sudo ethtool enp0s3
 
 Settings for enp0s3:
@@ -34,7 +34,7 @@ Settings for enp0s3:
 ## View packet statistics
 Use the `--statistics` flag to see detailed information about packets.
 
-```
+```bash
 $ sudo ethtool --statistics enp0s3
 
 NIC statistics:

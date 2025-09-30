@@ -3,7 +3,7 @@
 `timeout` - run a command with a time limit
 
 ## Syntax
-```
+```bash
 $ timeout [OPTION] DURATION COMMAND [ARG]...
 ```
 

@@ -11,7 +11,7 @@ wheel  -> group name
 travis -> user
 ```
 
-```
+```bash
 $ sudo usermod -a -G wheel travis
 (or, more commonly)
 $ sudo usermod -aG wheel travis

@@ -115,7 +115,7 @@ $ cat file.json | jq '.commands | length'
 ```
 
 ### Get price of `idx=2` in array
-```
+```bash
 $ jq '.[2].price' fruits.json
 1.25
 ```
