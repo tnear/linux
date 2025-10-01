@@ -14,7 +14,7 @@ $ sudo yum install <pkg_name>
 ### Custom config file
 Use the `-c` flag to use a custom config file:
 
-```
+```bash
 yum install -c /etc/compute/vmi/snapshot.yum.conf <pkg_name>
 ```
 

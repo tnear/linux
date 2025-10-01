@@ -15,11 +15,6 @@ ex: $ rg 'int main' ~
 Find trailing whitespace:
 ```bash
 $ rg ' $'
-scp.md
-8:```
-
-rg.md
-14:$ rg --hidden git
 ```
 
 To search hidden directories (such as `.git`), use the `--hidden` flag:

@@ -26,7 +26,7 @@ See also [`ripgrep`](rg.md).
 -o = only print matched text
 -P = PCRE. For example, if left off must use '[0-9]' for '\d'
 -q = quiet, do not write anything to stdout. Useful for conditionals.
--r = recursively search directories
+-r = recursively search directories (do not follow symlinks)
 -R = recursively search directories while following symlinks
 -v = invert-select. Return lines NOT containing pattern.
 -w = match whole word
@@ -45,7 +45,7 @@ $ grep -r --exclude-dir='.git' 'repo'
 $ grep -r --exclude-dir={.git,.vscode} 'log'
 ```
 
-Note: [`rg`](rg.md) does this natively.
+Note: [`rg`](rg.md) does this by default.
 
 ## Only print matched text
 This uses `.*` to match from desired text (`user`) to the end of the line. Nothing before `user` is printed.

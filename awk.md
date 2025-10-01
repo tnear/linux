@@ -48,7 +48,7 @@ $ seq 1 100 | awk '{s+=$1} END {print s}'
 ```
 
 ### Generate powers of 2
-```
+```bash
 seq 0 2 | awk '{print 2^$1}'
 1
 2

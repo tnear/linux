@@ -38,7 +38,7 @@ $ curl -v example.com > /dev/null
 
 ### Silent
 Use `-s, --silent` to avoid printing progress meter or errors.
-```
+```bash
 curl -s example.com
 ```
 

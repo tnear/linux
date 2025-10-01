@@ -31,7 +31,7 @@ data1    data2
 ## `-o, --output-separator`
 The default output separator is two spaces.
 
-```
+```bash
 printf 'header1 header2\ndata1 data2' > file.txt
 
 # separate columns with '|'
@@ -39,3 +39,4 @@ $ column -t file.txt -o ' | '
 
 header1 | header2
 data1   | data2
+```

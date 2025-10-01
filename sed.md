@@ -3,7 +3,7 @@
 `sed` - stream editor for filtering and transforming text
 
 ## Syntax
-```
+```bash
 sed <flag1 flag2 etc> <pattern> <file>
 ```
 
@@ -75,7 +75,7 @@ $ sed -E 's/\s/\n/g' < file.c | sort | uniq -c
 
 ## Empty replacements
 Trim everything after colon in timestamp by using an empty replacement
-```
+```bash
 ll | awk '{print $8}' | sed -E 's/:.*//'
 17
 10
@@ -84,7 +84,7 @@ ll | awk '{print $8}' | sed -E 's/:.*//'
 
 ## Specific line number
 For example, to target line 23, use this syntax:
-```
+```bash
 sed '23s/old/new'
 ```
 

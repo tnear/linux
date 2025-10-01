@@ -7,7 +7,7 @@ nohup is a POSIX command which means "no hang up". Its purpose is to execute a c
 Output that would normally go to the terminal goes to a file called nohup.out, if it has not already been redirected.
 
 ## Usage
-```sh
+```bash
 $ nohup myProgram & # run program in background
 $ exit
 ```

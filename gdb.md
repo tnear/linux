@@ -372,7 +372,7 @@ The .gdbinit file contains a list of gdb commands to execute upon gdb startup.
 
 ### Custom gdbinit location
 By default, gdb searches a user's home directory for a `.gdbinit` file to apply. To override this and provide a custom path, start `gdb` with the `-x` flag:
-```
+```bash
 gdb -x /path/to/custom/gdbinit my_program
 ```
 

@@ -4,7 +4,7 @@
 Combines files. Does not compress by default.
 
 Syntax:
-```
+```bash
 tar [options] [archive-file] [file1 file2 ...]
 ```
 
@@ -20,7 +20,7 @@ tar [options] [archive-file] [file1 file2 ...]
 
 ## Create archive
 Create archive `my_tar.tar` by combining files `f1.txt` and `f2.txt`.
-```
+```bash
 tar -cf my_tar.tar f1.txt f2.txt
 ```
 

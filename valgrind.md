@@ -35,7 +35,7 @@ Valgrind produces output about memory usage. This indicates that 40 bytes of mem
 ## Valgrind with `gdb`
 Syntax to stop after zero errors:
 
-```
+```bash
 valgrind --vgdb=full -vgdb-error=0 ./a.out
 ```
 

@@ -11,7 +11,7 @@ Use the slider or the left + right arrow keys to navigate back in time.
 
 ## Other features
 - Use `Option+Click` to move cursor to a specified point.
-- Smart selection? todo
+- TODO: Smart selection
 
 ## Resources
 - https://iterm2.com/features.html
