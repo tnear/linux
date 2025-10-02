@@ -1,10 +1,13 @@
-FALSE
+# false
 
-false - do nothing, unsuccessfully
+`false` - do nothing, unsuccessfully
 
-# Run false and show non-zero (error) response:
+See also: [`true`](true.md)
+
+## Basic usage
+```bash
+# Run false and show non-zero (error) response
 $ false
 $ echo $?
 1
-
----
+```
