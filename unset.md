@@ -1,17 +1,20 @@
-UNSET
+# unset
 
-unset — unset values and attributes of variables and functions
+`unset` — unset values and attributes of variables and functions
 
-# Set an environment variable:
-$ PERSON='tnear'
+See also: [`declare`](declare.md)
+
+## Basic usage
+```bash
+# Set an environment variable
+$ PERSON='me'
 $ echo $PERSON
-tnear
+me
 
-# Unset (remove) environment variable:
+# Unset (remove) environment variable
 $ unset PERSON
 
-# Show that it has been removed:
+# Show that it has been removed
 echo $PERSON
 <no output>
-
----
+```

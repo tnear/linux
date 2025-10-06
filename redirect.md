@@ -28,7 +28,8 @@ $ echo 'hello' 1> hello.txt  # '1>' is equivalent to '>'
 $ fake_cmd 2> error.txt
 ```
 
-## Redirect both stdout and stderr using '&>'. Note: '2>&1' can also be used
+## Redirect both stdout and stderr using '&>'.
+Note: `'2>&1'` can also be used.
 ```bash
 $ echo 'hello' &> log_and_error.txt
 ```

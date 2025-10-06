@@ -97,7 +97,7 @@ $ find . -size 0c
 $ find . -user 'root'
 ```
 
-## TYPE - search file type.
+## TYPE - search file type
 `f` = plaintext, `d` = directory, `l` = symbolic link
 
 ```bash

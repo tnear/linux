@@ -10,7 +10,7 @@ Instant replay lets you travel back in time to recover text that was erased from
 Use the slider or the left + right arrow keys to navigate back in time.
 
 ## Other features
-- Use `Option+Click` to move cursor to a specified point.
+- Use `Option + Click` to move cursor to a specified point.
 - TODO: Smart selection
 
 ## Resources
