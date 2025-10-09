@@ -26,8 +26,8 @@ ZSH_THEME="robbyrussell"
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
 
+# note: 'git' adds many aliases
 plugins=(
-            git
             colored-man-pages
             web-search
         )
@@ -37,6 +37,9 @@ source $ZSH/oh-my-zsh.sh
 ## User configuration ##
 # aliases (-G for color output on macOS)
 alias l.='ls -G -d .*'
+gsm() {
+    git switch master || git switch main
+}
 
 # colorful prompt string (ps1)
 PROMPT='%F{magenta}%n%F{yellow}@%F{cyan}%m%F{248}:%F{blue}%~%F{red}$%f '
@@ -81,8 +84,13 @@ set +o histverify
 # set extended flag (-E) and line numbers (everything else is mac-default)
 alias grep='grep -E -n --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn,.idea,.tox}'
 
-# fzf
+# skip fingerprinting prompt
+alias ssh='ssh -o StrictHostKeyChecking=no'
+
+## fzf
 source <(fzf --zsh)
+# accept input on left/right arrow keys (similar to ctrl+r)
+export FZF_DEFAULT_OPTS="--bind 'left:accept,right:accept'"
 
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
@@ -98,12 +106,12 @@ SAVEHIST=$HISTSIZE
 ## zle -N bracketed-paste bracketed-paste-magic
 
 # eza (ls replacement)
-alias l='eza -lah'
-alias ls='eza'
-alias ll='eza --long --group'
-alias lst='eza --long --tree --level=2'
-alias ls2='eza --long --tree --level=2'
-alias ls3='eza --long --tree --level=3'
+# alias l='eza -lah'
+# alias ls='eza'
+# alias ll='eza --long --group'
+# alias lst='eza --long --tree --level=2'
+# alias ls2='eza --long --tree --level=2'
+# alias ls3='eza --long --tree --level=3'
 
 # zsh-syntax-highlighting (should be last)
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

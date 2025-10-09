@@ -2,7 +2,7 @@
 
 List of common environment variables.
 
-See also: [`env`](env.md), [`printenv`](printenv.md)
+See also: [`env`](env.md), [`printenv`](printenv.md), [`unset`](unset.md)
 
 ## List all environment variables
 ```bash
@@ -78,7 +78,14 @@ $ echo 'export MY_VAR=1234' >> ~/.zshenv
 ```bash
 $ bash -c 'echo $QQQQ'
 <no output>
+
 # Now, pass in space-separated variables and echo their values:
 $ QQQQ=101 ZZZZ=102 bash -c 'echo $QQQQ $ZZZZ'
 101 102
+```
+
+## Unset environment variable
+Use the [`unset`](unset.md) to clear/remove/delete an environment variable.
+```bash
+unset VARIABLE_NAME
 ```
