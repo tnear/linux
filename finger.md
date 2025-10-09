@@ -1,18 +1,17 @@
-FINGER
+# finger
 
-finger — user information lookup program
+`finger` — user information lookup program
 
-# Lookup currently logged in users:
+## Lookup currently logged in users
+```bash
 $ finger
-Login     Name       Tty      Idle  Login Time   Office     Office Phone
-kali                 tty7      24d  Feb 20 08:05 (:0)
+Login     Name       Tty      Idle  Login Time
+kali      My Name    tty7      24d  Feb 20 08:05
+user2                s001      1:58 Sep 29 08:21
 
-# Lookup user 'root':
+# look up specific user ('root')
 $ finger root
 Login: root                             Name: root
 Directory: /root                        Shell: /usr/bin/zsh
 Never logged in.
-No mail.
-No Plan.
-
----
+```
