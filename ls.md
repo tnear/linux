@@ -2,6 +2,8 @@
 
 `ls` - list directory contents
 
+See also: [`ll`](ll.md)
+
 ## Common flags
 ```
 -a = list all files (including hidden)

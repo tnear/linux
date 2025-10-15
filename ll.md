@@ -1,8 +1,12 @@
 # ll
 
-`ll` - Long List. Alias for 'ls -l'
+`ll` - Long List. Alias for `ls -l`
+
+See also: [`ls`](ls.md)
 
 ## Alias
+`ll` is a common alias (not a command).
+
 ```bash
 $ alias ll
 ll='ls -l'
@@ -21,6 +25,7 @@ ll='ls -l'
 | |  |  | \-------------------------------------------- Alt access (blank means none defined)
 | \--\--\---------------------------------------------- R/W/Special modes for User, Group, Others
 \------------------------------------------------------ File type flag
-
-(source: https://unix.stackexchange.com/questions/103114/what-do-the-fields-in-ls-al-output-mean)
 ```
+
+## Resources
+- https://unix.stackexchange.com/questions/103114/what-do-the-fields-in-ls-al-output-mean

@@ -7,7 +7,7 @@ hello
 hi
 ```
 
-## '|&' is shorthand for '2>&1 |'
+## `|&` is shorthand for `2>&1 |`
 ```bash
 # Search stdout AND stderr using '|&':
 $ bash -c 'echo hello; echo hi 1>&2' |& grep ^h
@@ -28,7 +28,7 @@ $ echo 'hello' 1> hello.txt  # '1>' is equivalent to '>'
 $ fake_cmd 2> error.txt
 ```
 
-## Redirect both stdout and stderr using '&>'.
+## Redirect both stdout and stderr using `&>`
 Note: `'2>&1'` can also be used.
 ```bash
 $ echo 'hello' &> log_and_error.txt

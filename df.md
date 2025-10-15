@@ -33,6 +33,14 @@ tmpfs       ext4    393M  1.2M  391M   1% /run
 ```
 
 ### Query particular directory to learn its file system type
+Use `-T, --print-type`.
+
 ```bash
+# syntax
 $ df -T /path/to/dir
+
+# example
+$ df -T /dev/sda1
+Filesystem     Type 1K-blocks  Used Available Use% Mounted on
+/dev/sda1      vfat    102156  6352     95804   7% /boot/efi
 ```
