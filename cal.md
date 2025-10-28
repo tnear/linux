@@ -18,6 +18,6 @@ Su Mo Tu We Th Fr Sa
 ## Other usages
 - Display previous, current, and next month: `cal -3`
 - Display year: `cal 2025`
-- Display a select month of year: `cal 12 2024`
+- Display specific month: `cal 12 2024`
 - Quirk: `cal 9 1752`
 - Show week number: `cal -w`

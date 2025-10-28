@@ -12,14 +12,14 @@ $ head /etc/passwd
 Use `-n` to specify the number of lines
 ```bash
 # Output first two lines of /etc/passwd:
-$ head -n2 /etc/passwd
+$ head -n 2 /etc/passwd
 ```
 
 ## Specify number of bytes
 Use `-c`.
 ```bash
 output first 10 bytes:
-$ head -c10 <file>
+$ head -c 10 <file>
 ```
 
 ## Output multiple files
