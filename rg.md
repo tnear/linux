@@ -2,9 +2,7 @@
 
 `rg` - ripgrep recursively searches directories for a regex pattern while respecting your gitignore.
 
-Repository: https://github.com/BurntSushi/ripgrep
-
-ripgrep shares many of the same flags as grep.
+`ripgrep` shares many of the same flags as [`grep`](grep.md).
 
 ## Recursively search a directory for a regular expression
 ```bash
@@ -55,7 +53,7 @@ This example replaces 'hello <word>' with 'goodbye <word>'.
 `$ rg 'hello (\w+)' -r 'goodbye $1'`
 
 ## Multiline
-Use the multiline flag, `-U, --multiline`, to search multiple lines. Note: `ripgrep` supports this, but `grep` does not.
+Use the multiline flag, `-U, --multiline`, to search multiple lines. Note: this flag is not supported by `grep`.
 ```bash
 $ rg 'abc\ndef' -U
 lines.txt
@@ -69,3 +67,6 @@ By default, `rg` does not inspect `.gitignore` files and directories. To overrid
 ```bash
 rg --no-ignore 'search_term'
 ```
+
+## Resources
+- https://github.com/BurntSushi/ripgrep

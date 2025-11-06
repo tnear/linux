@@ -16,7 +16,7 @@ See [`hier-proc`](hier-proc.md)
 File Systems TABle. Used by `mount`.
 
 ## `/etc/groups`
-A group file which defines teh groups on a system.
+A group file which defines the groups on a system.
 
 Format: `<group_name>:<unused password>:<gid>:<group_list>`
 

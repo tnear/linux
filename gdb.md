@@ -376,6 +376,9 @@ By default, gdb searches a user's home directory for a `.gdbinit` file to apply.
 gdb -x /path/to/custom/gdbinit my_program
 ```
 
+### Command history
+Include `set history save` in `.gdbinit` to save command history across gdb sessions. This creates a `gdb_history` file.
+
 ## Crash dumps
 To debug a crash dump, use `gdb <binary> <path/to/coredump>`. Ex:
 ```bash
