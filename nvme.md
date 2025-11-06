@@ -77,7 +77,7 @@ Each namespace has its own LBA. NVMe commands specify the LBA number.
 Read-modify-write happens when a drive *reads* an existing block into memory, *modifies* the portion to change, then *writes* the entire block back to storage.
 
 ## Persistent reservations
-NVME persistent reservations (PR) allow multiple hosts to coordinate shared access to an NVMe namespace. This prevents data corruption when multiple initiators access the same target storage.
+NVMe persistent reservations (PR) allow multiple hosts to coordinate shared access to an NVMe namespace. This prevents data corruption when multiple initiators access the same target storage.
 
 ### Reservation types
 1. Write Exclusive (WE)

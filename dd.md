@@ -2,7 +2,7 @@
 
 `dd` - data definition - convert and copy a file
 
-`dd` is offten used to backup, restore, or destroy disks. It uses "option=value" syntax instead of "-option value".
+`dd` is often used to backup, restore, or destroy disks. It uses "option=value" syntax instead of "-option value".
 
 ## Syntax explanation
 - `if`: input file

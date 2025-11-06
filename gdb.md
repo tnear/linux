@@ -20,7 +20,7 @@ See also: [`gdb-dashboard`](gdb.md#gdb-dashboard)
 
 ## Printing
 
-## Elements
+### Printing elements
 ```bash
 # elements controls number of items in a vector (or string) to print
 # set string display length to unlimited

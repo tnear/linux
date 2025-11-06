@@ -1,6 +1,8 @@
-# nvme-resv-register - Register an nvme reservation
+# nvme-resv-register
 
 `nvme-resv-register` - Register an nvme reservation
+
+See also: [`nvme-resv`](nvme-resv.md)
 
 ## Basic usage
 
@@ -9,7 +11,8 @@
 sudo nvme resv-register /dev/nvme0n1 \
     --crkey=0 \
     --nrkey=0x1234 \
-    --rrega=0  # Register action
+    --rrega=0 \  # 0 = Register action
+    --cptpl=3  # enable ptpl
 
 # 2. Acquire a reservation
 sudo nvme resv-acquire /dev/nvme0n1 \
@@ -29,6 +32,6 @@ sudo nvme resv-release /dev/nvme0n1 \
 # 5. Unregister
 sudo nvme resv-register /dev/nvme0n1 \
     --crkey=0x1234 \
-    --rrega=1      # Unregister action
+    --rrega=1      # 1 = Unregister action
 ```
 
