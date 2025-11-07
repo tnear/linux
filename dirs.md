@@ -1,8 +1,11 @@
-DIRS
+# dirs
 
-Display directory stack.
+`dirs` - Display directory stack.
 
-# All multiple directories to stack:
+See also: [`pushd`](pushd.md)
+
+## View directory stack
+```bash
 $ pushd /lib
 $ pushd /var
 $ pushd /etc
@@ -13,5 +16,4 @@ $ dirs -v
 1       /var
 2       /lib
 3       ~
-
----
+```

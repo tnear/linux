@@ -1,8 +1,12 @@
-PUSHD
+# pushd
 
-Push directory onto directory stack.
+`pushd` - Push directory onto directory stack.
 
-# Push pwd onto stack:
+See also: [`dirs`](dirs.md)
+
+## Basic workflow
+```bash
+# push pwd onto stack
 [/var] $ pushd .
 /var
 
@@ -12,13 +16,17 @@ $ cd /etc
 # Then return to old pwd (/var):
 [/etc] $ popd
 [/var] $
+```
 
-# Push pwd onto stack and navigate elsewhere in one step:
+## Push pwd onto stack and navigate elsewhere in one step
+```bash
 [~] $ pushd /var/www
 [/var/www] $ popd
 [~] $
+```
 
-# All multiple directories to stack:
+## View directory stack
+```bash
 $ pushd /lib
 $ pushd /var
 $ pushd /etc
@@ -29,5 +37,4 @@ $ dirs -v
 1       /var
 2       /lib
 3       ~
-
----
+```

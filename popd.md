@@ -1,7 +1,5 @@
-POPD
+# popd
 
-Pop directory from directory stack.
+`popd` - Pop directory from directory stack.
 
-See 'pushd.txt' for usage.
-
----
+See [`pushd`](pushd.md) for example usage.
