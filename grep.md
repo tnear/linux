@@ -21,6 +21,7 @@ See also [`ripgrep`](rg.md).
 -E = extended regexp, supports extra characters such as '|'
 -f = match patterns defined in file
 -i = case insensitive
+-L, --files-without-match = lists files which do not match pattern
 -m NUM, --max-count=NUM = stop after NUM results, ex: grep -m 1 'pattern'
 -n = show line numbers
 -o = only print matched text
@@ -95,3 +96,11 @@ $ grep -B3 -A4 'pattern' <file>
 
 ## Multiline
 `grep` does not support multiline patterns. Use [`ripgrep`](rg.md) instead.
+
+## Entire files
+
+### List files which do not match a pattern
+```bash
+# find markdown files which do not contain the letter 'p'
+grep -L 'p' *.md
+```

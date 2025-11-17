@@ -1,16 +1,17 @@
-READ
+# read
 
-read — read from standard input into shell variables
+`read` — read from standard input into shell variables
 
-# Read from stdin and create MY_VAR env variable:
+## Basic usage
+```bash
+# read from stdin and create MY_VAR env variable
 $ read MY_VAR  # type value below:
 hello
 
-# Print newly created variable
+# print variable
 $ echo $MY_VAR
 hello
 
-# Read random data into environment variable:
+# read random data into environment variable:
 $ read RAND < /dev/urandom
-
----
+echo $RAND  # outputs binary data
