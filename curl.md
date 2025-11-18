@@ -1,6 +1,6 @@
 # curl
 
-`curl` - cURL - Client URL - transfer a URL
+`curl` - Client URL - transfer a URL
 
 ## Output web page HTML
 ```bash

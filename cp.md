@@ -1,17 +1,22 @@
-CP
+# cp
 
-cp - copy files and directories
+`cp` - copy files and directories
 
-# Copying file to cwd:
+## Basic usage
+```bash
+# copy file to cwd
 $ cp /path/to/file .
 
-# Copy file to directory:
+# copy file to directory
 $ cp file dir/
 
-# Copy multiple files to directory:
+# copy multiple files to directory
 $ cp file1 file2 file3 dir/
+```
 
-# -r, --recursive = copy recursively (can be used for copying directories):
+## Copy recursively
+Use `-r, --recursive` to copy recursively. This is useful for copying directories.
+
+```bash
 $ cp -r srcDir newDir
-
----
+```
