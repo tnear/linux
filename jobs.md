@@ -1,15 +1,23 @@
-JOBS
+# jobs
 
-jobs — display status of jobs in the current session
+`jobs` — display status of jobs in the current session
 
-# Run process in background
+See also: [`bg`](bg.md), [`fg`](fg.md)
+
+## Basic usage
+```bash
+# run process in background
 $ gedit file.txt &
 
+# use 'jobs' to see background processes
 $ jobs
 [1]  + running    gedit file.txt
+```
 
-# -l = include metadata such as PID:
+## Long listing
+Use `-l` to include job metadata such as PID.
+
+```bash
 $ jobs -l
 [1]  + 214509 running    gedit file.txt
-
----
+```

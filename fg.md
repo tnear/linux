@@ -2,6 +2,8 @@
 
 `fg` — foreground - run jobs in the foreground
 
+See also: [`bg`](bg.md), [`jobs`](jobs.md)
+
 ## Basic example
 ```bash
 # create a long running process
