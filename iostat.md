@@ -17,7 +17,6 @@ sda      4.29        91.72        18.15         0.00     974089     192706      
 - tps: transactions per second
 - wrtn: written
 
-
 ## Display extended statistics
 Use `-x` to show more columns.
 ```bash

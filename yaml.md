@@ -19,7 +19,6 @@ YAML is a data serialization language commonly used in configuration files.
 - `-`: list member
 - `[]`: inline format with list members separated by comma and space
 
-
 ## Keys and values
 ```yaml
 --- # indented Block

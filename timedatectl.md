@@ -2,7 +2,6 @@
 
 `timedatectl` - Control the system time and date
 
-
 ## Show current date and time zone
 ```bash
 $ timedatectl

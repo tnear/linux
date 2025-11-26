@@ -22,6 +22,7 @@ Overhead  Command  Shared Object      Symbol
 - `-g`: Enable call-graph (stack chain/backtrace)
 - ` -- sleep <num>`: run for `num` seconds
 - `-p`: attach to PID
+- `-t`: specify thread id
 
 ## Frequency
 Use `-F, --freq=` to specify sample frequency in Hertz.

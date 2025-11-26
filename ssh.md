@@ -46,7 +46,6 @@ $ ssh -L 8080:social.example.org:80 ssh-server.example.com
 
 This allows you to access the restricted server using the url http://localhost:8080/
 
-
 ### X11: X Windows System v11
 https://goteleport.com/blog/x11-forwarding/
 

@@ -12,7 +12,6 @@ $ sudo shutdown -h now
 $ shutdown
 ```
 
-
 ## `-c` = Cancel a pending shutdown
 ```bash
 $ shutdown -c
