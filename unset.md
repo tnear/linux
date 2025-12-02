@@ -2,7 +2,7 @@
 
 `unset` — unset values and attributes of variables and functions
 
-See also: [`declare`](declare.md)
+See also: [`declare`](declare.md), [`export`](export.md)
 
 ## Basic usage
 ```bash
@@ -11,7 +11,7 @@ $ PERSON='me'
 $ echo $PERSON
 me
 
-# Unset (remove) environment variable
+# Clear (remove/delete/unset) environment variable
 $ unset PERSON
 
 # Show that it has been removed

@@ -4,6 +4,8 @@
 
 `export` can be used to make shell variables available to subprocesses.
 
+See also: [`unset`](unset.md)
+
 ## List all exported variables
 ```bash
 $ export
