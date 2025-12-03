@@ -1,19 +1,20 @@
-PRINTF
+# printf
 
-printf - format and print data
+`printf` - format and print data
 
-Note: printf, unlike echo, does not include a newline at the end.
+Note: `printf`, unlike [`echo`](echo.md), does not include a newline at the end.
 
-# Print hex characters:
+## Basic usage
+```bash
+# print hex characters
 $ printf '\x41\x42\x43'
 ABC
 
-# Use contents of file for command line input:
+# use contents of file for command line input
 $ printf '12345\xa5\xdb\x17\x00' > input.bin
 $ ./overflow "$(< input.bin)"
 
-# Format specifiers:
-$ printf 'Hello, %s %d' 'tnear' '123'
-Hello, tnear 123
-
----
+# format specifiers
+$ printf 'Hello, %s %d' 'user' '123'
+Hello, user 123
+```

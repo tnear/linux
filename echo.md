@@ -2,13 +2,15 @@
 
 `echo` - display a line of text
 
-## Echo by default adds newline
+See also: [`printf`](printf.md)
+
+## Basic usage
 ```bash
+# by default, echo adds a newline
 $ echo hello
 hello\n
-```
 
-### Use -n to avoid newline suffix
+# use `-n` to avoid newline suffix
 ```bash
 $ echo -n hello
 hello

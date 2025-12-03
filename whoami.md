@@ -1,12 +1,13 @@
-WHOAMI
+# whoami
 
-whoami - print effective user name
+`whoami` - print effective user name
 
+## Basic usage
+```bash
 $ whoami
-kali
+user
 
-# Change to root:
+# sudo to run as root
 $ sudo whoami
 root
-
----
+```
