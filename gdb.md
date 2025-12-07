@@ -75,6 +75,12 @@ Use `break <location> if <condition>`.
 (gdb) break recursive_func.cpp:25 if depth == 1
 ```
 
+### Temporary breakpoints
+A temporary breakpoint automatically deletes itself after it is hit for the first. Enable with `tbreak` or `tb`.
+```
+(gdb) tb my_func
+```
+
 ## Stepping
 - Use `next` or `n` to step over the current line.
 - Use `step` or `s` to step into the current line.
@@ -299,6 +305,31 @@ Maps an old path to a new path to locate source files.
 (gdb) set substitute-path /old/path/to/source /new/path/to/source
 ```
 
+## Catch
+Use `catch` (or `catchpoint`) to stop execution when a certain event occurs, such as an exception.
+
+```
+# stop when syscall exit is called
+(gdb) catch syscall exit
+
+# stop when runtime_error is thrown.
+# note: do NOT use single quotes here
+catch throw std::runtime_error
+
+# stop when runtime_error is caught
+catch catch std::runtime_error
+```
+
+Use `tcatch` to create a temporary catchpoint.
+
+### Viewing catchpoints
+View catchpoints (and all breakpoints) with `info breakpoints` or `info b`.
+```
+>>> info breakpoints
+Num     Type        Disp Enb Address  What
+1      catchpoint   keep y            syscall "exit"
+```
+
 ## Python
 `gdb` includes a built-in Python interpreter.
 
@@ -318,9 +349,13 @@ end
 ```
 
 ## Shell commands
-To run shell commands from `gdb`, type `shell <cmd>`. Ex:
+To run shell commands from `gdb`, type `!<cmd>` or `shell <cmd>`. Ex:
 
-```
+```bash
+# syntax 1:
+(gdb) !ls
+
+# syntax 2:
 (gdb) shell ps
   PID TTY          TIME CMD
  1024 pts/6    00:00:00 zsh
