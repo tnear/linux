@@ -2,6 +2,10 @@
 
 `tmux` — terminal multiplexer
 
+See also: [`screen`](screen.md)
+
+`tmux` is newer than `screen`.
+
 Hierarchy: Sessions have windows, windows have panes.
 
 ## Start session

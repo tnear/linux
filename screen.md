@@ -1,13 +1,17 @@
-SCREEN
+# screen
 
-screen - screen manager with VT100/ANSI terminal emulation
+`screen` - screen manager with VT100/ANSI terminal emulation
 
-Useful for multiple views of a remote machine
+See also: [`tmux`](tmux.md)
 
-# Create a nameless screen:
+`screen` is older than `tmux`.
+
+## Basic workflow
+```bash
+# Create a nameless screen
 $ screen
 
-# Detach screen:
+# Detach screen
 $ screen
 # press Ctrl+A, D on keyboard
 [detached from 228806.pts-1.user]
@@ -30,5 +34,4 @@ $ screen -r my_new_screen
 
 # Exit screen:
 $ exit
-
----
+```
