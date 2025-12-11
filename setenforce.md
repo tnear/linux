@@ -2,7 +2,7 @@
 
 `setenforce` - modify the mode SELinux is running in
 
-See also: [`getenforce`](getenforce.md)
+See also: [`getenforce`](getenforce.md), [`SELinux`](se_linux.md)
 
 ## Basic usage
 Use `Enforcing` or `1` to put SELinux in enforcing mode.
