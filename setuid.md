@@ -1,19 +1,38 @@
-SETUID
+# setuid
 
-A special file permission allowing users to run certain programs with elevated permissions.
+`setuid` - set user identity
 
-# /usr/bin/passwd is a common example where regular users
-# temporarily need root permissions to change their password.
-# (Note the 's' permissions flag):
+See also: [`chmod`](chmod.md)
+
+`setuid` is a special file permission allowing users to run a program with the file owner's permissions.
+
+## `passwd`
+`/usr/bin/passwd` is a common example where regular users temporarily need root permissions to change their password.
+
+```bash
+# Note the 's' permissions flag:
 $ ll /usr/bin/passwd
 -rwsr-xr-x 1 root root 68248 Nov 11 02:28 /usr/bin/passwd
+```
 
-# Can set the setuid bit using chmod:
+## Setting uid bit
+```bash
+# set the setuid bit using chmod
 $ chmod +s f.txt
-# Verify 'S' flag in permissions. 'ls' also highlights these files in red
+
+# Verify 'S' bit in permissions
 $ ll f.txt
 -rwSr-Sr-- 1 kali kali 0 Mar 25 16:25 f.txt
 
 # alt syntax: chmod 4xxx f.txt  # 4 denotes setuid
+```
 
----
+### `setuid` as `root` user
+
+```bash
+# ensure root owns the file
+sudo chown root:root /path/to/app
+
+# add setuid bit (symbolic syntax)
+sudo chmod u+s /path/to/app
+```

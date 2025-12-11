@@ -2,12 +2,14 @@
 
 `chmod` - change mode - change file mode bits
 
+See also: [`setuid`](setuid.md)
+
 ## Allow all to read, write, and execute a file
 ```bash
 $ chmod 777 file.txt
 ```
 
-### -v = verbose
+### `-v` = verbose
 ```bash
 $ chmod -v 777 file.txt
 mode of 'file.txt' changed from 0644 (rw-r--r--) to 0777 (rwxrwxrwx)
@@ -23,21 +25,17 @@ u = user, g = group, o = others, a = all
 r = read, w = write, x = execute, s = setuid, t = sticky
 ```
 
-### Sticky bit (SUID)
-SUID sets effective user ID for calling process. Useful for running as root. The `passwd` command uses the sticky bit. When the bit is set, `ls` displays a red background color for the file.
-```bash
-# for current user (u), add (+) SUID bit (set user ID bit)
-$ chmod u+s file.txt
-```
+### setuid (SUID)
+See [`setuid`](setuid.md).
 
 ### 4-digit syntax
-The first digit controls special bits. SUID=4, Sticky=1:
+The first digit controls special bits. Ex: sticky=1, setuid=4:
 ```bash
 $ chmod 4777 file.txt
 ```
 
 ### Another example
-For user (u) and group (g), add write (r) and execute (x) permissions:
+For user (`u`) and group (`g`), add write (`r`) and execute (`x`) permissions:
 ```bash
 $ chmod ug+rx file.txt
 ```

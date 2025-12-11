@@ -1,14 +1,16 @@
-STICKY
+# sticky
 
-Only file owner can rename or delete files inside directory with sticky bit.
+The `sticky` bit permits only the file owner to rename or delete files inside directory.
 
-# Use chmod to set sticky bit.
-$ chmod +t my_dir
-OR
-$ chmod 1777 my_dir
+See also: [`chmod`](chmod.md)
 
-# Verify 't' flag in permissions. 'ls' highlights sticky directories in blue:
+## Basic usage
+```bash
+# use chmod to set sticky bit.
+$ chmod +t my_dir    # symbolic syntax
+$ chmod 1777 my_dir  # numeric syntax
+
+# verify 't' flag in permissions
 $ ll -d my_dir
 drwxr-xr-t 2 kali kali 4096 Mar 25 16:31 my_dir
-
----
+```
