@@ -8,7 +8,7 @@ $ date
 Fri Mar 31 05:36:27 PM CDT 2023
 ```
 
-```
+```bash
 # -I, --iso-8601 = Output in <yyyy>-<mm>-<01>
 $ date -I
 2023-05-01

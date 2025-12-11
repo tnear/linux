@@ -19,7 +19,6 @@ int main() {
 
 ### Run program and analyze its output
 `$ ./overflow`
-
 ```
 =========================================================
 ==938296==ERROR: AddressSanitizer: stack-buffer-overflow on address 0x7ffe55264bdc at pc 0x55a1dd91133d bp 0x7ffe55264b60 sp 0x7ffe55264b58

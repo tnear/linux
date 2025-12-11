@@ -2,9 +2,9 @@
 
 `setuid` - set user identity
 
-See also: [`chmod`](chmod.md)
+`setuid` is a special file permission allowing users to run a program with the file owner's permissions. `setuid` is less granular than `setcap`.
 
-`setuid` is a special file permission allowing users to run a program with the file owner's permissions.
+See also: [`chmod`](chmod.md), [`setcap`](setcap.md)
 
 ## `passwd`
 `/usr/bin/passwd` is a common example where regular users temporarily need root permissions to change their password.

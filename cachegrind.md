@@ -50,6 +50,7 @@ Include dirs:
 User annotated:
 Auto-annotation:  on
 ```
+
 - `I1 cache`: Level 1 instruction cache
 - `D1 cache`: Level 1 data cache
 - `LL cache`: Last level (often L3) cache
