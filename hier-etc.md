@@ -49,3 +49,5 @@ Accounts, user IDs, and home directories.
 ## `/etc/shadow`
 Hashed passwords. Root-only file access.
 
+## `/etc/sudoers`
+Configuration file defining who can run what commands as which user (often `root`).

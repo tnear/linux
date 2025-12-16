@@ -21,7 +21,7 @@ touch /tmp/my_cap.txt
 $ sudo setcap cap_net_bind_service+ep /tmp/my_cap.txt
 
 # get its capabilities
-$ sudo getcap /tmp/my_cap.txt
+$ getcap /tmp/my_cap.txt
 /tmp/my_cap.txt cap_net_bind_service=ep
 ```
 

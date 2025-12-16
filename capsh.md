@@ -2,7 +2,7 @@
 
 `capsh` - capability shell wrapper
 
-`capsh` can display and manipualte capabilities.
+`capsh` can display and manipulate capabilities.
 
 ## Example usage
 

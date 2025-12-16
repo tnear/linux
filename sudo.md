@@ -4,25 +4,30 @@
 
 ## Change to root user
 ```bash
-# (alt syntax: $ sudo su -)
 $ sudo -i
+
+# alt syntax
+$ sudo su -
 ```
 
-## Run commands as root
+## Run commands as specified user
 ```bash
-# most common usage (no flags)
+# run as root (no -u flag)
 $ sudo apt install <pkg_name>
 
 # -u = run command as a specified user
 $ sudo -u nobody whoami
 nobody
+```
 
-# -E = preserve your environment variables
+## Preserve your environment variables
+Use -E  to pass environment variables.
+```bash
 $ export MY_VAR="hello"
 $ sudo -E env | grep MY_VAR  # outputs: "MY_VAR=hello"
 ```
 
-### Run last command as 'root'
+## Run last command as 'root'
 Use [`!!`](!.md) to reload the previous command and prefix with `sudo`.
 ```bash
 $ sudo !!
@@ -30,5 +35,6 @@ $ sudo !!
 
 ## List sudoers
 ```bash
+# use 'visudo' to modify this file
 $ sudo cat /etc/sudoers
 ```
