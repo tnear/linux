@@ -27,6 +27,9 @@ See also: [`gdb-dashboard`](gdb.md#gdb-dashboard)
 # (default behavior is to truncate)
 (gdb) set print elements unlimited
 (gdb) set print elements 0  # equivalent to 'unlimited'
+
+# print multiple elements (12) of an array
+(gdb) print *array@12
 ```
 
 ### `info locals`
