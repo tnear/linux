@@ -1,5 +1,16 @@
 # gdb
 
+## Command line arguments
+Use `--args` to pass command line arguments to `gdb`.
+```bash
+$ gdb --args ./myApp arg1 arg2
+```
+
+If `gdb` is already running, use `start`:
+```
+(gdb) start arg1 arg2
+```
+
 ## Source code
 Use `list` to print code lines.
 
@@ -38,6 +49,18 @@ Use `info locals` to print all local variables.
 ### `info variables`
 Use `info variables` to see both local and global variables (may dump pages of data).
 
+### Display value at each step
+Use `display` (or `disp`) to display (print) the value of an expression with each step.
+
+Use `undisplay` to clear a display.
+```
+(gdb) disp user.name()
+(gdb) n  # next automatically prints 'user.name()'
+1. user.name() = "alice"
+
+(gdb) undisplay 1  # remove display when done
+```
+
 ## Breakpoints
 
 ### Setting breakpoints
@@ -60,8 +83,13 @@ Num   Type         Disp Enb Address            What
 ```
 
 ### Clearing (removing/deleting) breakpoints
-Use gdb's `clear` command:
+Use gdb's `delete` command to delete by index. Use `clear` to delete by name:
 ```
+(gdb) del        # delete all breakpoints
+(gdb) del 1      # delete breakpoint at index 1
+(gdb) del 2-4    # delete breakpoints 2, 3, 4
+(gdb) del 2 4 5  # delete multiple indexes
+
 (gdb) clear      # clear all breakpoints
 (gdb) clear 100  # clear breakpoint on line 100
 ```
@@ -70,6 +98,12 @@ Use gdb's `clear` command:
 Use `enable` / `disable` to toggle availability.
 
 Use `enable N` / `disable N` to toggle a particular breakpoint number (index).
+
+```
+(gdb) enable 4    # enable breakpoint at index 4
+(gdb) enable 2 3  # enable 2 and 3
+(gdb) disable 3   # disable breakpoint 3
+```
 
 ### Conditional breakpoints
 Use `break <location> if <condition>`.
@@ -104,6 +138,25 @@ Use `run` or `r` to run the application. If it has exited or crash, `run` will r
 
 Use `start` to enter into the first line of executable code (such as beginning of `int main()`).
 
+## Functions
+Use `call` to call a function while stopped at a breakpoint.
+
+```
+(gdb) call myFcn(user.getName())
+$1 = "Alice"
+```
+
+### Query function names
+Use `info functions` to query function names.
+```
+# syntax: info functions <name>
+(gdb) info functions push_back
+std::string::push_back(char)
+
+# regex query
+(gdb) info functions vector.*push_back
+```
+
 ## Call stack
 Use `bt` or `backtrace` to examine the call stack.
 
@@ -112,6 +165,7 @@ Use the `frame` command to change stack frames.
 
 ```
 (gdb) frame 3  # change to stack frame 3
+(gdb) f 3      # shorthand syntax
 (gdb) frame    # view what frame is current (3)
 (gdb) frame 0  # return to top of stack
 ```
@@ -193,16 +247,6 @@ Switch to a thread using `thread <thread_num>`, ex: `thread 2`.
 ## Source
 Use `info source` to see full path to file, debug information, and more.
 
-## Functions
-```
-# query function names: info functions <name>
-(gdb) info functions push_back
-std::string::push_back(char)
-
-# regex query
-(gdb) info functions vector.*push_back
-```
-
 ## Macros
 
 ### Display macro by name
@@ -224,7 +268,18 @@ Defined at /home/user/debug.cpp:3
 (gdb) dprintf func ...
 ```
 
-## `ptype`
+## Types
+
+### `whatis`
+Use `whatis` to see a variable's data type.
+```
+(gdb) whatis value.name()
+type = std::string_view
+(gdb) whatis value.name_
+type = std::string
+```
+
+### `ptype`
 
 Use `ptype` to display data type information for a variable.
 
@@ -451,3 +506,4 @@ Use either `focus cmd` or shortcut `Ctrl+X O` to move focus to the command windo
 - https://sourceware.org/gdb/current/onlinedocs/gdb.html/Set-Watchpoints.html
 - https://youtu.be/-n9Fkq1e6sg
 - https://youtu.be/V1t6faOKjuQ
+- https://youtu.be/dtPlx-Tn3mM
