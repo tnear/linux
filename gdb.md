@@ -372,10 +372,10 @@ Use `catch` (or `catchpoint`) to stop execution when a certain event occurs, suc
 
 # stop when runtime_error is thrown.
 # note: do NOT use single quotes here
-catch throw std::runtime_error
+(gdb) catch throw std::runtime_error
 
 # stop when runtime_error is caught
-catch catch std::runtime_error
+(gdb) catch catch std::runtime_error
 ```
 
 Use `tcatch` to create a temporary catchpoint.

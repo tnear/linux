@@ -1,19 +1,24 @@
-RM
+# rm
 
-rm - remove files or directories
+`rm` - remove files or directories
 
-# Remove file:
+## Basic usage
+```bash
+# remove one file
 $ rm file.txt
-
-# Remove multiple files:
+# remove multiple files
 $ rm f1 f2 f3
+```
 
-# -r = recursive remove
-# Needed to remove non-empty directories:
+## Recursive remove
+Use `-r` for a recursive remove. It permits removing non-empty directories
+```bash
 $ rm -r my_directory
+```
 
-# -f = force. Remove directory and do not prompt. Also suppresses errors.
-# Useful for deleting local git repositories:
+## Force remove
+Use `-f` to force-remove directory with no prompt. This flag also suppresses errors.
+
+```bash
 $ rm -rf my_repository
-
----
+```

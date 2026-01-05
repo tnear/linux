@@ -12,6 +12,6 @@ Use `Permissive` or `0` to put SELinux in permissive mode.
 # enforce SELinux
 sudo setenforce 1
 
-# disable SELinux
+# do not enforce SELinux policies (instead, log them)
 sudo setenforce 0
 ```
