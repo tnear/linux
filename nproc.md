@@ -4,6 +4,8 @@
 
 The `nproc` command prints the number of processors (cores) available to the current process.
 
+See also: [`make`](make.md)
+
 ## Basic usage
 
 This process has 11 processors available:
@@ -12,14 +14,14 @@ $ nproc
 11
 ```
 
-This number corresponds to the `CPU(s)` output line of the [`lscpu`](lscpu.txt) command:
+`nproc` corresponds to the `CPU(s)` output line of [`lscpu`](lscpu.md):
 ```bash
 $ lscpu | grep '^CPU(s)'
 CPU(s):              11
 ```
 
 ```bash
-# multithreaded build
+# multithreaded build using all CPUs
 $ make -j$(nproc)
 ```
 

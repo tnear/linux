@@ -10,18 +10,16 @@ $ sudo -i
 $ sudo su -
 ```
 
-## Run commands as specified user
+## Run command as specified user
+Use `-u` to specify user.
 ```bash
-# run as root (no -u flag)
-$ sudo apt install <pkg_name>
-
-# -u = run command as a specified user
+# run command as 'nobody' user
 $ sudo -u nobody whoami
 nobody
 ```
 
-## Preserve your environment variables
-Use -E  to pass environment variables.
+## Preserve environment variables
+Use `-E` to pass environment variables.
 ```bash
 $ export MY_VAR="hello"
 $ sudo -E env | grep MY_VAR  # outputs: "MY_VAR=hello"

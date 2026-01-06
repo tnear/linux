@@ -7,19 +7,17 @@ Basic syntax:
 $ ssh username@host
 
 # Ex:
-$ ssh tnear@example.edu
+$ ssh user@example.edu
 ```
 
 ## Common flags
-```
--X    Enables X11 forwarding
--Y    Enables trusted X11 forwarding (less secure)
--L    Local port forwarding tunnel
--N    Do not execute a remote command. Useful for port forwarding
--v    verbose mode. Use -vv or -vvv for extra verbosity
--i    identity file. Used to specify a private key
--G    print configuration information
-```
+- `-X`: Enables X11 forwarding
+- `-Y`: Enables trusted X11 forwarding (less secure)
+- `-L`: Local port forwarding tunnel
+- `-N`: Do not execute a remote command. Useful for port forwarding
+- `-v`: verbose mode. Use `-vv` or `-vvv` for extra verbosity
+- `-i`: identity file. Used to specify a private key
+- `-G`: print configuration information
 
 ## Run commands on machine without connecting
 
@@ -35,7 +33,7 @@ ssh machine_name 'lspci | grep -i nvme'
 
 ### Connect and allow trusted X11 forwarding
 ```bash
-$ ssh -Y tnear@example.edu
+$ ssh -Y user@example.edu
 ```
 
 ## Forward port
