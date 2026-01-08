@@ -7,17 +7,17 @@
 
 ## Configuration
 
-On macOS, the plaintext config file is located here: `"/Users/tnear/Library/Application Support/com.mitchellh.ghostty/config"`
+On macOS, the plaintext config file is located here: `"/Users/<user>/Library/Application Support/com.mitchellh.ghostty/config"`
 
 ### Show config
 ```bash
-ghostty +show-config
+$ ghostty +show-config
 ```
 
 ### Themes
 ```bash
-# list themes TUI
-ghostty +list-themes
+# Open list themes TUI
+$ ghostty +list-themes
 ```
 
 ### Font

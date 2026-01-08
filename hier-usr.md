@@ -1,4 +1,4 @@
-# hier-user
+# hier-usr
 
 ## `/usr`
 Holds only shareable, read-only data, so that it can be mounted by various machines running Linux.
