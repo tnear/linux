@@ -20,3 +20,10 @@ Use `-r, --recursive` to copy recursively. This is useful for copying directorie
 ```bash
 $ cp -r srcDir newDir
 ```
+
+## Preserve attributes
+Use `--preserve=all` to preserve attributes such as mode, ownership, capabilities, and timestamps.
+
+```bash
+$ cp --preserve=all path/to/file /new/dir
+```

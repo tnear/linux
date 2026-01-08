@@ -1,11 +1,11 @@
-READLINK
+# readlink
 
-readlink - print resolved symbolic links or canonical file names
+`readlink` - print resolved symbolic links or canonical file names
 
-# Resolve symbolic link:
+## Resolve symbolic link
+```bash
 $ touch a.txt
 $ ln -s a.txt soft.lnk
 $ readlink soft.lnk
 a.txt
-
----
+```

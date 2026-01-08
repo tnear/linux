@@ -7,6 +7,8 @@
 
 ## Configuration
 
+On macOS, the plaintext config file is located here: `"/Users/tnear/Library/Application Support/com.mitchellh.ghostty/config"`
+
 ### Show config
 ```bash
 ghostty +show-config
