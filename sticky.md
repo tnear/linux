@@ -2,11 +2,11 @@
 
 The `sticky` bit permits only the file owner to rename or delete files inside directory.
 
-See also: [`chmod`](chmod.md)
+See also: [`chmod`](chmod.md), [`setuid`](setuid.md)
 
 ## Basic usage
 ```bash
-# use chmod to set sticky bit.
+# use chmod to set sticky bit
 $ chmod +t my_dir    # symbolic syntax
 $ chmod 1777 my_dir  # numeric syntax
 
