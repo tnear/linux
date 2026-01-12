@@ -32,6 +32,7 @@ $ getcap /tmp/my_cap.txt
 - `cap_sys_admin`: allows system administrator operations such as mounting filesystems, setting hostname, and filesystem operations
     - **Warning**: this is broad and powerful, essentially "almost root" and should be avoided in favor of more specific capabilities if possible
 - `cap_ipc_lock`: Lock memory (`mlock`, `mmap`, shared memory) and allocating huge pages
+- `cap_dac_override`: (discretionary access control) bypass read/write/execute permission blocks
 
 ## Resources
 - https://earthly.dev/blog/intro-to-linux-capabilities/

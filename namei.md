@@ -6,7 +6,7 @@
 
 ## Basic usage
 ```bash
-$ namei /var/log/seq.txt                   
+$ namei /var/log/seq.txt
 f: /var/log/seq.txt
  d /
  d var
@@ -23,7 +23,7 @@ Key:
 Use `-l, --long` for information on permissions and owner.
 
 ```bash
-$ namei -l /etc/passwd     
+$ namei -l /etc/passwd
 f: /etc/passwd
 dr-xr-xr-x root root /
 drwxr-xr-x root root etc
