@@ -49,5 +49,6 @@ $ chmod +x script.sh
 ## Change permissions recursively on a directory
 Use `-R, --recursive` to change the bits of a folder and all its subfolders:
 ```bash
+# directories need execute bit, so use 777 instead of 666
 chmod -R 777 /path/to/directory
 ```

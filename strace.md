@@ -91,3 +91,9 @@ The `-f` flag follows child processes.
 ```bash
 strace -f $(pidof my_app)
 ```
+
+## `-o`
+Use `-o` to write to a file.
+```bash
+$ strace -o strace_dump.txt ./my_app
+```
