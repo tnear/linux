@@ -407,7 +407,7 @@ end
 ```
 
 ## Shell commands
-To run shell commands from `gdb`, type `!<cmd>` or `shell <cmd>`. Ex:
+To run shell (ex: bash) commands from `gdb`, type `!<cmd>` or `shell <cmd>`. Ex:
 
 ```bash
 # syntax 1:

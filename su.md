@@ -1,18 +1,32 @@
-SU
+# su
 
-su - run a command with substitute user and group ID
+`su` - run a command with substitute user and group ID
 
-# Change to user (enter user's password at the prompt):
-$ su travis
-Password: <travis's password>
+## Basic usage
+
+```bash
+# Change to user by entering password
+$ su my_user
+Password: <enter here>
 $ whoami
-travis
+my_user
+```
 
-# -p = preserve environment (shell, home, etc.):
-# su -p travis
+### Dash usage
+Use `-` to start a login shell. This runs shell startup files such as `.bashrc`
+```bash
+$ sudo su - my_user
+```
 
-    # (-p is easier)
-    # -s = shell to use:
-    $ su -s /usr/bin/zsh travis
+## Preserve environment
+Use `-p, --preserve-environment` to preserve environment (shell, home, etc.):
 
----
+```bash
+$ su -p travis
+# or
+
+
+# (-p is easier)
+# -s = shell to use:
+$ su -s /usr/bin/zsh travis
+```

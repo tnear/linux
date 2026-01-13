@@ -16,3 +16,12 @@ chsh -s /bin/zsh
 ```
 
 Log out then log back in to see the update.
+
+## Specify user
+```bash
+# change shell for my_user
+sudo chsh -s /bin/bash my_user
+
+# do not allow logging in
+sudo chsh -s /usr/sbin/nologin my_user
+```
