@@ -13,17 +13,16 @@ $ kill <job_num>
 ```
 
 ## Commonly used signals
-```
--0    (no signal, only checks if you have permission to signal)
--1    HUP (hang up)
--2    INT (interrupt)
--3    QUIT (quit)
--6    ABRT (abort)
--9    KILL (non-catchable, non-ignorable kill)
--14   ALRM (alarm clock)
--15   TERM (software termination signal, default)
--19   STOP (stop a process)
-```
+
+- `-0`: No signal, only checks if you have permission to signal
+- `-1`: HUP (hang up)
+- `-2`: INT (interrupt)
+- `-3`: QUIT (quit)
+- `-6`: ABRT (abort)
+- `-9`: KILL (non-catchable, non-ignorable kill)
+- `-14`: ALRM (alarm clock)
+- `-15`: TERM (software termination signal, default)
+- `-19`: STOP (stop a process)
 
 ## Search for process id and kill
 ```bash

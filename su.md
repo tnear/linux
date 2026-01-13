@@ -19,14 +19,8 @@ $ sudo su - my_user
 ```
 
 ## Preserve environment
-Use `-p, --preserve-environment` to preserve environment (shell, home, etc.):
+Use `-p, --preserve-environment` to preserve your current environment (environment variables, shell).
 
 ```bash
-$ su -p travis
-# or
-
-
-# (-p is easier)
-# -s = shell to use:
-$ su -s /usr/bin/zsh travis
+$ su -p my_user
 ```

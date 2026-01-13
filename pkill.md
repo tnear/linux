@@ -2,6 +2,8 @@
 
 `pkill` - look up or signal processes based on name and other attributes
 
+See also: [`kill`](kill.md)
+
 ## Kill process by name
 ```bash
 $ pkill gedit

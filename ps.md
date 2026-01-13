@@ -46,3 +46,18 @@ $ ps -a f
   11551 pts/0    Ss     0:22 /usr/bin/zsh
  214803 pts/0    R+     0:00  \_ ps f
 ```
+
+## User-defined format
+Use `-o <fields>` to customize the output of `ps`.
+
+```bash
+# print user name of specified pid
+$ ps -o user -p <pid>
+USER
+my_user
+
+# print pid and user (comma separated)
+$ ps -o pid,user
+PID USER
+...
+```

@@ -4,7 +4,8 @@
 
 See also: [`pidof`](pidof.md)
 
-## Find gedit process ID
+## Find process ID
+This finds pid of 'gedit'
 ```bash
 $ pgrep gedit
 643415
