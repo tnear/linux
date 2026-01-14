@@ -12,30 +12,30 @@ $ grep -options 'pattern' <file_or_directory>
 See also [`ripgrep`](rg.md).
 
 ## Common flags
-```
--A = show X lines after. Space is optional: '-A 3' or '-A3'
--a = treat binary files as ASCII. Useful to see more than 'binary file matches'
--B = show X lines before
--C = show X lines before and after
--c = count number of occurrences
--E = extended regexp, supports extra characters such as '|'
--f = match patterns defined in file
--i = case insensitive
--L, --files-without-match = lists files which do not match pattern
--m NUM, --max-count=NUM = stop after NUM results, ex: grep -m 1 'pattern'
--n = show line numbers
--o = only print matched text
--P = PCRE. For example, if left off must use '[0-9]' for '\d'
--q = quiet, do not write anything to stdout. Useful for conditionals.
--r = recursively search directories (do not follow symlinks)
--R = recursively search directories while following symlinks
--v = invert-select. Return lines NOT containing pattern.
--w = match whole word
---exclude-dir=GLOB = ignore specified directories
-```
+- `-A`: show X lines after. Space is optional: `-A 3` or `-A3`
+- `-a`: treat binary files as ASCII. Useful to see more than 'binary file matches'
+- `-B`: show X lines before, ex: `B7`
+- `-C`: show X lines before and after, ex: `C3`
+- `-c`: count number of occurrences
+- `-E`: extended regexp, supports extra characters such as `|`
+- `-F`: fixed strings (no regex). Ex: no special meaning for `.`, `*`, etc.
+- `-f`: match patterns defined in file
+- `-i`: case insensitive
+- `-L, --files-without-match`: list files which do *not* match pattern
+- `-m, --max-count`: stop after NUM results, ex: `grep -m 1 ...`
+- `-n`: show line numbers
+- `-o`: only print matched text
+- `-P`: PCRE. Ex: can use `\d` instead of '[0-9]'
+- `-q`: quiet (no stdout). Useful for conditionals
+- `-R`: recursively search directories while following symlinks
+- `-r`: recursively search directories (do not follow symlinks)
+- `-v`: invert-select. Return lines NOT containing pattern.
+- `-w`: match whole word
+- `-x`: exact line match (entire line must match)
+- `--exclude-dir=GLOB`: ignore specified directories
 
-## -r, --recursive = recursively search all sub-directories
-Use `-r` to recursive search starting in a directory.
+## Recursively search all sub-directories
+Use `-r, --recursive` to recursive search starting in a directory.
 ```bash
 $ grep -r 'repo' ~
 

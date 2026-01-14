@@ -13,7 +13,7 @@ my_user
 ```
 
 ### Dash usage
-Use `-` to start a login shell. This runs shell startup files such as `.bashrc`
+Use `-` (hyphen) to start a login shell. This runs shell startup files such as `.bashrc`
 ```bash
 $ sudo su - my_user
 ```

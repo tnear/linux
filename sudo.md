@@ -36,3 +36,6 @@ $ sudo !!
 # use 'visudo' to modify this file
 $ sudo cat /etc/sudoers
 ```
+
+## Avoid user prompts
+Use `-n, --non-interactive` to avoid user prompts, such as for a password.

@@ -2,7 +2,9 @@
 
 `rg` - ripgrep recursively searches directories for a regex pattern while respecting your gitignore.
 
-`ripgrep` shares many of the same flags as [`grep`](grep.md).
+`ripgrep` shares many of the same flags as `grep`.
+
+See also: [`grep`](grep.md)
 
 ## Recursively search a directory for a regular expression
 ```bash

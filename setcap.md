@@ -25,6 +25,14 @@ $ getcap /tmp/my_cap.txt
 /tmp/my_cap.txt cap_net_bind_service=ep
 ```
 
+### Remove capabilities
+Use `-r` to remove (delete) capabilities
+
+```bash
+# remove all capabilities
+$ sudo setcap -r /path/to/file
+```
+
 ## Common capabilities
 - `cap_net_bind_service`: allows binding to sockets on ports less than 1024
 - `cap_net_admin`: configuring network interfaces, firewalls, routing tables, network monitoring tools, socket options
