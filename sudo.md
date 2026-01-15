@@ -25,8 +25,9 @@ $ export MY_VAR="hello"
 $ sudo -E env | grep MY_VAR  # outputs: "MY_VAR=hello"
 ```
 
-## Run last command as 'root'
-Use [`!!`](!.md) to reload the previous command and prefix with `sudo`.
+## Rerun previous command as `root`
+Use [`!!`](!.md) to reload the previous command and prefix with `sudo`. See [`!`](!.md) for more information.
+
 ```bash
 $ sudo !!
 ```

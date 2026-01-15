@@ -2,7 +2,7 @@
 
 `cat` - concatenate files and print on the standard output
 
-Display contents of file
+See also: [`zcat`](zcat.md)
 
 ## Basic usage
 ```bash

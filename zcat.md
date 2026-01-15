@@ -1,6 +1,8 @@
 # zcat
 
-The `zcat` command allows viewing the files within an archive without unzipping it.
+`zcat` concatenates files within an archive without unzipping it.
+
+See also: [`cat`](cat.md)
 
 ## Basic usage
 
@@ -8,7 +10,6 @@ The `zcat` command allows viewing the files within an archive without unzipping 
 $ cat users.list
 1 - u1
 2 - user 2
-3 - user #3
 
 $ gzip users.list
 
@@ -16,5 +17,4 @@ $ gzip users.list
 $ zcat users.list.gz
 1 - u1
 2 - user 2
-3 - user #3
 ```
