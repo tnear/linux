@@ -2,12 +2,14 @@
 
 `su` - run a command with substitute user and group ID
 
+See also: [`runuser`](runuser.md)
+
 ## Basic usage
 
 ```bash
 # Change to user by entering password
 $ su my_user
-Password: <enter here>
+Password:
 $ whoami
 my_user
 ```
