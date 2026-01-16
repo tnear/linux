@@ -4,12 +4,14 @@
 
 Source code: https://github.com/coreutils/coreutils/blob/master/src/tee.c
 
+See also: [heredocument](heredocument.md)
+
 ## Write to a read-only file as `sudo`
 ```bash
 echo 'text here' | sudo tee /path/to/read-only/file
 ```
 
-## Display output of ps AND write to file
+## Print output and write to file
 ```bash
 $ ps | tee ps.txt
 ```
@@ -27,3 +29,6 @@ $ cat ps.txt
  144662 pts/2    00:00:00 ps
  144663 pts/2    00:00:00 tee
 ```
+
+## Use heredocument as root user
+See [heredocument](heredocument.md) for an example.

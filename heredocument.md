@@ -4,6 +4,8 @@ A here document (heredoc) refers to a special block of code that contains multi-
 
 Here documents are denoted by `<<` followed by a token, often `EOF`. Reading stops upon encountering that token.
 
+See also: [`tee`](tee.md)
+
 ## Count number of lines between EOF/EOF
 ```bash
 $ wc -l << EOF
@@ -37,6 +39,15 @@ Output:
     "coding"
   ]
 }
+```
+
+## Heredocument as root user
+Use `tee`:
+
+```bash
+$ sudo tee my_doc > /dev/null << EOF
+data here
+EOF
 ```
 
 ## Resources

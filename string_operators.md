@@ -1,13 +1,5 @@
 # String Operators
 
-## String concatenate using variable substitution
-```bash
-$ STR='str'
-$ STRING="${STR}ing"
-$ echo $STRING
-string
-```
-
 ## String concatenation
 There are multiple ways to concatenate strings.
 
@@ -46,20 +38,20 @@ then
 fi
 
 # check non-zero length (-z)
-if [ -z $c ]
+if [ -z $b ]
 then
-    echo 'c has zero length'
+    echo 'b has zero length'
 fi
 
 # check non-zero length
-if [ $b ]
+if [ $c ]
 then
-    echo 'b has non-zero length'
+    echo 'c has non-zero length'
 fi
 
 # run script above
 $ ./string_ops.sh
 a=b
-c has zero length
 b has non-zero length
+c has zero length
 ```
