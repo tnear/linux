@@ -6,7 +6,26 @@ Here documents are denoted by `<<` followed by a token, often `EOF`. Reading sto
 
 See also: [`tee`](tee.md)
 
-## Count number of lines between EOF/EOF
+## Write to file
+```bash
+$ cat << EOF > my_file.txt
+data here
+EOF
+
+$ cat my_file.txt
+data here
+```
+
+### Write to file as root user
+Use [`tee`](tee.md):
+
+```bash
+$ sudo tee my_doc > /dev/null << EOF
+data here
+EOF
+```
+
+## Count number of lines
 ```bash
 $ wc -l << EOF
 heredoc> as sdf sdf awef
@@ -39,15 +58,6 @@ Output:
     "coding"
   ]
 }
-```
-
-## Heredocument as root user
-Use `tee`:
-
-```bash
-$ sudo tee my_doc > /dev/null << EOF
-data here
-EOF
 ```
 
 ## Resources
