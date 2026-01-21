@@ -2,7 +2,7 @@
 
 Security-Enhanced Linux is a Linux kernel security module that provides access control.
 
-See also: [`getenforce`](getenforce.md), [`setenforce`](setenforce.md)
+See also: [`getenforce`](getenforce.md), [`setenforce`](setenforce.md), [`sestatus`](sestatus.md)
 
 ## Commands
 - Enable SELinux: `sudo setenforce 1`

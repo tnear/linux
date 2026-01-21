@@ -11,7 +11,7 @@ Math::Calculator::add(double, double)
 ```
 
 ### Explanation of mangling syntax
-```
+```cpp
 // double add(double, double):
 _ZN4Math10Calculator3addEdd
 ```

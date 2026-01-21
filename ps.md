@@ -16,24 +16,16 @@ root   2  0.0  0.0      0     0 ?   S    Jan22 0:00 [kthreadd]
 with a terminal)
 - `TIME`: the cumulative CPU time used by the process
 - `RSS`: resident size set - physical memory used in KB (actual RAM usage)
-- `STAT`: process state code. R=running, S=sleeping, Z=zombie, T=stopped
+- `STAT`: process state code. `R`=running, `S`=sleeping, `Z`=zombie, `T`=stopped
 
 ## Common flags
 - `-a` = all user processes
 - `-e` = show all processes
 - `-f` = full format listing
 - `-l` = long format: includes niceness value (NI).
+- `-p` = filter for a pid, ex: `ps -p 101`
 - `-u` = user-oriented (extra columns). `-u` is incompatible with `-l`
 - `-x` = include extra processes not attached to terminal
-- `-p` = filter for a pid, ex: `ps -p 1`
-
-## Show niceness value (NI)
-```bash
-$ ps -axl
-F   UID   PID    PPID NI    VSZ   RSS  COMMAND
-4     0     1       0  0 167480 12028  /sbin/init splash
-1     0     2       0  0      0     0  [kthreadd]
-```
 
 ## f = Show process hierarchy (forest)
 ```bash
