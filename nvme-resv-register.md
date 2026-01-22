@@ -34,4 +34,3 @@ sudo nvme resv-register /dev/nvme0n1 \
     --crkey=0x1234 \
     --rrega=1      # 1 = Unregister action
 ```
-

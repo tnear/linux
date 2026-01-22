@@ -41,4 +41,3 @@ By default, system accounts do **not** get a home directory (use `-m` to overrid
 ### Regular users
 - UID is 1000+
 - Passwords age and eventually expire
-

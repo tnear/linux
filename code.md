@@ -29,4 +29,3 @@ code -d /path/1 /path/2
 ```bash
 code --list-extensions
 ```
-

@@ -9,4 +9,3 @@ cksum /etc/passwd
 337325332   9050    /etc/passwd
 # CRC      # bytes  # file
 ```
-
