@@ -7,7 +7,7 @@ See also: [SELinux](se_linux.md)
 ## Basic usage
 
 ```bash
-$ sestatus    
+$ sestatus
 SELinux status:               enabled
 SELinuxfs mount:              /sys/fs/selinux
 SELinux root directory:       /etc/selinux

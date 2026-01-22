@@ -1,8 +1,8 @@
 # dirs
 
-`dirs` - Display directory stack.
+`dirs` - display directory stack
 
-See also: [`pushd`](pushd.md)
+See also: [`pushd`](pushd.md), [`popd`](popd.md)
 
 ## View directory stack
 ```bash

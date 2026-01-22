@@ -1,8 +1,8 @@
 # pushd
 
-`pushd` - Push directory onto directory stack.
+`pushd` - push directory onto directory stack
 
-See also: [`dirs`](dirs.md)
+See also: [`dirs`](dirs.md), [`popd`](popd.md)
 
 ## Basic workflow
 ```bash
@@ -18,8 +18,9 @@ $ cd /etc
 [/var] $
 ```
 
-## Push pwd onto stack and navigate elsewhere in one step
+## Push cwd onto stack and navigate elsewhere in one step
 ```bash
+# push cwd (home) onto stack and navigate to /var/www
 [~] $ pushd /var/www
 [/var/www] $ popd
 [~] $

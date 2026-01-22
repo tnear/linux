@@ -1,5 +1,7 @@
 # popd
 
-`popd` - Pop directory from directory stack.
+`popd` - pop directory from directory stack
 
 See [`pushd`](pushd.md) for example usage.
+
+See also: [`dirs`](dirs.md)

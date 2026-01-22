@@ -13,16 +13,16 @@ sudo chown tnear .ssh -R
 The `nobody` user in Linux owns no files, is in no privileged groups, and has the smallest subset of abilities.
 
 ```bash
-# create a file owned by self
+# create a file owned by me
 $ touch file.txt
-$ ll !$
--rw-r--r-- 1 kali kali 0 Mar 24 17:24 file.txt
+$ ll file.txt
+-rw-r--r-- 1 me me 0 Mar 24 17:24 file.txt
 
 # change owner to 'nobody'
 $ sudo chown nobody file.txt
 
 $ ll file.txt
--rw-r--r-- 1 nobody kali 0 Mar 24 17:26 file.txt
+-rw-r--r-- 1 nobody me 0 Mar 24 17:26 file.txt
 ```
 
 ## Change owner and group
