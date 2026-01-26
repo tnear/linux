@@ -25,8 +25,6 @@ TARGET                        SOURCE     FSTYPE    OPTIONS
 │ ├─/dev/shm                  tmpfs      tmpfs     rw,nosuid,nodev,noexec,
 │ ├─/dev/pts                  devpts     devpts    rw,nosuid,noexec,relati
 │ └─/dev/hugepages            hugetlbfs  hugetlbfs rw,relatime,seclabel,pa
-├─/var/oled                   /dev/mapper/ocivolume-oled
-│                                        xfs       rw,relatime,seclabel,at
 ├─/boot                       /dev/sda2  xfs       rw,relatime,seclabel,at
 │ └─/boot/efi                 /dev/sda1  vfat      rw,relatime,fmask=0077,
 └─/var/lib/nfs/rpc_pipefs     rpc_pipefs rpc_pipef rw,relatime

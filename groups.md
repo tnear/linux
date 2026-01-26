@@ -5,7 +5,7 @@
 ## Display your groups
 ```bash
 $ groups
-kali adm dialout cdrom floppy sudo audio dip video plugdev netdev bluetooth scanner
+my_user sudo audio video wheel bluetooth scanner
 ```
 
 ## Display groups of another user

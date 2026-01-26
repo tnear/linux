@@ -28,7 +28,7 @@ The kernel is loaded from disk (typically `/boot/vmlinuz-<version>`) into memory
 - Starts the init process (PID 1)
 
 ## Init System (systemd)
-systemd becomes the first process (PID 1) and handles:
+[`systemd`](systemd.md) becomes the first process (PID 1) and handles:
 - Mounting remaining filesystems
 - Starting services in correct order
 - Setting up networking
