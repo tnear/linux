@@ -19,8 +19,12 @@ Note: the example does not specify `-n`, so it defaults to updating every 2 seco
 $ watch pstree -ahp $(pidof <name>)
 ```
 
-## Complex command
-Wrap long commands in quotes. Escape internal quotes if necessary.
+## Quotes
+Many shell operators and command substitutions need to be wrapped in quotes
 ```bash
-watch 'ps -aux'
+# | requires quotes
+watch 'ps -aux | grep python'
+
+# command substitution also requires quotes
+watch 'echo "Time: $(date)"'
 ```

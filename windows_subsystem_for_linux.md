@@ -3,26 +3,26 @@
 Windows Subsystem for Linux (WSL) allows running a Linux environment on Windows without a virtual machine or dual booting.
 
 ## Installation
-```
+```PowerShell
 wsl --install -d <distribution_name>
 wsl --install -d OracleLinux_9_1
 ```
 
 ## List distributions
 Show which distributions are available to install:
-```
+```PowerShell
 wsl --list --online
 ```
 
 Show additional metadata about installed distributions such as running/stopped:
-```
+```PowerShell
 wsl --list --verbose
   NAME               STATE           VERSION
 * OracleLinux_9_1    Running         2
 ```
 
 ### Change default
-```
+```PowerShell
 wsl --set-default OracleLinux_9_1
 ```
 
@@ -77,8 +77,8 @@ travis@travis:~$ notepad.exe  # opens Windows notepad.exe
 
 ### Run Linux applications on Windows
 Prefix Linux commands with `wsl` to use them on Windows:
-```
-PS> ipconfig | wsl uniq
+```PowerShell
+ipconfig | wsl uniq
 <unique lines>
 ```
 

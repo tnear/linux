@@ -1,7 +1,11 @@
-SSH-KEYGEN
+# ssh-keygen
 
-ssh-keygen — OpenSSH authentication key utility
+`ssh-keygen` — OpenSSH authentication key utility
 
+See also: [`ssh-copy-id`](ssh-copy-id.md)
+
+## Basic usage
+```bash
 $ ssh-keygen
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/kali/.ssh/id_rsa):
@@ -14,5 +18,4 @@ The key's randomart image is:
 +---[RSA 3072]----+
 |    =BE o...=+**.|
 +----[SHA256]-----+
-
----
+```
