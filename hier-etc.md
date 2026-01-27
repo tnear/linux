@@ -13,7 +13,7 @@ Configuration file for GRUB bootloader. Used to modify `/proc/cmdline`.
 See [`hier-proc`](hier-proc.md)
 
 ## `/etc/fstab`
-File Systems TABle. Used by `mount`.
+File Systems TABle. Used by [`mount`](mount.md)
 
 ## `/etc/groups`
 A group file which defines the groups on a system.

@@ -3,7 +3,7 @@
 `test` - check file types and compare values
 
 ## Check file existence
-The `test` command and `[]` are interchangeable.
+The `test` command and `[ ... ]` are interchangeable.
 
 ```bash
 # test

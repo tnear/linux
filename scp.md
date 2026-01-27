@@ -4,23 +4,26 @@
 
 See also: [`rsync`](rsync.md)
 
-## Copy `file1.txt` from local to remote machine
+## Copy file from local to remote machine
 ```bash
-scp file1.txt user@cs.example.edu:/home/user/path/file1.txt
+scp file1.txt user@example.edu:/home/user/path/file1.txt
 ```
 
-## Copy `file1.txt` from remote machine to local
+## Copy from remote machine to local
 
 This preserves the file name and copies to `pwd`.
 
-*Note: this must be run in the **local** machine.*
+Note: this must be run in the **local** machine.
 ```bash
-scp user@cs.example.edu:/home/user/path/file1.txt .
+scp user@example.edu:/home/user/path/file1.txt .
 ```
 
-## `-r` = recursive copy. Copy directory `/tmp/d` and all its contents
+## Recursive directory copy
+Use `-r` to do a recursive copy.
+
 ```bash
-scp -r /tmp/d user@cs.example.edu:/home/user/d
+# Copy directory `/tmp/d` and all its contents
+scp -r /tmp/d user@example.edu:/home/user/d
 ```
 
 Note: it's often more efficient to [`tar`](tar.md) files first before `scp` (or `rsync`).

@@ -26,10 +26,9 @@ $ mount /dev/flash_sdd /media/photos
 ```
 
 ## Common flags
-```
--t     -> type, ex: mount -t tmpfs # see tmpfs.md
---bind -> used for creating bind mounts
-```
+- `-t`: type, ex: `mount -t tmpfs`, see [`tmpfs`](tmpfs.md)
+- `--bind`: used for creating bind mounts
+- `-o <opts>`: specify options, ex: `mount -o remount`
 
 ## Bind mount
 A bind mount mounts one directory to another. They can be useful when working in `chroot` environments.
