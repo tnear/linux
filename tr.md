@@ -1,52 +1,72 @@
-TR
+# tr
 
-tr - translate or delete characters
+`tr` - translate or delete characters
 
 Syntax:
-tr [OPTION]... STRING1 [STRING2]
+`tr [OPTION]... STRING1 [STRING2]`
 
-# Source code: https://github.com/coreutils/coreutils/blob/master/src/tr.c
+- Source code: https://github.com/coreutils/coreutils/blob/master/src/tr.c
 
-# Convert lowercase to uppercase:
+## Basic conversions
+
+### Convert lowercase to uppercase:
+```bash
 $ tr a-z A-Z <<< 'hello'
 HELLO
 
 # Alt syntax for above (translates better for different locales):
 $ tr [:lower:] [:upper:]
 
-# Convert braces to brackets:
+# another alt syntax using bash parameter expansion (",,")
+str='Hello World'
+lowercase="${str,,}"  # lowercase = 'hello world'
+```
+
+### Convert braces to brackets:
+```bash
 $ tr '{}' '[]' <<< '{hello}{world}'
 [hello][world]
+```
 
-# -d = delete text. Delete spaces:
+## Text deletion
+Use `-d` to delete text.
+
+```bash
+# delete spaces:
 $ tr -d ' ' <<< 'a b c 1 2 3'
 abc123
 
 # Remove digits:
 $ tr -d 0-9 <<< 'a 1 b 2 c 3'
 a b c
+```
 
-# -s = squeeze. Remove consecutive 'a' or 'b' characters:
+## Squeeze
+Use `-s` to squeeze text, i.e. remove consecutive duplicates.
+
+```bash
+# Remove consecutive 'a' or 'b' characters:
 $ tr -s 'ab' <<< 'aaaccbbbaa'
 accba
+```
 
-# Read from file:
-$ tr -s 'ab' < file.txt
+## Complement
+Use `-c` to operate on everything BUT a set.
 
-# Get gedit process ID by squeezing consecutive spaces in out put of 'ps'.
-# Note: this uses grep -v to avoid self-matching of the grep command:
-$ ps -aux | grep gedit | grep -v grep | tr -s ' ' | cut -f2 -d ' '
-643415
-
-# -c = complement, operate on everything BUT [SET1].
+```bash
 # Delete all non-lowercase letters:
 $ tr -cd a-z <<< 'keep12_only lowerZcaseZ'
 keeponlylowercase
+```
 
-# Caesar cipher:
+## Caesar cipher
+
+```bash
+# encrypt
 $ tr a-z b-za <<< 'caesar cipher'
 dbftbs djqifs
+
+# decrypt
 $ tr b-za a-z <<< 'dbftbs djqifs'
 caesar cipher
-
----
+```

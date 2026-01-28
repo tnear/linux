@@ -19,7 +19,7 @@ nobody
 ```
 
 ## Preserve environment variables
-Use `-E` to pass environment variables.
+Use `-E, --preserve-env` to pass environment variables.
 ```bash
 $ export MY_VAR="hello"
 $ sudo -E env | grep MY_VAR  # outputs: "MY_VAR=hello"

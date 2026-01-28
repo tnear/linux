@@ -6,16 +6,14 @@ See also: [`scp`](scp.md)
 
 ## Common flags
 
-```
--a, --archive = recursive copy, preserving all metadata (recommended)
--v, --verbose = by default, sync is silent
--P            = partial + progress. Shows progress while preserving partially transferred files (recommended)
-```
+- `-a, --archive`: recursive copy, preserving all metadata (recommended)
+- `-v, --verbose`: by default, sync is silent
+- `-P`: Show progress while preserving partially transferred files (recommended)
 
 ## Copy all files from `dir/` to `newDir/`
 ```bash
 # (rsync will create newDir if it doesn't exist)
-$ rsync -av dir newDir/
+$ rsync -avP dir newDir/
 sending incremental file list
 created directory newDir
 dir/
