@@ -1,7 +1,6 @@
 # tar
 
-`tar` - Tape Archive - an archiving utility
-Combines files. Does not compress by default.
+`tar` - Tape ARchive - an archiving utility
 
 Syntax:
 ```bash
@@ -15,15 +14,18 @@ tar [options] [archive-file] [file1 file2 ...]
 - `-v, --verbose`: output
 - `-x, --extract`: archive
 - `-z, --gzip`: compress directories and files
+- `-C, --directory=DIR`: choose directory to extract to
 
-## Create archive
+## Basic usage
+
 Create archive `my_tar.tar` by combining files `f1.txt` and `f2.txt`.
 ```bash
+# c = create, f = files
 tar -cf my_tar.tar f1.txt f2.txt
-```
 
-## Extract archive
-`tar -xf my_tar.tar`
+# Extract archive
+tar -xf my_tar.tar
+```
 
 ## Compress and decompress `tar.gz`
 

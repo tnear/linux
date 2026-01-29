@@ -14,12 +14,12 @@ sed <flag1 flag2 etc> <pattern> <file>
 ```
 - `s`: substitute
 - `g`: global replacement
-- `i`: case insensitive
+- `i`: case insensitive (distinct from `-i`, which is in-place)
 - `d`: (not shown) delete line
 - `<line_num>`: line number to replace
 
 ## Common flags
-- `-i`: in-place (write to file) instead of stdout
+- `-i`: in-place: write to file instead of `stdout`
 - `-E` (or `-r`): extended regex, do not need to escape `(`, `)`, `+`, `?`
 
 ## Replace multiple consecutive spaces with single space
@@ -41,14 +41,14 @@ abc123 abc456 a
 ```
 
 ## Case insensitive replace
-This example replaces 'ZSH' -> 'bash' (note the `i` suffix).
+This example replaces 'ZSH' -> 'bash' (note the case insensitive `i` suffix).
 ```bash
 $ ps | sed -E 's/ZSH/bash/gi'
     PID TTY          TIME CMD
  679036 pts/1    00:00:48 bash
 ```
 
-## Chain commands using `;`
+## Chain multiple commands using `;`
 This replaces 'abc' with 'xyz' and '123' with '789'.
 ```bash
 $ echo 'abc 123' > file.txt
@@ -56,7 +56,7 @@ $ sed 's/abc/xyz/g; s/123/789/g' file.txt
 ```
 
 ## Delete lines
-This deletes lines beginning with 'Hello' using 'd' suffix.
+This deletes lines beginning with 'Hello' using `d` suffix.
 ```bash
 $ echo 'Hello\nWorld!' > file.txt
 $ sed '/^Hello/d' file.txt
@@ -64,7 +64,7 @@ World!
 ```
 
 ## Get word counts of a file
-This pattern replaces spaces (`\s`) with newlines (`\n`). Once the data is newline delimited, tools such as sort/uniq work natively:
+This pattern replaces spaces (`\s`) with newlines (`\n`). Once the data is newline delimited, tools such as `sort` and `uniq` work natively:
 ```bash
 $ sed -E 's/\s/\n/g' < file.c | sort | uniq -c
     1 enough
