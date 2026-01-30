@@ -1,6 +1,8 @@
 # head
 
-`head` - output the first part (10 lines) of files
+`head` - output the first part of files
+
+See also: [`tail`](tail.md)
 
 ## Basic usage
 ```bash

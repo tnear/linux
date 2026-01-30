@@ -2,13 +2,15 @@
 
 `tail` - output the last part of files
 
+See also: [`head`](head.md)
+
 ## Basic usage
 Output last 10 lines (default) of file
 ```bash
 tail /etc/passwd
 ```
 
-### Specify number of lines (default is 10)
+### Specify number of lines
 Use `-n <num>` to output the last `n` lines.
 ```bash
 # Output last two lines of /etc/passwd:

@@ -52,4 +52,8 @@ my_user
 $ ps -o pid,user
 PID USER
 ...
+
+# use '=' not to print the column header
+$ ps -o user= -p <pid>
+my_user
 ```

@@ -14,14 +14,14 @@ result="$s1 $s2"  # result="hello world"
 result="${s1} ${s2}"  # result="hello world"
 
 # += operator
-s1+="$s2"  # s1="helloworld" (modifies s1)
+s1+=" $s2"  # s1="hello world" (modifies s1)
 ```
 
 ## Comparison operators
 ```
 [ $a = $b ] Equality
-  [ -z $a ] Check if length zero
-     [ $a ] Check if length is non-zero
+  [ -z $a ] Check if length zero (empty)
+     [ $a ] Check if length is non-zero (non-empty)
 ```
 
 ### Example

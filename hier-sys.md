@@ -7,11 +7,11 @@ The `/sys` directory is a virtual filesystem called `sysfs` that provides a stru
 This directory contains filesystem-specific information and controls. System administrators can tune parameters here without rebooting.
 
 ### `/sys/fs/cgroup`
-Controls the cgroup (control groups) system, which allows limiting and isolating resources such as CPU time, system memory, and network bandwidth.
+The cgroup (control groups) mechanism allows limiting and isolating resources such as CPU time, system memory, and network bandwidth.
 
 - cgroups are hierarchical. Child cgroups inherit certain attributes from their parent cgroup.
 - a *subsystem* represents a single resource, such as CPU time or memory.
-- `/sys/fs/cgroup/cgroup.procs`: contains a list of PIDs assigned to that cgroup, one PID per line. Writing a PID to this file adds that process into the cgroup.
+- `/sys/fs/cgroup/cgroup.procs`: This is the top-level cgroup. It contains a list of PIDs assigned to that cgroup, one PID per line. Writing a PID to this file adds that process into the cgroup. Adding a PID to the file removes the PID from any child cgroup controls. This typically removes resource limits and escapes containerization.
 
 ### Managing cgroups
 ```bash
