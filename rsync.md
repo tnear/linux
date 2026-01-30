@@ -7,7 +7,7 @@ See also: [`scp`](scp.md)
 ## Common flags
 
 - `-a, --archive`: recursive copy, preserving all metadata (recommended)
-- `-v, --verbose`: by default, sync is silent
+- `-v, --verbose`: default is silent
 - `-P`: Show progress while preserving partially transferred files (recommended)
 
 ## Copy all files from `dir/` to `newDir/`
@@ -24,7 +24,7 @@ total size is 6  speedup is 0.03
 ```
 
 ## Remote computer with partial and progress
-Using `rsync` for remote transfers because the `-P` flag will resume file transfer after recovering from a disconnect.
+`-P` will resume file transfer after recovering from a disconnect.
 ```bash
 $ rsync -P a.html tnear@100.101.102.103:/home/user
 a.html

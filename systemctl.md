@@ -2,7 +2,19 @@
 
 `systemctl` - Control the systemd system and service manager
 
-## Basic usage
+## Querying services
+```bash
+# list all systemd services (--no-pager is optional)
+systemctl list-units --type=service --no-pager
+
+# view status of specific service
+systemctl status <service_name>
+
+# view systemd file
+systemctl cat <service_name>
+```
+
+## Starting service
 ```bash
 # start service 'my_app'
 $ systemctl start my_app
@@ -11,7 +23,7 @@ $ systemctl start my_app
 $ systemctl enable my_app
 ```
 
-## `firewalld`
+### Example `status` output
 ```bash
 # Check if firewalld is running
 $ sudo systemctl status firewalld

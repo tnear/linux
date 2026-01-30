@@ -1,4 +1,4 @@
-# fgrep 
+# fgrep
 
 `fgrep` - fixed strings grep
 
