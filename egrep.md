@@ -1,12 +1,5 @@
-EGREP
+# egrep 
 
-egrep - extended GREP
-Same as grep -E
+`egrep` - extended GREP
 
-# Without -e, this matches nothing (except self):
-$ ps -aux | \grep '(root|kali)'
-
-# With -e (or EGREP), matches all ROOT or KALI processes:
-$ ps -aux | grep -e '(root|kali)'
-
----
+`egrep` is non-standard and deprecated. Use [`grep -E`](grep.md) instead.

@@ -29,42 +29,31 @@ See also [`ripgrep`](rg.md).
 - `-q`: quiet (no stdout). Useful for conditionals
 - `-R`: recursively search directories while following symlinks
 - `-r`: recursively search directories (do not follow symlinks)
-- `-v`: invert-select. Return lines NOT containing pattern.
+- `-v`: invert-select. Return lines NOT containing pattern
 - `-w`: match whole word
 - `-x`: exact line match (entire line must match)
 - `--exclude-dir=GLOB`: ignore specified directories
 
 ## Recursively search all sub-directories
-Use `-r, --recursive` to recursive search starting in a directory.
+Use `-R, --dereference-recursive` to recursive search starting in a directory. Lowercase (`-r`) will not follow symlinks.
+
 ```bash
-$ grep -r 'repo' ~
+$ grep -R 'repo' ~
 
 # Exclude '.git' directory from 'repo' directory
-$ grep -r --exclude-dir='.git' 'repo'
+$ grep -R --exclude-dir='.git' 'repo'
 
 # exclude multiple directories
-$ grep -r --exclude-dir={.git,.vscode} 'log'
+$ grep -R --exclude-dir={.git,.vscode} 'log'
 ```
 
-Note: [`rg`](rg.md) does this by default.
+Note: [`rg`](rg.md) searches recursively by default.
 
 ## Only print matched text
 This uses `.*` to match from desired text (`user`) to the end of the line. Nothing before `user` is printed.
 ```bash
 $ grep -o 'user.*' /etc/passwd
-user mode.  At other times this information is provided by
-user:*:248:248:Setup User:/var/setup:/bin/bash
-```
-
-## Find lines NOT containing the letter 'e' using invert-select (-v)
-```bash
-$ lscpu | grep -v e
-CPU(s):                4
-CPU family:            6
-
-# Count number of occurrences:
-$ grep -c system /etc/passwd
-4
+user mode. Setup User:/var/setup:/bin/bash
 ```
 
 ## PCRE example (fails without -P)
@@ -72,7 +61,8 @@ $ grep -c system /etc/passwd
 $ echo '1 2' | grep -P '\d'
 ```
 
-## Match patterns in a file, -f, --file
+## Match patterns in a file
+Use `-f, --file`.
 ```bash
 $ cat patterns.txt
 ^a$

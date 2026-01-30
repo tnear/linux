@@ -1,8 +1,9 @@
-REBOOT
+# reboot
 
-halt, poweroff, reboot - Halt, power-off or reboot the machine
+`halt, poweroff, reboot` - Halt, power-off or reboot the machine
 
-# Reboot machine (warning: does not prompt):
+## Reboot machine
+```bash
+# warning: does not prompt
 $ reboot
-
----
+```

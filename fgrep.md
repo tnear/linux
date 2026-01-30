@@ -1,8 +1,5 @@
-FGREP
+# fgrep 
 
-fgrep - plain string search. Does not support expressions. Faster than grep.
+`fgrep` - fixed strings grep
 
-# Search for literal '0.0':
-$ ps -aux | fgrep '0.0'
-
----
+`fgrep` is non-standard and deprecated. Use [`grep -F`](grep.md) instead.
