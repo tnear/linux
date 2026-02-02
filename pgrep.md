@@ -6,21 +6,26 @@ See also: [`pidof`](pidof.md)
 
 ## Common flags
 - `-a`: show full command line
+- `-c`: print count (similar to `grep -c`)
 - `-i`: case insensitive match, `pgrep -i '<pattern>'`
 - `-l`: also show process name (similar to `ls -l`)
+- `-u`: filter by user, ex: `grep -u <username_or_uid>`
+- `-x`: match *exact* process name (default behavior is substring)
 
-## Find process ID
-This finds pid of 'gedit'
+## Querying process ID
+This finds PIDs of processes with exact name `bash`.
 ```bash
-$ pgrep gedit
+$ pgrep -x bash
+18096
 643415
 ```
 
 ### Regex pattern matching
 ```bash
-# find processes ending with 'sh' (such as zsh/bash)
-$ pgrep '.*sh'
+# find processes ending with '.sh' (such as zsh/bash)
+$ pgrep '\.*sh'
 10
+115
 ```
 
 ## `pgrep` vs. `pidof`

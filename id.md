@@ -15,7 +15,7 @@ uid=1(daemon) gid=1(daemon) groups=1(daemon)
 ```
 
 ## Get ID-only
-Use the `-u`  flag to get a user ID.
+Use the `-u` flag to get a user ID.
 ```bash
 $ id -u tnear
 1000

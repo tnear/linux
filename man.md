@@ -20,8 +20,8 @@ Use `-P <pager>` to use a specified pager.
 ```bash
 # output with cat and filter contents
 $ man -P cat socket | grep name
-76:     correspondents named in send(2) calls.  Datagrams are generally received
-128:     getsockname(2), getsockopt(2), ioctl(2), listen(2), read(2), recv(2),
+76:     correspondents named in send(2) calls
+128:     getsockname(2), getsockopt(2), ioctl(2)
 ```
 
 Another example which specifies the section number.

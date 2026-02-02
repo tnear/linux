@@ -26,12 +26,4 @@ sudo netstat -tnp | grep $(pidof my_app) | wc -l
 
 ## `pgrep` vs. `pidof`
 
-### `pgrep` summary
-- Simpler and faster than `pgrep` because it does not do regex
-- Requires knowing exact process name
-- Returns space separated PIDs
-
-### `pgrep` summary
-- Supports pattern matching
-- Supports advanced filtering and detailed output
-- Returns one PID per line
+See [`pgrep`](pgrep.md#pgrep-vs-pidof).
