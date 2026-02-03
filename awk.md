@@ -33,8 +33,8 @@ total 56
 -rw-r--r-- 1 kali kali    0 Jun 21 10:08 ll.txt
 -rw-r--r-- 1 kali kali  547 Jun 21 10:07 ls.txt
 
-# Print lines whose second field ($2) is greater than 2 (i.e., number of hard/soft links > 2):
-$ awk '$2 > 2' ll.txt
+# Print lines whose second field ($2) is greater than 3 (i.e., number of hard/soft links > 3):
+$ awk '$2 > 3' ll.txt
 ```
 
 ## Math

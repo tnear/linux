@@ -13,7 +13,7 @@
 ```bash
 $ sudo chroot /mnt/recovery
 
-# Any process run in that shell will see /mnt/recovery as /.
+# Any process run in that shell will see /mnt/recovery as /
 
 # Paths outside /mnt/recovery cannot be accessed
 ```

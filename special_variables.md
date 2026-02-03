@@ -2,10 +2,19 @@
 
 Special shell variables.
 
-## Exit status of last command: $?. 0 = no error
+## Exit status of last command: `$?`
+A non-zero value indicates an error. `0` is success.
+```bash
 $ fake_cmd
 $ echo $?
 127
+```
+
+## Get shell PID: `$$`
+```bash
+$ echo $$
+31515
+```
 
 ## All positional parameters
 `$@` is a special parameter that represents all positional parameters passed to a script or function.
@@ -29,28 +38,6 @@ Arguments passed: hello world foo bar baz
 Processing: hello world
 Processing: foo
 Processing: bar baz
-```
-
-## Shell script which uses numerous special variables
-```bash
-$ cat special_variables.sh
-#!/usr/bin/zsh
-# https://www.tutorialspoint.com/unix/unix-special-variables.htm
-echo "File Name: $0"
-echo "First Parameter: $1"
-echo "Second Parameter: $2"
-echo "Quoted Values: $@"
-echo "Quoted Values: $*"
-echo "Total Number of Parameters: $#"
-
-# Run above script
-$ ./special_variables.sh hello world
-File Name: ./special_variables.sh
-First Parameter: hello
-Second Parameter: world
-Quoted Values: hello world
-Quoted Values: Hello world
-Total Number of Parameters: 2
 ```
 
 ## Internal field separator

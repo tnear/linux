@@ -57,3 +57,9 @@ PID USER
 $ ps -o user= -p <pid>
 my_user
 ```
+
+### Parent process ID
+Use `ppid` to get parent process ID.
+```bash
+$ ps -o ppid= -p <pid>
+```

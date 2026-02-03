@@ -12,13 +12,14 @@ $ mktemp
 $ mktemp -d
 /tmp/tmp.BBTBG6KZwh
 
-# Create a temporary directory and navigate there:
+# Create a temporary directory and navigate
+# there in one command
 $ cd $(mktemp -d)
 [/tmp/tmp.8F5BTjCwhG] $
 ```
 
 ## Placeholders
-Use `XXX...` for mktemp to fill in with random characters. There must be at least 3 X's.
+Use `XXX...` with `mktemp` to fill in with random characters. There must be at least 3 consecutive X's.
 
 ```bash
 $ mktemp my_data.XXXX.log

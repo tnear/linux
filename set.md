@@ -35,6 +35,9 @@ $ bash debugging.sh
 0
 ```
 
+#### `-o xtrace`
+This is an alternative syntax for `set -x`.
+
 ### `-a`, exports functions and variables in script
 The `-a` flag is useful for creating variables or functions in a script and then having them available after the script runs.
 
