@@ -4,7 +4,8 @@
 
 See also: [`set`](set.md)
 
-## -c = command to run
+## Command to run
+Use `-c` to specify a command string.
 ```bash
 $ bash -c 'echo hello'
 hello
@@ -14,14 +15,8 @@ $ zsh -c 'echo hello'
 ```
 
 ## Execution trace (xtrace) mode
-The `-x` flag creates verbose output for debugging scripts:
+The `-x` flag creates verbose output for debugging scripts.
 ```bash
-$ cat script.sh
-#!/bin/bash
-echo 'Starting script'
-echo 'Hello, world!'
-echo 'Script completed'
-
 $ bash -x script.sh
 + echo 'Starting script'
 Starting script
@@ -31,7 +26,7 @@ Hello, world!
 Script completed
 ```
 
-^The `+` character denotes the command about to be run.
+The `+` character denotes the command about to be run.
 
 ## subshell
 To spawn a subshell, which is a child process of current shell, enclose statements in parentheses:

@@ -3,7 +3,9 @@
 `killall` - kill processes by name
 
 ## Send `SIGTERM` (terminal) signal to ALL gedit processes
-`$ killall gedit`
+```bash
+$ killall gedit
+```
 
 ## Send SIGKILL to all gedit processes
 ```bash

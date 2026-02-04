@@ -47,12 +47,16 @@ Use `-r, --replace` to replace output.
 
 This example replaces 'hello' with 'world' (note: this only affects stdout. It does not modify any files).
 
-`$ rg hello -r world`
+```bash
+$ rg hello -r world
+```
 
 ### Capture group
 This example replaces 'hello <word>' with 'goodbye <word>'.
 
-`$ rg 'hello (\w+)' -r 'goodbye $1'`
+```bash
+$ rg 'hello (\w+)' -r 'goodbye $1'
+```
 
 ## Multiline
 Use the multiline flag, `-U, --multiline`, to search multiple lines. Note: this flag is not supported by `grep`.

@@ -49,7 +49,7 @@ The output `ls -l` uses the first character to denote the file type.
 - `d` = directory
 - `D` = door (Solaris 2.5 and up)
 - `l` = symbolic link
-- `p` = FIFO (named pipe)
+- `p` = [`FIFO`](mkfifo.md) (named pipe)
 - `P` = port (Solaris 10 and up)
 - `s` = socket
 - `?` = some other file type
