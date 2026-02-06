@@ -2,6 +2,8 @@
 
 `ps` - process status - report a snapshot of the current processes.
 
+See also: [`pstree`](pstree.md)
+
 ## Basic usage
 ```bash
 $ ps -aux
@@ -10,22 +12,22 @@ root   1  0.0  0.2 167480 12028 ?   Ss   Jan22 0:03 /sbin/init
 root   2  0.0  0.0      0     0 ?   S    Jan22 0:00 [kthreadd]
 ```
 
-### Columns
+### Column meaning
 - `VSZ`: virtual memory size in kilobytes (total allocated memory)
-- `TTY`: terminal type (may show '?' for processes not associated
+- `TTY`: terminal type (may show `?` for processes not associated
 with a terminal)
 - `TIME`: the cumulative CPU time used by the process
 - `RSS`: resident size set - physical memory used in KB (actual RAM usage)
 - `STAT`: process state code. `R`=running, `S`=sleeping, `Z`=zombie, `T`=stopped
 
 ## Common flags
-- `-a` = all user processes
-- `-e` = show all processes
-- `-f` = full format listing
-- `-l` = long format: includes niceness value (NI).
-- `-p` = filter for a pid, ex: `ps -p 101`
-- `-u` = user-oriented (extra columns). `-u` is incompatible with `-l`
-- `-x` = include extra processes not attached to terminal
+- `-a`: all processes with a terminal
+- `-e`: show all processes. Same as `-A`
+- `-f`: full format listing
+- `-l`: long format: includes niceness value (`NI`).
+- `-p`: filter for a pid, ex: `ps -p 101`
+- `-u`: user-oriented (extra columns). `-u` is incompatible with `-l`
+- `-x`: include extra processes not attached to terminal
 
 ## f = Show process hierarchy (forest)
 ```bash

@@ -2,6 +2,8 @@
 
 `id` - print real and effective user and group IDs
 
+See also: [`groups`](groups.md), [`getent`](getent.md)
+
 ## Get your user ID (UID) and groups (GID)
 ```bash
 $ id

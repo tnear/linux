@@ -3,14 +3,14 @@
 ## `/etc`
 System-wide configuration files, often editable in a text editor.
 
-## `/etc/environment`
-A system-wide configuration file used by all users. Requires administrator privileges to modify.
-
 ## `/etc/default/grub`
 Configuration file for GRUB bootloader. Used to modify `/proc/cmdline`.
 
 ### Modify `/proc/cmdline`
 See [`hier-proc`](hier-proc.md)
+
+## `/etc/environment`
+A system-wide configuration file used by all users. Requires administrator privileges to modify.
 
 ## `/etc/fstab`
 File Systems TABle. Used by [`mount`](mount.md)
@@ -29,6 +29,9 @@ daemon:*:1:root
 <truncated>
 ```
 
+## `/etc/login.defs`
+Defines user ID and group ID ranges, such as `UID_MIN=1001`, `UID_MAX=60000`, `SYS_UID_MIN=201`, `SYS_UID_MAX=999`.
+
 ## `/etc/os-release`
 Displays information about the operating system release version.
 
@@ -39,8 +42,6 @@ ID="ol"
 ID_LIKE="fedora"
 VERSION_ID="9.4"
 PLATFORM_ID="platform:el9"
-PRETTY_NAME="Oracle Linux Server 9.4"
-CPE_NAME="cpe:/o:oracle:linux:9:4:server"
 ```
 
 ## `/etc/passwd`

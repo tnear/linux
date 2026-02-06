@@ -25,7 +25,7 @@ CPU(s):              11
 $ make -j$(nproc)
 ```
 
-## --all
+## `--all`
 To show the total number of processors available, use the `--all` flag:
 
 ```bash

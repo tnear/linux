@@ -2,7 +2,7 @@ dc
 
 `dc` - an arbitrary precision calculator
 
-`dc` is the oldest surviving UNIX program.
+`dc` (*desk calculator*) is the oldest surviving UNIX program.
 
 See also: [`bc`](bc.md)
 

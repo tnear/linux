@@ -2,6 +2,8 @@
 
 `groups` - print the groups a user is in
 
+See also: [`id`](id.md), [`getent`](getent.md)
+
 ## Display your groups
 ```bash
 $ groups
