@@ -12,3 +12,6 @@ $ cat /etc/passwd
 # Filter output using grep
 $ cat /etc/passwd | grep root
 ```
+
+## Common flags
+- `-n`: show line numbers, ex: `cat -n file`

@@ -2,6 +2,8 @@
 
 `find` - search for files in a directory hierarchy
 
+See also: [`xargs`](xargs.md)
+
 ## Case sensitive recursive find in pwd (.) for file names containing 'hello' using a glob
 ```bash
 $ find . -name '*hello*'

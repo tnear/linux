@@ -27,6 +27,9 @@ $ tar -cf my_tar.tar f1.txt f2.txt
 $ tar -xf my_tar.tar
 ```
 
+### Dash/hyphen use
+Explanation [here](ps.md#dashhyphen-use).
+
 ## Compress and decompress `tar.gz`
 
 ```bash

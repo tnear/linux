@@ -12,6 +12,11 @@ root   1  0.0  0.2 167480 12028 ?   Ss   Jan22 0:03 /sbin/init
 root   2  0.0  0.0      0     0 ?   S    Jan22 0:00 [kthreadd]
 ```
 
+### Dash/hyphen use
+A few commands, such as `ps` and [`tar`](tar.md) do not require `-` before their flags (ex: `ps aux`). This is legacy from supporting old UNIX variants.
+
+For consistency, prefer using `-`, ex: `tar -xvf`.
+
 ### Column meaning
 - `VSZ`: virtual memory size in kilobytes (total allocated memory)
 - `TTY`: terminal type (may show `?` for processes not associated
