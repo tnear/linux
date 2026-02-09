@@ -11,10 +11,10 @@ $ sudo yum-config-manager --enable ol8_developer
 ```
 
 Partial list of Oracle Linux configurations:
-- ol8_developer
-- ol8_developer_EPEL
-- ol8_codeready_builder
-- ol8_addons
+- `ol8_developer`
+- `ol8_developer_EPEL`
+- `ol8_codeready_builder`
+- `ol8_addons`
 
 ## Resources
 - https://docs.oracle.com/en-us/iaas/oracle-linux/developer/index.htm

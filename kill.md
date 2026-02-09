@@ -9,7 +9,7 @@ See also: [`pkill`](pkill.md)
 $ kill <pid1> <pid2> <pid3> <...>
 $ kill -signal_num <pid>
 $ kill -signal_name <pid>
-$ kill <job_num>
+$ kill %<job_num>
 ```
 
 ## Commonly used signals

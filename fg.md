@@ -30,7 +30,8 @@ $ fg
 ## Job index
 Use `%n` to switch to a job by its number.
 ```bash
-$ jobs   # list jobs to see indexes
-$ bg %2  # put job 2 in background
-$ fg %1  # put job 1 in foreground
+$ jobs     # list jobs to see indexes
+$ bg %2    # put job 2 in background
+$ fg %1    # put job 1 in foreground
+$ kill %1  # kill job index=1
 ```

@@ -14,5 +14,5 @@ Paste:
 ```bash
 $ pbpaste # no args
 
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ2h3dip/I44lEQaAYMc9fRuflYu4uRitxbs5r1Pk6RW travis.near@oracle.com
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ2h3dip/I44lEQaAYMc9fRuflYu4uRitxbs5r1Pk6RW user@example.com
 ```
