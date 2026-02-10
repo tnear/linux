@@ -16,3 +16,15 @@ $ sudo lvs
   var_log       vg00 -wi-ao----  8.00g
   var_log_audit vg00 -wi-ao----  2.00g
 ```
+
+## Options
+Use `-o <options>` to specify `lvs` options.
+
+```bash
+# list all logical volume paths
+$ lvs -o lv_path
+
+  /dev/vg00/home
+  /dev/vg00/root
+  /dev/vg00/swap
+```

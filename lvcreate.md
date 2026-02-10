@@ -2,12 +2,12 @@
 
 `lvcreate` - Create a logical volume (LV)
 
-See also: [volumes](volumes.md), [`lvs`](lvs.md), [`lvdisplay`](lvdisplay.md)
+See also: [volumes](volumes.md), [`lvs`](lvs.md), [`lvdisplay`](lvdisplay.md), [`lvremove`](lvremove.md)
 
 ## Basic usage
 ```bash
 # create LV /dev/vg00/my_app
-$ lvcreate --yes -L 1G -n my_app vg00
+$ sudo lvcreate --yes -L 1G -n my_app vg00
 ```
 
 Flags:

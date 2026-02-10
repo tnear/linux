@@ -31,7 +31,7 @@ world
 ```
 
 ### Interpret backslashes
-Use the `-e` flag to interpret backslashes. Useful for writing newlines to a file.
+Use the `-e` flag to interpret backslashes. Useful for writing newlines (`\n`) or tabs (`\t`) to a file.
 
 ```bash
 $ echo 'a\nbc'    # does not insert newline

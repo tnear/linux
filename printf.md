@@ -2,7 +2,9 @@
 
 `printf` - format and print data
 
-Note: `printf`, unlike [`echo`](echo.md), does not include a newline at the end.
+Note: `printf`, unlike `echo`, does not insert a newline at the end by default.
+
+See also: [`echo`](echo.md)
 
 ## Basic usage
 ```bash

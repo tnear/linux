@@ -11,10 +11,10 @@ A physical volume is a storage device (such as a disk like `/dev/sda` or partiti
 ## Logical volume
 A logical volume (LV) is a software-defined flexible storage container which is made of one or more physical volumes. They provide an abstraction layer between physical hardware (disk/partitions) and filesystems.
 
-## Volume group
-A volume group is a storage pool which combines one or more physical volumes. Volume groups are then divided into logical volumes. A volume group is created using `vgcreate`.
-
 ### Features
 - Resizing: logical volumes can grow or shrink without repartitioning the disk
 - Snapshots
 - Spanning multiple disks
+
+## Volume group
+A volume group is a storage pool which combines one or more physical volumes. Volume groups are then divided into logical volumes. A volume group is created using `vgcreate`.
