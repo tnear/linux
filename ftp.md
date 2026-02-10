@@ -1,6 +1,6 @@
 # ftp
 
-`ftp` — Internet file transfer program
+`ftp` - Internet file transfer program
 
 **Note**: `ftp` transmits passwords in plain text. For secure transfers, prefer [`sftp`](sftp.md).
 

@@ -1,6 +1,6 @@
 # read
 
-`read` — read from standard input into shell variables
+`read` - read from standard input into shell variables
 
 ## Basic usage
 ```bash

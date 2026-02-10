@@ -1,6 +1,6 @@
 # fg
 
-`fg` — foreground - run jobs in the foreground
+`fg` - foreground - run jobs in the foreground
 
 See also: [`bg`](bg.md), [`jobs`](jobs.md)
 

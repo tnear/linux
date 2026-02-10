@@ -1,6 +1,6 @@
 # SCP
 
-`scp` — OpenSSH secure file copy
+`scp` - OpenSSH secure file copy
 
 See also: [`rsync`](rsync.md)
 

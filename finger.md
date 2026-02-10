@@ -1,6 +1,6 @@
 # finger
 
-`finger` — user information lookup program
+`finger` - user information lookup program
 
 ## Lookup currently logged in users
 ```bash

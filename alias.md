@@ -1,6 +1,6 @@
 # alias
 
-`alias` — define or display aliases
+`alias` - define or display aliases
 
 ## List aliases
 ```bash

@@ -1,6 +1,6 @@
 # ssh
 
-`ssh` — 'secure shell' - OpenSSH remote login client
+`ssh` - 'secure shell' - OpenSSH remote login client
 
 Basic syntax:
 ```bash

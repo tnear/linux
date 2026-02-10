@@ -1,6 +1,6 @@
 # type
 
-`type` — write a description of command type
+`type` - write a description of command type
 
 ## Basic usage
 

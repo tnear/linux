@@ -1,6 +1,6 @@
 # jobs
 
-`jobs` — display status of jobs in the current session
+`jobs` - display status of jobs in the current session
 
 See also: [`bg`](bg.md), [`fg`](fg.md), [`kill`](kill.md)
 

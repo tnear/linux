@@ -1,6 +1,6 @@
 # tmux
 
-`tmux` — terminal multiplexer
+`tmux` - terminal multiplexer
 
 See also: [`screen`](screen.md)
 

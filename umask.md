@@ -1,6 +1,6 @@
 UMASK
 
-`umask` — get or set the file mode creation mask
+`umask` - get or set the file mode creation mask
 
 Masks RWX permission bits during file creation. 022 is a common default.
 

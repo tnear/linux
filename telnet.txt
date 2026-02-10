@@ -1,6 +1,6 @@
 TELNET
 
-telnet — teletype network - user interface to the unencrypted TELNET protocol
+telnet - teletype network - user interface to the unencrypted TELNET protocol
 
 # Connect to localhost:
 $ telnet 127.0.0.1 1234

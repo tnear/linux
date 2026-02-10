@@ -1,6 +1,6 @@
 BC
 
-bc — basic calculator - arbitrary-precision arithmetic language
+bc - basic calculator - arbitrary-precision arithmetic language
 
 # Built-in functions: sqrt, scale, ...
 

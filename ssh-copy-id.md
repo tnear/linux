@@ -1,6 +1,6 @@
 # ssh-copy-id
 
-`ssh-copy-id` — use locally available keys to authorise logins on a remote machine
+`ssh-copy-id` - use locally available keys to authorise logins on a remote machine
 
 See also: [`ssh-keygen`](ssh-keygen.md)
 

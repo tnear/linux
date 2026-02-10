@@ -1,6 +1,6 @@
 # ulimit
 
-`ulimit` — set or report file size limit
+`ulimit` - set or report file size limit
 
 ## Core dumps
 The `-c` flag specifies core dumps in number of 512-byte blocks.

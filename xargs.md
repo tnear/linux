@@ -2,7 +2,7 @@
 
 `xargs` - eXtended ARGumentS - build and execute command lines from standard input
 
-Often simpler than `find` + `-exec`.
+`xargs` is often simpler syntax than `find` + `-exec`.
 
 See also: [`find`](find.md)
 
@@ -48,10 +48,10 @@ $ seq 10 | xargs -I{} sqlite3 data.db 'insert into table1 values ({});'
 ```
 
 ## Prevent running when finding 0 results
-Use `--no-run-if-empty`. Without this command, xargs will run command with 0 args. For example, `ls` no args lists everything. Therefore, `xargs` uses `ls` with no args and outputs everything for zero results:
+Use `--no-run-if-empty`. Without this command, `xargs` will run the command with 0 args. For example, `ls` no args lists everything. Therefore, `xargs ls` with no arguments will outputs everything for zero results which produces an unintended result:
 ```bash
 $ touch a b
-$ find | grep fake_str | xargs ls
+$ find | grep fake_str | xargs ls  # likely incorrect results
 a  b
 
 # To prevent this behavior, use --no-run-if-empty:
@@ -60,7 +60,7 @@ $ find | grep fake_str | xargs --no-run-if-empty ls
 ```
 
 ## Interactive mode tip
-Use `echo` first to see what xargs will do. Before removing, use echo to see what command xargs will run:
+Use `echo` first to see what `xargs` will do. Before removing, use echo to see what command `xargs` will run:
 ```bash
 $ touch a b
 $ find . -type f | xargs echo rm

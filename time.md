@@ -1,6 +1,6 @@
 # time
 
-`time` — time a simple command
+`time` - time a simple command
 
 ## Basic usage
 Prefix a command to run with `time`:

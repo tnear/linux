@@ -1,6 +1,6 @@
 # cd
 
-`cd` — change the working directory
+`cd` - change the working directory
 
 ## Change to home directory
 ```bash

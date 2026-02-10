@@ -1,6 +1,6 @@
 # ssh-keygen
 
-`ssh-keygen` — OpenSSH authentication key utility
+`ssh-keygen` - OpenSSH authentication key utility
 
 See also: [`ssh-copy-id`](ssh-copy-id.md)
 

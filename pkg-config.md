@@ -1,6 +1,6 @@
 # pkg-config
 
-`pkgconf` — a system for configuring build dependency information
+`pkgconf` - a system for configuring build dependency information
 
 ## Mode version
 Use `--modversion` to get the version number of an installed package.

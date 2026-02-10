@@ -1,6 +1,6 @@
 # export
 
-`export` — set the export attribute for variables
+`export` - set the export attribute for variables
 
 `export` can be used to make shell variables available to subprocesses.
 

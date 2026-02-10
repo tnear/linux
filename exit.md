@@ -1,6 +1,6 @@
 # exit
 
-`exit` — cause the shell or script to exit
+`exit` - cause the shell or script to exit
 
 ## Basic usage
 ```bash

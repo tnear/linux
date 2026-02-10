@@ -1,6 +1,6 @@
 # unset
 
-`unset` — unset values and attributes of variables and functions
+`unset` - unset values and attributes of variables and functions
 
 See also: [`declare`](declare.md), [`export`](export.md)
 

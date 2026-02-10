@@ -1,6 +1,6 @@
 # file
 
-`file` — determine file type
+`file` - determine file type
 
 Looks at file's magic number to help determine its type. Displays metadata about a file. Indicates if file contains debug info or is stripped
 
