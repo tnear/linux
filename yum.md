@@ -1,6 +1,6 @@
 # yum
 
-yum - redirecting to DNF Command Reference
+`yum` - redirecting to DNF Command Reference
 
 The Yellowdog Updater Modified (YUM) is a package manager commonly used on Fedora, Red Hat, and Oracle Linux.
 

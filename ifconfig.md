@@ -1,6 +1,6 @@
 # ifconfig
 
-ifconfig - interface config - configure a network interface
+`ifconfig` - interface config - configure a network interface
 
 *Deprecated in favor of [`ip`](ip.md).*
 

@@ -1,6 +1,6 @@
 # jq
 
-jq - Command-line JSON processor
+`jq` - Command-line JSON processor
 
 ## Pretty-print a JSON string
 The expression `jq '.'` converts input to output with no changes. The `'.'` portion can be left off in this example.

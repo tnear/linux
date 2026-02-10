@@ -1,6 +1,8 @@
 # ip
 
-ip - show / manipulate routing, network devices, interfaces and tunnels
+`ip` - show / manipulate routing, network devices, interfaces and tunnels
+
+See also: [`ifconfig`](ifconfig.md)
 
 ## Show current machine's ip address
 ```bash

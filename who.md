@@ -2,6 +2,8 @@
 
 `who` - show who is logged on
 
+See also: [`w`](w.md)
+
 ## Basic usage
 ```bash
 $ who

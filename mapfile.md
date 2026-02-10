@@ -1,6 +1,6 @@
 # mapfile
 
-`mapfile` - Read lines from the standard input into the indexed array variable array
+`mapfile` - Read lines from the standard input into the indexed array variable
 
 ## Read file into array of strings
 ```bash

@@ -20,7 +20,7 @@ top -p <pid> -H
 
 ### Load average
 ```
-top - 12:47:24 up  8:21,  1 user,  load average: 0.44, 0.27, 0.25
+$ top - 12:47:24 up  8:21,  1 user,  load average: 0.44, 0.27, 0.25
 ```
 
 - `12:47:24`: current time

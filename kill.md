@@ -1,6 +1,6 @@
 # kill
 
-kill - send a signal to a process
+`kill` - send a signal to a process
 
 See also: [`pkill`](pkill.md)
 

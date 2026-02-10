@@ -1,6 +1,6 @@
 # sysctl
 
-sysctl - configure kernel parameters at runtime
+`sysctl` - configure kernel parameters at runtime
 
 ## -a, --all
 This displays all values currently available.

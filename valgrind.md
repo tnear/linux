@@ -1,6 +1,6 @@
 # Valgrind
 
-valgrind - a suite of tools for debugging and profiling programs
+`valgrind` - a suite of tools for debugging and profiling programs
 
 ## Example with a memory leak
 ```c
