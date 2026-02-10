@@ -6,9 +6,15 @@ Source code: https://github.com/coreutils/coreutils/blob/master/src/tee.c
 
 See also: [heredocument](heredocument.md)
 
-## Write to a read-only file as `sudo`
+## `sudo` with `tee`
+
+Note: `sudo echo` does not work.
 ```bash
-echo 'text here' | sudo tee /path/to/read-only/file
+# write to file as root
+echo 'text here' | sudo tee /path/to/file
+
+# use -a to append
+echo 'text here' | sudo tee -a /path/to/file
 ```
 
 ## Print output and write to file
@@ -19,16 +25,7 @@ $ ps | tee ps.txt
 ## Append to previous file (instead of overwrite)
 ```bash
 $ ps | tee -a ps.txt
-
-# Show appended output:
-$ cat ps.txt
-    PID TTY          TIME CMD
- 143914 pts/2    00:00:00 ps
- 143915 pts/2    00:00:00 tee
-    PID TTY          TIME CMD
- 144662 pts/2    00:00:00 ps
- 144663 pts/2    00:00:00 tee
 ```
 
 ## Use heredocument as root user
-See [heredocument](heredocument.md) for an example.
+See [heredocument](heredocument.md#write-to-file-as-root-user) for an example.
