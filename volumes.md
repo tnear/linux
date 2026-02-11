@@ -2,7 +2,7 @@
 
 ## Terminology
 - Disk: physical device such as HDD or SSD. Ex: `/dev/sda1`, `/dev/nvme0n1`
-- Partition: a defined section of a disk. Each partition can be formatted and used separately. Ex: `/dev/sda1`, `/dev/nvme0n1`
+- Partition: a defined section of a disk. Each partition can be formatted and used separately. Ex: `/dev/sda1`, `/dev/nvme0n1p1`
 - Volume: a storage area that is not necessarily limited to a single partition or disk
 
 ## Physical volume

@@ -16,3 +16,19 @@ $ sudo mkfs.ext4 -q /dev/vg00/my_app
 The `-q` (quiet) flag suppresses most output.
 
 Path `/dev/vg00/my_app` is the path to the block device to format. In this example, it is the logical volume `vg00`.
+
+## Complete example
+
+```bash
+# Partition the disk
+sudo fdisk /dev/sdb     # Create /dev/sbd1 partition for disk
+
+# Format it (-L = label)
+sudo mke2fs -t ext4 -L "storage" /dev/sdb1
+
+# Mount it
+sudo mount /dev/sdb1 /mnt/storage
+
+# Verify
+df -h /mnt/storage
+```

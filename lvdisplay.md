@@ -2,7 +2,7 @@
 
 `lvdisplay` - Display information about a logical volume
 
-See also: [`lvs`](lvs.md), [`lvcreate`](lvcreate.md), [`volumes`](volumes.md)
+See also: [`lvs`](lvs.md), [`lvcreate`](lvcreate.md), [volumes](volumes.md)
 
 ## Basic usage
 
