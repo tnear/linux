@@ -4,7 +4,6 @@
 
 See also: [`lvdisplay`](lvdisplay.md), [`volumes`](volumes.md)
 
-
 ## Basic usage
 ```bash
 $ sudo lvs

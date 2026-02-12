@@ -33,7 +33,7 @@ A soft link creates a special shortcut file (like Windows). Soft links use pathn
 Use `-s, --symbolic` to create a symbolic link.
 
 ```bash
-$ ln -s <file to point to> <new path>
+$ ln -s <existing_file_or_dir> <new_path>
 $ ln -s a.txt aLink.txt
 ```
 
