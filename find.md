@@ -43,7 +43,7 @@ $ find . -iname '*hello*'
 To do a case insensitive listing, use `find` with the `-ls` flag.
 ```bash
 $ find /tmp/ -iname '*data*' -ls
-2853037   8 -rw-r--r--    1 tnear    wheel   756 Jul 11 09:10 /tmp//MyData.txt
+2853037   8 -rw-r--r--    1 user wheel 756 Jul 11 09:10 /tmp/MyData.txt
 ```
 
 ## MTIME - modification time

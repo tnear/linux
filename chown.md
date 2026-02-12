@@ -6,7 +6,7 @@
 Use `-R` to change the ownership recursively of a directory contents.
 ```bash
 # sudo chown <user> <dir> -R
-sudo chown tnear .ssh -R
+sudo chown user .ssh -R
 ```
 
 ## Change owner to nobody

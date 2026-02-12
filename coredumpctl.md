@@ -22,7 +22,7 @@ Fri 2025-03-14 14:51:24 GMT 180111 SIGSEGV  /tmp/crash/my_crash
 
 # use pid and path from `list` output above
 $ coredumpctl dump -o /tmp/crash/my_crash 180111
-tnear@[~] $  coredumpctl dump -o /tmp/crash/my_crash 180111
+user@[~] $  coredumpctl dump -o /tmp/crash/my_crash 180111
            PID: 180111 (my_crash)
         Signal: 11 (SEGV)
      Timestamp: Fri 2025-03-14 14:51:24 GMT (19min ago)

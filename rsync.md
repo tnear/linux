@@ -26,7 +26,7 @@ total size is 6  speedup is 0.03
 ## Remote computer with partial and progress
 `-P` will resume file transfer after recovering from a disconnect.
 ```bash
-$ rsync -P a.html tnear@100.101.102.103:/home/user
+$ rsync -P a.html user@100.101.102.103:/home/user
 a.html
            0 100%    0.00kB/s    0:00:00 (xfer#1, to-check=0/1)
 

@@ -24,7 +24,7 @@ Format: `<group_name>:<unused password>:<gid>:<group_list>`
 $ cat /etc/group
 # Group Database
 nobody:*:-2:
-wheel:*:0:root,tnear
+wheel:*:0:root,user
 daemon:*:1:root
 <truncated>
 ```

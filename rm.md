@@ -2,6 +2,8 @@
 
 `rm` - remove files or directories
 
+See also: [`rmdir`](rmdir.md), [`unlink`](unlink)
+
 ## Basic usage
 ```bash
 # remove one file

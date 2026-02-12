@@ -72,5 +72,5 @@ srwxr-xr-x. 1 user1 access-login   0 Jul 15 19:24 socketFile
 
 ```bash
 $ find /tmp/ -iname '*data*' -ls
-2853037    8 -rw-r--r--    1 tnear   dev    756 Jul 11 09:10 /tmp/MyData.txt
+2853037  8 -rw-r--r--  1 user grp  756 Jul 11 09:10 /tmp/MyData.txt
 ```
