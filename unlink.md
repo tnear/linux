@@ -2,7 +2,7 @@
 
 `unlink` - call the unlink function to remove the specified file
 
-See also: [`rm`](rmd.md)
+See also: [`rm`](rm.md)
 
 ## Basic usage
 Uniquely, `unlink` has no command options.

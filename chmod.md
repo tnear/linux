@@ -2,7 +2,7 @@
 
 `chmod` - change mode - change file mode bits
 
-See also: [`setuid`](setuid.md)
+See also: [`setuid`](setuid.md), [`install`](install.md)
 
 ## Allow all to read, write, and execute a file
 ```bash
@@ -19,11 +19,12 @@ mode of 'file.txt' changed from 0644 (rw-r--r--) to 0777 (rwxrwxrwx)
 
 ### Syntax
 ```bash
-chmod [ugoa][+-=][rwxst]
-u = user, g = group, o = others, a = all
-+ is add, - is remove, = is assign
-r = read, w = write, x = execute, s = setuid, t = sticky
+$ chmod [ugoa][+-=][rwxst]
 ```
+
+- `u` = user, `g` = group, `o` = others, `a` = all
+- `+` is add, `-` is remove, `=` is assign
+- `r` = read, `w` = write, `x` = execute, `s` = setuid, `t` = sticky
 
 ### setuid (SUID)
 See [`setuid`](setuid.md).
@@ -47,8 +48,8 @@ $ chmod +x script.sh
 ```
 
 ## Change permissions recursively on a directory
-Use `-R, --recursive` to change the bits of a folder and all its subfolders:
+Use `-R, --recursive` to change the bits of a directory and all its subdirectories:
 ```bash
 # directories need execute bit, so use 777 instead of 666
-chmod -R 777 /path/to/directory
+$ chmod -R 777 /path/to/directory
 ```

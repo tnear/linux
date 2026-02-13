@@ -2,14 +2,16 @@
 
 `chown` - change owner - change file owner and group
 
+See also: [`install`](install.md)
+
 ## Recursive change
 Use `-R` to change the ownership recursively of a directory contents.
 ```bash
 # sudo chown <user> <dir> -R
-sudo chown user .ssh -R
+$ sudo chown user .ssh -R
 ```
 
-## Change owner to nobody
+## Change owner to `nobody`
 The `nobody` user in Linux owns no files, is in no privileged groups, and has the smallest subset of abilities.
 
 ```bash
@@ -32,7 +34,7 @@ Use `<owner>:<group>` to change both.
 $ sudo chown nobody:team file.txt
 ```
 
-## Change group only
+### Change group only
 Use `:<group>` to change group without changing owner.
 
 ```bash

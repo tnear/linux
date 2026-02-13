@@ -2,6 +2,8 @@
 
 `cp` - copy files and directories
 
+See also: [`mv`](mv.md), [`install`](install.md)
+
 ## Basic usage
 ```bash
 # copy file to cwd
