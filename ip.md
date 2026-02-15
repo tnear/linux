@@ -32,3 +32,26 @@ $ ip link
     link/ether 01:10:1a:88:9d:c8 brd ff:ff:ff:ff:ff:ff
     altname enp0s3
 ```
+
+## Network namespaces
+Network namespaces are used by containers to create an isolated network stack per container. See Networking.git for more information.
+
+```bash
+# create a namespace
+sudo ip netns add my_ns
+
+# list all namespaces
+ip netns list
+
+# delete a namespace
+sudo ip netns delete my_ns
+
+# run command inside namespace
+sudo ip netns exec my_ns <command>
+
+# get a shell inside namespace
+sudo ip netns exec my_ns bash
+
+# run command ("ip link") inside network namespace
+$ ip netns exec my_ns ip link
+```
