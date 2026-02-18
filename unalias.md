@@ -1,11 +1,14 @@
-UNALIAS
+# unalias
 
-unalias - remove alias definitions
+`unalias` - remove alias definitions
 
-# Create temporary alias:
+See also: [`alias`](alias.md)
+
+## Basic usage
+```bash
+# create temporary alias
 $ alias myalias='echo myalias'
 
-# Unalias:
+# remove/delete alias
 $ unalias myalias
-
----
+```

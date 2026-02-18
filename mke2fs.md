@@ -7,6 +7,11 @@ See also: [volumes](volumes.md), [`mount`](mount.md)
 ## Introduction
 `mke2fs` formats a block device (disk, partition, or logical volume).
 
+### Advantages
+- A corruption in another file system will not affect yours
+- Simpler backups and recovery
+- Fine-grained quotas, limits, and security (ex: `noexec`)
+
 ## Basic usage
 ```bash
 # make ext4 filesystem using 'mkfs.ext4' wrapper
@@ -32,3 +37,6 @@ sudo mount /dev/sdb1 /mnt/storage
 # Verify
 df -h /mnt/storage
 ```
+
+### `lost+found`
+This directory is created when using `mke2fs`. It acts a recovery area and should be left alone.

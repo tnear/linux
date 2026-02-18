@@ -2,6 +2,8 @@
 
 `alias` - define or display aliases
 
+See also: [`unalias`](unalias.md)
+
 ## List aliases
 ```bash
 $ alias

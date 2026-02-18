@@ -4,6 +4,8 @@
 
 Displays dynamic table of active processes
 
+See also: [`htop`](htop.md)
+
 ## Basic usage
 ```bash
 # show all processes

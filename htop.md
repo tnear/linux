@@ -1,6 +1,8 @@
 # htop
 
-`htop, pcp-htop` - interactive process viewer
+`htop` - interactive process viewer
+
+See also: [`top`](top.md)
 
 ## Top banner output
 - `tasks: <num>`: total number of processes
