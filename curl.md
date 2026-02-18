@@ -2,6 +2,8 @@
 
 `curl` - Client URL - transfer a URL
 
+See also: [`wget`](wget.md)
+
 ## Output web page HTML
 ```bash
 # basic usage

@@ -16,6 +16,12 @@ $ sudo lvs
   var_log_audit vg00 -wi-ao----  2.00g
 ```
 
+### Attributes
+- `w`: writable
+- `i`: inherited allocation policy
+- `a`: active
+- `o`: open
+
 ## Options
 Use `-o <options>` to specify `lvs` options.
 
