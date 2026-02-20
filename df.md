@@ -30,6 +30,11 @@ Filesystem  Type    Size  Used Avail Use% Mounted on
 udev        ext4    1.9G     0  1.9G   0% /dev
 tmpfs       ext4    393M  1.2M  391M   1% /run
 /dev/sda1   xfs      78G   13G   62G  17% /
+
+# tmpfs drive
+$ df -T /dev/shm
+Filesystem     Type  1K-blocks  Used Available Use% Mounted on
+none           tmpfs   8088632     0   8088632   0% /dev/shm
 ```
 
 ### Query particular directory to learn its file system type
