@@ -1,21 +1,30 @@
-MV
+# mv
 
-mv - move (rename) files
+`mv` - move (rename) files
 
-# Rename file:
+See also: [`cp`](cp.md)
+
+## Basic usage
+```bash
+# rename file
 $ mv oldName newName
 
-# Move file to directory (dir):
+# move file to directory
 $ mv file.txt dir/
 
-# Move multiple files to directory:
+# move directory into /tmp
+$ mv my_dir /tmp
+
+# move multiple files to directory
 $ mv file1 file2 file3 dir/
 
-# Rename directory:
+# rename directory
 $ mv oldDir newDir
+```
 
-# -i, --interactive = prompt to overwrite if dest file already exists:
+### Prompt to overwrite
+Use `-i, --interactive` to prompt to overwrite if destination exists.
+```bash
 $ mv -i a.txt b.txt
 mv: overwrite 'b.txt'?
-
----
+```

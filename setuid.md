@@ -36,3 +36,11 @@ sudo chown root:root /path/to/app
 # add setuid bit (symbolic syntax)
 sudo chmod u+s /path/to/app
 ```
+
+## `nosuid`
+`nosuid` is a Linux `mount` option that prevents `setuid` on binaries within that filesystem. It is a security feature that prevents users from gaining elevated (root) permissions.
+
+```bash
+# find 'nosuid' mounts
+$ mount | grep nosuid
+```

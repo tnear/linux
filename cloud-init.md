@@ -1,7 +1,5 @@
 # cloud-init
 
-aka "cloud init", "cloud_init", and "cloudinit".
-
 `cloud-init`, aka "cloud init", "cloud_init", and "cloudinit", runs one time when an instance is provisioned. It runs as the `root` user.
 
 ## Log files
