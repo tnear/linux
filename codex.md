@@ -72,6 +72,13 @@ More information: https://developers.openai.com/codex/prompting
 - Try open-ended prompts, such as brainstorming app improvements, performance bottlenecks, and identifying missing test coverage
 - Codex supports reading images
 
+## Bash commands
+Prefix a command with `!` to run a shell command:
+```bash
+# list files
+codex> !ls
+```
+
 ## Resources
 - https://github.com/openai/codex
 - "Getting started with Codex", https://youtu.be/px7XlbYgk7I

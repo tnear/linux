@@ -2,7 +2,7 @@
 
 `ip` - show / manipulate routing, network devices, interfaces and tunnels
 
-See also: [`ifconfig`](ifconfig.md)
+See also: [`ifconfig`](ifconfig.md), [`arp`](arp.md)
 
 ## Show current machine's ip address
 ```bash
@@ -54,4 +54,17 @@ sudo ip netns exec my_ns bash
 
 # run command ("ip link") inside network namespace
 $ ip netns exec my_ns ip link
+```
+
+## Neighbor
+`ip neighbor` is the modern equivalent of [`arp`](arp.md).
+
+```bash
+# list all arp entries
+$ ip neighbor show
+$ arp  # legacy
+
+# show specific entry
+$ ip neighbor show 192.168.1.1
+$ arp 192.168.1.1  # legacy
 ```

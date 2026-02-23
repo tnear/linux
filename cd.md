@@ -2,18 +2,19 @@
 
 `cd` - change the working directory
 
-## Change to home directory
+See also: [`pwd`](pwd.md)
+
+## Basic usage
 ```bash
+# change to home directory
 $ cd
 # OR
 $ cd ~
-```
 
-## Change to previous directory
-```bash
+# change to previous directory
 $ cd /tmp
-$ cd
-$ cd -  # this line returns to /tmp
+$ cd /sys  # change away
+$ cd -  # return to /tmp
 ```
 
 ## Builtin
