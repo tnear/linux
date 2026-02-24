@@ -6,7 +6,17 @@ Source code: https://github.com/coreutils/coreutils/blob/master/src/tee.c
 
 See also: [heredocument](heredocument.md)
 
-## `sudo` with `tee`
+## Basic usage
+
+```bash
+# Print output and write to file
+$ ps | tee ps.txt
+
+# Append to previous file (instead of overwrite)
+$ ps | tee -a ps.txt
+```
+
+## Root user with `tee`
 
 Note: `sudo echo` does not work.
 ```bash
@@ -17,15 +27,5 @@ echo 'text here' | sudo tee /path/to/file
 echo 'text here' | sudo tee -a /path/to/file
 ```
 
-## Print output and write to file
-```bash
-$ ps | tee ps.txt
-```
-
-## Append to previous file (instead of overwrite)
-```bash
-$ ps | tee -a ps.txt
-```
-
-## Use heredocument as root user
+### Use heredocument as root user
 See [heredocument](heredocument.md#write-to-file-as-root-user) for an example.

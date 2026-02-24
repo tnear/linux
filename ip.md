@@ -15,7 +15,7 @@ $ ip address
        valid_lft forever preferred_lft forever
 ```
 
-## Show ip routes
+## IP routes
 ```bash
 $ ip route
 default via 10.0.2.2 dev eth0 proto dhcp src 10.0.2.15 metric 100
