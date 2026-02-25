@@ -6,11 +6,11 @@ Commands run in the shell are stored in a hash table.
 The hash table displays the full path to the command and the number of times it was run ('hits').
 ```bash
 $ hash
-hits	command
-   1	/usr/bin/whoami
-   4	/usr/bin/man
-   2	/usr/bin/ls
-   1	/usr/bin/w
+hits    command
+   1    /usr/bin/whoami
+   4    /usr/bin/man
+   2    /usr/bin/ls
+   1    /usr/bin/w
 ```
 
 ## Add command to hash table without running it
@@ -19,10 +19,10 @@ Calling hash directly on a command adds it to the table with 0 hits.
 ```bash
 $ hash grep xargs
 $ hash
-hits	command
-   0	/usr/bin/grep
-   0	/usr/bin/xargs
-   1	/usr/bin/whoami
+hits    command
+   0    /usr/bin/grep
+   0    /usr/bin/xargs
+   1    /usr/bin/whoami
 ```
 
 ## Reset table
