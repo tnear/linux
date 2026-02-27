@@ -1,5 +1,7 @@
 # cloud-init
 
+`cloud-init` - Cloud instance initialization
+
 `cloud-init`, aka "cloud init", "cloud_init", and "cloudinit", runs one time when an instance is provisioned. It runs as the `root` user.
 
 ## Log files
@@ -14,3 +16,6 @@ This is the user-data script itself.
 
 ### `/var/lib/cloud/instance/boot-finished`
 Timestamp file indicating when cloud-init completed.
+
+## Resources
+- https://cloud-init.io/

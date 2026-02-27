@@ -2,9 +2,7 @@
 
 `source` - reads and executes the contents of a file
 
-'source' runs one line after another.
-
-'source' runs in your current shell, while executing a script spawns a new shell.
+`source` runs one line after another. It runs in your current shell, while executing a script spawns a new shell.
 
 See also: [`time`](time.md), [`eval`](eval.md)
 

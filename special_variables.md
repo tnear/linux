@@ -19,10 +19,8 @@ $ echo $$
 ## All positional parameters
 `$@` is a special parameter that represents all positional parameters passed to a script or function.
 
-### Example
+### Iterating example
 ```bash
-echo "Arguments passed: $@"
-
 # loop through each argument
 for arg in "$@"; do
     echo "Processing: $arg"
@@ -32,12 +30,13 @@ done
 ./script.sh "hello world" foo "bar baz"
 ```
 
-### Output
-```
-Arguments passed: hello world foo bar baz
-Processing: hello world
-Processing: foo
-Processing: bar baz
+### Forwarding all arguments example
+```bash
+# .zshrc
+my_fcn() {
+    # call script.sh while forwarding all arguments
+    ~/path/to/script.sh "$@"
+}
 ```
 
 ## Internal field separator

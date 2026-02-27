@@ -34,7 +34,10 @@ with a terminal)
 - `-u`: user-oriented (extra columns). `-u` is incompatible with `-l`
 - `-x`: include extra processes not attached to terminal
 
-## f = Show process hierarchy (forest)
+## Show process hierarchy
+
+Use `f` to show process hierarchy as a forest.
+
 ```bash
 $ ps -a f
     PID TTY      STAT   TIME COMMAND
