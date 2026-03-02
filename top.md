@@ -89,9 +89,9 @@ MiB Swap:   1024.0 total,    477.1 free,    546.9 used.   2199.3 avail Mem
 - `TIME+`: total CPU time used by process since starting, `minutes:seconds:hundredths`
 - `COMMAND`: program name
 
-```bash
 ## Show processes for a user
 
+```bash
 $ top -u <user>  # basic syntax
 $ top -u root  # show for root user
 ```

@@ -25,3 +25,12 @@ Use `XXX...` with `mktemp` to fill in with random characters. There must be at l
 $ mktemp my_data.XXXX.log
 my_data.Kly9.log
 ```
+
+## Specify temporary directory
+Use `-p <dir>` to use a temporary directory. If unspecified, it defaults to `/tmp`.
+
+```bash
+# create temporary directory (-d) in /var/tmp
+$ mktemp -d -p /var/tmp
+/var/tmp/tmp.baY7hFRsnp
+```

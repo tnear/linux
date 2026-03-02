@@ -12,15 +12,20 @@ if test -f /path/to/file; then
 fi
 
 # equivalent bracket syntax (more common)
-# (spaces around '[' and ']' are required)
+# (spaces inside '[' and ']' are required)
 if [ -f /path/to/file ]; then
     echo 'File exists'
+fi
+
+if [ -n "$PATH" ]; then
+    echo 'Path is non-empty'
 fi
 ```
 
 ## Operators
-- `-f`: checks if it is a regular file
 - `-d`: checks if it is a directory
 - `-e`: checks if it exists (any type)
-- `-x`: checks if it is executable
+- `-f`: checks if it is a regular file
 - `-h`: checks if it is symbolic link
+- `-n`: checks non-empty string
+- `-x`: checks if it is executable

@@ -2,7 +2,7 @@
 
 `mount` - mount a filesystem
 
-See also: [`mke2fs`](mke2fs.md), [`umount`](umount.md), [`findmnt`](findmnt.md)
+See also: [`mke2fs`](mke2fs.md), [`umount`](umount.md), [`findmnt`](findmnt.md), [`mountpoint`](mountpoint.md)
 
 ## Display all mounted partitions
 ```bash

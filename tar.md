@@ -11,6 +11,7 @@ tar [options] [archive-file] [file1 file2 ...]
 - `-c, --create`: create archive
 - `-C, --directory=DIR`: choose directory to extract to
 - `-f, --file`: specify file name
+- `-p, --preserve-permissions`: preserve file permissions
 - `-t, --list`: list contents of archive
 - `-v, --verbose`: additional output
 - `-x, --extract`: extract archive
