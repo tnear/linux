@@ -19,7 +19,8 @@ nobody
 ```
 
 ## Preserve environment variables
-Use `-E, --preserve-env` to pass environment variables.
+Use `-E, --preserve-env` to pass environment variables. This is useful when running scripts as a different user because `export` alone isn't enough to make them available.
+
 ```bash
 $ export MY_VAR="hello"
 $ sudo -E env | grep MY_VAR  # outputs: "MY_VAR=hello"

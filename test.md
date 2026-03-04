@@ -29,3 +29,4 @@ fi
 - `-h`: checks if it is symbolic link
 - `-n`: checks non-empty string
 - `-x`: checks if it is executable
+- `-z`: checks for empty string or unset

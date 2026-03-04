@@ -2,7 +2,7 @@
 
 `pgrep` - look up, signal, or wait for processes based on name and other attributes
 
-See also: [`pidof`](pidof.md)
+See also: [`pidof`](pidof.md), [`grep`](grep.md)
 
 ## Common flags
 - `-a`: show full command line

@@ -2,12 +2,12 @@
 
 `file` - determine file type
 
-Looks at file's magic number to help determine its type. Displays metadata about a file. Indicates if file contains debug info or is stripped
+The `file` command looks at file's magic number to help determine its type. It displays metadata about a file. For binaries, it indicates if file contains debug info or is stripped.
 
 ## Basic usage
 ```bash
 $ file a.out
-a.out: ELF 64-bit LSB executable, x86-64,  with debug_info, not stripped
+a.out: ELF 64-bit LSB executable, x86-64, with debug_info, not stripped
 
 $ file readreq.c
 readreq.c: C source, ASCII text

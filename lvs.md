@@ -2,7 +2,7 @@
 
 `lvs` - Display information about logical volumes
 
-See also: [`lvdisplay`](lvdisplay.md), [`volumes`](volumes.md)
+See also: [`lvdisplay`](lvdisplay.md), [`volumes`](volumes.md), [`lvremove`](lvremove.md)
 
 ## Basic usage
 ```bash
