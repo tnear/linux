@@ -25,6 +25,12 @@ Use `-L` to follow symlinks.
 find -L /path/to/search -type f
 ```
 
+Find symlink loops (recursive check)
+```bash
+$ find -L /your/path -type l
+# will output 'X is part of the same file system loop as Y'
+```
+
 ## Get number of files with .h or .c extension
 ```bash
 $ find /usr/include -name '*.[hc]' | wc

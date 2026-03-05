@@ -15,12 +15,10 @@ source ~/.zshrc
 $ cat cmds.txt
 echo 'a'
 echo 'b'
-echo 'c'
 
 $ source cmds.txt
 a
 b
-c
 ```
 
 ## Time command duration

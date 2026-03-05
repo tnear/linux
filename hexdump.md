@@ -2,6 +2,8 @@
 
 `hexdump` - display file contents in hexadecimal, decimal, octal, or ascii
 
+See also: [`od`](od.md)
+
 ## hexdump
 Use the `-C` flag to show a right column (recommended).
 ```bash
