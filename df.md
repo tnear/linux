@@ -22,7 +22,7 @@ tmpfs           393M  1.2M  391M   1% /run
 ```
 
 ## `-T, --print-type`
-Include 'Type' column in `df` output.
+`-T` shows file system type column.
 
 ```bash
 $ df -T
@@ -35,17 +35,4 @@ tmpfs       ext4    393M  1.2M  391M   1% /run
 $ df -T /dev/shm
 Filesystem     Type  1K-blocks  Used Available Use% Mounted on
 none           tmpfs   8088632     0   8088632   0% /dev/shm
-```
-
-### Query particular directory to learn its file system type
-Use `-T, --print-type`.
-
-```bash
-# syntax
-$ df -T /path/to/dir
-
-# example
-$ df -T /dev/sda1
-Filesystem     Type 1K-blocks  Used Available Use% Mounted on
-/dev/sda1      vfat    102156  6352     95804   7% /boot/efi
 ```

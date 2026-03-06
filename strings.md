@@ -1,26 +1,17 @@
-STRINGS
+# strings
 
-strings - print the sequences of printable characters in files
+`strings` - print the sequences of printable characters in files
 
 Find strings in (binary) files. Defaults to 4+ characters
 
-# Find 4+ character strings:
+## Basic usage
+```bash
+# find 4+ character strings
 $ strings shellclean.o
 /bin/bashABBBBCCCC
-CustomJump
-ShellCode
 
-# Find 2+ character strings:
+# find 2+ character strings using -n2
 $ strings -n2 shellclean.o
 ELF
 /bin/bashABBBBCCCC
-CustomJump
-ShellCode
-
-# Find GMP functions exported in 'factor':
-$ strings $(where factor) | grep -i gmp
-__gmpz_init_set_si
-__gmpz_init
-__gmpz_tdiv_q_ui
-
----
+```

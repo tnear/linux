@@ -19,7 +19,7 @@ Change: 2023-03-26 15:30:21.635831143 -0500
  Birth: 2023-03-26 15:30:21.635831143 -0500
 ```
 
-## Common flags
+## File system flag
 Use `-f` (file system) to display status about file system where a given file or directory resides instead of about the file itself.
 ```bash
 $ mkdir myDir
@@ -29,4 +29,13 @@ $ stat -f myDir
 Block size: 4096       Fundamental block size: 4096
 Blocks: Total: 20520787   Free: 12880753   Available: 11826866
 Inodes: Total: 5251072    Free: 4504871
+```
+
+## Customize output
+Use `-c <format>` to customize `stat` output.
+
+```bash
+# get inode number
+$ stat -c '%i' AGENTS.md
+20468577
 ```

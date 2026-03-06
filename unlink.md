@@ -16,16 +16,16 @@ unlink /path/to/symlink
 ```
 
 ## Limitations
-`unlink` is a much simpler command than `rm`.
+`unlink` is a simpler command than `rm`:
 
-`unlink` does not support removing directories.
-```bash
-$ unlink my_dir
-unlink: cannot unlink 'my_dir': Is a directory
-```
+- It does not support removing directories:
+    ```bash
+    $ unlink my_dir
+    unlink: cannot unlink 'my_dir': Is a directory
+    ```
 
-`unlink` does not support removing multiple files.
-```bash
-$ unlink a.txt b.txt
-unlink: extra operand 'b.txt'
-```
+- It does not support removing multiple files:
+    ```bash
+    $ unlink a.txt b.txt
+    unlink: extra operand 'b.txt'
+    ```
