@@ -29,3 +29,10 @@ Use `--preserve=all` to preserve attributes such as mode, ownership, capabilitie
 ```bash
 $ cp --preserve=all path/to/file /new/dir
 ```
+
+## Other flags
+
+```bash
+# -u, --update checks if source is newer than destination
+$ cp -u old.txt new.txt  # no change assuming old's timestamp is older
+```

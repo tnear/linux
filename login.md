@@ -1,8 +1,9 @@
-LOGIN
+# login
 
-login - begin session on the system
+`login` - begin session on the system
 
-# Login as user 'travis':
-$ sudo login travis
-
----
+## Basic usage
+```bash
+# log in as specified user
+$ sudo login my_user
+```
