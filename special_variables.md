@@ -3,7 +3,7 @@
 Special shell variables.
 
 ## Exit status of last command: `$?`
-A non-zero value indicates an error. `0` is success.
+Also known as "exit code", "status code", or "return_code. A non-zero value indicates an error. `0` is success.
 ```bash
 $ fake_cmd
 $ echo $?
@@ -50,3 +50,6 @@ IFS='='
 # because IFS is '=', this splits $arg into 'key' and 'value'
 read key value <<< "$arg"
 ```
+
+## `BASH_SOURCE`
+`BASH_SOURCE` is a special array variable in bash that holds file names by stack frame. `${BASH_SOURCE[0]}` is the current script. `${BASH_SOURCE[1]}` (if present) is the caller.

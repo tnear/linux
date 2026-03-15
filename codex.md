@@ -51,13 +51,21 @@ Use AGENTS.md to point Codex to a Plans.md so the agent has a template for writi
 https://developers.openai.com/codex/cli/slash-commands
 
 ### `/permissions`
-See what Codex can do without prompting you.
+See what actions Codex can perform without prompting you.
 
 ### `/status`
 Provides overview of version, model, directory, sandbox mode, AGENTS.md, account, context window, and more.
 
 ### `/review`
 Finds issues before committing.
+
+### `/plan`
+Enter plan mode. This mode will only plan changes without making them.
+
+Press `shift + tab` to return to Default mode.
+
+### `/compact`
+Summarize conversation to prevent hitting the context limit.
 
 ## Prompting
 
