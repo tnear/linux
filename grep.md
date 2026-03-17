@@ -29,6 +29,8 @@ $ grep -options 'pattern' <file_or_directory>
 - `-q`: quiet (no stdout). Useful for conditionals
 - `-R`: recursively search directories while following symlinks
 - `-r`: recursively search directories (do not follow symlinks)
+- `-s`: match whitespace (ex: space, tab, newline)
+- `-S`: match non-whitespace
 - `-v`: invert-select. Return lines *not* containing pattern
 - `-w`: match whole word
 - `-x`: exact line match (entire line must match)

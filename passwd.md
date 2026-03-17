@@ -1,15 +1,14 @@
-PASSWD
+# passwd
 
-passwd - change user password
+`passwd` - change user password
 
+## Basic usage
+```bash
+# change your password
 $ passwd
-Changing password for <user>.
-(current) UNIX password:
-Enter new UNIX password:
-Retype new UNIX password:
+...
 passwd: password updated successfully
 
-# Change another user's password:
+# change another user's password
 $ sudo passwd user_name
-
----
+```

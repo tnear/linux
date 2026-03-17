@@ -22,7 +22,7 @@ $ lscpu | grep CPU
 CPU(s):      4
 ```
 
-Therefore, the percent resource usage for above numbers is 0.36 / 4 * 100 = 9%.
+Therefore, the percent resource usage for above numbers is `0.36 / 4 * 100 = 9%`.
 
 ## `-s, --since`
 ```bash
