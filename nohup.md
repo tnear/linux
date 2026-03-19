@@ -11,8 +11,8 @@ Output that would normally go to the terminal goes to a file called `nohup.out`,
 
 ## Usage
 ```bash
-$ nohup myProgram & # run program in background
-$ exit
+$ nohup myProgram &
+$ exit  # myProgram continues to run after user log out
 ```
 
 ## Resources

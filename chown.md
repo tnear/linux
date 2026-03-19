@@ -2,7 +2,7 @@
 
 `chown` - change owner - change file owner and group
 
-See also: [`install`](install.md)
+See also: [`install`](install.md), [`chgrp`](chgrp.md)
 
 ## Recursive change
 Use `-R` to change the ownership recursively of a directory contents.

@@ -24,7 +24,7 @@ CPU(s):      4
 
 Therefore, the percent resource usage for above numbers is `0.36 / 4 * 100 = 9%`.
 
-## `-s, --since`
+### `-s, --since`
 ```bash
 uptime -s
 2025-05-03 11:17:44
