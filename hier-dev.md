@@ -47,3 +47,11 @@ $ ll /dev/hugepages
 .rw-------@ 1.1G root root 14 May 17:51 app_with_huge_pages_2
 .rw-------@ 1.1G root root 14 May 17:51 app_with_huge_pages_3
 ```
+
+## `/dev/full`
+`/dev/full` is a special file that is always "full". Any attempt to write to it will fail. It is useful for simulating full disk conditions, such as for testing.
+
+```bash
+$ echo 'test' > /dev/full
+echo: write error: no space left on device
+```

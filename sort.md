@@ -2,32 +2,24 @@
 
 `sort` - sort lines of text files
 
-## Sort file
+See also: [`uniq`](uniq.md)
+
+## Basic usages
 ```bash
+# sort file
 $ sort /etc/passwd
-_apt:x:100:65534::/nonexistent:/usr/sbin/nologin
-avahi:x:111:117:Avahi mDNS daemon,,,:/run/avahi-daemon:/usr/sbin/nologin
-backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
-<...>
-```
 
-## Sort processes by name
-```bash
+# Sort processes by name
 $ ps -aux | sort
-```
 
-## Sort numerically
-Ex: `[1, 2, 10]` instead of `[1, 10, 2]`
-```bash
+# Sort numerically
+# Ex: [1, 2, 10] instead of [1, 10, 2]
 $ sort -n
-```
 
-## Reverse order of sort
-```bash
+# Reverse order of sort
 $ sort -r
-```
-## -u = sort unique (alternate for sort | uniq)
-```bash
+
+# Unique sort (alternative for sort | uniq)
 $ sort -u file.txt
 ```
 

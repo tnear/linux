@@ -87,6 +87,9 @@ Prefix a command with `!` to run a shell command:
 codex> !ls
 ```
 
+## Adding directories
+Use `codex --add-dir <dir1> --add-dir <dir2> ...` to add additional directories. This can be useful for spanning multiple repositories.
+
 ## Resources
 - https://github.com/openai/codex
 - "Getting started with Codex", https://youtu.be/px7XlbYgk7I

@@ -2,6 +2,8 @@
 
 `uniq` - report or omit repeated lines
 
+See also: [`sort`](sort.md)
+
 ## Basic usage
 ```bash
 $ cat file.txt
