@@ -52,3 +52,6 @@ Hashed passwords. Root-only file access.
 
 ## `/etc/sudoers`
 Configuration file defining who can run what commands as which user (often `root`).
+
+## `/etc/profile.d`
+Contains scripts which are executed automatically when any user logs in. Useful for setting environment variables and paths which should be available to all users.

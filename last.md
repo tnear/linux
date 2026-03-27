@@ -2,6 +2,8 @@
 
 `last` - show a listing of last logged in users
 
+See also: [`lastlog`](lastlog.md)
+
 ## Show most recently logged in users
 ```bash
 $ last

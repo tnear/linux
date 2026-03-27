@@ -13,36 +13,13 @@ $ curl example.com
 $ curl example.com > example.html
 ```
 
-### Get headers only
-Use `-I, --head` to fetch headers only.
-```bash
-$ curl -I google.com
-```
-Content-Length: 219
-
-### Output to file
-Use `-O, --remote-name` to output to a file.
-```bash
-# download index.html
-$ curl -O example.com/index.html
-
-# use lowercase -o to specify a custom file name
-$ curl -o example.html example.com
-```
-
-### Verbose
-Use `-v, --verbose` to show additional information (such as headers)
-
-```bash
-# show header information, dump html content to /dev/null
-$ curl -v example.com > /dev/null
-```
-
-### Silent
-Use `-s, --silent` to avoid printing progress meter or errors.
-```bash
-curl -s example.com
-```
+## Common flags
+- `-I, --head`: fetch headers only
+- `-O, --remote-name`: output to a file
+- `-o`: specify custom file name
+- `-v, --verbose`: show additional info
+- `-s, --silent`: prevent printing progress meter and errors
+- `-L, --location`: follow page redirects
 
 ### Authentication
 Use `-u` to specify `user:password`.
@@ -54,13 +31,6 @@ $ curl -u demo:password ftp://test.rebex.net
 Use `-H, --header` to send extra header information.
 ```bash
 curl -H "X-First-Name: Joe" https://example.com
-```
-
-### Follow page moves to a different location
-Use `-L, --location` to make curl redo a request at the new location.
-
-```bash
-curl -L https://example.com
 ```
 
 ## FTP
