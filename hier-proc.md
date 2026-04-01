@@ -1,6 +1,6 @@
 # hier-proc
 
-The `/proc` directory includes information on system hardware, processes, and other kernel information. `/proc` is a virtual file system.
+`/proc` contains information on system hardware, processes, and other kernel information. `/proc` is a virtual file system.
 
 Many `/proc` files show as 0 bytes despite having data due to their virtual nature:
 ```bash

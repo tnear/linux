@@ -1,7 +1,6 @@
 # hier-etc
 
-## `/etc`
-System-wide configuration files, often editable in a text editor.
+`/etc` contains system-wide configuration files, often editable in a text editor.
 
 ## `/etc/default/grub`
 Configuration file for GRUB bootloader. Used to modify `/proc/cmdline`.

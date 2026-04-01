@@ -1,7 +1,6 @@
 # hier-dev
 
-# `/dev`
-Special or device files. Usually hardware represented as a file.
+`/dev` contains special or device files. Usually hardware represented as a file.
 
 ## `/dev/mem`
 Main (physical) memory in file form. Root-protected.

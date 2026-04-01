@@ -14,7 +14,7 @@ $ pstack $(pidof my_app)
 ### Example usage
 ```bash
 # run on current process (shell)
-$ pstack $$             
+$ pstack $$
 #0  0x00007f1468c089ec in sigsuspend () from /lib64/libc.so.6
 #1  0x0000556581e7b961 in zwaitjob ()
 #2  0x0000556581e7bcd8 in waitjobs ()

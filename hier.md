@@ -1,64 +1,65 @@
-HIER
+# Hierarchy
 
-https://granneman.com/tech/linux/thelinuxenvironment/topleveldirectories
+`hier` - description of the filesystem hierarchy
 
-$ man hier
+Help text: `man hier`
 
-hier - description of the filesystem hierarchy
+### [`/bin`](hier-bin.md)
+Essential binaries. Needed in single user mode and to bring the system up or repair it.
 
-    /bin   Essential binaries. Needed in single user mode and to
-            bring the system up or repair it.
+### `/boot`
+Contains static files for the boot loader. Holds only the files which are needed during the boot process. Ex: GNU GRUB bootloader.
 
-    /boot  Contains static files for the boot loader.
-            Holds only the files which are needed during the boot
-            process. Ex: GNU GRUB bootloader.
+### [`/dev`](hier-dev.md)
+Special or device files. Usually hardware represented as a file.
 
-    /dev   Special or device files. Usually hardware represented as a file.
+### [`/etc`](hier-etc.md)
+System-wide configuration files, often editable in a text editor.
 
-    /etc   System-wide configuration files, often editable in a text editor.
+### `/home`
+Root home directory for users.
 
-    /home  Root home directory for users.
+### `/lib`
+Should hold those shared libraries that are necessary to boot the system and to run the commands in the root filesystem.
 
-    /lib   Should hold those shared libraries that are
-            necessary to boot the system and to run the commands in
-            the root filesystem.
+### `/lost+found`
+Contains items lost in the filesystem. These items are usually chunks of files mangled as a consequence of a faulty disk or a system crash.
 
-    /lost+found
-           Contains items lost in the filesystem.
-            These items are usually chunks of files mangled as a
-            consequence of a faulty disk or a system crash.
+### `/media`
+Contains mount points for removable media such as CD and DVD disks or USB sticks.
 
-    /media Contains mount points for removable media
-            such as CD and DVD disks or USB sticks.
+### `/mnt`
+Mount point for file systems or devices (ex: CDs, flash drives).
 
-    /mnt   Mount point for file systems or devices (ex: CDs, flash drives).
+### `/opt`
+Optional packages. Often used by programs to dump install data.
 
-    /opt   Optional packages. Often used by programs to dump install data.
+### [`/proc`](hier-proc.md)
+Includes information on system hardware and processes. /proc is a virtual file system.
 
-    /proc  Includes information on system hardware and processes.
-            /proc is a virtual file system.
+### `/root`
+The home directory for the root user.
 
-    /root  The home directory for the root user.
+### `/run`
+Contains information which describes the system since it was booted. All saved in RAM, not to disk.
 
-    /run   Contains information which describes the system since it was booted.
-            All saved in RAM, not to disk.
+### [`/sbin`](hier-sbin.md)
+System administration binaries. Intended to be run as ROOT.
 
-    /sbin  System administration binaries. Intended to be run as ROOT.
+### `/srv`
+This directory contains site-specific data that is served by this system.
 
-    /srv   This directory contains site-specific data that is served
-            by this system.
+### [`/sys`](hier-sys.md)
+This is a mount point for the sysfs filesystem, which provides information about the kernel like /proc, but better structured. Virtual filesystem.
 
-    /sys   This is a mount point for the sysfs filesystem, which
-            provides information about the kernel like /proc, but
-            better structured. Virtual filesystem.
+### `/tmp`
+Contains temporary files which may be deleted with no notice, such as by a regular job or at system boot up.
 
-    /tmp   Contains temporary files which may be deleted with no notice,
-            such as by a regular job or at system boot up.
+### [`/usr`](hier-usr.md)
+Holds only shareable, read-only data, so that it can be mounted by various machines running Linux.
 
-    /usr   Holds only shareable, read-only data, so that it
-            can be mounted by various machines running Linux.
+### [`/var`](hier-var.md)
+Variable directory. Writable, persistent files. Can be used for logging (see /var/log).
 
-    /var   Variable directory. Writable, persistent files.
-            Can be used for logging (see /var/log).
-
----
+## Resources
+- https://granneman.com/tech/linux/thelinuxenvironment/topleveldirectories
