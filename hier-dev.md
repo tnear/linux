@@ -4,26 +4,17 @@
 Special or device files. Usually hardware represented as a file.
 
 ## `/dev/mem`
-```bash
-$ man mem
-```
 Main (physical) memory in file form. Root-protected.
 
 ## `/dev/null`
-```bash
-$ man null
-```
 Data sink. Discards everything written to it. Useful to suppress output.
 
 ### Examples
 ```bash
-# Produces messy output due to permission denied errors
-$ grep -r hello /sys/
-
-# Direct stderr to /dev/null to ignore permission errors
+# Use '2>' (stderr) to direct to /dev/null to ignore permission errors
 $ grep -r hello /sys/ 2> /dev/null
 
-# Suppress successful pings so that only errors appear in terminal
+# Suppress successful pings (stdout, '>') so that only errors appear in terminal
 $ ping google.com > /dev/null
 ```
 
@@ -38,7 +29,7 @@ $ echo $RAND
 ```
 
 ## `/dev/hugepages`
-This directory provides a special interface to the kernel's huge page memory management. These are binary files.
+Provides a special interface to the kernel's huge page memory management. These are binary files.
 
 ```bash
 $ ll /dev/hugepages
@@ -49,9 +40,20 @@ $ ll /dev/hugepages
 ```
 
 ## `/dev/full`
-`/dev/full` is a special file that is always "full". Any attempt to write to it will fail. It is useful for simulating full disk conditions, such as for testing.
+A file that is always "full". Any attempt to write to it will fail. It is useful for simulating full disk conditions, such as for testing.
 
 ```bash
 $ echo 'test' > /dev/full
 echo: write error: no space left on device
+```
+
+## `/dev/mapper`
+Device-mapper is a kernel framework that allows creating layered block devices. Inside are user-friendly names for virtual block devices.
+
+```bash
+$ ll /dev/mapper
+total 0
+crw-------. 1 root root 10, 236 Mar 24 22:50 control
+lrwxrwxrwx. 1 root root       7 Mar 24 22:50 volume-oled -> ../dm-1
+lrwxrwxrwx. 1 root root       7 Mar 24 22:50 volume-root -> ../dm-0
 ```

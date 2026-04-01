@@ -62,7 +62,7 @@ Finds issues before committing.
 ### `/plan`
 Enter plan mode. This mode will only plan changes without making them.
 
-Press `shift + tab` to return to Default mode.
+Press `shift + tab` to toggle between Plan mode and Default mode.
 
 ### `/compact`
 Summarize conversation to prevent hitting the context limit.
