@@ -5,6 +5,7 @@
 See also: [`ll`](ll.md)
 
 ## Common flags
+- `-1`: list one line per file (similar to `ll` format)
 - `-a, --all`: list all files (including hidden)
 - `-d, --directory`: list directory itself (instead of directory contents)
 - `-h, --human-readable`: human-readable sizes (ex: 977K instead of 1000000)

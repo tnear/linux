@@ -1,13 +1,15 @@
-LD
+# ld
 
-ld - linker - link editor - The GNU linker
+`ld` - linker - link editor - The GNU linker
 
-# Create executable file (file) from object file (file.o):
+## Basic usage
+
+```bash
+# create executable file (file) from object file (file.o)
 $ ld -o file file.o
 
 # -m = emulation, needed for 32-bit apps when assembled with --32:
 $ as -gstabs --32 -o shell.o shell.s
 $ ld -m elf_i386 -o shell shell.o
 $ ./shell
-
----
+```
