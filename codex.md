@@ -90,6 +90,9 @@ codex> !ls
 ## Adding directories
 Use `codex --add-dir <dir1> --add-dir <dir2> ...` to add additional directories. This can be useful for spanning multiple repositories.
 
+## Logs and errors
+Logs are dumped in `~/.codex/log/codex-tui.log`.
+
 ## Resources
 - https://github.com/openai/codex
 - "Getting started with Codex", https://youtu.be/px7XlbYgk7I

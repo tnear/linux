@@ -53,7 +53,7 @@ This directory contains site-specific data that is served by this system.
 This is a mount point for the sysfs filesystem, which provides information about the kernel like /proc, but better structured. Virtual filesystem.
 
 ### `/tmp`
-Contains temporary files which may be deleted with no notice, such as by a regular job or at system boot up.
+Contains temporary files which regularly get deleted. Often configured to be [`tmpfs`](tmpfs.md).
 
 ### [`/usr`](hier-usr.md)
 Holds only shareable, read-only data, so that it can be mounted by various machines running Linux.
