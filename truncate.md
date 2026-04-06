@@ -4,6 +4,9 @@
 
 See also: [`dd`](dd.md), [`fallocate`](fallocate.md)
 
+## Comparison to similar functions
+See [`fallocate`](fallocate.md#comparison-to-similar-functions)
+
 ## Common usages
 
 Notes:

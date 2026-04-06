@@ -4,9 +4,11 @@
 
 `fdisk` is a low-level utility to create, delete, and modify partitions on a disk.
 
+See also: [`growpart`](growpart.md)
+
 ## List permissions
 
-This is the most common `fdisk` usage.
+Use `-l, --list` to list partition tables. This is the most common `fdisk` usage.
 
 ```bash
 $ sudo fdisk -l

@@ -2,6 +2,8 @@
 
 `mapfile` - Read lines from the standard input into the indexed array variable
 
+See also: [`compgen`](compgen.md), [process substitution](process_substitution.md)
+
 ## Read file into array of strings
 ```bash
 # create a file with 3 lines
@@ -16,6 +18,19 @@ echo ${lines[0]} # outputs 'Line 1'
 
 # output all lines separated by space
 echo ${lines[*]} # outputs "Line 1 Line 2 Line 3"
+```
+
+## Iterate over files matching glob
+
+```bash
+# read all log files into an array variable
+# using process substitution
+mapfile -t files < <(compgen -G "*.log")
+
+# iterate over each match
+for f in "${files[@]}"; do
+    echo "Found: $f"
+done
 ```
 
 ## Resources
