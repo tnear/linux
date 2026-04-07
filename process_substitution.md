@@ -1,10 +1,10 @@
 # Process Substitution
 
-In computing, process substitution is a form of inter-process communication that allows the input or output of a command to appear as a file.
+Process substitution is a form of inter-process communication that allows the input or output of a command to appear as a file.
 
 Syntax: `<(...command...)`
 
-## File creation
+## Temporary file creation
 Process substitution creates temporary files which are automatically thrown away.
 
 ```bash

@@ -1,8 +1,11 @@
-POWEROFF
+# poweroff
 
-halt, poweroff, reboot - Halt, power-off or reboot the machine
+`poweroff` - Halt, power-off or reboot the machine
 
-# Power off machine:
-$ poweroff  # warning: does not prompt
+See also: [`reboot`](reboot.md)
 
----
+## Basic usage
+```bash
+# warning: does not prompt
+$ poweroff
+```

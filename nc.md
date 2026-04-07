@@ -47,3 +47,16 @@ $ nc -l -p 1234 > file.txt
 # Note how port number and file name are same as above:
 $ nc <addr> 1234 < file.txt
 ```
+
+## UNIX domain sockets
+
+Use `-U, --unixsock` flag.
+
+```bash
+# basic connection
+$ nc -U /path/to/my.sock
+
+$ nc -U -z -w 5 /path/to/my.sock
+# -z: zero I/O mode (checks if connection can be made)
+# -w 5: wait up to 5 seconds
+```
