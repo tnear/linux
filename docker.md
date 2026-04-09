@@ -4,25 +4,35 @@
 
 Docker uses OS-level virtualization to package software in *containers*. Containers ensure that applications work consistently on different systems.
 
+See also: [`docker`](docker.md)
+
+## Images
+An **image** is a blueprint that contains everything needed to run an application (code, libraries, environment variables, etc.). The image is immutable.
+
+```bash
+# pull new image
+sudo docker pull <url>
+
+# list images (including their checksum)
+sudo docker image list
+
+# remove image by id
+sudo docker rmi <checksum>
+
+# -f to force remove
+sudo docker rmi -f <checksum>
+```
+
 ## Containers
 Docker containers encapsulate an application with all of its dependencies, making it consistent across different environments.
 
 Containers are lightweight, making them more efficient than virtual machines because they share the host system's kernel.
-
-## Architecture
-![](images/DockerArchitecture.png)
-
-*Image: https://youtu.be/NPguawVjbN0*
 
 ## Key features
 - Portability: Once a Docker container is created, it can be run on any system that has Docker installed. This reduces the "it works on my machine" problem in development.
 - Efficiency: Containers share the host system's kernel, not requiring an OS per application. They start quickly and use less CPU and RAM than VMs.
 - Isolation: Docker ensures that applications that are running in containers are isolated from each other and from the host system. This isolation improves security and allows for fine-grained control over system resources.
 - Developer Productivity: Docker containers support a fast development cycle since developers can work in local containers that mirror the production environment.
-
-## How Docker works
-- Docker Images: An image is a lightweight, standalone, executable package that includes everything needed to run a piece of software, including the code, runtime, libraries, environment variables, and config files.
-- Docker Containers: A container is a runtime instance of a Docker image. It runs isolated from the host environment by default, only accessing host files and networks if configured to do so.
 
 ## Docker layers
 A *layer* in an image contains a set of filesystem changes (additions, deletions, or modifications) applied to a previous layer. Ex: first layer adds basic commands, second layer installs Python, third layer installs application dependencies, etc.
@@ -47,7 +57,7 @@ COPY app.py /app/        # layer 4: added /app/app.py
 ```
 
 ### Container layer
-Docker adds one *writable layer* on top of the read-only layers. All runtime writes (logs, temp files, database writes, etc.) go here.
+Docker adds one writable layer on top of the read-only layers called the *container layer*. All runtime writes (logs, temp files, database writes, etc.) go here.
 
 When the container is deleted, the container layer is also destroyed. Persistent data must be kept in a *volume*.
 
@@ -86,9 +96,10 @@ COPY . /app/                  # changes freely
 ## Mount points
 
 ### Volumes
-Volumes are used for persistent data in containers. Volumes *cannot* be accessed on host OS.
+Volumes are used for persistent data in containers and are managed by Docker. Volumes *cannot* be accessed on host OS.
 
 The name (`mydata`) identifies the volume. The example below uses the *same* name, therefore both containers see the same data. This makes concurrent writes dangerous.
+
 ```bash
 # -d = detached
 # -v, --mount = mount volume
@@ -118,7 +129,7 @@ docker run --mount mydata:/app/data myimage
 
 # Bind mount: left side is a path (starts with / or ./)
 docker run --mount /home/user/myapp:/app myimage
-``` 
+```
 
 ## Dockerfile
 A `Dockerfile` is a text file that contains all the commands to assemble an image.
@@ -154,7 +165,7 @@ WORKDIR /app
 CMD ["python", "app.py"]  # exec form (preferred)
 CMD python app.py         # shell form
 
-# VOLUME declares a mount point 
+# VOLUME declares a mount point
 VOLUME /data
 ```
 
@@ -166,21 +177,43 @@ $ docker version
 $ docker info
 ```
 
-### List containers
-```bash
-# currently running containers
-$ docker ps
-
-# all containers
-$ docker ps -a
-```
-
-### List images
+### Images
 ```bash
 $ docker images
 REPOSITORY  TAG     IMAGE ID  CREATED      SIZE
 ubuntu      latest  4e2e4f88  3 days ago   64.2MB
 nginx       1.19    9beeba24  2 weeks ago  133MB
+```
+
+### Containers
+```bash
+# list currently running containers
+$ docker ps
+
+# user-friendly view with size
+$ docker ps -a --size --format "{{.ID}}\t{{.Names}}\t{{.Size}}"
+
+# list all containers
+$ docker ps -a
+
+# list all containers for an image
+$ sudo docker ps -a --filter ancestor="$image_name"
+```
+
+#### Container size
+Containers have two sizes, ex: `120MB (virtual 500MB)`
+
+- `120MB`: writable layer (actual container changes)
+- `virtual 500 MB`: all image layers (shared)
+
+For cleanup, focus on the first number first.
+
+```bash
+# show container size
+$ docker ps -a --size
+
+# user-friendly view with size
+$ docker ps -a --size --format "{{.ID}}\t{{.Names}}\t{{.Size}}"
 ```
 
 ### Build image from Dockerfile then run the image
@@ -222,6 +255,16 @@ $ docker container stop my_container
 ```
 
 Use `docker container ps -a` to check on its status.
+
+### Copy file into container
+
+```bash
+# using container name
+sudo docker cp /path/to/file.txt container_name:/path/in/container
+
+# using checksum
+sudo docker cp /path/to/file.txt <checksum>:/path/in/container
+```
 
 ## Resources
 - https://spacelift.io/blog/dockerfile
