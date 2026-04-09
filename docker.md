@@ -4,24 +4,10 @@
 
 Docker uses OS-level virtualization to package software in *containers*. Containers ensure that applications work consistently on different systems.
 
-See also: [`docker`](docker.md)
+See also: [`docker`](docker.md), [`docker-api`](docker-api.md)
 
 ## Images
 An **image** is a blueprint that contains everything needed to run an application (code, libraries, environment variables, etc.). The image is immutable.
-
-```bash
-# pull new image
-sudo docker pull <url>
-
-# list images (including their checksum)
-sudo docker image list
-
-# remove image by id
-sudo docker rmi <checksum>
-
-# -f to force remove
-sudo docker rmi -f <checksum>
-```
 
 ## Containers
 Docker containers encapsulate an application with all of its dependencies, making it consistent across different environments.
@@ -62,11 +48,11 @@ Docker adds one writable layer on top of the read-only layers called the *contai
 When the container is deleted, the container layer is also destroyed. Persistent data must be kept in a *volume*.
 
 ```bash
-[ Container layer          ]  # writable, lost when container is deleted
-[ COPY app.py /app/        ]  # read-only
-[ RUN apt-get install curl ]  # read-only
-[ RUN apt-get update       ]  # read-only
-[ FROM ubuntu:24.04        ]  # read-only
+[ Container layer      ] # writable, lost when container is deleted
+[ COPY app.py /app/    ] # read-only
+[ RUN apt install curl ] # read-only
+[ RUN apt update       ] # read-only
+[ FROM ubuntu:24.04    ] # read-only
 ```
 
 ### Layer sharing and caching
@@ -98,38 +84,10 @@ COPY . /app/                  # changes freely
 ### Volumes
 Volumes are used for persistent data in containers and are managed by Docker. Volumes *cannot* be accessed on host OS.
 
-The name (`mydata`) identifies the volume. The example below uses the *same* name, therefore both containers see the same data. This makes concurrent writes dangerous.
-
-```bash
-# -d = detached
-# -v, --mount = mount volume
-# mydata = name of volume on host
-# /app/data = path inside the container
-docker run -d --mount mydata:/app/data image_a  # container A writes to /app/data
-docker run -d --mount mydata:/app/data image_b  # container B sees the same files
-```
-
 ### Bind mounts
 A *bind mount* takes a specific path on your host filesystem and mounts it directly into the container. Unlike volumes, Docker doesn't manage it. You are exposing a host directory as-is.
 
 Bind mounts are most useful for development: you mount your source code on your host to a path in the container. Edits on your local editor are instantly reflected in the container.
-
-Syntax:
-```bash
-# mount /home/user/myapp on host to /app on container
-$ docker run --mount /home/user/myapp:/app image_a
-```
-
-### Syntax comparison
-Note: prefer `--mount` over `-v` for clarity.
-
-```bash
-# Volume: left side is a name (no slash)
-docker run --mount mydata:/app/data myimage
-
-# Bind mount: left side is a path (starts with / or ./)
-docker run --mount /home/user/myapp:/app myimage
-```
 
 ## Dockerfile
 A `Dockerfile` is a text file that contains all the commands to assemble an image.
@@ -167,103 +125,6 @@ CMD python app.py         # shell form
 
 # VOLUME declares a mount point
 VOLUME /data
-```
-
-## API
-
-### Docker info
-```bash
-$ docker version
-$ docker info
-```
-
-### Images
-```bash
-$ docker images
-REPOSITORY  TAG     IMAGE ID  CREATED      SIZE
-ubuntu      latest  4e2e4f88  3 days ago   64.2MB
-nginx       1.19    9beeba24  2 weeks ago  133MB
-```
-
-### Containers
-```bash
-# list currently running containers
-$ docker ps
-
-# user-friendly view with size
-$ docker ps -a --size --format "{{.ID}}\t{{.Names}}\t{{.Size}}"
-
-# list all containers
-$ docker ps -a
-
-# list all containers for an image
-$ sudo docker ps -a --filter ancestor="$image_name"
-```
-
-#### Container size
-Containers have two sizes, ex: `120MB (virtual 500MB)`
-
-- `120MB`: writable layer (actual container changes)
-- `virtual 500 MB`: all image layers (shared)
-
-For cleanup, focus on the first number first.
-
-```bash
-# show container size
-$ docker ps -a --size
-
-# user-friendly view with size
-$ docker ps -a --size --format "{{.ID}}\t{{.Names}}\t{{.Size}}"
-```
-
-### Build image from Dockerfile then run the image
-First, create a Dockerfile. Assume it is called `my-python-image`.
-
-Next, build the image:
-```bash
-$ docker build -t my-python-image .
-
-# output:
-Successfully built 123456789abc
-Successfully tagged my-python-image:latest
-```
-
-- `-t` is optional and used to set the image tag.
-
-Lastly, run the container:
-```shell
-$ docker run -it my-python-image
-```
-
-`-it` means open in Interactive Terminal
-
-### Run image
-More complex example than above:
-```shell
-$ docker run --name my-nginx -d -p 8080:80 nginx
-```
-
-- `--name my-nginx` assigns the name my-nginx to the container.
-- `-d` runs the container in detached mode, so it runs in the background.
-- `-p 8080:80` maps port 80 of the container to port 8080 on the host, allowing you to access the Nginx server by visiting http://localhost:8080 in your web browser.
-- `nginx` is the name of the image to use, with Docker pulling the latest version of the Nginx image from Docker Hub if it's not already present locally.
-
-### Stop running a Docker container
-Use the `stop` command.
-```bash
-$ docker container stop my_container
-```
-
-Use `docker container ps -a` to check on its status.
-
-### Copy file into container
-
-```bash
-# using container name
-sudo docker cp /path/to/file.txt container_name:/path/in/container
-
-# using checksum
-sudo docker cp /path/to/file.txt <checksum>:/path/in/container
 ```
 
 ## Resources
