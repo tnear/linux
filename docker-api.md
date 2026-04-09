@@ -26,9 +26,6 @@ nginx       1.19    9beeba24  2 weeks ago  133MB
 # list currently running containers
 $ docker ps
 
-# user-friendly view with size
-$ docker ps -a --size --format "{{.ID}}\t{{.Names}}\t{{.Size}}"
-
 # list all containers
 $ docker ps -a
 
@@ -47,9 +44,6 @@ For cleanup, focus on the first number first.
 ```bash
 # show container size
 $ docker ps -a --size
-
-# user-friendly view with size
-$ docker ps -a --size --format "{{.ID}}\t{{.Names}}\t{{.Size}}"
 ```
 
 ### Stop running a container

@@ -38,6 +38,20 @@ $ bash debugging.sh
 #### `-o xtrace`
 This is an alternative syntax for `set -x`.
 
+#### `-o pipefail`
+Makes a pipeline fail if any command fails (not just the last one).
+
+```bash
+# without pipefail, this returns 0 (success) because
+# last command (true) succeeds
+$ false | true
+echo $?
+0
+$ false
+echo $?
+1
+```
+
 ### `-a`, exports functions and variables in script
 The `-a` flag is useful for creating variables or functions in a script and then having them available after the script runs.
 
@@ -50,6 +64,9 @@ name='hello'
 $ echo $name
 hello
 ```
+
+### `-u`: unset variables
+Use `set -u` to treat unset variables as an error. Without `-u`, this would NOT error if `$MY_VAR` had no value: `echo $MY_VAR`.
 
 ## `+[arg]`
 The `+[arg]` syntax *disables* a `set` option. For example, `set +x` *disables* output debugging. `set +e` *continues* running in case of errors.

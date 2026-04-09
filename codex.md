@@ -67,6 +67,9 @@ Press `shift + tab` to toggle between Plan mode and Default mode.
 ### `/compact`
 Summarize conversation to prevent hitting the context limit.
 
+### `/rename`
+Renames session for easier identification.
+
 ## Prompting
 
 ### Create custom prompt command

@@ -12,7 +12,7 @@ tar [options] [archive-file] [file1 file2 ...]
 - `-C, --directory=DIR`: choose directory to extract to
 - `-f, --file`: specify file name
 - `-p, --preserve-permissions`: preserve file permissions
-- `-t, --list`: list contents of archive
+- `-t, --list`: list file names and directories in archive
 - `-v, --verbose`: additional output
 - `-x, --extract`: extract archive
 - `-z, --gzip`: compress directories and files
@@ -43,7 +43,7 @@ $ tar -xzf my_tar.tar.gz
 
 ## Display contents without extracting
 
-Use `-t, --list` to print file names.
+Use `-t, --list` to print (view) file names.
 ```bash
 $ tar -tf my_tar.tar
 f1.txt

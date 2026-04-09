@@ -11,11 +11,11 @@ The cgroup (control groups) mechanism allows limiting and isolating resources su
 
 - cgroups are hierarchical. Child cgroups inherit certain attributes from their parent cgroup.
 - a *subsystem* represents a single resource, such as CPU time or memory.
-- `/sys/fs/cgroup/cgroup.procs`: This is the top-level cgroup. It contains a list of PIDs assigned to that cgroup, one PID per line. Writing a PID to this file adds that process into the cgroup. Adding a PID to the file removes the PID from any child cgroup controls. This typically removes resource limits and escapes containerization.
+- `/sys/fs/cgroup/cgroup.procs`: This is the root (top-level) cgroup. It contains a list of PIDs assigned to that cgroup, one PID per line. Adding a PID to this file removes that PID from any child cgroup controls (detaching from existing cgroups happens automatically). Writing to root cgroup removes resource limits escapes containerization, and removes process from `systemd`'s management.
 
 ### Managing cgroups
 ```bash
-# /sys/fs/cgroup is the root cgroup directory (it may need to be mounted)
+# /sys/fs/cgroup is the root cgroup directory
 
 # create new directory for cgroup
 sudo mkdir /sys/fs/cgroup/cpu/my_cpu_group
