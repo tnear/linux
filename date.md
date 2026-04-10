@@ -9,7 +9,7 @@ Fri Mar 31 05:36:27 PM CDT 2023
 ```
 
 ```bash
-# -I, --iso-8601 = Output in <yyyy>-<mm>-<01>
+# -I, --iso-8601 = output current date as YYYY-MM-DD
 $ date -I
 2023-05-01
 ```
@@ -20,3 +20,4 @@ $ date -I
 $ touch "file_$(date +%Y%m%d_%H%M).txt"
 $ ls file_*
 file_20250716_1452.txt
+```

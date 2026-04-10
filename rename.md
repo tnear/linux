@@ -6,5 +6,5 @@
 This example renames all `.txt` files to have a `.md` extension.
 
 ```bash
-rename 's/.txt$/.txt/' *.md
+rename 's/\.txt$/.md/' *.txt
 ```

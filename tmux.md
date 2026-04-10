@@ -14,7 +14,7 @@ Hierarchy: Sessions have windows, windows have panes.
 $ tmux
 
 # Start tmux session with name
-$ tmux new -t session_name
+$ tmux new -s session_name
 ```
 
 ## Navigating tmux sessions

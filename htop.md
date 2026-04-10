@@ -24,7 +24,7 @@ Load average: 1.86 2.05 1.90
 
 ## Common flags
 - Show processes for a user: `htop -u <user>`
-- Show processes with specific IDs: `htop -u <pid>`
+- Show processes with specific IDs: `htop -p <pid1>,<pid2>`
 
 ## Interactive sort
 Click column headers.

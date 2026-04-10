@@ -2,7 +2,7 @@
 
 `cloud-init` - Cloud instance initialization
 
-`cloud-init`, aka "cloud init", "cloud_init", and "cloudinit", runs one time when an instance is provisioned. It runs as the `root` user.
+`cloud-init`, aka "cloud init", "cloud_init", and "cloudinit", runs during early boot and executes modules with different frequencies such as per-boot, per-instance, or once. It runs as the `root` user.
 
 ## Log files
 ### `/var/log/cloud-init.log`

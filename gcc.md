@@ -7,7 +7,7 @@
 # create executable a.out
 gcc file.c
 
-# compile and link multiple files into one object file:
+# compile and link multiple files into one executable:
 gcc f1.c f2.c -o objfile
 ```
 

@@ -5,7 +5,7 @@
 Its name comes from *Chronos*, the Greek word for time.
 
 ## `crontab`
-`cron` actions come from a `crontab` (cron table), which is a configuration file that specifies shell commands to run periodically. This table is typically stored in `/etc/cron.d`.
+`cron` actions come from a `crontab` (cron table), which is a configuration file that specifies shell commands to run periodically. User crontabs are commonly edited with `crontab -e`, while `/etc/cron.d` is used for system-wide cron snippets.
 
 ## Syntax
 ```

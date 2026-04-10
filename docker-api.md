@@ -73,17 +73,17 @@ $ sudo docker cp /path/to/file.txt <checksum>:/path/in/container
 - `mydata`: name of volume on host
 - `/app/data`: path inside container
 
-If two volumes use the same name, they will see the same data. This can introduce race conditions if containers are writing to the same volume at the same time.
+If two containers use the same named volume, they will see the same data. This can introduce race conditions if both are writing to it at the same time.
 
 ```bash
-$ docker run -d --mount mydata:/app/data image_a  # container A writes to /app/data
-$ docker run -d --mount mydata:/app/data image_b  # container B sees the same files
+$ docker run -d --mount type=volume,src=mydata,dst=/app/data image_a
+$ docker run -d --mount type=volume,src=mydata,dst=/app/data image_b
 ```
 
 ### Bind mounts
 ```bash
 # mount /home/user/myapp on host to /app on container
-$ docker run --mount /home/user/myapp:/app image_a
+$ docker run --mount type=bind,src=/home/user/myapp,dst=/app image_a
 ```
 
 ### Syntax comparison
@@ -91,8 +91,8 @@ Volumes use a name (no slash), while bind mounts use a path.
 
 ```bash
 # Volume: left side is a name (mydata)
-$ docker run --mount mydata:/app/data myimage
+$ docker run --mount type=volume,src=mydata,dst=/app/data myimage
 
 # Bind mount: left side is a path (starts with / or ./)
-$ docker run --mount /home/user/myapp:/app myimage
+$ docker run --mount type=bind,src=/home/user/myapp,dst=/app myimage
 ```

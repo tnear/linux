@@ -4,7 +4,7 @@
 
 ## Basic usage
 ```bash
-# read from stdin and create MY_VAR env variable
+# read from stdin into shell variable MY_VAR
 $ read MY_VAR  # type value below:
 hello
 
@@ -12,6 +12,7 @@ hello
 $ echo $MY_VAR
 hello
 
-# read random data into environment variable:
+# read random data into shell variable:
 $ read RAND < /dev/urandom
 echo $RAND  # outputs binary data
+```

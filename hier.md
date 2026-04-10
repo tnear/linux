@@ -17,7 +17,7 @@ Special or device files. Usually hardware represented as a file.
 System-wide configuration files, often editable in a text editor.
 
 ### `/home`
-Root home directory for users.
+Home directories for regular users.
 
 ### `/lib`
 Should hold those shared libraries that are necessary to boot the system and to run the commands in the root filesystem.

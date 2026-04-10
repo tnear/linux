@@ -10,8 +10,8 @@ See also: [`getenforce`](getenforce.md), [`setenforce`](setenforce.md), [`sestat
 - Query SELinux status: `getenforce`
 
 ## Modes
-- `enforcing` (0): blocks violations
-- `permissive` (1): logs violations without blocking
+- `enforcing` (1): blocks violations
+- `permissive` (0): logs violations without blocking
 - `disabled`: turns off SELinux completely
 
 ## Security context

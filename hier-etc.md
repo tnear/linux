@@ -14,7 +14,7 @@ A system-wide configuration file used by all users. Requires administrator privi
 ## `/etc/fstab`
 File Systems TABle. Used by [`mount`](mount.md)
 
-## `/etc/groups`
+## `/etc/group`
 A group file which defines the groups on a system.
 
 Format: `<group_name>:<unused password>:<gid>:<group_list>`

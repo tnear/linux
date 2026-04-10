@@ -36,7 +36,7 @@ $ chmod 4777 file.txt
 ```
 
 ### Another example
-For user (`u`) and group (`g`), add write (`r`) and execute (`x`) permissions:
+For user (`u`) and group (`g`), add read (`r`) and execute (`x`) permissions:
 ```bash
 $ chmod ug+rx file.txt
 ```

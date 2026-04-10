@@ -16,7 +16,7 @@ $ umask
 - mask 2nd bit (W) for all
 
 ## Change mask (symbolic)
-Set RWS bits for *all* files for `u`ser, `g`roup, and `o`ther.
+Set the mask to allow the default file-creation permissions for `u`ser, `g`roup, and `o`ther.
 
 ```bash
 $ umask u=rwx,g=rwx,o=rwx  # no space after comma

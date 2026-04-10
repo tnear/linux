@@ -29,21 +29,21 @@ Note: `gcov` works best when the executable does not have an extension.
 
 ### Run executable
 ```
-./example.out
+./example
 ```
 
 Execution creates gcov data files (`.gcda` and `.gcno`) in pwd:
 
 ```bash
-$ ll example.out*
--rwxr-xr-x 1 kali kali 27248 Oct 27 08:13 example.out
--rw-r--r-- 1 kali kali   124 Oct 27 08:15 example.out-example.gcda
--rw-r--r-- 1 kali kali   572 Oct 27 08:13 example.out-example.gcno
+$ ls -1 example*
+example
+example-example.gcda
+example-example.gcno
 ```
 
 ### Analyze coverage with `gcov`
 ```bash
-$ gcov example.c
+$ gcov example-example.gcno
 File 'example.c'
 Lines executed:100.00% of 6
 Creating 'example.c.gcov'
@@ -54,9 +54,10 @@ Lines executed:100.00% of 6
 ```bash
 $  cat example.c.gcov
 -:    0:Source:example.c
--:    0:Graph:example.gcno
--:    0:Data:example.gcda
+-:    0:Graph:example-example.gcno
+-:    0:Data:example-example.gcda
 -:    0:Runs:1
+-:    0:Programs:1
 -:    1:#include <stdio.h>
 -:    2:
 1:    3:int add(int a, int b) {

@@ -16,13 +16,14 @@ $ codex resume <SESSION_ID>  # resume specified session
 Add this to `~/.zshrc`: `eval "$(codex completion zsh)"`
 
 ### `config.toml`
-This specifies model, sandbox move, approval policy, web search, and more. It is located at `~/.codex/config.toml`.
+This specifies model, sandbox mode, approval policy, web search, and more. It is located at `~/.codex/config.toml`.
 
-`approval_mode`:
+`approval_policy`:
 - `untrusted`: request permission to use a command not in its "trusted" list
 - `on-failure`: if command fails, it will ask to run outside sandbox
 - `on-request`: runs until it needs to ask for escalated permissions
 - `never`: never ask for approvals
+- `granular`: configure approval behavior for specific prompt categories
 
 `sandbox_mode`:
 - `read-only`: requires permission to write to file

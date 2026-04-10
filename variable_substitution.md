@@ -22,7 +22,7 @@ word
 $ echo $var
 word
 
-# ':-': if var is unset, 'word' is substituted for var. var does not change:
+# ':-': if var is unset or null, 'word' is substituted for var. var does not change:
 $ unset var
 $ echo ${var:-word}
 word
@@ -34,4 +34,18 @@ $ echo $var
 $ var='var'
 $ echo ${var:-word}
 var
+
+# If var is set to an empty string, ':-' still uses the default:
+$ var=''
+$ echo ${var:-word}
+word
+
+# Common pattern: ${var:-}
+# This defaults to "" when a variable is unset or null. This pattern is common
+# with 'set -u' which does not permit accessing
+# unset variables.
+if [ -z "${INVALID_VAR:-}" ]; then
+    echo "Error: INVALID_VAR must be set" >&2
+    return 1
+fi
 ```

@@ -7,11 +7,11 @@ Arrays in shell scripts.
 # Create array using parentheses (no comma)
 $ arr=(2 3 4)
 
-# Arrays are 1-indexed and accessed by variable substitution, ${var}:
+# Bash indexed arrays are 0-indexed and accessed with ${arr[index]}:
 $ echo ${arr[1]}
-2
+3
 
 # Output entire array:
-$ echo ${arr}  # or ${arr[*]} or ${arr[@]}
+$ echo ${arr[*]}  # or ${arr[@]}
 2 3 4
 ```

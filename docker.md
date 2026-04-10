@@ -82,7 +82,7 @@ COPY . /app/                  # changes freely
 ## Mount points
 
 ### Volumes
-Volumes are used for persistent data in containers and are managed by Docker. Volumes *cannot* be accessed on host OS.
+Volumes are used for persistent data in containers and are managed by Docker. They are stored on the host filesystem, but Docker manages their location and lifecycle.
 
 ### Bind mounts
 A *bind mount* takes a specific path on your host filesystem and mounts it directly into the container. Unlike volumes, Docker doesn't manage it. You are exposing a host directory as-is.

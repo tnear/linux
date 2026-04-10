@@ -44,3 +44,21 @@ return_string() {
 str=$(return_string)
 echo "$str" # outputs 'my return value'
 ```
+
+## Local variables
+Variables in bash are global by default.
+
+```bash
+my_func() {
+    local y
+    x=10  # x is global and visible outside function
+    y=11  # y is local to function
+}
+
+$ my_func
+# x is still visible even though function exited
+$ echo $x
+10
+$ echo $y
+<no output>
+```
