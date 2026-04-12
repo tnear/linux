@@ -127,6 +127,35 @@ CMD python app.py         # shell form
 VOLUME /data
 ```
 
+## Rootless containers
+Rootless containers allow an unprivileged user to create and manage containers. Rootless containers mitigate the risk of container-breakout vulnerabilities.
+
+### User namespaces
+Rootless containers use the Linux kernel called *namespaces*. A user namespace maps UIDs between a container and a host.
+- Inside the container, the process sees itself as `root` (UID 0)
+- On the host, the container is actually running as an unprivileged user, ex: UID 1001
+
+The container gets the experience of running as `root`, so it can install packages, write to system directories, etc., but on the host it has no elevated privileges.
+
+## OverlayFS
+OverlayFS is a Linux kernel feature that merges directories. Docker uses it to implement layers. Every docker layer, except the top layer, is read-only.
+
+```
+merged/        # what the container sees
+|-- file_a     # from lower (unchanged)
+|-- file_b     # from upper (modified copy)
+|-- file_c     # from upper (newly created)
+
+upper/         # writable layer (container's changes)
+|-- file_b     # modified
+|-- file_c     # new file
+
+lower/         # read-only (image layers)
+|-- file_a
+|-- file_b     # original, shadowed by upper
+```
+
 ## Resources
 - https://spacelift.io/blog/dockerfile
 - docs.docker.com/get-started/docker-concepts/building-images/understanding-image-layers/
+- https://docs.solace.com/Software-Broker/Container-Tasks/rootless-containers.htm

@@ -111,3 +111,6 @@ $ cat /proc/sys/kernel/pid_max
 
 ## `/proc/self`
 Process information for current process (shell).
+
+## `/proc/cgroups`
+(Note: this describes cgroups v1. For cgroups v2, see [`/sys/fs/cgroup`](hier-sys.md)) Shows which cgroup subsystems (controllers) are compiled into the kernel and whether they are enabled.
