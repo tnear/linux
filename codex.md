@@ -97,6 +97,21 @@ Use `codex --add-dir <dir1> --add-dir <dir2> ...` to add additional directories.
 ## Logs and errors
 Logs are dumped in `~/.codex/log/codex-tui.log`.
 
+## Tokens
+When closed, Codex will output token usage for the session, such as this:
+
+```
+Token usage: total=864,457 input=834,427 (+ 9,796,864 cached) output=30,030 (reasoning 15,776)
+```
+
+- Token usage: total billed/counted tokens
+- input: tokens model consumed
+- 9,796,864 cached: additional input tokens reused from cache
+- output=30,030: tokens model generated in response
+- reasoning 15,776: a subset of `output` used for internal reasoning
+
+1 token approximately equals 0.75 words, so 800,000 tokens is roughly 600,000 words.
+
 ## Resources
 - https://github.com/openai/codex
 - "Getting started with Codex", https://youtu.be/px7XlbYgk7I
