@@ -12,7 +12,7 @@ See also: [heredocument](heredocument.md)
 # Print output and write to file
 $ ps | tee ps.txt
 
-# Append to previous file (instead of overwrite)
+# use -a to append (default is to overwrite)
 $ ps | tee -a ps.txt
 ```
 

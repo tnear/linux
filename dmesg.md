@@ -1,7 +1,5 @@
 # dmesg
 
-# todo: LC_ALL=C
-
 `dmesg` - diagnostic messages - print or control the kernel ring buffer
 
 Print kernel's ring buffer. Often used to troubleshoot device errors.
