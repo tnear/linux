@@ -28,5 +28,9 @@ fi
 - `-f`: checks if it is a regular file
 - `-h`: checks if it is symbolic link
 - `-n`: checks non-empty string
+- `-r`: checks if is readable
+- `-s`: file exists and size > 0
+- `-u`: setuid bit set
+- `-w`: checks if is writable
 - `-x`: checks if it is executable
 - `-z`: checks for empty string or unset

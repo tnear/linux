@@ -21,3 +21,13 @@ $ touch "file_$(date +%Y%m%d_%H%M).txt"
 $ ls file_*
 file_20250716_1452.txt
 ```
+
+## UTC time
+```bash
+$ date -u
+Wed Apr 15 06:23:35 PM UTC 2026
+
+# custom format
+$ date -u '+%Y-%m-%d %H:%M:%S'
+2026-04-15 18:24:59
+```

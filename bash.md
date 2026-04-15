@@ -22,10 +22,6 @@ The `-x` flag creates verbose output for debugging scripts.
 $ bash -x script.sh
 + echo 'Starting script'
 Starting script
-+ echo 'Hello, world!'
-Hello, world!
-+ echo 'Script completed'
-Script completed
 ```
 
 The `+` character denotes the command about to be run.
@@ -36,6 +32,12 @@ Use `-n` to run a syntax check.
 # parse script without running any commands
 $ bash -n my_script.sh
 ```
+
+### Exit after error
+Use `-e` to exit immediately upon errors, ex: `bash -e my_script.sh`
+
+### Treat unset variables as errors
+Use `-u` to treat unset variables as errors, ex: `bash -u my_script.sh`
 
 ## subshell
 To spawn a subshell, which is a child process of current shell, enclose statements in parentheses:

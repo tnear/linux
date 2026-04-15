@@ -31,6 +31,9 @@ $ docker ps -a
 
 # list all containers for an image
 $ sudo docker ps -a --filter ancestor="$image_name"
+
+# custom formatting example: show container names
+$ sudo podman ps -a --format '{{.Names}}'
 ```
 
 ### Container size
