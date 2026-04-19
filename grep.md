@@ -87,3 +87,13 @@ grep -L 'p' *.md
 
 ## Multiline
 `grep` does not support multiline patterns. Use [`ripgrep`](rg.md) instead.
+
+## Color
+`grep` is commonly aliased to show colors by default: `alias grep='grep --color=auto'`.
+
+One trick to color matches and leave un-matched lines alone, is to include `pattern|$`. The `$` always matches the end of a line and consumes zero characters.
+
+```bash
+# highlight errors, but print *all* lines
+$ grep 'ERROR|$' my_log.txt
+```

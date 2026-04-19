@@ -14,7 +14,6 @@ $ docker info
 
 ### List images
 ```bash
-# list images
 $ docker images      # older command form
 $ docker image list  # newer command form
 REPOSITORY  TAG     IMAGE ID  CREATED      SIZE
@@ -104,14 +103,17 @@ $ docker exec -it <id> bash
 ## Docker run
 `docker run` starts a container from an image.
 
-Basic syntax: `podman run [flags] <image> [command]`
+Basic syntax: `docker run [flags] <image> [command]`
 
 ### Common flags
-- `-it`: interactive terminal: creates shell, ex: `podman run alpine sh`
+- `-it`: interactive terminal: creates shell, ex: `docker run alpine sh`
 - `-d`: detached mode: runs container in background and returns to prompt
 - `-v, --mount`: specify volume mount, see [below](docker-api.md#volumes)
 - `--name`: assign container name instead of randomly generated
 - `--rm`: remove container upon exit. Useful to avoid container accumulation
+- `--replace`: if container with that name already exists, replace it
+- `--privileged`: grant container root-level access to host machine
+- `--user <user>`: specify user to run container
 
 ## Mount points
 
@@ -143,4 +145,16 @@ $ docker run --mount type=volume,src=mydata,dst=/app/data myimage
 
 # Bind mount: left side is a path (starts with / or ./)
 $ docker run --mount type=bind,src=/home/user/myapp,dst=/app myimage
+```
+
+## History
+`docker history` shows how an image was built. It shows the layer by layer history with the newest layers at the top.
+
+```bash
+$ sudo docker history <image_id>
+ID         CREATED BY                         SIZE
+e69ea36db  bash -c #(nop) WORKDIR /tmp/app... 0B
+<missing>  bash -c VER=$(curl -s htt...       231MB
+<missing>  bash -c python3.12 -m pip inst...  437MB
+<missing>  bash -c chown -R me /var/log...    679MB
 ```
