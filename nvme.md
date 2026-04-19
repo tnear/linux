@@ -143,6 +143,19 @@ I/O queue pairs handle data operations (read, write, flush, etc.). NVMe controll
 
 I/O queue pairs are created by the admin qpair.
 
+## NVMe Multipath
+
+NVMe multipath makes a single storage device accessible via multiple physical paths simultaneously. If one path fails, I/O continues through the others. If all paths are healthy, I/O is load-balanced across them.
+
+### Linux Support
+
+Native NVMe multipath is built into the Linux kernel's NVMe driver.
+
+```bash
+# Confirm it's enabled
+cat /sys/module/nvme_core/parameters/multipath
+```
+
 ## Resources
 - https://www.youtube.com/watch?v=Qy1q4qT7b2M
 - NVM Express over Fabrics with SPDK for Intel® Ethernet Products with RDMA (May 2021)

@@ -155,6 +155,11 @@ lower/         # read-only (image layers)
 |-- file_b     # original, shadowed by upper
 ```
 
+## Container registry
+A container registry is a server which stores images. Images are stored as layers, so the registry only needs to serve layers which a client doesn't have locally.
+
+A *localhost* container registry is a registry which is run locally. Useful for CI/CD and air-gapped environments.
+
 ## Resources
 - https://spacelift.io/blog/dockerfile
 - docs.docker.com/get-started/docker-concepts/building-images/understanding-image-layers/
