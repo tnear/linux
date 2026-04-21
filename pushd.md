@@ -6,14 +6,14 @@ See also: [`dirs`](dirs.md), [`popd`](popd.md)
 
 ## Basic workflow
 ```bash
-# push pwd onto stack
+# push cwd onto stack
 [/var] $ pushd .
 /var
 
 # Next, navigate away:
 $ cd /etc
 
-# Then return to old pwd (/var):
+# Then return to old  cwd (/var):
 [/etc] $ popd
 [/var] $
 ```

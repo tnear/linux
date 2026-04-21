@@ -3,7 +3,7 @@ FUSER
 fuser - identify processes using files or sockets
 
 # -v = verbose
-# Show users of pwd ('.'):
+# Show users of cwd ('.'):
 $ fuser -v .
         USER        PID ACCESS COMMAND
 /tmp:   kali      1420206 ..c.. zsh

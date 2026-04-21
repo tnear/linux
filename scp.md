@@ -11,7 +11,7 @@ scp file1.txt user@example.edu:/home/user/path/file1.txt
 
 ## Copy from remote machine to local
 
-This preserves the file name and copies to `pwd`.
+This preserves the file name and copies to `cwd`.
 
 Note: this must be run in the **local** machine.
 ```bash

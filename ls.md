@@ -17,7 +17,7 @@ See also: [`ll`](ll.md)
 - `-t`: sort by timestamp, ex: `ls -ltr` shows oldest contents on top
 - `-Z, --context`: print any [security context](se_linux.md#security-context) of each file (SELinux)
 
-## List all symbolic links in sub-directories of pwd
+## List all symbolic links in sub-directories of cwd
 ```bash
 $ ls -lR | grep '^l'
 

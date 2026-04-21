@@ -10,6 +10,6 @@ See also: [`mount`](mount.md)
 $ mount | grep fuse
 /home/user/Downloads/fuse-3.14.1/build/example/passthrough on /home/user/Downloads/fuse-3.14.1
 
-# remove FUSE mount point (assume pwd is example/passthrough)
+# remove FUSE mount point (assume cwd is example/passthrough)
 $ umount passthrough
 ```

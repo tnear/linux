@@ -32,7 +32,7 @@ Note: `gcov` works best when the executable does not have an extension.
 ./example
 ```
 
-Execution creates gcov data files (`.gcda` and `.gcno`) in pwd:
+Execution creates gcov data files (`.gcda` and `.gcno`) in cwd:
 
 ```bash
 $ ls -1 example*

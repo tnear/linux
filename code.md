@@ -9,7 +9,7 @@ code --help
 
 ## Open directory
 ```bash
-code .      # open pwd
+code .      # open cwd
 code <dir>  # general form
 ```
 

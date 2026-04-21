@@ -4,7 +4,7 @@
 
 See also: [`xargs`](xargs.md)
 
-## Case sensitive recursive find in pwd (.) for file names containing 'hello' using a glob
+## Case sensitive recursive find in cwd (.) for file names containing 'hello' using a glob
 ```bash
 $ find . -name '*hello*'
 ```
