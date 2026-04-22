@@ -3,10 +3,9 @@
 `jq` - json query - Command-line JSON processor
 
 ## Pretty-print a JSON string
-The expression `jq '.'` converts input to output with no changes. The `'.'` portion can be left off in this example.
 
 ```bash
-$ echo '{"fruit":{"name":"apple","color":"green","price":1.20}}' | jq '.'
+$ echo '{"fruit":{"name":"apple","color":"green","price":1.20}}' | jq
 {
   "fruit": {
     "name": "apple",
@@ -15,6 +14,9 @@ $ echo '{"fruit":{"name":"apple","color":"green","price":1.20}}' | jq '.'
   }
 }
 ```
+
+### Identity filter
+The identity filter, `.` outputs json unchanged. The syntaxes `| jq`, `| jq .`, and `| jq '.'` are equivalent.
 
 ### `-r, --raw-output`
 Use the `-r` flag to write to `stdout` instead of being formatted as a JSON string with quotes.

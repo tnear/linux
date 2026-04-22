@@ -23,13 +23,14 @@ nginx       1.19    9beeba24  2 weeks ago  133MB
 
 ### Remove images
 ```bash
-# first, use 'docker images' to list
+# get image IDs
+$ docker image list
 
 # next, remove by ID
 $ docker image rm 4e2e4f88
 
-# use force flag (-f) if you want to remove an image which is actively
-# in use by a container. Note: this will also remove containers
+# use force flag (-f) to remove an image which is actively in use
+# by a container. Note: this will also remove its containers
 $ docker image rm -f 4e2e4f88
 ```
 
@@ -45,16 +46,17 @@ $ docker image prune
 ### List containers
 ```bash
 # list currently running containers
-$ docker ps
+$ docker ps              # older command form (more common)
+$ docker container list  # newer command form
 
 # list all containers
-$ docker ps -a
+$ docker container list -a
 
 # list all containers for an image
-$ sudo docker ps -a --filter ancestor="$image_name"
+$ docker container list -a --filter ancestor="$image_name"
 
 # custom formatting example: show container names
-$ sudo podman ps -a --format '{{.Names}}'
+$ docker container list -a --format '{{.Names}}'
 ```
 
 ### Container size
@@ -63,11 +65,11 @@ Containers have two sizes, ex: `120MB (virtual 500MB)`
 - `120MB`: writable layer (actual container changes)
 - `virtual 500MB`: all image layers (shared)
 
-For cleanup, focus on the first number first.
+For cleanup, focus on the first writable layer size first.
 
 ```bash
 # show container size
-$ docker ps -a --size
+$ docker container list -a --size
 ```
 
 ### Stop running a container
@@ -77,16 +79,16 @@ Use the container `stop` sub-command.
 $ docker container stop my_container
 ```
 
-Use `docker container ps -a` to check on its status.
+Use `docker container container list -a` to check on its status.
 
 ### Copying files
 
 ```bash
 # copy file into container using container name
-$ sudo docker cp /path/to/file.txt container_name:/path/in/container
+$ docker cp /path/to/file.txt container_name:/path/in/container
 
 # using checksum
-$ sudo docker cp /path/to/file.txt <checksum>:/path/in/container
+$ docker cp /path/to/file.txt <checksum>:/path/in/container
 ```
 
 ## Exec
@@ -151,7 +153,7 @@ $ docker run --mount type=bind,src=/home/user/myapp,dst=/app myimage
 `docker history` shows how an image was built. It shows the layer by layer history with the newest layers at the top.
 
 ```bash
-$ sudo docker history <image_id>
+$ docker history <image_id>
 ID         CREATED BY                         SIZE
 e69ea36db  bash -c #(nop) WORKDIR /tmp/app... 0B
 <missing>  bash -c VER=$(curl -s htt...       231MB

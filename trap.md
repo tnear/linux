@@ -49,7 +49,7 @@ echo "trap removed"
 Setting a trap inside a function keeps that trap active even after function exits.
 
 ```bash
-f() { 
+f() {
     trap 'echo cleanup' EXIT
 }
 
