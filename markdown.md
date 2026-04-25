@@ -2,6 +2,8 @@
 
 Tips and trips for the markdown markup language.
 
+See also: [Mermaid](mermaid.md)
+
 ## Headings
 - Use `#` for a size 1 (large) heading
 - Use `##` for size 2 heading

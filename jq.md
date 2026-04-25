@@ -1,125 +1,107 @@
 # jq
 
-`jq` - json query - Command-line JSON processor
+`jq` — command-line JSON processor
 
-## Pretty-print a JSON string
+## Sample data
+All examples use `fruits.json`:
 
-```bash
-$ echo '{"fruit":{"name":"apple","color":"green","price":1.20}}' | jq
+```json
 {
-  "fruit": {
-    "name": "apple",
-    "color": "green",
-    "price": 1.20
-  }
+  "fruits": [
+    {
+      "name": "apple",
+      "color": "green",
+      "price": 1.2
+    },
+    {
+      "name": "banana",
+      "color": "yellow",
+      "price": 0.5
+    },
+    {
+      "name": "kiwi",
+      "color": "green",
+      "price": 1.25
+    }
+  ]
 }
 ```
 
-### Identity filter
-The identity filter, `.` outputs json unchanged. The syntaxes `| jq`, `| jq .`, and `| jq '.'` are equivalent.
-
-### `-r, --raw-output`
-Use the `-r` flag to write to `stdout` instead of being formatted as a JSON string with quotes.
+## Pretty-print
+The identity filter, `.`, outputs JSON unchanged and pretty-prints it. The syntaxes `| jq`, `| jq .`, and `| jq '.'` are equivalent.
 
 ```bash
-# with -r (no quotes)
-$ jq -r '.fruit.name' fruits.json
-apple
-
-# without
-$ jq '.fruit.name' fruits.json
-"apple"
-```
-
-## Files
-### No file
-Use the `-n` flag to construct JSON without a file.
-
-```bash
-$ jq -n '{"name": "John", "age": 30}'
-{
-  "name": "John",
-  "age": 30
-}
-```
-
-### `jq` on a file
-```bash
-$ echo '{"fruit":{"name":"apple","color":"green","price":1.20}}' > fruits.json
 $ jq '.' fruits.json
 ```
 
-## Select fields
+## Raw output (`-r`)
+Use `-r` to write strings to stdout without JSON quotes.
+
 ```bash
-$ jq '.fruit' fruits.json
-{
-  "name": "apple",
-  "color": "green",
-  "price": 1.20
-}
-```
+# with -r (outputs no quotes)
+$ jq -r '.fruits[0].name' fruits.json
+apple
 
-### Nested fields
-```bash
-$ jq '.fruit.price' fruits.json
-1.20
-```
-
-## Arrays
-The examples below all use this data:
-```json
-[
-  {
-    "name": "apple",
-    "color": "green",
-    "price": 1.2
-  },
-  {
-    "name": "banana",
-    "color": "yellow",
-    "price": 0.5
-  },
-  {
-    "name": "kiwi",
-    "color": "green",
-    "price": 1.25
-  }
-]
-```
-
-## Arrays
-
-### Iterate over array
-The syntax `.[]` iterates over an array of data.
-
-This example iterates over the array and gets all the `name` fields:
-```bash
-$ jq '.[].name' fruits.json
+# without -r
+$ jq '.fruits[0].name' fruits.json
 "apple"
-"banana"
-"kiwi"
 ```
+
+## Constructing JSON without a file (`-n`)
+```bash
+$ jq -n '{"name": "John", "age": 30}'
+```
+
+## Selection
 
 ### Index into array
-The syntax `.[0]` gets the zeroth element of an array:
+Use `[]` to work with arrays.
+- `[]`: get every element
+- `[0]`: get zeroth index
+- `[0:2]`: slice: get elements `0` and `1` (but not `2`)
+
 ```bash
-$ jq '.[0]' fruits.json
+$ jq '.fruits[0]' fruits.json
+{
   "name": "apple",
   "color": "green",
   "price": 1.2
 }
 ```
 
-### Get array length (number of elements)
+### Access a nested field
 ```bash
-# get number of elements of 'commands' array
-$ cat file.json | jq '.commands | length'
+# dot-chaining
+$ jq '.fruits[0].price' fruits.json
+1.2
+
+# pipe syntax is equivalent
+$ jq '.fruits[0] | .price' fruits.json
+1.2
 ```
 
-### Get price of `idx=2` in array
+### Iterate over array
+Use `.field[]` iterates over every element in the array.
+
 ```bash
-$ jq '.[2].price' fruits.json
-1.25
+$ jq '.fruits[].name' fruits.json
+"apple"
+"banana"
+"kiwi"
+```
+
+### Array length
+```bash
+$ jq '.fruits | length' fruits.json
+3
+```
+
+### Filter by value
+```bash
+# names of fruits with price > 1
+$ jq '.fruits[] | select(.price > 1) | .name' fruits.json
+"apple"
+"kiwi"
 ```
 
 ## Resources

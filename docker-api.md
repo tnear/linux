@@ -73,13 +73,27 @@ $ docker container list -a --size
 ```
 
 ### Stop running a container
-Use the container `stop` sub-command.
+Use the container `stop` subcommand to shut down a container gracefully. Use `kill` subcommand to send `SIGKILL` to force kill. Stopping a container does *not* remove the it.
 
 ```bash
+# graceful stop
 $ docker container stop my_container
+
+# force stop container
+$ docker container kill my_container
 ```
 
 Use `docker container container list -a` to check on its status.
+
+### Removing container
+Use `podman container rm`.
+```bash
+# first, gracefully stop container
+$ docker container stop my_container
+
+# then remove it
+$ docker container rm my_container
+```
 
 ### Copying files
 
@@ -91,15 +105,19 @@ $ docker cp /path/to/file.txt container_name:/path/in/container
 $ docker cp /path/to/file.txt <checksum>:/path/in/container
 ```
 
+### Inspect
+Use `docker container inspect <id>` to display a container's configuration. It displays a container's configuration, network settings, mounts, environment variables, state, and more.
+
 ## Exec
 Use `exec` to run a new command inside a container that is already running.
 
 ```bash
-# first, list containers to get an ID
-$ docker ps
+# first, list containers to get a container ID
+$ docker container list
 
 # run bash to get a shell into an existing container
-$ docker exec -it <id> bash
+# -d = detached
+$ docker container exec -it -d <id> bash
 ```
 
 ## Docker run
@@ -160,3 +178,6 @@ e69ea36db  bash -c #(nop) WORKDIR /tmp/app... 0B
 <missing>  bash -c python3.12 -m pip inst...  437MB
 <missing>  bash -c chown -R me /var/log...    679MB
 ```
+
+## Resources
+- "Complete Docker Course", https://youtu.be/RqTEHSBrYFw
