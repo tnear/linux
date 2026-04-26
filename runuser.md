@@ -2,7 +2,7 @@
 
 `runuser` - run a command with substitute user and group ID
 
-See also: [`su`](su.md)
+See also: [`su`](su.md), [`setpriv`](setpriv.md)
 
 ## Comparison with `su`
 - Only the root user can call `runuser`

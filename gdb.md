@@ -1,5 +1,9 @@
 # gdb
 
+`gdb` - The GNU Debugger
+
+See also: [`gcore`](gcore.md)
+
 ## Command line arguments
 Use `--args` to pass command line arguments to `gdb`.
 ```bash

@@ -2,6 +2,8 @@
 
 `man` - an interface to the system reference manuals
 
+See also: [`less`](less.md)
+
 ## Open manual page
 The section number is in top left: CD(1POSIX)
 ```bash
