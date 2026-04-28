@@ -1,6 +1,6 @@
 # lvremove
 
-`lvremove` — Remove logical volume(s) from the system
+`lvremove` - Remove logical volume(s) from the system
 
 See also: [`lvcreate`](lvcreate.md), [`umount`](umount.md), [volumes](volumes.md)
 

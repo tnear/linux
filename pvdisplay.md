@@ -1,6 +1,6 @@
 # pvdisplay
 
-`pvdisplay` — Display various attributes of physical volume(s)
+`pvdisplay` - Display various attributes of physical volume(s)
 
 See also: [`pvs`](pvs.md)
 

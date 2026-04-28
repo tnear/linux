@@ -1,6 +1,6 @@
 # pvs
 
-`pvs` — Display information about physical volumes
+`pvs` - Display information about physical volumes
 
 See also: [volumes](volumes.md), [`pvdisplay`](pvdisplay.md)
 

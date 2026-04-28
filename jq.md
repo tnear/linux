@@ -1,6 +1,6 @@
 # jq
 
-`jq` — command-line JSON processor
+`jq` - command-line JSON processor
 
 ## Sample data
 All examples use `fruits.json`:
