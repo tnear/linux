@@ -80,6 +80,20 @@ $ jq '.fruits[0] | .price' fruits.json
 1.2
 ```
 
+### Multiple fields
+Use `| {field1, field2, ...}`
+
+```bash
+# get name and color fields of zeroth element
+$ jq '.fruits.[0] | {name, color}' fruits.json
+{
+  "name": "apple",
+  "color": "green"
+}
+```
+
+## Arrays
+
 ### Iterate over array
 Use `.field[]` iterates over every element in the array.
 
