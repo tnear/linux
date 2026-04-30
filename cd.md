@@ -15,6 +15,9 @@ $ cd ~
 $ cd /tmp
 $ cd /sys  # change away
 $ cd -  # return to /tmp
+
+# change to another user's home directory
+$ cd ~other_user  # equivalent: cd /home/other_user
 ```
 
 ## Builtin

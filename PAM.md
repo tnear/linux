@@ -38,7 +38,7 @@ $ sudo
 
 ```bash
 $ cat /etc/pam.d/runuser
-# <type>   <control>    <module>         <args>  
+# <type>   <control>    <module>         <args>
 auth       sufficient   pam_rootok.so
 session    optional     pam_keyinit.so   revoke
 session    required     pam_limits.so

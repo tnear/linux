@@ -1,7 +1,7 @@
 # FC
 
 `fc` - fix command - processes the command history list.
- 
+
 `fc` tries the `$EDITOR` environment variable first.
 
 ## Example

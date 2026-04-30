@@ -2,7 +2,7 @@
 
 `file` - determine file type
 
-The `file` command looks at file's magic number to help determine its type. It displays metadata about a file. For binaries, it indicates if file contains debug info or is stripped.
+The `file` command looks at file's magic number to determine its type. It displays metadata about a file. For binaries, it indicates if file contains debug info.
 
 ## Basic usage
 ```bash
@@ -22,5 +22,5 @@ BuildID[sha1]=<hash>, for GNU/Linux 3.2.0, stripped
 Use `-L, --dereference` to follow symbolic links.
 
 ```bash
-file -L /path/to/symlink/file
+$ file -L /path/to/symlink/file
 ```

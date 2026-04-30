@@ -5,11 +5,12 @@
 `cloud-init`, aka "cloud init", "cloud_init", and "cloudinit", runs during early boot and executes modules with different frequencies such as per-boot, per-instance, or once. It runs as the `root` user.
 
 ## Log files
-### `/var/log/cloud-init.log`
-This contains internal cloud-init process logs (ex: no user-data).
 
 ### `/var/log/cloud-init-output.log`
 This files captures the stdout and stderr from user-data scripts.
+
+### `/var/log/cloud-init.log`
+This contains internal cloud-init process logs (ex: no user-data).
 
 ### `/var/lib/cloud/instance/user-data.txt`
 This is the user-data script itself.
