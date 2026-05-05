@@ -20,3 +20,6 @@ Indicates a system user which does not have a shell and therefore does not suppo
 
 ## `/usr/bin`
 Contains user-level programs. Most applications (ex: `ls`, `ps`, `grep`, etc.) are installed here. This directory is almost always in `$PATH`.
+
+## `/usr/libexec`
+Contains executable helper programs used internally by other programs. Note: use `/usr/bin` if users are intended to run directly.

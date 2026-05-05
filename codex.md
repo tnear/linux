@@ -58,7 +58,7 @@ See what actions Codex can perform without prompting you.
 Provides overview of version, model, directory, sandbox mode, AGENTS.md, account, context window, and more.
 
 ### `/review`
-Finds issues before committing.
+Perform code review to finds issues before committing. Prompts about which branches and commits.
 
 ### `/plan`
 Enter plan mode. This mode will only plan changes without making them.
@@ -112,7 +112,17 @@ Token usage: total=864,457 input=834,427 (+ 9,796,864 cached) output=30,030 (rea
 
 1 token approximately equals 0.75 words, so 800,000 tokens is roughly 600,000 words.
 
+## Subagents
+Codex can spawn specialized agents in parallel that collect results into one response.
+
+Subagents:
+- are only spawned when explicitly asked to
+- have their own context windows
+- use more tokens
+- inherit your current sandbox policy
+
 ## Resources
 - https://github.com/openai/codex
 - "Getting started with Codex", https://youtu.be/px7XlbYgk7I
 - https://developers.openai.com/codex/cli/slash-commands
+- https://developers.openai.com/codex/subagents

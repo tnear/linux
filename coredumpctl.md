@@ -4,13 +4,13 @@
 
 ## List core dumps
 ```bash
-coredumpctl list
+$ coredumpctl list
 ```
 
 ### Query executable name
 ```bash
 # coredumpctl list <name>
-coredumpctl list my_binary
+$ coredumpctl list my_binary
 ```
 
 ## Analyze a core dump
@@ -35,12 +35,13 @@ user@[~] $  coredumpctl dump -o /tmp/crash/my_crash 180111
 
 ```bash
 # Debug a specific core dump by PID
-coredumpctl debug 180111
+$ coredumpctl debug 180111
 ```
 
 ```bash
 # export an uncompressed dump
-coredumpctl dump 180111 > /tmp/core.dump
+$ coredumpctl dump 180111 > /tmp/core.dump
+
 # debug dump with gdb
-gdb /path/to/your/program /tmp/core.dump
+$ gdb /path/to/your/program /tmp/core.dump
 ```
