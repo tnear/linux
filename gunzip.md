@@ -1,5 +1,5 @@
 # gunzip
 
-`gzip, gunzip, zcat` - compress or expand files
+`gunzip` - compress or expand files
 
-See [`gzip`](gzip.md) for more information.
+See [`gzip`](gzip.md) for an example.

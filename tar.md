@@ -7,6 +7,8 @@ Syntax:
 tar [options] [archive-file] [file1 file2 ...]
 ```
 
+See also: [`gzip`](gzip.md)
+
 ## Common flags
 - `-c, --create`: create archive
 - `-C, --directory=DIR`: choose directory to extract to
