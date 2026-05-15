@@ -19,5 +19,5 @@ $ install -m 644 -o my_user -g my_grp config.conf /etc/myapp/
 $ install -d -m 755 /var/log/myapp
 ```
 
-## When files/directories already exist
-If the destination already exists, `install` does nothing. It does *not* create files, update ownership, or update permissions.
+## When files already exist
+If the target file already exists, `install` removes the old file and creates a new one in its place. This is useful for updating running executables, as it avoids errors by replacing the file entry rather than overwriting the data in-place

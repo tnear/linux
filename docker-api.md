@@ -86,7 +86,7 @@ $ docker container kill my_container
 Use `docker container container list -a` to check on its status.
 
 ### Removing container
-Use `podman container rm`.
+Use `docker container rm`.
 ```bash
 # first, gracefully stop container
 $ docker container stop my_container
