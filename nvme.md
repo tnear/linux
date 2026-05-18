@@ -153,8 +153,18 @@ Native NVMe multipath is built into the Linux kernel's NVMe driver.
 
 ```bash
 # Confirm it's enabled
-cat /sys/module/nvme_core/parameters/multipath
+$ cat /sys/module/nvme_core/parameters/multipath
 ```
+
+## BDF
+BDF (`Bus:Device.Function`) is the standard way to identify a PCIe device by its location on the bus. BDF is more stable than a name such as `/dev/nvme0n1`.
+
+Example: `0000:5e:00.0`.
+
+- `0000`: PCI domain
+- `5e`: bus
+- `00`: device
+- `0`: function
 
 ## Resources
 - https://www.youtube.com/watch?v=Qy1q4qT7b2M

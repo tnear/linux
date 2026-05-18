@@ -179,5 +179,18 @@ e69ea36db  bash -c #(nop) WORKDIR /tmp/app... 0B
 <missing>  bash -c chown -R me /var/log...    679MB
 ```
 
+## System
+
+### Disk free
+Use `docker system df` to show how much space images, containers, and volumes are using.
+
+```bash
+$ docker system df
+TYPE           TOTAL   ACTIVE   SIZE       RECLAIMABLE
+Images         34      15       8.453GB    4.064GB (48%)
+Containers     30      25       513.1MB    135.5kB (0%)
+Local Volumes  3       3        8.606MB    0B (0%)
+```
+
 ## Resources
 - "Complete Docker Course", https://youtu.be/RqTEHSBrYFw
