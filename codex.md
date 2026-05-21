@@ -71,6 +71,9 @@ Summarize conversation to prevent hitting the context limit.
 ### `/rename`
 Renames session for easier identification.
 
+### `/fork`
+Clones current Codex conversation into a new thread (similar to `git branch`). Useful to explore new approaches based on currently built context.
+
 ## Prompting
 
 ### Create custom prompt command

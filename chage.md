@@ -1,9 +1,11 @@
-CHAGE
+# chage
 
-chage - change age - change user password expiry information
+`chage` - change age - change user password expiry information
 
-# -l, --list: show account aging information:
-$ chage -l kali
+## Basic usage
+Use `-l, --list` to show account aging information.
+```bash
+$ chage -l my_user
 Last password change                              : Aug 08, 2022
 Password expires                                  : never
 Password inactive                                 : never
@@ -11,5 +13,4 @@ Account expires                                   : never
 Minimum number of days between password change    : 0
 Maximum number of days between password change    : 99999
 Number of days of warning before password expires : 7
-
----
+```
