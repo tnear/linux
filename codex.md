@@ -72,7 +72,7 @@ Summarize conversation to prevent hitting the context limit.
 Renames session for easier identification.
 
 ### `/fork`
-Clones current Codex conversation into a new thread (similar to `git branch`). Useful to explore new approaches based on currently built context.
+Clones current Codex conversation into a new thread. Forks use git worktrees to allow independent changes. Forks are useful to explore new approaches based on currently built context.
 
 ## Prompting
 
