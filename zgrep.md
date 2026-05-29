@@ -2,6 +2,8 @@
 
 `zgrep` - search possibly compressed files for a regular expression
 
+See also: [`zcat`](zcat.md), [`zless`](zless.md)
+
 ## Basic usage
 ```bash
 $ cat users.list
