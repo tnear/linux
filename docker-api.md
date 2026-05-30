@@ -5,6 +5,7 @@ Docker API is used to manage images and containers. `podman` API is mostly a dro
 See also: [`docker`](docker.md), [`podman`](podman.md)
 
 ## Docker info
+Display system information.
 ```bash
 $ docker version
 $ docker info
@@ -16,6 +17,7 @@ $ docker info
 ```bash
 $ docker images      # older command form
 $ docker image list  # newer command form
+$ docker image ls    # alt command
 REPOSITORY  TAG     IMAGE ID  CREATED      SIZE
 ubuntu      latest  4e2e4f88  3 days ago   64.2MB
 nginx       1.19    9beeba24  2 weeks ago  133MB
@@ -26,7 +28,7 @@ nginx       1.19    9beeba24  2 weeks ago  133MB
 # get image IDs
 $ docker image list
 
-# next, remove by ID
+# next, remove by image ID
 $ docker image rm 4e2e4f88
 
 # use force flag (-f) to remove an image which is actively in use
@@ -37,7 +39,7 @@ $ docker image rm -f 4e2e4f88
 ### Prune
 Use `prune` to remove all unused images at once.
 ```bash
-# note: this will prompt before deleting
+# note: this will prompt before deleting anything
 $ docker image prune
 ```
 
@@ -120,10 +122,12 @@ $ docker container list
 $ docker container exec -it -d <id> bash
 ```
 
-## Docker run
+## Run / create container from image
 `docker run` starts a container from an image.
 
 Basic syntax: `docker run [flags] <image> [command]`
+
+Simple example: `podman run -it -d alpine sh`
 
 ### Common flags
 - `-it`: interactive terminal: creates shell, ex: `docker run alpine sh`
@@ -138,11 +142,18 @@ Basic syntax: `docker run [flags] <image> [command]`
 ## Mount points
 
 ### Volumes
+Simple example:
+```bash
+podman run -d -v mydata:/app/data myimage
+```
+
+Flags:
 - `-d`: detached
-- `-v, --mount`: mount volume (prefer `--mount` over `-v` for clarity.)
+- `-v, --mount`: mount volume
 - `mydata`: name of volume on host
 - `/app/data`: path inside container
 
+#### Duplicate volumes
 If two containers use the same named volume, they will see the same data. This can introduce race conditions if both are writing to it at the same time.
 
 ```bash

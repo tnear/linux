@@ -38,7 +38,7 @@ flowchart LR
 %% round edges: (txt)
 %% cylinder: [(txt)]
 %% circle: ((txt))
-%% diamon: {txt}
+%% diamond: {txt}
 flowchart TD
     id1[id1]
     id2(Text 2)
@@ -64,6 +64,50 @@ flowchart LR
 flowchart LR
     A e1@==> B
     e1@{ animate: true }
+```
+
+## Sequence diagrams
+
+### Participants
+Participants are rendered in order of appearance. Use `participant` for a rectangle, and `actor` for a stick figure.
+
+```mermaid
+sequenceDiagram
+    participant Alice
+    actor Bob
+    Bob->>Alice: Hi, Alice
+    Alice-->>Bob: (response) Hi, Bob
+```
+
+### Messages
+Messages are lines and use this syntax: `[Actor][Arrow][Actor]:Message text`
+
+- `->`: solid line without arrow
+- `-->`: dotted line without arrow
+- `->>`: solid line with arrow
+- `-->>`: dotted line with arrow (commonly used for responses)
+
+### Activations
+*Activations* in sequence diagrams show how long a participant is actively processing a request. They are rendered as a thin rectangle on the participant's lifeline.
+
+```mermaid
+sequenceDiagram
+    participant Alice
+    participant John
+    Alice->>John: Hello John, how are you?
+    activate John
+    John-->>Alice: Great!
+    deactivate John
+```
+
+#### Shortcut notation
+Activations have their own shortcut: `+[Actor]`, and `-[Actor]`.
+
+This diagram is identical to above.
+```
+sequenceDiagram
+    Alice->>+John: Hello John, how are you?
+    John-->>-Alice: Great!
 ```
 
 ## Resources

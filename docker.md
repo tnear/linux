@@ -10,7 +10,7 @@ See also: [`docker`](docker.md), [`docker-api`](docker-api.md)
 An **image** is a blueprint that contains everything needed to run an application (code, libraries, environment variables, etc.). The image is immutable.
 
 ## Containers
-Docker containers encapsulate an application with all of its dependencies, making it consistent across different environments.
+A **container** encapsulates an application with all of its dependencies, making it consistent across different environments.
 
 Containers are lightweight, making them more efficient than virtual machines because they share the host system's kernel.
 
@@ -30,7 +30,7 @@ Each layer stores only the *diff* of the previous one.
 ### Layer advantages
 - Immutable. Allows images to build safely on each other
 - Layers can be shared if checksum matches
-- Supports incremental builds if only later layers change (see below for mre details)
+- Supports incremental builds if only later layers change (see below)
 
 ### Layer creation
 The instructions `RUN`, `COPY`, `ADD` all produce a new layer. Other instructions (`CMD`, `ENTRYPOINT`, etc.) only set image metadata.
@@ -56,8 +56,8 @@ When the container is deleted, the container layer is also destroyed. Persistent
 ```
 
 ### Layer sharing and caching
-- Layers are identified by a SHA256 hash of their contents. This has two important consequences:
-1. Sharing across images. If two images share the same base (ubuntu:24.04), those layers exist only once on disk and in memory. Docker doesn't duplicate them.
+Layers are identified by a hash of their contents. This has two important consequences:
+1. Sharing across images. If two images share the same base (ex: `ubuntu:24.04`), those layers exist only once on disk and in memory. Docker doesn't duplicate them.
 1. Build cache. During a build, Docker checks whether a layer's inputs have changed. If not, it reuses the cached layer instead of re-running the instruction. This makes rebuilds fast.
 
 #### Cache invalidation rules
@@ -72,7 +72,7 @@ dockerfileCOPY . /app/       # changes every time
 RUN pip install -r reqs.txt  # must therefore rerun each time
 ```
 
-Good example which orders from rare -> common:
+Good example which orders changes from rare -> common:
 ```bash
 dockerfileCOPY reqs.txt /app/ # rarely changes
 RUN pip install -r reqs.txt   # cached unless requirements change
@@ -85,9 +85,9 @@ COPY . /app/                  # changes freely
 Volumes are used for persistent data in containers and are managed by Docker. They are stored on the host filesystem, but Docker manages their location and lifecycle.
 
 ### Bind mounts
-A *bind mount* takes a specific path on your host filesystem and mounts it directly into the container. Unlike volumes, Docker doesn't manage it. You are exposing a host directory as-is.
+A *bind mount* takes a path on a host filesystem and mounts it directly into the container. Unlike volumes, Docker does not manage it.
 
-Bind mounts are most useful for development: you mount your source code on your host to a path in the container. Edits on your local editor are instantly reflected in the container.
+Bind mounts are useful for development: mount local source code to a path in the container. Local edits are instantly reflected in the container.
 
 ## Dockerfile
 A `Dockerfile` is a text file that contains all the commands to assemble an image.
@@ -131,9 +131,9 @@ VOLUME /data
 Rootless containers allow an unprivileged user to create and manage containers. Rootless containers mitigate the risk of container-breakout vulnerabilities.
 
 ### User namespaces
-Rootless containers use the Linux kernel called *namespaces*. A user namespace maps UIDs between a container and a host.
-- Inside the container, the process sees itself as `root` (UID 0)
-- On the host, the container is actually running as an unprivileged user, ex: UID 1001
+Rootless containers use the Linux kernel feature called *namespaces*. A user namespace maps UIDs between a container and a host.
+- Inside the container, the process sees itself as `root` (`UID=0`)
+- On the host, the container is actually running as an unprivileged user, ex: `UID=1001`
 
 The container gets the experience of running as `root`, so it can install packages, write to system directories, etc., but on the host it has no elevated privileges.
 
@@ -158,7 +158,7 @@ lower/         # read-only (image layers)
 ## Container registry
 A container registry is a server which stores images. Images are stored as layers, so the registry only needs to serve layers which a client doesn't have locally.
 
-A *localhost* container registry is a registry which is run locally. Useful for CI/CD and air-gapped environments.
+A *localhost* container registry is a registry which is run locally. It is useful for CI/CD and air-gapped environments.
 
 ## Resources
 - https://spacelift.io/blog/dockerfile
