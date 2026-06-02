@@ -3,7 +3,7 @@
 `nvme-smart-log` - Send NVMe SMART log page request, returns result and log
 
 ## Basic usage
-`smart-log` lists health stats about an NVMe controller.
+`smart-log` lists SMART health stats about an NVMe controller.
 
 ```bash
 $ sudo nvme smart-log /dev/nvme2
@@ -18,7 +18,7 @@ Data Units Read                    : 19350116 (9.91 TB)
 Data Units Written                 : 94369299 (48.32 TB)
 host_read_commands                 : 74303191
 host_write_commands                : 314016322
-controller_busy_time               : 58
+controller_busy_time               : 58     # minutes
 power_cycles                       : 67
 power_on_hours                     : 26972
 unsafe_shutdowns                   : 41
