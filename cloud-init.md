@@ -6,11 +6,13 @@
 
 ## Log files
 
+### `/var/log/cloud-init.log`
+(start here)
+
+This contains internal cloud-init process logs (ex: no user-data).
+
 ### `/var/log/cloud-init-output.log`
 This files captures the stdout and stderr from user-data scripts.
-
-### `/var/log/cloud-init.log`
-This contains internal cloud-init process logs (ex: no user-data).
 
 ### `/var/lib/cloud/instance/user-data.txt`
 This is the user-data script itself.
