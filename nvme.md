@@ -28,7 +28,7 @@ Subsystem (NQN: nqn.example.com:subsystem1)
 Use [`nvme connect`](nvme-connect.md).
 
 ## NVMe controllers
-A controller is the physical hardware component which manages communication between the host system and the actual flash memory. Ex: `/dev/nvme0`.
+A controller is the physical hardware component which manages communication between the host system and the actual flash memory. Ex: `/dev/nvme0`. It owns queue pairs.
 
 ### Responsibilities for controller
 - Hardware management: each NVMe device has at least one controller which handles command processing, wear leveling, and garbage collection
@@ -37,6 +37,16 @@ A controller is the physical hardware component which manages communication betw
 
 ### NVMe Identify Controller (`id-ctrl`)
 See [`id-ctrl`](nvme-id-ctrl.md).
+
+### Host vs controller
+- *host*: the computer asking for data
+- *controller*: the manager inside the storage device that fulfills the request
+
+The host says "give me this data." The controller goes and gets it.
+
+Simple example (non-remote): a laptop is a host. The NVMe SSD plugged into it contains a controller.
+
+NVMe-OF example: For two servers connected by a network, the *application server* is the host because it sends NVMe commands. The *storage server* is the controller: it receives those commands, runs them against its drives, and sends back results.
 
 ## NVMe namespaces
 Namespaces are logical divisions of the storage space that can be separately addressed. One controller can manage many namespaces. Ex: `/dev/nvme0n1`.
@@ -165,6 +175,12 @@ Example: `0000:5e:00.0`.
 - `5e`: bus
 - `00`: device
 - `0`: function
+
+## Capsule
+
+A *capsule* is a self-contained unit of information exchange for NVMe over Fabrics. There are two kinds:
+1. Command capsule: travels from host to controller. At minimum it contains the 64-byte Submission Queue Entry. Optionally it can also carry SGLs describing where data lives, or even the data itself inline.
+1. Response capsule: travels from controller to host. At minimum it contains the 16-byte Completion Queue Entry. Same CQE format as PCIe. Optionally it can carry data inline too.
 
 ## Resources
 - https://www.youtube.com/watch?v=Qy1q4qT7b2M
