@@ -2,6 +2,9 @@
 
 Non-Volatile Memory Express (NVMe) is a specification for accessing a computer's non-volatile storage attached via a PCI Express (PCIe) bus.
 
+See also: [flash memory](flash-memory.md)
+
+## Introduction
 ```
 [NVMe] <-> [PCIe bus] <-> [CPU]
 ```
@@ -28,25 +31,7 @@ Subsystem (NQN: nqn.example.com:subsystem1)
 Use [`nvme connect`](nvme-connect.md).
 
 ## NVMe controllers
-A controller is the physical hardware component which manages communication between the host system and the actual flash memory. Ex: `/dev/nvme0`. It owns queue pairs.
-
-### Responsibilities for controller
-- Hardware management: each NVMe device has at least one controller which handles command processing, wear leveling, and garbage collection
-- Command queues: controllers implement multiple submission and completion queues for parallel command processing
-- Identification: each controller has a unique identifier
-
-### NVMe Identify Controller (`id-ctrl`)
-See [`id-ctrl`](nvme-id-ctrl.md).
-
-### Host vs controller
-- *host*: the computer asking for data
-- *controller*: the manager inside the storage device that fulfills the request
-
-The host says "give me this data." The controller goes and gets it.
-
-Simple example (non-remote): a laptop is a host. The NVMe SSD plugged into it contains a controller.
-
-NVMe-OF example: For two servers connected by a network, the *application server* is the host because it sends NVMe commands. The *storage server* is the controller: it receives those commands, runs them against its drives, and sends back results.
+See [NVMe Controller](nvme-controller.md).
 
 ## NVMe namespaces
 Namespaces are logical divisions of the storage space that can be separately addressed. One controller can manage many namespaces. Ex: `/dev/nvme0n1`.
@@ -134,24 +119,6 @@ AENs are *admin* commands.
 
 ### Example use case
 If an NVMe SSD starts overheating, it can send an AEN to the host OS, which can take action like throttling I/O or triggering an alarm.
-
-## Queue pair
-NVMe uses queue pairs (qpairs) for communication between the host and controller. Each queue pair consists of:
-- Submission Queue (SQ): Where the host places commands
-- Completion Queue (CQ): Where the controller places completion entries
-
-### Admin queue pairs
-Each NVMe controller has exactly one admin QP, which has an ID of 0. It is created during controller initialization. The admin queue pair handles controller management (it is not involved in data transfer aka I/O).
-
-Responsibilities:
-- controller config (setting features, log pages, capability discovery)
-- namespace management
-- queue management: create and delete I/O qpairs
-
-### I/O queue pairs
-I/O queue pairs handle data operations (read, write, flush, etc.). NVMe controllers can support up to 65,535 I/O queue pairs (while admin qpair only has one). Their IDs range from [1, 65535]. Multiple I/O queue pairs enables parallelism.
-
-I/O queue pairs are created by the admin qpair.
 
 ## NVMe Multipath
 
