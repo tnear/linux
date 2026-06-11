@@ -3,7 +3,7 @@
 `jq` - command-line JSON processor
 
 ## Sample data
-All examples use `fruits.json`:
+All examples in this file use `fruits.json`:
 
 ```json
 {
@@ -32,6 +32,14 @@ The identity filter, `.`, outputs JSON unchanged and pretty-prints it. The synta
 
 ```bash
 $ jq '.' fruits.json
+```
+
+### Pretty-print from string
+```bash
+$ echo '<json>' | jq
+
+# if json string contains \n, use printf
+$ printf '%s\n' '<json>' | jq
 ```
 
 ## Raw output (`-r`)

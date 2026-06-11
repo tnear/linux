@@ -13,6 +13,10 @@ $ touch file{1..10}.txt
 # stride=2
 $ echo {1..10..2}
 1 3 5 7 9
+
+# specific values comma-separated
+$ echo {2,1,3}
+2 1 3
 ```
 
 ### Character sequences

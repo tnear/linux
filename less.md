@@ -2,7 +2,7 @@
 
 `less` - opposite of more - file perusal filter for crt viewing
 
-See also: [`man`](man.md)
+See also: [`man`](man.md), [`more`](more.md)
 
 ## Basic usage
 ```
