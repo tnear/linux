@@ -9,7 +9,7 @@ The two main types of flash memory are NOR flash and NAND flash. This file prima
 
 | Attribute | NOR Flash | NAND Flash |
 |-----------|-----------|------------|
-| Ue-case | Firmware, embedded | SSDs, USB drives |
+| Use-case | Firmware, embedded | SSDs, USB drives |
 | Read speed (random) | Very fast (byte-level) | Slower (page-level) |
 | Read speed (sequential) | Moderate | Very fast |
 | Write speed | Slow | Fast |
@@ -17,14 +17,41 @@ The two main types of flash memory are NOR flash and NAND flash. This file prima
 | Cost | Higher | Lower |
 | Durability | Higher | Lower (needs wear-leveling) |
 
-### NAND Manufacturers
-The major NAND manufacturers are Samsung, Intel, Micron, SK Hynix, and Western Digital.
+### NAND manufacturers
+The major NAND flash memory manufacturers are Samsung, Intel, Micron, SK Hynix, and Western Digital.
 
-## Flash storage hierarchy
+## Architecture
+```text
+┌─────────────────────────────────────────┐
+│                HOST (CPU)               │
+└─────────────────┬───────────────────────┘
+                  │ PCIe / SATA / SAS
+┌─────────────────▼───────────────────────┐
+│              SSD CONTROLLER             │
+│                                         │
+│  ┌──────────┐        ┌────────────────┐ │
+│  │   HIL    │◄──────►│  CPU (FTL      │ │
+│  │          │        │   Firmware)    │ │
+│  └──────────┘        └────────────────┘ │
+│                                         │
+│  ┌──────────┐        ┌────────────────┐ │
+│  │   DRAM   │        │  ECC Engine    │ │
+│  │ (L2P     │        │                │ │
+│  │  Cache)  │        │                │ │
+│  └──────────┘        └────────────────┘ │
+│                                         │
+└─────────────────┬───────────────────────┘
+                  │ Channels
+┌─────────────────▼───────────────────────┐
+│              NAND FLASH                 │
+└─────────────────────────────────────────┘
+```
 
-Flash contains numerous levels of hierarchy to allow for more parallelism.
+### Flash storage hierarchy
 
-- Cell: a single floating gate that stores 1 or more bits. Fundamental unit of storage in SSDs
+Flash memory contains multiple levels of hierarchy to allow more parallelism.
+
+- Cell: a single floating gate that stores 1-4 bits. Fundamental unit of storage in SSDs
 - Page: a row of cells, typically 4-16 KB. Smallest unit that you can read/write
 - Block: a group of pages, typically 4-8 MB. Smallest unit that can be erased
 - Plane: a collection of blocks that share the same read/write circuitry
@@ -32,7 +59,7 @@ Flash contains numerous levels of hierarchy to allow for more parallelism.
 - Package: the physical chip on the PCB, contains multiple stacked dies
 - Channel: the bus connecting the controller to a set of packages
 
-## Cells
+### Cells
 
 There are multiple cell types. Each generation stores more bits per cell by using more voltage levels.
 
@@ -41,13 +68,24 @@ SLC: single-level cell, MLC: multi-level cell, TLC: triple-level cell, QLC: quad
 *Note: P/E is program/erase, see Erase section for more info.*
 
 | Type | Bits/cell | Endurance (P/E cycles) | Speed | Cost |
-|---|---|---|---|---|
-| SLC | 1 | ~100,000 | Fastest | Highest |
-| MLC | 2 | ~10,000 | Fast | High |
-| TLC | 3 | ~1,000–3,000 | Moderate | Low |
-| QLC | 4 | ~100–1,000 | Slowest | Lowest |
+|------|-----------|------------------------|-------|------|
+| SLC | 1 | ~100,000     | Fastest  | Highest |
+| MLC | 2 | ~10,000      | Fast     | High    |
+| TLC | 3 | ~1,000–3,000 | Moderate | Low     |
+| QLC | 4 | ~100–1,000   | Slowest  | Lowest  |
 
 Most consumer SSDs today use TLC. Enterprise drives may use MLC or SLC for additional durability.
+
+### Host interface layer
+The *host interface layer* (HIL) acts as the bridge between a computer's processor (host) and the drive's internal flash controller. It receives commands (from protocols such as NVMe, SATA, etc.), parses them, then forwards them to FTL. Once FTL finishes, the HIL packages the response and returns it to the host.
+
+### DRAM (L2P cache)
+DRAM holds the L2P (logical-to-physical) mapping table in fast memory so the controller can quickly look up where any LBA lives.
+
+DRAM is *volatile*, meaning data is lost during power loss. Enterprise drives with power loss protection (PLP) contain capacitors that provide enough energy after power is cut to flush from DRAM to NAND.
+
+- Clean shutdown: controller flushes mapping table from DRAM to NAND before powering off. On next power-up, it reloads from NAND.
+- Sudden power loss: flush never happens, and the controller must scan NAND looking for log entries and metadata to reconstruct mappings.
 
 ## Overwriting
 
@@ -118,8 +156,16 @@ Each Program (write) / Erase cycle forces high voltage through the cell's insula
 
 When the controller detects a degraded block (through error correcting codes), it retires it by adding it to a "bad block table" and never maps data there again. This happens transparently to the host.
 
-## SLC Cache / Write Buffer
-todo
+## TODO
+- SLC Cache / Write Buffer
+- Transistors
+- Floating gate
+- Charge trap: for TLC, can be 8 levels of electrons trapped
+- MOSFET
+- 3D flash vs 2D flash
 
 ## Resources
 - https://en.wikipedia.org/wiki/Flash_memory
+- "Reading from TLC : Triple Level Cells", https://youtu.be/YtBysgPOKx4
+- "The Flash Translation Layer", https://youtu.be/o68T7c82foA
+- "How does Flash Memory work?", https://youtu.be/r2KaVfSH884
