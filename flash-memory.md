@@ -52,16 +52,17 @@ The major NAND flash memory manufacturers are Samsung, Intel, Micron, SK Hynix, 
 Flash memory contains multiple levels of hierarchy to allow more parallelism.
 
 - Cell: a single floating gate that stores 1-4 bits. Fundamental unit of storage in SSDs
-- Page: a row of cells, typically 4-16 KB. Smallest unit that you can read/write
+- String: multiple flash cells (typically 128) serially connected on a bitline (BL)
+- Page: a row of cells, typically 16 KB. Smallest unit that you can read/write
 - Block: a group of pages, typically 4-8 MB. Smallest unit that can be erased
 - Plane: a collection of blocks that share the same read/write circuitry
-- Die: a single piece of silicon, containing one or more planes
+- Die: a single piece of silicon, typically containing 2-4 planes
 - Package: the physical chip on the PCB, contains multiple stacked dies
 - Channel: the bus connecting the controller to a set of packages
 
 ### Cells
 
-There are multiple cell types. Each generation stores more bits per cell by using more voltage levels.
+Cells are specialized transistors which trap electrons. There are multiple cell levels. Each generation stores more bits per cell by using more voltage levels.
 
 SLC: single-level cell, MLC: multi-level cell, TLC: triple-level cell, QLC: quad-level cell.
 
@@ -76,12 +77,22 @@ SLC: single-level cell, MLC: multi-level cell, TLC: triple-level cell, QLC: quad
 
 Most consumer SSDs today use TLC. Enterprise drives may use MLC or SLC for additional durability.
 
+#### Cell technologies
+There are two primary cell technologies:
+- Floating gate (2D): older, uncommon now
+- Charge trap (3D): newer technology
+
 ### Host interface layer
 The *host interface layer* (HIL) acts as the bridge between a computer's processor (host) and the drive's internal flash controller. It receives commands (from protocols such as NVMe, SATA, etc.), parses them, then forwards them to FTL. Once FTL finishes, the HIL packages the response and returns it to the host.
 
 ### DRAM (L2P cache)
-DRAM holds the L2P (logical-to-physical) mapping table in fast memory so the controller can quickly look up where any LBA lives.
+DRAM holds the following:
+- L2P (logical-to-physical) mapping table in fast memory so the controller can quickly look up where any LBA lives
+- Write buffer (to reduce write latency. Writes are slower than reads for SSDs)
+- Metadata such as P/E cycles
+- Capacitors to flush DRAM to flash in case of power loss
 
+#### Power loss
 DRAM is *volatile*, meaning data is lost during power loss. Enterprise drives with power loss protection (PLP) contain capacitors that provide enough energy after power is cut to flush from DRAM to NAND.
 
 - Clean shutdown: controller flushes mapping table from DRAM to NAND before powering off. On next power-up, it reloads from NAND.
@@ -113,7 +124,8 @@ After enough writing, blocks contain a mix of *valid pages* and *stale pages* wh
 The *flash translation layer* (FTL) is the firmware layer inside the SSD controller that makes NAND flash look like a normal, overwritable block device to the host. FTL is the reason SSDs can be a drop-in replacement for hard drives despite NAND's fundamentally different behavior because it abstracts away details from the OS such as erase blocks and wear leveling.
 
 ### Roles
-The FTL's primary job is maintaining a lookup table that maps every logical address that the host knows about to the actual physical location on the NAND.
+- Mapping table: stores every logical address (known to host) to physical address (on SSD)
+- Status table: stores which blocks have free and invalid data. Used decide victim blocks to erase
 
 It also runs garbage collection and wear leveling in the background to keep the drive healthy and performant.
 
@@ -136,7 +148,7 @@ Controllers GC proactively in the background during idle time, keeping a supply 
 Garbage collection leads to *write amplification*
 
 ### Write amplification
-*Write amplification* is the process when valid pages that weren't touched by the host get rewritten anyway as collateral of the garbage collection process. This burns endurance and consumes bandwidth the host could otherwise use.
+*Write amplification* is the process when valid pages that were not touched by the host get rewritten anyway as collateral of the garbage collection process. This burns endurance and consumes bandwidth the host could otherwise use.
 
 Write amplification can be minimized by keeping the drive from filling up completely so that the FTL has more candidate blocks to choose from.
 
@@ -169,3 +181,4 @@ When the controller detects a degraded block (through error correcting codes), i
 - "Reading from TLC : Triple Level Cells", https://youtu.be/YtBysgPOKx4
 - "The Flash Translation Layer", https://youtu.be/o68T7c82foA
 - "How does Flash Memory work?", https://youtu.be/r2KaVfSH884
+- "Basics of NAND Flash-Based SSDs", https://youtu.be/hqLrd-Uj0aU
