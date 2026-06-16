@@ -98,7 +98,11 @@ codex> !ls
 Use `codex --add-dir <dir1> --add-dir <dir2> ...` to add additional directories. This can be useful for spanning multiple repositories.
 
 ## Logs and errors
-Logs are dumped in `~/.codex/log/codex-tui.log`.
+Logs are opt-in. Set `log_dir` in config.toml, ex:
+
+```bash
+log_dir = "/home/user/.codex/log"
+```
 
 ## Tokens
 When closed, Codex will output token usage for the session, such as this:
