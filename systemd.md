@@ -2,6 +2,8 @@
 
 `systemd, init` - systemd system and service manager
 
+See also: [`systemctl`](systemctl.md), [`journalctl`](journalctl.md)
+
 ## Step-by-step example creating a `systemd` process (untested)
 
 ### Create a service file in `/etc/systemd/system`

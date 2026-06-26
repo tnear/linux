@@ -2,7 +2,7 @@
 
 `journalctl` - Query the systemd journal
 
-See also: [`systemd`](systemd.md)
+See also: [`systemd`](systemd.md), [`systemctl`](systemctl.md)
 
 The `systemd` journal centralizes the management of logs which can originate from many different locations (ex: kernel, initrd, services, etc.).
 

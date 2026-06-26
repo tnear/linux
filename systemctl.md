@@ -2,6 +2,8 @@
 
 `systemctl` - Control the systemd system and service manager
 
+See also: [`systemd`](systemd.md), [`journalctl`](journalctl.md)
+
 ## Querying services
 ```bash
 # list all systemd services (--no-pager is optional)
