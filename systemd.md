@@ -2,7 +2,13 @@
 
 `systemd, init` - systemd system and service manager
 
-See also: [`systemctl`](systemctl.md), [`journalctl`](journalctl.md)
+`systemd` is a system and service manager for Linux operating systems. It serves as the init system, the first process launched by the kernel (PID 1),and is responsible for bootstrapping user space and managing system processes.
+
+See also: [`systemctl`](systemctl.md), [`journalctl`](journalctl.md), [`runit`](runit.md)
+
+## Features
+- Parallel startup: Unlike SysV's sequential init scripts, `systemd` starts services in parallel whenever dependencies allow, dramatically reducing boot times.
+- Cgroups integration: `systemd` places each service in its own Linux control group, enabling precise tracking of all processes belonging to a service.
 
 ## Step-by-step example creating a `systemd` process (untested)
 

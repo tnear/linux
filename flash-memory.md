@@ -126,8 +126,8 @@ The *flash translation layer* (FTL) is the firmware layer inside the SSD control
 ### Roles
 - Mapping table: stores every logical address (known to host) to physical address (on SSD)
 - Status table: stores which blocks have free and invalid data. Used decide victim blocks to erase
-
-It also runs garbage collection and wear leveling in the background to keep the drive healthy and performant.
+- Garbage collection (runs in background)
+- Wear leveling (runs in background)
 
 ## Erasing
 There are many ways to erase data from NAND flash memory.
@@ -143,7 +143,7 @@ Garbage collection (GC) exists because of the overwrite problem: stale pages acc
 
 The FTL periodically selects a block containing mostly stale pages, writes them to a free location elsewhere, then erases the block. The erased block rejoins the pool of free space.
 
-Controllers GC proactively in the background during idle time, keeping a supply of pre-erased blocks ready to absorb incoming writes at any moment.
+Controllers GC proactively in the background during idle time, keeping a supply of pre-erased blocks ready for incoming writes at any moment.
 
 Garbage collection leads to *write amplification*
 
@@ -153,10 +153,10 @@ Garbage collection leads to *write amplification*
 Write amplification can be minimized by keeping the drive from filling up completely so that the FTL has more candidate blocks to choose from.
 
 ## Over provisioning
-Over-provisioning is capacity that's reserved for the controller and never exposed to the host: the OS can't see it or fill it. This hidden pool gives the FTL a supply of pre-erased blocks ready to absorb writes immediately, so garbage collection can run proactively in the background rather than stalling the host.
+Over-provisioning is capacity that's reserved for the controller and never exposed to the host: the OS can't see it or fill it. This hidden pool gives the FTL a supply of pre-erased blocks ready to write immediately, so garbage collection can run proactively in the background rather than stalling the host.
 
-- Consumer drives: reserve around 7%
-- Enterprise drives: reserve 25–28% to allow sustained performance under heavy workloads
+- Consumer drives: over-provision around 7%
+- Enterprise drives: over-provision 25–28% to allow sustained performance under heavy workloads
 
 ## Wear leveling
 NAND cells wear out after a finite number of Program/Erase (P/E) cycles, so without intervention, heavily written blocks would die early while blocks storing rarely-changed data sit nearly untouched.
