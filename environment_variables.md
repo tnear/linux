@@ -61,6 +61,11 @@ $ zsh --version
 zsh 5.9 (x86_64-apple-darwin23.0)
 ```
 
+### `LC_ALL`
+`LC_ALL` is a master environment variable that overrides all other locale categories (like `LC_CTYPE`, `LC_COLLATE`, `LC_TIME`) and the `LANG` variable.
+
+Setting `LC_ALL=C` enforces the default C or POSIX locale. It is often used for consistent behavior across locales, such as with sorting.
+
 ## Creation
 
 ### Temporary (current session only)
