@@ -40,7 +40,7 @@ $ sudo cat /etc/sudoers
 ```
 
 ## Avoid user prompts
-Use `-n, --non-interactive` to avoid user prompts, such as for a password.
+Use `-n, --non-interactive` to avoid user prompts, such as for a password. `sudo -n` will fail instead of prompting for passwords. Useful for automated scripts.
 
 ## List commands a user can run
 Use `-l, --list` to list what commands a user can run. Useful for checking if a user is a `sudoer`.
