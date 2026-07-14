@@ -10,7 +10,7 @@ The two systems reflect different philosophies about what an init system should 
 
 ### Scope
 
-- `systemd` is an integrated platform. Beyond service management, it handles networking, DNS, user sessions, device events, timers, and more. 
+- `systemd` is an integrated platform. Beyond service management, it handles networking, DNS, user sessions, device events, timers, and more.
 - `runit` is narrowly focused: boot, supervise, shut down. Everything else is out of scope.
 
 ### Complexity vs. Simplicity

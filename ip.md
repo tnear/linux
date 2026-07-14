@@ -11,14 +11,14 @@ $ ip address
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
     inet 127.0.0.1/8 scope host lo
        valid_lft forever preferred_lft forever
-    inet6 ::1/128 scope host 
+    inet6 ::1/128 scope host
        valid_lft forever preferred_lft forever
 2: ens3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 9000 qdisc mq state UP group default qlen 1000
     link/ether 02:00:17:0f:7b:09 brd ff:ff:ff:ff:ff:ff
     altname enp0s3
     inet 10.0.3.214/24 brd 10.0.3.255 scope global dynamic noprefixroute ens3
        valid_lft 48374sec preferred_lft 48374sec
-    inet6 fe80::17ff:fe0f:7b09/64 scope link noprefixroute 
+    inet6 fe80::17ff:fe0f:7b09/64 scope link noprefixroute
        valid_lft forever preferred_lft forever
 ```
 
