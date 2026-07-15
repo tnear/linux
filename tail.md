@@ -20,11 +20,11 @@ tail -n 2 /etc/passwd
 ## Follow file
 Following files is useful to monitor in real-time when data is appended to the log.
 
-### Follow file handle
-Use `tail -f <file>`.
-
 ### Follow file name
 The `-F` flag will follow a file if it is renamed or rotated.
 ```bash
 tail -F /var/log/system.log
 ```
+
+### Follow file handle
+Use `tail -f <file>`. If the file is renamed (or rotated), `tail -f` will continue to follow the old file.
