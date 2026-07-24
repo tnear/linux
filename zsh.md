@@ -2,16 +2,17 @@
 
 `Zsh` is a popular Unix shell.
 
+See also: [`bash`](bash.md), [3p](3p.md)
+
 ## Plugins
 Useful plugins to install.
 
-- colored-man-pages
-- zsh-autosuggestions
-- zsh-history-substring
-- zsh-syntax-highlighting
-- web-search (can type: google <search_term> to search the web)
+- `colored-man-pages`
+- `zsh-autosuggestions`
+- `zsh-history-substring`
+- `zsh-syntax-highlighting`
 
-Note: zsh-autocomplete is causing terminal crashes on mac at the moment.
+Note: `zsh-autocomplete` is causing terminal crashes on mac at the moment.
 
 ## Features
 
@@ -29,7 +30,7 @@ $ ll -<tab>
 ```
 
 ## Autocomplete
-Example to get autocomplete working for `bazel`.
+Example to get autocomplete working with `bazel`.
 
 ```bash
 # create oh-my-zsh completions directory if it doesn't exist

@@ -2,7 +2,7 @@
 
 `bash` - GNU Bourne-Again SHell
 
-See also: [`set`](set.md)
+See also: [`set`](set.md), [`zsh`](zsh.md)
 
 ## Common flags
 
