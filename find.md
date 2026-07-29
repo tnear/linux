@@ -87,25 +87,25 @@ $ find /usr/bin -executable -type f | wc -l
 3093
 ```
 
-## SIZE - search file sizes
-c = byes suffix
+## Size - search file sizes
+
 ### Find all files larger than 1000 bytes
 ```bash
 $ find . -size +1000c
 # Find all files larger than 1 GB:
 $ find / -size +1G 2> /dev/null
 
-# Find zero byte files:
+# Find zero byte files (c = bytes suffix):
 $ find . -size 0c
 ```
 
-## USER - search file owner
+## User - search file owner
 ```bash
 # Find all files owned by 'root':
 $ find . -user 'root'
 ```
 
-## TYPE - search file type
+## Type - search file type
 `f` = plaintext, `d` = directory, `l` = symbolic link
 
 ```bash
@@ -119,7 +119,7 @@ $ find . -type l -ls
 2752605   0 lrwxrwxrwx  1 kali  5 Mar 25 16:06 ./a.lnk -> a.txt
 ```
 
-## MAXDEPTH - stop at a specified recursion depth
+## Maxdepth - stop at a specified recursion depth
 ```bash
 $ find /usr -maxdepth 1
 /usr
@@ -141,22 +141,21 @@ $ find -print0 | hd
 2e 00 2e 2f 61 20 31 00  2e 2f 61 5c 6e 32 00     |.../a 1../a\n2.|
 ```
 
-## EXEC
+## Exec
 
-Syntax:
-```bash
-# {}: placeholder for the result found
-# \; = command delimiter ('\' is used to escape the semicolon)
-```
+### Syntax
+- `{}`: placeholder for the result found
+- `\;`: command delimiter (`\` is used to escape semicolon
 
-Examples:
+### Examples
 ```bash
 $ find <find_cmd> -exec <exec_cmd> {} \;
 
-# Find zero byte files then call 'ls -la' on each one:
+# Find zero byte files (0c) then list each one:
 $ find . -size 0c -exec ls -la {} \;
 
-# Simpler syntax using xargs: $ find . -size 0c | xargs ls -la
+# Simpler syntax using xargs:
+$ find . -size 0c | xargs ls -la
 
 # Use -exec placeholder to rename files.
 # {} is mapped to {}_renamed, thus adding '_renamed' suffix to all file names:
@@ -166,11 +165,13 @@ $ ls
 file1_renamed  file2_renamed ...
 
 # Alt syntax using xargs:
-# find -name 'file*' | xargs -I{} mv {} {}_renamed
+$ find -name 'file*' | xargs -I{} mv {} {}_renamed
+```
 
-# COMMAND DELIMITER
-# Two delimiters exist: \; and +
+### Command delimiter
+Two delimiters exist: `\;` and `+`
 
+```bash
 # \; example:
 # Calls grep N times, one for each result: grep result1; grep result2; ...
 $ find . -type f -exec grep 'hello' {} \;
@@ -181,9 +182,9 @@ $ find . -type f -exec grep 'hello' {} +
 ```
 
 ## Get lines of code (LOC)
-This example gets lines of code for files with a .cpp or .h extension. It uses `-o` to do an OR constraint.
+This example gets lines of code for files with a `.cpp` or `.h` extension. It uses `-o` to perform an `OR` constraint.
 
-The parentheses need to be escaped because they have a separate meaning in bash.
+The parentheses must be escaped because they have a separate meaning in bash.
 ```bash
 $ find . -type f \( -name '*.cpp' -o -name '*.h' \) | xargs wc
 
@@ -196,7 +197,9 @@ newlines | word count | characters
 find . -type f -printf "%s %p\n" 2> /dev/null | sort -rn | head -n5 | awk '{print $2 " - " $1 " bytes"}'
 ```
 
-### printf: uses '%s' to get size and %p' to get path. Ex:
+### `printf`
+
+`printf` uses `%s` to get size and `%p` to get path.
 ```bash
 find . -type f -printf "%s %p\n"
 478 ./.git/hooks/applypatch-msg.sample
