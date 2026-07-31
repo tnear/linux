@@ -1,23 +1,24 @@
-LOOK
+# look
 
-look - display lines beginning with a given string
+`look` - display lines beginning with a given string
 
-Note: 'grep' is typically a better choice.
+Note: `grep` is typically a better choice.
 
+See also: [`grep`](grep.md)
+
+## Basic usage
+
+```bash
 # Find words in dictionary beginning with <STRING>.
 # When file name is omitted, look searches /usr/share/dict/words:
 $ look metro
-
 metro
 metronome
 metronomes
 metropolis
 
-
 # Search a particular file:
 $ look '#include' Main.c
-
 #include <stdio.h>
 #include <string.h>
-
----
+```
