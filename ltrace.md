@@ -1,9 +1,11 @@
-LTRACE
+# ltrace
 
-ltrace - A library call tracer
+`ltrace` - A library call tracer
 
 Note: ltrace writes to stderr (not stdout).
 
+## Basic usage
+```bash
 $ ltrace ./license
 printf("Checking License: ")
 strcmp("a", "AAAA-G10N-ALL-OK")
@@ -14,10 +16,11 @@ getenv("POSIXLY_CORRECT")                                = nil
 strrchr("echo", '/')                                     = nil
 setlocale(LC_ALL, "")                                    = "en_US.UTF-8"
 bindtextdomain("coreutils", "/usr/share/locale")         = "/usr/share/locale"
+```
 
-# -x = filter for expression.
+Use `-x` to filter for expression:
+```bash
 # Show ALL output using '*':
 # (sometimes needed when not seeing any output)
 $ ltrace -x '*' ./malloc.o
-
----
+```
