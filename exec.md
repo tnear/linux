@@ -5,6 +5,8 @@
 1. Replace the current shell process with another program
 1. Manipulate file descriptors in current shell
 
+See also: [`flock`](flock.md)
+
 ## Replace process
 `exec` replaces the current process instead of creating a new process. Therefore, it is more efficient. `exec` does not return to the original process because it replaces it.
 
