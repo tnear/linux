@@ -5,7 +5,7 @@
 See also: [`mount`](mount.md)
 
 ## List all mounted file systems
-By default, it shows a tree structure. Use `findmnt -l` to output as a list.
+By default, `findmnt` prints  a tree structure. Use `findmnt -l` to output as a list.
 
 ```bash
 $ findmnt

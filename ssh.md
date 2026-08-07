@@ -59,5 +59,4 @@ Use the `-i` flag to specify a path to an identity file (private key). Ex:
 ssh -i /path/to/private/key
 ```
 
-If unspecified, the he defaults are `~/.ssh/id_dsa`, `~/.ssh/id_ecdsa`,
-`~/.ssh/id_ed25519`, and `~/.ssh/id_rsa`.
+If unspecified, the defaults are `~/.ssh/id_dsa`, `~/.ssh/id_ecdsa`, `~/.ssh/id_ed25519`, and `~/.ssh/id_rsa`.
