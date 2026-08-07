@@ -2,6 +2,8 @@
 
 `sudo, sudoedit` - execute a command as another user
 
+See also: [`visudo`](visudo.md)
+
 ## Change to root user
 ```bash
 $ sudo -i
@@ -35,7 +37,7 @@ $ sudo !!
 
 ## List sudoers
 ```bash
-# use 'visudo' to modify this file
+# note: use 'visudo' to modify this file
 $ sudo cat /etc/sudoers
 ```
 
