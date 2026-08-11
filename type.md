@@ -5,20 +5,19 @@
 ## Basic usage
 
 ```bash
-# Describe 'ls'
+# alias
 $ type ls
 ls is an alias for ls --color=auto
 
-# 'mv' command:
+# command
 $ type mv
 mv is /usr/bin/mv
 
-# Run non-aliased 'ls':
-$ command ls
-```
-
-## Shell builtin example
-```bash
+# shell builtin
 $ type jobs
 jobs is a shell builtin
+
+# user-defined functions
+$ type my_fcn
+my_fcn is a shell function from /home/user/.zshrc
 ```

@@ -13,13 +13,13 @@ $ wc <file1> <file2> ...
 This example retrieves newlines, word count, and number of characters for files beginning with "w":
 ```bash
 $ wc w*
-   0    0    0 wc.txt
-   8   35  240 wget.txt
-  12   39  254 whatis.txt
-   7   22  177 whereis.txt
-  21   51  313 which.txt
-   7   22  139 who.txt
-  11   50  309 w.txt
+   0    0    0 wc.md
+   8   35  240 wget.md
+  12   39  254 whatis.md
+   7   22  177 whereis.md
+  21   51  313 which.md
+   7   22  139 who.md
+  11   50  309 w.md
   66  219 1432 total
 ```
 
