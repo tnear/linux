@@ -2,11 +2,11 @@
 
 `userdel` - delete a user account and related files
 
-See also: [`useradd`](useradd.md)
+See also: [`useradd`](useradd.md), [`usermod`](usermod.md)
 
 ## Basic usage
 ```bash
-# Delete existing user 'new_user':
+# Delete existing user 'new_user'
 $ sudo userdel new_user
 ```
 

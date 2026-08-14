@@ -2,7 +2,7 @@
 
 `useradd` - create a new user or update default new user information
 
-See also: [`userdel`](userdel.md)
+See also: [`userdel`](userdel.md), [`usermod`](usermod.md)
 
 ## Basic usage
 ```bash

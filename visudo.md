@@ -2,7 +2,7 @@
 
 `visudo` - edit the sudoers file
 
-See also: [`sudo`]
+See also: [`sudo`](sudo.md)
 
 ## Introduction
 
