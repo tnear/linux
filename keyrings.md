@@ -33,4 +33,4 @@ A *keyring* is a container of keys and other keyrings.
 - user keyring: per user
 
 ## `keyctl`
-See [`keyctl`] for examples of managing keys.
+See [`keyctl`](keyctl.md) for examples of managing keys.

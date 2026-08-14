@@ -8,13 +8,11 @@ See also: [`dnf`](dnf.md), [`rpm-ostree`](rpm_ostree.md)
 RPM (Red Hat Package Manager) is the core package management tool for Red Hat-based Linux distributions (like RHEL, Oracle Linux, CentOS, Fedora).
 
 RPM records information such as this:
-```
-Which version is installed?
-Which package put this file here?
-Has this file been modified?
-What dependencies does this package require?
-How do I uninstall it cleanly?
-```
+- Which version is installed?
+- Which package put this file here?
+- Has this file been modified?
+- What dependencies does this package require?
+- How do I uninstall it cleanly?
 
 ## Common commands
 

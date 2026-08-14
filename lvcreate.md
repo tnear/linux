@@ -14,4 +14,4 @@ Flags:
 - `--yes`: answer "yes" to all prompts
 - `-L 1G`: specify size of logical volume to 1 GB
 - `-n my_app`: sets name of LV
-- `vg00`: volume group name in which the LV will be created. Use [`vgs`] to list volume groups
+- `vg00`: volume group name in which the LV will be created. Use [`vgs`](vgs.md) to list volume groups
