@@ -4,7 +4,9 @@
 
 The Yellowdog Updater Modified (YUM) is a package manager commonly used on Fedora, Red Hat, and Oracle Linux.
 
-See also [`yum-config-manager`](yum-config-manager.md), [`dnf`](dnf.md)
+`yum` is an older package manager than `dnf`.
+
+See also: [`yum-config-manager`](yum-config-manager.md), [`dnf`](dnf.md)
 
 ## Install a package
 ```bash

@@ -4,7 +4,7 @@
 
 Globally search for a Regular Expression and Print matching lines
 
-See also [`ripgrep`](rg.md), [`pgrep`](pgrep.md)
+See also: [`ripgrep`](rg.md), [`pgrep`](pgrep.md)
 
 ## Basic syntax
 ```bash
