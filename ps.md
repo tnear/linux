@@ -33,6 +33,7 @@ with a terminal)
 - `-p`: filter for a pid, ex: `ps -p 101`
 - `-u`: user-oriented (extra columns). `-u` is incompatible with `-l`
 - `-x`: include extra processes not attached to terminal
+- `-Z`: include [security context](se_linux.md#security-context)
 
 ## Show process hierarchy
 

@@ -2,7 +2,7 @@
 
 `sestatus` - SELinux status tool
 
-See also: [SELinux](se_linux.md)
+See also: [SELinux](se_linux.md), [`getenforce`](getenforce.md)
 
 ## Basic usage
 

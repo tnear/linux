@@ -4,21 +4,27 @@
 
 See also: [`groups`](groups.md), [`getent`](getent.md)
 
-## Get your user ID (UID) and groups (GID)
+## Get user ID (UID) and groups (GID)
 ```bash
+# get own UID and GID
 $ id
 uid=1000(kali) gid=1000(kali) groups=1000(kali),4(adm),20(dialout),27(sudo),29(audio),44(video)
-```
 
-## Get specified UID and GID
-```bash
+# get specified user's UID and GID
 $ id daemon
 uid=1(daemon) gid=1(daemon) groups=1(daemon)
-```
 
-## Get ID-only
-Use the `-u` flag to get a user ID.
-```bash
+# get ID-only
 $ id -u user
 1000
+```
+
+## Security context
+Use `-Z, --context` to print a user's [security context](se_linux.md#security-context).
+
+```bash
+$ id -Z
+unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+
+# user : role : type : level
 ```

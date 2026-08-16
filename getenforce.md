@@ -2,7 +2,7 @@
 
 `getenforce` - get the current mode of SELinux
 
-See also: [`setenforce`](setenforce.md), [`SELinux`](se_linux.md)
+See also: [`setenforce`](setenforce.md), [`SELinux`](se_linux.md), [`sestatus`](sestatus.md)
 
 ## Basic usage
 `getenforce` reports whether SELinux is enforcing, permissive, or disabled.
