@@ -2,7 +2,7 @@
 
 `declare` is a bash built-in which sets variables and/or give them attributes.
 
-See also: [`unset`](unset.md)
+See also: [`unset`](unset.md), [`readonly`](readonly.md)
 
 Syntax:
 ```bash
@@ -43,9 +43,4 @@ unset count    # undeclare/remove variable
 ```
 
 ## Read-only variable
-To create a read-only variable (constant), use `-r`.
-
-```bash
-declare -r PI=3.14159
-PI=3.14  # errors with "zsh: read-only variable: PI"
-```
+To create a read-only variable (constant), use `-r`. See [`readonly`](readonly.md) for a complete example.

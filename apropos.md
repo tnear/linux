@@ -1,8 +1,10 @@
-APROPOS
+# apropos
 
-apropos - search the manual page names and descriptions
+`apropos` - search the manual page names and descriptions
 
+## Basic usage
+
+```bash
 # List commands relevant to translate (including 'tr'):
 $ apropos translate
-
----
+```
