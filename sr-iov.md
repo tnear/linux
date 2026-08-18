@@ -1,6 +1,6 @@
 # SR-IOV
 
-Single Root Input/Output Virtualization (SR-IOV) is a PCI Express (PCIe) specification that allows a single physical device to be shared by multiple virtual machines (VMs). SR-IOV improves performance and manageability by isolating PCI Express resources.
+Single Root Input/Output Virtualization (SR-IOV or SRIOV) is a PCI Express (PCIe) specification that allows a single physical device to be shared by multiple virtual machines (VMs). SR-IOV improves performance and manageability by isolating PCI Express resources.
 
 ## The problem
 A physical NVMe SSD is one device. If you have a server running 20 virtual machines, and each VM needs to talk to that SSD, something has to mediate. The traditional answer is the hypervisor: every I/O from every VM traps into the hypervisor, which forwards it to the real device on the VM's behalf, then returns the result. This is expensive because every single I/O crosses the hypervisor boundary twice.

@@ -23,7 +23,7 @@ $ rg --hidden git
 ```
 
 ## Glob (wildcard) search
-Use `-g, --glob` to wildcard search only certain file name patterns.
+Use `-g, --glob` to wildcard search only certain file name patterns (or file extensions).
 ```bash
 $ rg 'int main' -g 'a*.c'
 alignof.c
