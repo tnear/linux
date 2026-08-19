@@ -37,7 +37,8 @@ int main()
 ```
 
 ### Display sections
-Use `-S` to  get sections. Also add `-W` for wide output.
+Use `-S` to get sections. Also add `-W` for wide output.
+
 ```
 There are 39 section headers, starting at offset 0xa248:
 

@@ -13,7 +13,7 @@ See also: [`dirs`](dirs.md), [`popd`](popd.md)
 # Next, navigate away:
 $ cd /etc
 
-# Then return to old  cwd (/var):
+# Then return to old cwd (/var):
 [/etc] $ popd
 [/var] $
 ```

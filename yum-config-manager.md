@@ -1,6 +1,6 @@
 # yum-config manager
 
-`yum-config-manager` - Manage  main and repository DNF configuration options, toggle which repositories are enabled or disabled, and add new repositories.
+`yum-config-manager` - Manage main and repository DNF configuration options, toggle which repositories are enabled or disabled, and add new repositories.
 
 See also: [`yum`](yum.md).
 
