@@ -2,7 +2,7 @@
 
 `vgextend` - Add physical volumes to a volume group
 
-See also: [volumes](volumes.md)
+See also: [volumes](volumes.md), [`lvextend`](lvextend.md)
 
 ## Introduction
 
@@ -36,3 +36,33 @@ After `vgextend`:
              +---- vgdata ---- lvapp
 /dev/sdb  --/
 ```
+
+### `lvextend`
+
+Now `vgdata` has more free space, but `lvapp` hasn't grown. The extra space sits unused in the pool until it is claimed with `lvextend`.
+
+```bash
+# use -r to resize the filesystem
+sudo lvextend -r -L +20G /dev/vgdata/lvapp
+```
+
+Before `lvextend`:
+```
+/dev/sda2 --\
+             +---- vgdata ---- lvapp (small)
+/dev/sdb  --/                      \
+                                 (free space unused)
+```
+
+After `lvextend`:
+```
+/dev/sda2 --\
+             +---- vgdata ---- lvapp (bigger)
+/dev/sdb  --/
+```
+
+### Summary
+
+- `pvcreate`: turn a raw disk into a physical volume
+- `vgextend`: add that physical volume to the pool (`vgdata`)
+- `lvextend`: grow a logical volume (`lvapp`) using space from that pool
