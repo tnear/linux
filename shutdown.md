@@ -2,17 +2,18 @@
 
 `shutdown` - Halt, power off or reboot the machine
 
-## Shutdown immediately
+## Basic usage
+
 ```bash
+# shutdown immediately
 $ sudo shutdown -h now
-```
 
-### Shutdown machine in one minute
-```bash
-$ shutdown
-```
+# shutdown machine in one minute
+$ shutdown --reboot +1 'Custom message here...'
 
-## `-c` = Cancel a pending shutdown
-```bash
+# shutdown in two minutes
+$ shutdown --reboot +2
+
+# Use -c to cancel a pending shutdown
 $ shutdown -c
 ```
