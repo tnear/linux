@@ -1,16 +1,21 @@
-FUSER
+# fuser
 
-fuser - identify processes using files or sockets
+`fuser` - identify processes using files or sockets
 
-# -v = verbose
-# Show users of cwd ('.'):
+See also: [`lsof`](lsof.md)
+
+## Basic usage
+
+Use `-v` for verbose.
+
+```bash
+# show users of cwd ('.')
 $ fuser -v .
         USER        PID ACCESS COMMAND
 /tmp:   kali      1420206 ..c.. zsh
 
-# See who is using Python:
+# see who is using Python
 $ fuser -v $(where python)
-                     USER        PID ACCESS COMMAND
-/usr/bin/python3.11: kali       1398 ...e. blueman-applet
-
----
+                     USER   PID ACCESS COMMAND
+/usr/bin/python3.11: user  1398 ...e. blueman-applet
+```

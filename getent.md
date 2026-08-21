@@ -18,7 +18,7 @@ $ getent passwd user_name
 # list all groups
 $ getent group
 
-# list specific group
+# list users belonging to a specific group
 $ getent group group_name
 ```
 

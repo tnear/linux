@@ -2,6 +2,8 @@
 
 `lsof` - list open files
 
+See also: [`fuser`](fuser.md)
+
 ## File usage
 
 ```bash
