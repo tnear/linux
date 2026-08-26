@@ -2,6 +2,8 @@
 
 `base64` - base64 encode/decode data and print to standard output
 
+See also: [`base32`](base32.md)
+
 ## Basic usage
 ```bash
 # file

@@ -71,8 +71,6 @@ $ sudo restorecon -v selinux-demo
 Relabeled /home/tnear/selinux-demo from system_u:object_r:passwd_file_t:s0 to system_u:object_r:user_home_t:s0
 ```
 
-TODO: matchpathcon, chcon
-
 ## Resources
 - https://en.wikipedia.org/wiki/Security-Enhanced_Linux
 - https://www.baeldung.com/linux/selinux

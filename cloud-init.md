@@ -6,16 +6,14 @@
 
 ## Log files
 
-### `/var/log/cloud-init.log`
-(start here)
-
-This contains internal cloud-init process logs (ex: no user-data).
-
-### `/var/log/cloud-init-output.log`
-This files captures the stdout and stderr from user-data scripts.
-
 ### `/var/lib/cloud/instance/user-data.txt`
 This is the user-data script itself.
+
+### `/var/log/cloud-init-output.log`
+This files captures the stdout and stderr from user-data script.
+
+### `/var/log/cloud-init.log`
+This contains internal cloud-init process logs (ex: no user-data).
 
 ### `/var/lib/cloud/instance/boot-finished`
 Timestamp file indicating when cloud-init completed.
@@ -28,11 +26,18 @@ Cloud-config is a cloud-init configuration format written in YAML.
 #cloud-config
 # ^^^ "cloud-config" is a required format maker
 
+# bootcmd runs commands early in the boot sequence.
+# Unlike runcmd, bootcmd is called *every* boot.
+bootcmd:
+  # note: /run is cleared every boot, so 'bootcmd'
+  # is a common place to configure /run.
+  - [install, -d, -m, "0750", /run/my-service]
+
 # packages to install using default package manager
 # ex: runs 'dnf install -y grubby nvme-cli'
 packages:
-    - grubby
-    - nvme-cli
+  - grubby
+  - nvme-cli
 
 # Files to create or replace. This example adds two
 # kernel modules to my-module.conf. This path loads
@@ -46,8 +51,8 @@ write_files:
       nvme-fabrics
       nvme-tcp
 
-# Commands to run during this boot. modules-load.d does
-# not load modules, so this must be separate.
+# 'runcmd' contains commands to run during *first* boot only.
+# runcmd runs late in boot sequence. See also: bootcmd.
 # The command is listed first and its arguments are comma separated, ex: modprobe nvme_fabrics
 runcmd:
   # Load the NVMe/TCP modules during the initial boot.
