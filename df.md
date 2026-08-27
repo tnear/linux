@@ -4,16 +4,14 @@
 
 See also: [`du`](du.md)
 
-## Show disk usage of drive containing home directory (~)
+## Basic usage
 ```bash
+# show disk usage of drive containing home directory (~)
 $ df -h ~
 Filesystem      Size  Used Avail Use% Mounted on
 /dev/sda1        79G   31G   44G  41% /
-```
 
-## `-h, --human-readable`
-G=gigabyte, M=megabyte
-```bash
+# recommended flag: -h, --human-readable
 $ df -h
 Filesystem      Size  Used Avail Use% Mounted on
 udev            1.9G     0  1.9G   0% /dev

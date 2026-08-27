@@ -1,8 +1,8 @@
 # reboot
 
-`halt, poweroff, reboot` - Halt, power-off or reboot the machine
+`reboot` - reboot the machine
 
-See also: [`poweroff`](poweroff.md)
+See also: [`poweroff`](poweroff.md), [`shutdown`](shutdown.md), [`halt`](halt.md)
 
 ## Reboot machine
 ```bash

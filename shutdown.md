@@ -1,6 +1,8 @@
 # shutdown
 
-`shutdown` - Halt, power off or reboot the machine
+`shutdown` - power-off the machine
+
+See also: [`poweroff`](poweroff.md), [`reboot`](reboot.md), [`halt`](halt.md)
 
 ## Basic usage
 

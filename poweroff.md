@@ -1,8 +1,8 @@
 # poweroff
 
-`poweroff` - Halt, power-off or reboot the machine
+`poweroff` - power-off the machine
 
-See also: [`reboot`](reboot.md)
+See also: [`reboot`](reboot.md), [`shutdown`](shutdown.md), [`halt`](halt.md)
 
 ## Basic usage
 ```bash
