@@ -24,7 +24,8 @@ $ getent group group_name
 
 ## Hosts
 ```bash
-# list all hosts
+# List all hosts. A *host* is a computer connected to a network.
+
 $ getent hosts
 127.0.0.1       localhost
 127.0.0.1       localhost

@@ -2,7 +2,7 @@
 
 `flock` - manage locks from shell scripts
 
-See also: [`exec`](exec.md)
+See also: [`exec`](exec.md), [`lslocks`](lslocks.md)
 
 ## Introduction
 `flock` manages advisory locks using files, so you can prevent multiple instances of a script from running the same critical section simultaneously. It's commonly used in cron jobs, deployment scripts, or anywhere you need mutual exclusion.

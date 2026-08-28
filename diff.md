@@ -68,7 +68,7 @@ $ diff -u file1.txt file2.txt
   - `+1,4`: in new file (file2.txt, `+`), hunk starts at line 1 and spans 4 lines
 - `-`: line removed
 - `+`: line added
-- ` `: (no prefix) unchanged line
+- ` ` (no prefix): unchanged line
 
 ### Side-by-side diff
 
@@ -76,8 +76,8 @@ Use `-y`:
 
 ```bash
 $ diff -y file1.txt file2.txt
-apple                            apple
-banana                         | blueberry
-cherry                           cherry
-date                           | elderberry
+apple                      apple
+banana                   | blueberry
+cherry                     cherry
+date                     | elderberry
 ```

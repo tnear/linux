@@ -1,20 +1,20 @@
 # rg
 
-`rg` - ripgrep recursively searches directories for a regex pattern while respecting your gitignore.
-
-`ripgrep` shares many of the same flags as `grep`.
+`rg` - recursively search the current directory for lines matching a pattern
 
 See also: [`grep`](grep.md)
 
 ## Recursively search a directory for a regular expression
 ```bash
 $ rg regular_expression <dir>
-ex: $ rg 'int main' ~
-```
+# ex:
+$ rg 'int main' ~
 
-Find trailing whitespace:
-```bash
+# find trailing whitespace:
 $ rg ' $'
+
+# case insensitive search (-i, --ignore-case)
+$ rg -i 'Int Main'
 ```
 
 To search hidden directories (such as `.git`), use the `--hidden` flag:
@@ -36,16 +36,10 @@ alloca.c
 47:int main()
 ```
 
-## Case insensitive search
-Use `-i, --ignore-case`:
-```bash
-$ rg -i 'Int Main'
-```
-
 ## Replace text
 Use `-r, --replace` to replace output.
 
-This example replaces 'hello' with 'world' (note: this only affects stdout. It does not modify any files).
+This example replaces 'hello' with 'world' (note: this only affects `stdout`. It does not modify any files).
 
 ```bash
 $ rg hello -r world
