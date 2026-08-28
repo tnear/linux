@@ -24,13 +24,23 @@ $ ip address
 
 This shows two interfaces, `lo` (loopback) and `ens3` (Ethernet network interface).
 
+### Network interface
+A *network interface* is a network connection point managed by the OS. It can be:
+- a real device, such as Ethernet port or Wi-Fi adapter
+- a virtual network card attached to a VM
+- an internal connection implemented in software
+
+The OS assigns every network interface a name and tracks its details such as hardware address and IP address.
+
 ### Loopback
+- loopback is an internal path that lets a machine send traffic to itself
 - `mtu 65536`: maximum transmission unit (packet size): 65K
 - `link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00`
-    - contains dummy MAC address and dummy broadcast address (common for loopback)
+    - contains dummy (all zeros) MAC address and dummy broadcast address (common for loopback)
 - `inet6 ::1/128`: IPv6 equivalent of `127.0.0.1`
 
 ### `ens3`
+- this is the interface that connects this machine to its local network and other machines
 - `mtu 9000`: jumbo frames enabled, max packet size is 9000 bytes (normal is 1500 bytes)
 - `link/ether 02:00:17:0f:7b:09`: MAC address of interface (`02` prefix is common for VNICs)
 - `inet 10.0.3.214/24`: IPv4 address with `/24` subnet mask

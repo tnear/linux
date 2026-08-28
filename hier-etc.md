@@ -57,3 +57,11 @@ Contains scripts which are executed automatically when any user logs in. Useful 
 
 ## `/etc/pam.d`
 See [PAM](PAM.md).
+
+## `/etc/networks`
+A small text file that gives names to network addresses, ex:
+
+```
+loopback    127.0.0.0
+localnet    10.0.3.0
+```

@@ -2,6 +2,8 @@
 
 `free` - Display amount of free and used memory (RAM) in the system
 
+See also: [`top`](top.md)
+
 ## Human readable (shows units)
 Use `-h` to show units on sizes.
 

@@ -25,15 +25,16 @@ $ getent group group_name
 ## Hosts
 ```bash
 # List all hosts. A *host* is a computer connected to a network.
+# Examples: physical server, VM, or container with a network identity.
 
 $ getent hosts
-127.0.0.1       localhost
 127.0.0.1       localhost
 10.200.12.34    my-host.example.com
 ```
 
 ## Networks
 ```bash
+# print networks, typically reads /etc/networks
 $ getent networks
 default          0.0.0.0
 loopback         127.0.0.0

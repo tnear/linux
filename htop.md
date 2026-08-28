@@ -2,7 +2,7 @@
 
 `htop` - interactive process viewer
 
-See also: [`top`](top.md)
+See also: [`top`](top.md), [`free`](free.md)
 
 ## Top banner output
 - `tasks: <num>`: total number of processes

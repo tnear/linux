@@ -4,7 +4,7 @@
 
 Displays dynamic table of active processes
 
-See also: [`htop`](htop.md)
+See also: [`htop`](htop.md), [`free`](free.md)
 
 ## Basic usage
 ```bash
