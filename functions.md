@@ -6,7 +6,7 @@ Information on shell functions.
 ```bash
 $ name() { echo $(whoami); }
 $ name
-kali
+user
 ```
 
 ## Function arguments

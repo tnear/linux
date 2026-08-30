@@ -2,6 +2,8 @@
 
 `ln` - make links between files
 
+See also: [`readlink`](readlink.md)
+
 ## Hard link
 Associate the file name with the i-node. Creating a hard link increments reference count of i-node.
 
@@ -12,7 +14,7 @@ $ ln <orig file path> <new path>
 
 $ touch a.txt
 $ ll a.txt
--rw-r--r-- 1 kali Aug 17 a.txt
+-rw-r--r-- 1 user Aug 17 a.txt
 
 # create hard link
 $ ln a.txt aLink.txt
@@ -22,8 +24,8 @@ $ ln a.txt aLink.txt
 ```bash
 # Note how they share the i-node number
 $ ll -i a*.txt
-2754 -rw-r--r-- 2 kali aLink.txt
-2754 -rw-r--r-- 2 kali a.txt
+2754 -rw-r--r-- 2 user aLink.txt
+2754 -rw-r--r-- 2 user a.txt
 ```
 
 ## Soft (symbolic) link
@@ -41,8 +43,8 @@ $ ln -s a.txt aLink.txt
 ```bash
 # Note the 'l' permissions and arrow (->) to the original file
 $ ll -i a*.txt
-1712 -rw-r--r-- 1 kali a.txt
-1713 lrwxrwxrwx 1 kali aLink.txt -> a.txt
+1712 -rw-r--r-- 1 user a.txt
+1713 lrwxrwxrwx 1 user aLink.txt -> a.txt
 
 $ rm a.txt   # breaks symlink
 ```

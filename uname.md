@@ -9,7 +9,7 @@ Linux
 
 # -a, --all for all information
 $ uname -a
-Linux kali 6.1.0-kali7-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.20-1kali1 (2023-03-22) x86_64 GNU/Linux
+Linux user 6.1.0-user7-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.20-1user1 (2023-03-22) x86_64 GNU/Linux
 
 # -m for machine architecture
 $ uname -m
