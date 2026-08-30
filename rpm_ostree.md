@@ -8,7 +8,7 @@ See also: [`rpm`](rpm.md)
 
 On normal systems, you install packages through `dnf`. These commands *change the currently installed system*. Files under `/user/bin` and `/usr/lib` are modified.
 
-Instead of modifying the current OS in place, `rpm-stree` builds a new version of the OS filesystem, and lets you boot into that new version.
+Instead of modifying the current OS in place, `rpm-ostree` builds a new version of the OS filesystem, and lets you boot into that new version.
 
 ### Example
 

@@ -4,6 +4,9 @@ GZIP
 
 See also: [`gunzip`](gunzip.md), [`zcat`](zcat.md), [`tar`](tar.md)
 
+## Comparison with `zip`
+See [`zip`](zip.md#comparison-with-gzip).
+
 ## Common flags
 - `-k`: keep original file (default behavior is to delete the source file)
 - `-v`: verbose. Shows percent compression
