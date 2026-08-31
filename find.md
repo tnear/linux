@@ -2,7 +2,7 @@
 
 `find` - search for files in a directory hierarchy
 
-See also: [`xargs`](xargs.md)
+See also: [`xargs`](xargs.md), [`locate`](locate.md)
 
 ## Case sensitive recursive find in cwd (.) for file names containing 'hello' using a glob
 ```bash

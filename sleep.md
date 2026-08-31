@@ -6,6 +6,9 @@
 ```bash
 # sleep for 1.5 seconds
 $ sleep 1.5
+
+# sleep forever
+$ sleep infinity
 ```
 
 ## `SECONDS`
