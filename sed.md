@@ -10,9 +10,10 @@ sed <flag1 flag2 etc> <pattern> <file>
 ## Patterns
 
 Example patterns:
-- `'s/SEARCH_REGEX/REPLACEMENT/gi'`
-- `'<line_num>s/SEARCH_REGEX/REPLACEMENT/gi'`
+- `s/SEARCH_REGEX/REPLACEMENT/gi`
+- `<line_num>s/SEARCH_REGEX/REPLACEMENT/gi`
 
+Key:
 - `s`: substitute
 - `g`: global replacement
 - `i`: case insensitive (distinct from `-i`, which is in-place)

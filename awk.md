@@ -16,7 +16,7 @@ $ awk '/root/ {print}' ll.txt
 # Get fist and third fields (delimited by whitespace):
 # (note: $0 represents entire line)
 $ awk '{print $1,$3}' ll.txt
-drwxr-xr-x kali
+drwxr-xr-x user
 brw-r--r-- root
 
 # NF = number of fields
@@ -30,8 +30,8 @@ $ awk '{print NF " - " $NF}' ll.txt
 # Print lines less than 50 characters ($0 = entire line):
 $ awk 'length($0) < 50' ll.txt
 total 56
--rw-r--r-- 1 kali kali    0 Jun 21 10:08 ll.txt
--rw-r--r-- 1 kali kali  547 Jun 21 10:07 ls.txt
+-rw-r--r-- 1 user user    0 Jun 21 10:08 ll.txt
+-rw-r--r-- 1 user user  547 Jun 21 10:07 ls.txt
 
 # Print lines whose second field ($2) is greater than 3 (i.e., number of hard/soft links > 3):
 $ awk '$2 > 3' ll.txt
