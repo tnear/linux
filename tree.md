@@ -1,19 +1,21 @@
-TREE
+# tree
 
-tree - list contents of directories in a tree-like format.
+`tree` - list contents of directories in a tree-like format.
 
-$ mkdir test; cd test; touch file.txt; cd ..;
+## Basic usage
+
+```bash
+$ mkdir test
+$ touch test/file.txt
 $ tree test
 test
 └── file.txt
 
-
 # -P = pattern
-# Print all .c files in home directory (~) or beneath:
+# Print all .c files in home directory (~) or beneath
 $ tree -P '*.c' ~
 
 # -L = level
-# Print up to two levels:
+# Print up to two levels
 $ tree -L 2
-
----
+```

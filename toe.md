@@ -10,7 +10,7 @@ These entries tells programs what different terminals can do. Colors is a common
 
 ```bash
 # view current terminal's capabilities
-$ echo $TERM        
+$ echo $TERM
 xterm-256color
 
 # list all (-a) entries that a machine supports

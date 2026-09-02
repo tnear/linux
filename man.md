@@ -24,9 +24,7 @@ Use `-P <pager>` to use a specified pager.
 $ man -P cat socket | grep name
 76:     correspondents named in send(2) calls
 128:     getsockname(2), getsockopt(2), ioctl(2)
-```
 
-Another example which specifies the section number.
-```bash
+# specifying the section number
 $ man -P cat 7 socket | grep name
 ```

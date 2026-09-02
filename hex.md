@@ -29,10 +29,9 @@ Conversion example:
 =>   8     C     D     1
 ```
 
-
 2 hex chars = 1 byte. For example, `0xAABBCCDD` is 4 bytes.
 
-0xFF = 0b1111 1111 = 255
+`0xFF = 0b1111 1111 = 255`
 
 ## EAX register breakdown
 
