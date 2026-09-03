@@ -2,6 +2,8 @@
 
 `groupadd` - create a new group
 
+See also: [`newgrp`](newgrp.md)
+
 ## Create a group
 Use `groupadd` to create a new group. To add a user to an existing group, use [`usermod`](usermod.md).
 ```bash
