@@ -22,13 +22,13 @@ SELinux adds a second, independent layer of restrictions that apply regardless o
 ## Security context
 A *security context*, also known as *security label*, is a set of attributes that SELinux uses to determine what is allowed.
 
-A security context has four parts (*user:role:type:level*):
+A security context has four parts (`user:role:type:level`):
 1. `user`: tells which users the rule applies to. Has "_u" suffix, ex: `user_u`
 1. `role`: limits the actions that users can perform. Has "_r" suffix, ex: `system_r`
 1. `type`: has "_t" suffix, ex: "httpd_t" for web server or "var_t" for files in `/var`
 1. `level` (optional): range of clearance levels, such as `s0` or `s1`
 
-Generally, **type** is the most useful to manage.
+Generally, `type` is the most useful to manage.
 
 ### Annotation
 An example security context is: `unconfined_u:object_r:user_home_t:s0`.

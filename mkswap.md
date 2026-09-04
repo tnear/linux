@@ -1,19 +1,19 @@
-MKSWAP
+# mkswap
 
-mkswap - set up a Linux swap area
+`mkswap` - set up a Linux swap area
 
-Syntax:
-mkswap [options] device [size]
+See also: [`swapon`](swapon.md)
 
-# Create 10MB file:
+## Introduction:
+Syntax: `mkswap [options] device [size]`
+
+```bash
+# create 10MB file
 $ sudo fallocate -l 10MB /testswap
 
-# Update permissions:
+# update permissions
 $ sudo chmod 600 /testswap
 
-# Setup swap area for file:
+# setup swap area for file
 $ sudo mkswap /testswap
-
-# [See swapon.txt for complete usage]
-
----
+```

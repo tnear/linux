@@ -2,7 +2,7 @@
 
 `usermod` - modify a user account
 
-See also: [`userdel`](userdel.md), [`usermod`](usermod.md)
+See also: [`userdel`](userdel.md), [`useradd`](useradd.md)
 
 ## Add an existing user to a group
 
