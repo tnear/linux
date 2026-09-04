@@ -8,14 +8,12 @@ See also: [`fuser`](fuser.md)
 
 ```bash
 $ sudo lsof /path/to/socket.sock
-COMMAND   PID    USER   FD   TYPE     NODE NAME
-conmon     25    root   12u  unix   198950 /proc/self/fd/11/attach
-target   1234 testing   82u  unix 17098231 /path/to/socket.sock
-```
+COMMAND  PID  USER  FD   TYPE     NODE NAME
+conmon    25  root  12u  unix   198950 /proc/self/fd/11/attach
+target   123  user  82u  unix 17098231 /path/to/socket.sock
 
-Use `-t` for terse output (returns PID column only):
-```bash
-$ sudo lsof /path/to/socket.sock
+# use `-t` for terse output (returns PID column only)
+$ sudo lsof -t socket.sock
 25
 1234
 ```

@@ -16,7 +16,7 @@
 $ dd if=/dev/urandom of=myrand.txt bs=100 count=1
 
 $ ll myrand.txt
--rw-r--r-- 1 kali kali 100 Jun 24 08:09 myrand.txt
+-rw-r--r-- 1 user user 100 Jun 24 08:09 myrand.txt
 ```
 
 ## Performance measurements
