@@ -1,16 +1,12 @@
-PERF-HELP
+# perf help
 
-$ man perf help
-perf-help - display help information about perf
+`perf-help` - display help information about perf
 
-# Syntax: perf <cmd> -h
-$ perf stat -h
+See also: [`perf`](perf.md)
 
- Usage: perf stat [<options>] [<command>]
+## Basic usage
 
-    -a, --all-cpus        system-wide collection from all CPUs
-    -A, --no-aggr         disable CPU count aggregation
-    -B, --big-num         print large numbers with thousands' separators
-    -C, --cpu <cpu>       list of cpus to monitor in system-wid
-
----
+```bash
+# syntax: perf help <cmd>
+$ perf help annotate
+```
