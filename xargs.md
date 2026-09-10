@@ -19,8 +19,8 @@ $ find /usr/include -name '*.[hc]' | xargs grep 'int main'
 ```bash
 # print detailed listing of zero byte files
 $ find . -size 0c | xargs ls -la
--rw-r--r-- 1 kali 0 ./lec1/my_file.txt
--rw-r--r-- 1 kali 0 ./temp_directory/file5.txt
+-rw-r--r-- 1 user 0 ./lec1/my_file.txt
+-rw-r--r-- 1 user 0 ./temp_directory/file5.txt
 ```
 
 # Maximum arguments
@@ -34,8 +34,9 @@ hello a
 hello b
 ```
 
-## Replace string at specified location.
+## Replace string at specified location
 Use `-I` to replace-str. `{}` is a placeholder for string to be replaced.
+
 ```bash
 # Note: -I implies -n1:
 $ touch a b

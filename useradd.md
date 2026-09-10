@@ -25,7 +25,7 @@ $ ls -d /home/new_user
 /home/new_user
 ```
 
-## Delete user and their home directory.
+## Delete user and their home directory
 See [`userdel`](userdel.md) for an example.
 
 ## Create system user

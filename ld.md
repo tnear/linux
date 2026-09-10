@@ -2,6 +2,8 @@
 
 `ld` - linker - link editor - The GNU linker
 
+See also: [`as`](as.md)
+
 ## Basic usage
 
 ```bash

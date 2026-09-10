@@ -26,6 +26,12 @@ TARGET      SOURCE                  FSTYPE OPTIONS
 /var/my_app /dev/mapper/vg00-my_app ext4   rw,relatime,seclabel,stripe=256
 ```
 
-## Find which mounted filesystem contains a given path.
+## Find which mounted filesystem contains a given path
 
-Use `-T, --target` and specify a path (not a mount point). Ex: `findmnt -T ~`.
+Use `-T, --target` and specify a path (not a mount point).
+
+```bash
+$ findmnt -T ~                    
+TARGET SOURCE                  FSTYPE OPTIONS
+/      /dev/mapper/volume-root xfs    rw,relatime,seclabel,attr2
+```
