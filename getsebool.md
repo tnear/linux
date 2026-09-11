@@ -6,7 +6,7 @@ See also: [SELinux](se_linux.md), [`setsebool`](setsebool.md)
 
 ## Introduction
 
-SELinux policy includes configurable switches called *booleans*. A boolean represents a supported policy choice. Booleans allow changing certain SELinux behaviors **without modifying or rebuilding the SELinux policy**.
+SELinux policy includes configurable switches called *booleans*. A boolean represents a supported policy choice. Booleans allow changing certain SELinux behaviors *without modifying or rebuilding the SELinux policy*.
 
 ```bash
 # list all booleans

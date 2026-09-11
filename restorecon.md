@@ -8,8 +8,6 @@ See also: [SELinux](se_linux.md), [`matchpathcon`](matchpathcon.md), [`chcon`](c
 
 `restorecon` is an SELinux utility that restores files and directories to the security contexts defined by SELinux policy.
 
-## Usage
-
 `restorecon` often works closely with `matchpathcon` to fix mismatches:
 
 - `matchpathcon`: prints what label a path should have
@@ -25,6 +23,6 @@ Relabeled /home/tnear/selinux-demo from system_u:object_r:passwd_file_t:s0 to sy
 ## Other flags
 
 ```bash
-# recursively (and verbose) "fix" labels
+# recursively (and verbose) restore labels
 $ sudo restorecon -Rv /var/www/html
 ```

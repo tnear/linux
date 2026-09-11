@@ -1,8 +1,8 @@
 # SELinux
 
-SELinux is a mandatory access control (MAC) system built into the Linux kernel, originally developed by the NSA and later merged into mainline Linux. It adds a much stricter, fine-grained security layer on top of the traditional Unix permission model.
+SELinux is a mandatory access control (MAC) system, originally developed by NSA and later merged into Linux. It adds a stricter, fine-grained security layer on top of the traditional Unix permission model.
 
-See also: [`getenforce`](getenforce.md), [`setenforce`](setenforce.md), [`sestatus`](sestatus.md), [`matchpathcon`](matchpathcon.md), [`chcon`](chcon.md), [`restorecon`](restorecon.md), [`getsebool`](getsebool.md)
+See also: [`getenforce`](getenforce.md), [`setenforce`](setenforce.md), [`sestatus`](sestatus.md), [`matchpathcon`](matchpathcon.md), [`chcon`](chcon.md), [`restorecon`](restorecon.md), [`getsebool`](getsebool.md), [`setsebool`](setsebool.md)
 
 ## Motivation
 Standard Linux permissions (`rwx`, users, groups) are discretionary access control (DAC): the owner of a file decides who can access it, and any process running as a user inherits that user's full permissions. If an attacker compromises a process (say, a web server), they typically get everything that process's user account can do.
@@ -60,8 +60,7 @@ $ sudo chcon --reference=/etc/passwd selinux-demo
 $ ls -Z selinux-demo
 system_u:object_r:passwd_file_t:s0 selinux-demo
 
-# Print mismatch. matchpathcon prints what label a
-# pathname should have.
+# Print mismatch. matchpathcon prints what label a path should have
 $ matchpathcon -V selinux-demo
 selinux-demo has context system_u:object_r:passwd_file_t:s0, should be <none>
 

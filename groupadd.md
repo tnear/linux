@@ -2,7 +2,7 @@
 
 `groupadd` - create a new group
 
-See also: [`newgrp`](newgrp.md)
+See also: [`newgrp`](newgrp.md), [`groupdel`](groupdel.md), [`groupmod`](groupmod.md)
 
 ## Create a group
 Use `groupadd` to create a new group. To add a user to an existing group, use [`usermod`](usermod.md).

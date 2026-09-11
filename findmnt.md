@@ -31,7 +31,7 @@ TARGET      SOURCE                  FSTYPE OPTIONS
 Use `-T, --target` and specify a path (not a mount point).
 
 ```bash
-$ findmnt -T ~                    
+$ findmnt -T ~
 TARGET SOURCE                  FSTYPE OPTIONS
 /      /dev/mapper/volume-root xfs    rw,relatime,seclabel,attr2
 ```
