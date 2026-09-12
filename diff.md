@@ -2,16 +2,16 @@
 
 `diff` - compare files line by line
 
-See also: [`patch`](patch.md)
+See also: [`patch`](patch.md), [`cmp`](cmp.md)
 
 ## Example
 
 ```bash
-# Create two different files
+# create two different files
 printf 'apple\nbanana\ncherry\ndate\n' > file1.txt
 printf 'apple\nblueberry\ncherry\nelderberry\n' > file2.txt
 
-# Compare them
+# compare them. Note: typically -u (unified) is used for patching.
 diff file1.txt file2.txt
 ```
 
