@@ -11,7 +11,7 @@ See also: [`mknod`](mknod.md)
 # create a named pipe
 $ mkfifo my_pipe
 
-# display its attributes (note the 'p'=pipe attribute)
+# display its attributes (note the 'p' attribute for pipe)
 $ ll my_pipe
 prw-r--r-- 1 user user 0 Jun 21 09:53 my_pipe
 

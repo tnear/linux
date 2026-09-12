@@ -15,7 +15,6 @@ $ mktemp -d
 # Create a temporary directory and navigate
 # there in one command
 $ cd $(mktemp -d)
-[/tmp/tmp.8F5BTjCwhG] $
 ```
 
 ## Placeholders
