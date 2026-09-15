@@ -98,6 +98,9 @@ $ jq '.fruits.[0] | {name, color}' fruits.json
   "name": "apple",
   "color": "green"
 }
+
+# or, for root fields
+$ jq '{root1, root2}'
 ```
 
 ## Arrays

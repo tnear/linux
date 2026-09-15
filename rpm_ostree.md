@@ -2,7 +2,7 @@
 
 `rpm-ostree` - Hybrid image/package system for host operating system updates
 
-See also: [`rpm`](rpm.md)
+See also: [`rpm`](rpm.md), [`dnf`](dnf.md)
 
 ## The problem it tries to solve
 

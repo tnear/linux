@@ -4,7 +4,7 @@
 
 `dnf` is the default package manager on RHEL systems (Oracle Linux, RHEL, CentOS, etc.). It is a newer alternative to `yum`.
 
-See also: [`yum`](yum.md)
+See also: [`yum`](yum.md), [`rpm-ostree`](rpm_ostree.md)
 
 ## Basic usage
 
