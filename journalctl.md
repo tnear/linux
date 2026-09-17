@@ -48,5 +48,14 @@ $ journalctl --disk-usage
 Archived and active journals take up 344.0M in the file system.
 ```
 
+## Show kernel messages
+
+```bash
+# use -k, --dmesg
+$ journalctl -k
+```
+
+See also: [`dmesg`](dmesg.md)
+
 ## Resources
 - https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs

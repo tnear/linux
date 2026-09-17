@@ -13,17 +13,16 @@ reboot   system boot  6.1.0-kali7-amd6 Wed Apr 12 19:27   still running
 abc1234  pts/337      10.105.230.180   Thu Apr 11 16:29 - 16:35  (00:05)
 ```
 
-### Show specific user's history
-```bash
-last username
-```
+## Other usages
 
-### Show reboot (restart) history
 ```bash
-last reboot
-```
+# Show specific user's history
+$ last username
 
-## Get users who have logged in
+# Show reboot (restart) history
 ```bash
-last | awk '{print $1}' | sort -u
+$ last reboot
+
+# Get all users who have logged in
+$ last | awk '{print $1}' | sort -u
 ```

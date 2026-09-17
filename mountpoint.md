@@ -6,13 +6,11 @@ See also: [`mount`](mount.md)
 
 ## Basic usage
 ```bash
-# yes
 $ mountpoint /var
 /var is a mountpoint
 
-# no
-$ mountpoint /mnt
-/mnt is not a mountpoint
+$ mountpoint /tmp
+/tmp is not a mountpoint
 
 # bad path
 $ mountpoint /fake_dir

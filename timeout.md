@@ -7,12 +7,12 @@
 $ timeout [OPTION] DURATION COMMAND [ARG]...
 ```
 
-### Ping for 3 seconds
+### Specify timeout
 ```bash
 $ timeout 3s ping 8.8.8.8
 $ timeout 3 ping 8.8.8.8  # equivalent syntax, seconds is default unit
 
-# other suffixes
+# other timeout suffixes
 $ timeout 1m <command>
 $ timeout 0.5h <command>
 ```

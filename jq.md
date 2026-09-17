@@ -100,7 +100,7 @@ $ jq '.fruits.[0] | {name, color}' fruits.json
 }
 
 # or, for root fields
-$ jq '{root1, root2}'
+$ jq '{root1, root2}' <path_to_file.json>
 ```
 
 ## Arrays

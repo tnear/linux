@@ -2,7 +2,17 @@
 
 `dmesg` - diagnostic messages - print or control the kernel ring buffer
 
-Print kernel's ring buffer. Often used to troubleshoot device errors.
+See also: [`journalctl`](journalctl.md)
+
+## Introduction
+`dmesg` is often used to diagnose the following issues:
+
+- Hardware detection: disks, NVMe devices, NICs, USB devices, CPUs
+- Driver issues: load failures, resets, firmware problems
+- Storage errors: I/O errors, NVMe timeouts, filesystem-related kernel messages
+- Network problems: link up/down, driver resets
+- Boot diagnostics: what the kernel detected during startup
+- Kernel warnings/errors: OOM kills, crashes, PCIe errors, etc.
 
 ## Print 'boot' related kernel diagnostic messages
 ```bash
