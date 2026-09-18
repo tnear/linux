@@ -19,16 +19,16 @@ $ echo $SHELL
 ### User
 ```bash
 $ echo $USER
-kali
+user
 
-# alternate syntax
+# alternate syntax (do not use prefix '$')
 $ printenv USER
 ```
 
 ### Home directory
 ```bash
 $ echo $HOME
-/home/kali
+/home/user
 ```
 
 ### Path

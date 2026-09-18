@@ -128,6 +128,12 @@ Subagents:
 - use more tokens
 - inherit your current sandbox policy
 
+## Shortcut keys
+| Action           | Shortcut   |
+|------------------|------------|
+| Navigate back    | `Ctrl + [` |
+| Navigate forward | `Ctrl + ]` |
+
 ## Resources
 - https://github.com/openai/codex
 - "Getting started with Codex", https://youtu.be/px7XlbYgk7I

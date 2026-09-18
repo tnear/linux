@@ -1,16 +1,14 @@
 # Docker
 
-*https://en.wikipedia.org/wiki/Docker_(software)*
-
 Docker uses OS-level virtualization to package software in *containers*. Containers ensure that applications work consistently on different systems.
 
 See also: [`docker`](docker.md), [`docker-api`](docker-api.md)
 
 ## Images
-An **image** is a blueprint that contains everything needed to run an application (code, libraries, environment variables, etc.). The image is immutable.
+An image is a blueprint that contains everything needed to run an application (code, libraries, environment variables, etc.). The image is immutable.
 
 ## Containers
-A **container** encapsulates an application with all of its dependencies, making it consistent across different environments.
+A container encapsulates an application with all of its dependencies, making it consistent across different environments.
 
 Containers are lightweight, making them more efficient than virtual machines because they share the host system's kernel.
 
@@ -164,3 +162,4 @@ A *localhost* container registry is a registry which is run locally. It is usefu
 - https://spacelift.io/blog/dockerfile
 - docs.docker.com/get-started/docker-concepts/building-images/understanding-image-layers/
 - https://docs.solace.com/Software-Broker/Container-Tasks/rootless-containers.htm
+- https://en.wikipedia.org/wiki/Docker_(software)

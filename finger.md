@@ -2,7 +2,7 @@
 
 `finger` - user information lookup program
 
-See also: [`w`](w.md), [`who`](who.md)
+See also: [`w`](w.md), [`who`](who.md), [`pinky`](pinky.md)
 
 ## Lookup currently logged in users
 ```bash
