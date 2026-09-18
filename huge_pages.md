@@ -60,3 +60,8 @@ $ ll /dev/hugepages
 .rw-------@ 1.1G root root 14 May 17:51 app_with_huge_pages_2
 .rw-------@ 1.1G root root 14 May 17:51 app_with_huge_pages_3
 ```
+
+## hugetlbfs
+`hugetlbfs` is a pseudo-filesystem that exposes the kernel's huge page pool to userspace. It can be mounted via: `mount -t hugetlbfs none /dev/hugepages`.
+
+Once mounted, a process can map a file inside that mountpoint and the memory is backed by hugepages instead of standard ones.

@@ -35,5 +35,11 @@ $ cat /proc/3299971/cgroup
 0::/user.slice/user-1003.slice/session-1466.scope
 ```
 
+## `/sys/bus`
+`/sys/bus` organizes everything by bus type (ex: pci, usb, platform), with each getting its own subdirectory.
+
+### `/sys/bus/pci/devices/<BDF>/reset`
+Used to issue a PCIe reset. Ex: `echo 1 > /sys/bus/pci/devices/<BDF>/reset`. Happens at bus (hardware) level. Can be used to recover a stuck controller that is not responding to `nvme reset`.
+
 ## Resources
 - https://medium.com/@weidagang/linux-beyond-the-basics-cgroups-f157d93bd755
