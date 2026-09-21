@@ -4,7 +4,7 @@
 
 `fdisk` is a low-level utility to create, delete, and modify partitions on a disk.
 
-See also: [`growpart`](growpart.md)
+See also: [`growpart`](growpart.md), [`mke2fs`](mke2fs.md)
 
 ## List permissions
 

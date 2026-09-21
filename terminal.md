@@ -1,26 +1,17 @@
-TERMINAL
+# terminal
 
 Useful tips and tricks for using a terminal
 
-Ctrl+C: Send SIGINT
-Ctrl+D: Register EOF
-Ctrl+\: Send SIGQUIT
+See also: [`history`](history.md), [signals](signal.md)
 
-Ctrl+A: Move cursor to beginning of line
-Ctrl+E: Move cursor to end of line
-
-Ctrl+U: Delete line to left
-Ctrl+K: Delete line to right
-Ctrl+W: Delete word (equivalent to Ctrl+Backspace)
-
-Ctrl+L: Clear screen without clearing scrollback (command form: clear -x)
-
-Ctrl+R: history (see history.txt)
-
-# Tabs:
-Ctrl+Tab         : Previous tab in history
-Ctrl+Shift + Tab : Next tab in history
-Ctrl+Shift + W   : Close tab
-Ctrl+Shift + N   : New terminal window
-
----
+## Shortcuts
+- `Ctrl + C`: Send `SIGINT`
+- `Ctrl + \`: Send `SIGQUIT`
+- `Ctrl + D`: Register EOF
+- `Ctrl + A`: Move cursor to beginning of line
+- `Ctrl + E`: Move cursor to end of line
+- `Ctrl + U`: Delete line to left
+- `Ctrl + K`: Delete line to right
+- `Ctrl + W`: Delete word to left
+- `Ctrl + L`: Clear screen (command: `clear -x`)
+- `Ctrl + R`: Search history
