@@ -30,11 +30,5 @@ $ curl -u demo:password ftp://test.rebex.net
 ### Header information
 Use `-H, --header` to send extra header information.
 ```bash
-curl -H "X-First-Name: Joe" https://example.com
-```
-
-## FTP
-
-```bash
-$ curl ftp://ftp.slackware.com/welcome.msg
+curl -H "X-First-Name: User" https://example.com
 ```

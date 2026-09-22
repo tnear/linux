@@ -70,3 +70,11 @@ $ tmux attach -t <name> = attach by session name
 1. `:setw synchronize-panes`  # Toggle on
 1. Use synchronized panes
 1. `:setw synchronize-panes`  # Toggle off
+
+### Control mode
+
+Start with `-CC` to enter control mode where tmux stops drawing its own terminal UI and instead outputs a text protocol, which some terminals (ex: iTerm2) understand.
+
+```bash
+$ tmux -CC
+```

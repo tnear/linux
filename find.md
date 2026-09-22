@@ -116,7 +116,7 @@ $ find . -type d
 $ touch a.txt
 $ ln -s a.txt a.lnk
 $ find . -type l -ls
-2752605   0 lrwxrwxrwx  1 kali  5 Mar 25 16:06 ./a.lnk -> a.txt
+2752605   0 lrwxrwxrwx  1 user  5 Mar 25 16:06 ./a.lnk -> a.txt
 ```
 
 ## Maxdepth - stop at a specified recursion depth
