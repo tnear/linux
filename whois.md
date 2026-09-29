@@ -1,28 +1,22 @@
-WHOIS
+# whois
 
-whois - client for the whois directory service
+`whois` - client for the whois directory service
 
-# Basic usage:
+## Basic usage
+```bash
 $ whois example.edu
-This Registry database contains ONLY .EDU domains.
-The data in the EDUCAUSE Whois database is provided
-by EDUCAUSE for information purposes in order to
-assist in the process of obtaining information about
-or related to .edu domain registration records.
-
-A Web interface for the .EDU EDUCAUSE Whois Server is
-available at: http://whois.educause.edu
-
--------------------------------------------------------------
-
 Domain Name: EXAMPLE.EDU
 
 Registrant:
         ICANN
         12025 Waterfront Drive
-        suite 300
         Los Angeles, CA 90094-2536
-        USA
-<truncated>
 
----
+Name Servers:
+        MITCH.NS.CLOUDFLARE.COM
+        KATELYN.NS.CLOUDFLARE.COM
+
+Domain record activated:    16-May-2000
+Domain record last updated: 01-Jul-2026
+Domain expires:             31-Jul-2027
+```

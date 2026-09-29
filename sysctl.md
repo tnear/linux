@@ -3,10 +3,10 @@
 `sysctl` - configure kernel parameters at runtime
 
 ## -a, --all
-This displays all values currently available.
+Display all values.
 
-This finds all parameters about "hugepages":
 ```bash
+# find all hugepage parameters
 $ sudo sysctl -a | grep hugepages
 
 vm.nr_hugepages = 8192

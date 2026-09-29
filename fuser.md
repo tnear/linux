@@ -12,7 +12,7 @@ Use `-v` for verbose.
 # show users of cwd ('.')
 $ fuser -v .
         USER        PID ACCESS COMMAND
-/tmp:   kali      1420206 ..c.. zsh
+/tmp:   user      1420206 ..c.. zsh
 
 # see who is using Python
 $ fuser -v $(where python)
