@@ -30,7 +30,7 @@ b
 c
 ```
 
-## Prefix lines by the count of occurrences
+## Prefix lines with the count of occurrences
 Use `-c, --count` to print count information.
 
 ```bash

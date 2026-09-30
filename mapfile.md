@@ -10,7 +10,7 @@ See also: [`compgen`](compgen.md), [process substitution](process_substitution.m
 echo -e 'Line 1\nLine 2\nLine 3' > lines.txt
 
 # use mapfile to read file into a string array
-# the '-t' flag remove trailing delimiter (default newline)
+# the '-t' flag to remove Trailing delimiter (default is newline)
 mapfile -t lines < lines.txt
 
 # output first line

@@ -44,3 +44,24 @@ unset count    # undeclare/remove variable
 
 ## Read-only variable
 To create a read-only variable (constant), use `-r`. See [`readonly`](readonly.md) for a complete example.
+
+## Arrays
+
+### Indexed array
+
+Use `-a` to declare an indexed array.
+Note: indexing works differently with bash vs zsh.
+```bash
+declare -a fruits=("apple" "banana" "cherry")
+echo "${fruits[1]}"
+# outputs "banana" with bash (0-indexed)
+# outputs "apple" with zsh (1-indexed)
+```
+
+### Associative array
+
+Use `-A`.
+```bash
+declare -A colors=([apple]="red" [banana]="yellow")
+echo "${colors[apple]}"  # red
+```

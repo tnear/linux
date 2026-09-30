@@ -6,20 +6,19 @@ See also: [`uniq`](uniq.md)
 
 ## Basic usages
 ```bash
-# sort file
 $ sort /etc/passwd
 
-# Sort processes by name
+# sort processes by name
 $ ps -aux | sort
 
-# Sort numerically
+# sort numerically
 # Ex: [1, 2, 10] instead of [1, 10, 2]
 $ sort -n
 
-# Reverse order of sort
+# reverse order of sort
 $ sort -r
 
-# Unique sort (alternative for sort | uniq)
+# unique sort (alternative for sort | uniq)
 $ sort -u file.txt
 ```
 
@@ -37,4 +36,20 @@ $ sort -k 2
 # Can be useful for sorting 3rd field of ip addresses.
 # Also uses 'n' suffix to sort numerically instead of alphabetically
 $ sort -t . -k 3n
+```
+
+## Version sort
+Use `-V, --version-sort` for natural sort of version numbers within text.
+
+```bash
+$ printf '%s\n' "1.5.10" "1.5.2" "1.5.1" | sort -V
+1.5.1
+1.5.2
+1.5.10
+
+# also works when there is a prefix
+$ printf '%s\n' "v1.10" "v1.2" "v1.1" | sort -V
+v1.1
+v1.2
+v1.10
 ```

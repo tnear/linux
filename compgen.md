@@ -4,8 +4,6 @@
 
 `compgen` returns the same values that Bash uses for tab completion.
 
-See also: [`mapfile`](mapfile.md)
-
 ## Basic usage
 
 ```bash
