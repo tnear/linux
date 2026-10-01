@@ -3,7 +3,7 @@
 `lshw` - list hardware
 
 ## Introduction
-`lshw` inventories a Linux system’s hardware: CPU, RAM, disks, NICs, PCI devices, firmware details, and more. Run with sudo for most complete information.
+`lshw` inventories a Linux system's hardware: CPU, RAM, disks, NICs, PCI devices, firmware details, and more. Run with sudo for most complete information.
 
 ```bash
 $ sudo lshw -short

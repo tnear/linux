@@ -2,6 +2,8 @@
 
 `wait` - wait for background processes to complete
 
+See also: [`pidwait`](pidwait.md)
+
 ## Wait for specific background job
 
 Use `wait PID`.
