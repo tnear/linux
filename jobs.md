@@ -2,7 +2,7 @@
 
 `jobs` - display status of jobs in the current session
 
-See also: [`bg`](bg.md), [`fg`](fg.md), [`kill`](kill.md)
+See also: [`bg`](bg.md), [`fg`](fg.md), [`kill`](kill.md), [`disown`](disown.md)
 
 ## Basic usage
 ```bash
