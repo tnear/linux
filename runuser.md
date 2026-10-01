@@ -2,7 +2,10 @@
 
 `runuser` - run a command with substitute user and group ID
 
-See also: [`su`](su.md), [`setpriv`](setpriv.md)
+See also: [`su`](su.md), [`setpriv`](setpriv.md), [PAM](PAM.md)
+
+## Introduction
+`runuser` lets root execute a command as another user without prompting for a password. It uses PAM for authentication. The `runuser` process remains as a parent process.
 
 ## Comparison with `su`
 - Only the root user can call `runuser`
@@ -12,12 +15,12 @@ See also: [`su`](su.md), [`setpriv`](setpriv.md)
 Use `-u` to specify a user name.
 
 ```bash
-$ sudo runuser -u nobody whoami
+$ sudo runuser -u nobody -- whoami
 nobody
 ```
 
 Without root user, `runuser` errors:
 ```bash
-$ runuser -u nobody whoami
+$ runuser -u nobody -- whoami
 runuser: may not be used by non-root users
 ```

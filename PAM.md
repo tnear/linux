@@ -2,12 +2,14 @@
 
 `PAM` - Pluggable Authentication Modules for Linux
 
+See also: [`sudo`](sudo.md), [`runuser`](runuser.md)
+
 ## Motivation
 PAM is a Linux framework that lets programs such as `login`, `sudo`, `sshd`, and `runuser` rely on a common authentication system.
 
 Without PAM, every application would need to handle things like checking passwords and enforcing account restrictions.
 
-PAM is described as *pluggable* because an app's corresponding modules can be changed without rewriting the application.
+PAM is *pluggable* because administrators can change how an application handles authentication without changing the application's code.
 
 ## Organization
 
@@ -23,7 +25,6 @@ sudo
 ```
 
 ### Workflow
-When you run, for example, `runuser`, the flow is:
 
 ```bash
 $ sudo

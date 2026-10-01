@@ -1,10 +1,14 @@
-SHOWKEY
+# showkey
 
-showkey - examine the codes sent by the keyboard
+`showkey` - examine the codes sent by the keyboard
 
-# -a, --ascii = starts in 'ascii' dump mode
+## Basic usage
+
+```bash
+# Use -a, --ascii to start in 'ascii' dump mode
 $ showkey -a
 A        65 0101 0x41  # Shift+A
-^E        5 0005 0x05  #  Ctrl+E
-
----
+^C        3 0003 0x03  #  Ctrl+C
+^\       28 0034 0x1c  #  Ctrl+\
+^D        4 0004 0x04  #  Ctrl+D to exit
+```
