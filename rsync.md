@@ -2,7 +2,7 @@
 
 `rsync` - a fast, versatile, remote (and local) file-copying tool
 
-See also: [`scp`](scp.md)
+See also: [`scp`](scp.md), [`sftp`](sftp.md)
 
 ## Common flags
 

@@ -1,11 +1,11 @@
 # ll
 
-`ll` - Long List. Alias for `ls -l`
+`ll` - long list
 
 See also: [`ls`](ls.md)
 
 ## Alias
-`ll` is a common alias (not a command).
+`ll` is a common alias for `ls -l` (not a separate command).
 
 ```bash
 $ alias ll
