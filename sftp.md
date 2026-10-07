@@ -36,7 +36,7 @@ Use sftp's `get` command.
 ```bash
 sftp> get remote_file.txt
 Fetching /home/tnear/remote_file.txt to remote_file.txt
-remote_file.txt                        100%   17     0.1KB/s   00:00
+remote_file.txt     100%   17     0.1KB/s   00:00
 
 local> cat remote_file.txt
 data from remote

@@ -19,8 +19,8 @@ See [`zip`](zip.md#comparison-with-gzip).
 # compress file.txt (keep source file using -k) into file.txt.gz
 $ gzip -k file.txt
 $ ll f.txt*
--rw-r--r-- 1 kali kali 54 Mar 25 16:17 f.txt
--rw-r--r-- 1 kali kali 36 Mar 25 16:17 f.txt.gz
+-rw-r--r-- 1 user user 54 Mar 25 16:17 f.txt
+-rw-r--r-- 1 user user 36 Mar 25 16:17 f.txt.gz
 
 # uncompress file (keep source file using -k)
 $ gunzip -k file.txt.gz

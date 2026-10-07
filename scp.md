@@ -22,8 +22,8 @@ scp user@example.edu:/home/user/path/file1.txt .
 Use `-r` to do a recursive copy.
 
 ```bash
-# Copy directory `/tmp/d` and all its contents
-scp -r /tmp/d user@example.edu:/home/user/d
+# Copy directory `/tmp/dir` and all its contents
+scp -r /tmp/dir user@example.edu:/home/user/dir
 ```
 
-Note: it's often more efficient to [`tar`](tar.md) files first before `scp` (or `rsync`).
+Note: it's often more efficient to [`tar`](tar.md) files first before copying.

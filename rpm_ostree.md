@@ -67,4 +67,6 @@ If `rpm-ostree apply-live` refuses with:
 
 ...then the pending deployment contains upgrades/replacements of packages already present in the running deployment. Explicitly permit those replacements with:
 
-`sudo rpm-ostree apply-live --allow-replacement`
+```
+sudo rpm-ostree apply-live --allow-replacement
+```

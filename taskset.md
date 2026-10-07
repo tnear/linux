@@ -13,7 +13,7 @@ pid 217's current affinity list: 0-31
 ```
 
 - Each `f` represents 4 bits
-- 8 `f` means 32-bit hex mask
+- `ffffffff` (8*4) indicates 32-bit hex mask
 - Therefore, it means that PID can be scheduled on any of the 32 CPU cores on the system (0-31).
 
 ## Pin process to specified core (CPU)

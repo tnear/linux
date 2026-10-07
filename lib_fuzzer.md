@@ -42,7 +42,7 @@ SUMMARY: AddressSanitizer: heap-buffer-overflow /tmp/libFuzzer.cpp:8:31 in buggy
 
 ### View file which caused the crash
 ```bash
-$ \cat crash-a68f6ae95f2cf4e88fe2faa7c39bc4bab704bba6
+$ cat crash-a68f6ae95f2cf4e88fe2faa7c39bc4bab704bba6
 ??]
 ```
 
