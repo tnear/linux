@@ -2,7 +2,7 @@
 
 `scp` - OpenSSH secure file copy
 
-See also: [`rsync`](rsync.md)
+See also: [`rsync`](rsync.md), [`sftp`](sftp.md)
 
 ## Copy file from local to remote machine
 ```bash
