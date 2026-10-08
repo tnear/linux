@@ -1,17 +1,15 @@
-DPKG
+# dpkg
 
-dpkg - package manager for Debian
+`dpkg` - package manager for Debian
 
-Syntax:
-dpkg [option...] action
-
-# -s, --status: check if package is installed:
+## Basic usage
+```bash
+# use -s, --status to check if package is installed
 $ dpkg -s coreutils
 Package: coreutils
 Essential: yes
 Status: install ok installed
 
-# -r = remove: remove a package:
+# use -r to remove a package:
 $ dpkg -r <pkg_name>
-
----
+```

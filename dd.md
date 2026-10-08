@@ -2,7 +2,9 @@
 
 `dd` - data definition - convert and copy a file
 
-`dd` is often used to backup, restore, or destroy disks. It uses "option=value" syntax instead of "-option value".
+`dd` is often used to backup, restore, or destroy disks. It uses `option=value` syntax instead of `-option value`.
+
+See also: [`fallocate`](fallocate.md)
 
 ## Syntax explanation
 - `if`: input file
@@ -12,7 +14,7 @@
 
 ## Basic usage
 ```bash
-# write 100 bytes of random data to file myrand.txt:
+# write 100 bytes of random data to file myrand.txt
 $ dd if=/dev/urandom of=myrand.txt bs=100 count=1
 
 $ ll myrand.txt

@@ -10,18 +10,18 @@ The two systems reflect different philosophies about what an init system should 
 
 ### Scope
 
-- `systemd` is an integrated platform. Beyond service management, it handles networking, DNS, user sessions, device events, timers, and more.
 - `runit` is narrowly focused: boot, supervise, shut down. Everything else is out of scope.
+- `systemd` is an integrated platform. Beyond service management, it handles networking, DNS, user sessions, device events, timers, and more.
 
 ### Complexity vs. Simplicity
 
-- `systemd` models the system in rich detail. Unit files declare dependencies, ordering constraints, and resource limits.
 - `runit` is just shell scripts and directories.
+- `systemd` models the system in rich detail. Unit files declare dependencies, ordering constraints, and resource limits.
 
 ### Dependency Handling
 
-- `systemd` builds a dependency graph from declarative unit files and resolves startup order automatically.
 - `runit` has no such mechanism. Service ordering is the administrator's responsibility, handled manually during the boot stage.
+- `systemd` builds a dependency graph from declarative unit files and resolves startup order automatically.
 
 ## Containers
 

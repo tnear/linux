@@ -6,9 +6,7 @@
 ```bash
 $ date
 Fri Mar 31 05:36:27 PM CDT 2023
-```
 
-```bash
 # -I, --iso-8601 = output current date as YYYY-MM-DD
 $ date -I
 2023-05-01

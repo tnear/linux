@@ -2,16 +2,18 @@
 
 `modinfo` - Show information about a Linux Kernel module
 
+See also: [`lsmod`](lsmod.md)
+
 ## Basic usage
 
 ```bash
-# list a kernel modules
+# list a few kernel modules
 $ lsmod | tail -n3
 battery                28672  0
 wmi                    36864  1 video
 button                 24576  0
 
-# get more information about a particular kernel module
+# query specified kernel module
 $ modinfo battery
 filename:       /lib/modules/6.1.0-amd64/kernel/drivers/acpi/battery.ko
 license:        GPL
