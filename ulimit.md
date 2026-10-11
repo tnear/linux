@@ -2,6 +2,8 @@
 
 `ulimit` - set or report file size limit
 
+See also: [`prlimit`](prlimit.md)
+
 ## Core dumps
 The `-c` flag specifies core dumps in number of 512-byte blocks.
 ```bash

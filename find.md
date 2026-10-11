@@ -70,7 +70,7 @@ $ find . -mtime +3
 ```
 
 ## PERM - search file permissions
-### Find executable (+x) files:
+### Find executable (+x) files
 ```bash
 $ find . -perm -+x
 ```

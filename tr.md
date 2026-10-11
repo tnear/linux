@@ -9,7 +9,7 @@ Syntax:
 
 ## Basic conversions
 
-### Convert lowercase to uppercase:
+### Convert lowercase to uppercase
 ```bash
 $ tr a-z A-Z <<< 'hello'
 HELLO
@@ -22,7 +22,7 @@ str='Hello World'
 lowercase="${str,,}"  # lowercase = 'hello world'
 ```
 
-### Convert braces to brackets:
+### Convert braces to brackets
 ```bash
 $ tr '{}' '[]' <<< '{hello}{world}'
 [hello][world]

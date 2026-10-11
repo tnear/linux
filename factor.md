@@ -24,5 +24,5 @@ $ factor 123456789
 123456789: 3 3 3607 3803
 
 $ factor 1.5
-factor: ‘1.5’ is not a valid positive integer
+factor: '1.5' is not a valid positive integer
 ```

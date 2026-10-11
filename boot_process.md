@@ -5,6 +5,21 @@ The Basic Input/Output System (BIOS) or Unified Extensible Firmware Interface (U
 
 The BIOS/UEFI identifies bootable devices and initiates the boot sequence according to the boot order configured in its settings.
 
+## BIOS vs UEFI
+
+|           | BIOS         | UEFI         |
+|-----------|--------------|--------------|
+| Age | 1980s legacy | Modern replacement |
+| Booting | Runs code on disk's first sector | Loads `.efi` file from EFI System Partition |
+| Security | None | Secure Boot verifies signed bootloaders |
+| Interface | Text-only | Often graphical with mouse support |
+
+Check which you have on Linux:
+```bash
+[ -d /sys/firmware/efi ] && echo UEFI || echo BIOS
+```
+
+
 ## Master Boot Record (MBR) / GUID Partition Table (GPT)
 For BIOS systems: The BIOS checks if found devices (such as hard drive, CD drive, etc.) have a master boot record. The MBR is located in the first 512 bytes of the bootable disk.
 

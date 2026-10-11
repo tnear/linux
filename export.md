@@ -18,7 +18,7 @@ $ printenv QQQQ
 101
 ```
 
-## Make environment variable available sub-shell:
+## Make environment variable available sub-shell
 ```bash
 # alt two-line syntax to export
 $ QQQQ=101

@@ -16,7 +16,7 @@ $ code env.txt sync.txt
 ## History
 Use Ctrl+R (`fzf` overrides default history shortcut).
 
-## Search list of active processes:
+## Search list of active processes
 ```bash
 $ ps -aux | fzf
 ```
