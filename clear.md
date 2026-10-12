@@ -2,6 +2,8 @@
 
 `clear` - clear the terminal screen
 
+See also: [`reset`](reset.md)
+
 ## Basic usage
 ```bash
 # Clear screen and scrollback
