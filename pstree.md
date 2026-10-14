@@ -1,8 +1,17 @@
-PSTREE
+# pstree
 
-pstree - process tree - display a tree of processes
+`pstree` - process tree - display a tree of processes
 
-# Tree of all processes:
+## Flags
+- `-a`: show command line arguments
+- `-h`: highlight current process and ancestors (in bold)
+- `-p`: show PIDs
+- `-s`: show parent processes
+
+## Examples
+
+### Tree of all processes
+```bash
 $ pstree
 
 systemd-+-ModemManager---2*[{ModemManager}]
@@ -12,8 +21,10 @@ systemd-+-ModemManager---2*[{ModemManager}]
         |-VBoxService---8*[{VBoxService}]
         |-agetty
 <truncated>
+```
 
-# Tree of processes rooted at <pid>, ex: $ pstree 2:
+### Tree of processes rooted at <id>
+```bash
 $ pstree <pid>
 
 # Tree of current process ID (shell):
@@ -22,30 +33,4 @@ zsh───pstree
 
 # Tree of user processes, ex: $ pstree root:
 $ pstree <userid>
-
-# Flags:
--a = show command line arguments
--h = highlight current process and ancestors (in bold)
--p = show PIDs
--s = show parent processes
-
-# Monitor child processes for a given process ID:
-$ watch pstree -ap 1087170
-python,1087170
-  `-sh,1088344 -c /bin/sleep 10
-      `-sleep,1088345 10
-
-# 1087170 = Python PID
-# 1088344 = newly created shell PID
-# 1088345 = sleep process PID
-
-# Show parent processes for 'code'.
-# Without -s, the tree starts at the 2nd to last line:
-$ pstree -as 2192
-systemd splash
-  └─code
-      └─code --ms-enable-electron-run-as-node --inspect-port=0/usr/share/code/resource
-          └─code --ms-enable-electron-run-as-node/home/kali/.vscode/extensions/ms-python.
-              └─8*[{code}]
-
----
+```

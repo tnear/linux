@@ -8,7 +8,7 @@ See also: [`groups`](groups.md), [`getent`](getent.md)
 ```bash
 # get own UID and GID
 $ id
-uid=1000(kali) gid=1000(kali) groups=1000(kali),4(adm),20(dialout),27(sudo),29(audio),44(video)
+uid=1000(user) gid=1000(user) groups=1000(user),4(adm),20(dialout),27(sudo),29(audio),44(video)
 
 # get specified user's UID and GID
 $ id daemon
