@@ -61,8 +61,6 @@ sudo reboot
 ## `/proc/<pid>`
 Contains the file representation of process id.
 
-Import sub-directories:
-
 ### `/proc/<pid>/cmdline`
 Contains the command that started the process and its parameters.
 
@@ -109,8 +107,19 @@ $ cat /proc/sys/kernel/pid_max
 4194304
 ```
 
+### `/proc/sys/kernel/random/`
+Linux manages a cryptographically secure random-number generator inside the kernel.
+
+### `/proc/sys/kernel/random/boot_id`
+Contains a UUID identifying that boot. Commonly used to detect whether a machine has rebooted.
+
+### `/proc/sys/kernel/random/uuid`
+Generates a new, random UUID each time it is read.
+
 ## `/proc/self`
 Process information for current process.
 
 ## `/proc/cgroups`
-(Note: this describes cgroups v1. For cgroups v2, see [`/sys/fs/cgroup`](hier-sys.md)) Shows which cgroup subsystems (controllers) are compiled into the kernel and whether they are enabled.
+> Note: this describes cgroups v1. For cgroups v2, see [`/sys/fs/cgroup`](hier-sys.md).
+
+Shows which cgroup subsystems (controllers) are compiled into the kernel and whether they are enabled.

@@ -19,7 +19,6 @@ Check which you have on Linux:
 [ -d /sys/firmware/efi ] && echo UEFI || echo BIOS
 ```
 
-
 ## Master Boot Record (MBR) / GUID Partition Table (GPT)
 For BIOS systems: The BIOS checks if found devices (such as hard drive, CD drive, etc.) have a master boot record. The MBR is located in the first 512 bytes of the bootable disk.
 

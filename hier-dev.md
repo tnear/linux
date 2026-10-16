@@ -58,8 +58,8 @@ lrwxrwxrwx. 1 root root       7 Mar 24 22:50 volume-root -> ../dm-0
 ```
 
 ## `/dev/uio`
-UIO (Userspace I/O) is a Linux framework which allows handling certain hardware devices from user space instead of writing a kernel driver.
+UIO (Userspace I/O) is a Linux framework which allows handling certain hardware devices from userspace instead of writing a kernel driver.
 
-These are exposed as device nodes such as `/dev/uio0`. The user-space program opens `/dev/uio0`, maps memory into its address space, and waits for interrupts by reading the `fd`.
+These are exposed as device nodes such as `/dev/uio0`. The userspace program opens `/dev/uio0`, maps memory into its address space, and waits for interrupts by reading the `fd`.
 
-VFIO is often preferred for user space devices which need IOMMU support. For a UIO vs VFIO comparison, see OperatingSystems.git.
+VFIO is often preferred for userspace devices which need IOMMU support. For a UIO vs VFIO comparison, see OperatingSystems.git.
