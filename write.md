@@ -2,7 +2,7 @@
 
 `write` - send a message to another user
 
-See also: [`mesg`](mesg.md)
+See also: [`mesg`](mesg.md), [`wall`](wall.md)
 
 ## Basic usage
 

@@ -6,11 +6,13 @@ See also: [`grep`](grep.md)
 
 ## Recursively search a directory for a regular expression
 ```bash
-$ rg regular_expression <dir>
-# ex:
+# syntax
+$ rg regular_expression <file_or_dir>
+
+# search home directory
 $ rg 'int main' ~
 
-# find trailing whitespace:
+# find trailing whitespace
 $ rg ' $'
 
 # case insensitive search (-i, --ignore-case)
@@ -55,14 +57,14 @@ $ rg 'hello (\w+)' -r 'goodbye $1'
 ## Multiline
 Use the multiline flag, `-U, --multiline`, to search multiple lines. Note: this flag is not supported by `grep`.
 ```bash
-$ rg 'abc\ndef' -U
+$ rg 'abc\ndef' --multiline
 lines.txt
 1:abc
 2:def
 ```
 
 ## .gitignore
-By default, `rg` does not inspect `.gitignore` files and directories. To override this, use `-u, --no-ignore`:
+By default, `rg` does not inspect `.gitignore` files and directories of a repository. To override this, use `-u, --no-ignore`:
 
 ```bash
 rg --no-ignore 'search_term'
