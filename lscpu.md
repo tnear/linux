@@ -2,7 +2,7 @@
 
 `lscpu` - display information about the CPU architecture
 
-Common information: CPUs, cache info, NUMA nodes, and known vulnerabilities.
+Common information: CPUs, cache info, NUMA nodes, instruction sets, and known vulnerabilities.
 
 The `Flags` item includes CPU-supported features, such as fpu, mmx, sse, nx.
 
@@ -26,3 +26,16 @@ Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep pge cmov
 NUMA node0 CPU(s):   0-63,128-191
 NUMA node1 CPU(s):   64-127,192-255
 ```
+
+## Instruction sets
+
+SSE and AVX are sets of instructions that a CPU can execute. They add instructions that let the CPU work on several numbers at once. For example, instead of adding four pairs of numbers separately, one instruction can add all four pairs together.
+
+| Instruction set | Year | Max vector width | Main advance |
+|---|---|---|---|
+| SSE | 1999 | 128 bits | Process several numbers together |
+| SSE2 | 2000 | 128 bits | Add integer and higher-precision arithmetic |
+| SSE4.2 | 2008 | 128 bits | Add text and checksum operations |
+| AVX | 2011 | 256 bits | Process more numbers together |
+| AVX2 | 2013 | 256 bits | Extend wider processing to integers |
+| AVX-512 | 2016 | 512 bits | Further expand width and operations |

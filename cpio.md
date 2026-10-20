@@ -1,6 +1,6 @@
 # cpio
 
-cpio – copy files to and from archives
+cpio - copy files to and from archives
 
 "copy in, copy out"
 

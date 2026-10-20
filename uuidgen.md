@@ -1,6 +1,6 @@
 # uuidgen
 
-`uuidgen` – generates new UUID strings
+`uuidgen` - generates new UUID strings
 
 ## Usage
 ```bash
