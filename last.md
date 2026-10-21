@@ -8,8 +8,8 @@ See also: [`lastlog`](lastlog.md)
 ```bash
 $ last
 <USER>   <CONNECTION> <WHERE>          <DATE>             <LOGOUT TIME>
-kali     tty7         :0               Wed Apr 12 19:28   gone - no logout
-reboot   system boot  6.1.0-kali7-amd6 Wed Apr 12 19:27   still running
+user     tty7         :0               Wed Apr 12 19:28   gone - no logout
+reboot   system boot  6.1.0-user7-amd6 Wed Apr 12 19:27   still running
 abc1234  pts/337      10.105.230.180   Thu Apr 11 16:29 - 16:35  (00:05)
 ```
 

@@ -4,6 +4,7 @@
 
 *Deprecated in favor of [`ip`](ip.md).*
 
+## Basic usage
 ```bash
 $ ifconfig
 

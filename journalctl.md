@@ -4,6 +4,7 @@
 
 See also: [`systemd`](systemd.md), [`systemctl`](systemctl.md)
 
+## Introduction
 The `systemd` journal centralizes the management of logs which can originate from many different locations (ex: kernel, initrd, services, etc.).
 
 The journal is stored in a *binary* format.
