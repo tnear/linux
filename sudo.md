@@ -1,8 +1,8 @@
 # sudo
 
-`sudo, sudoedit` - execute a command as another user
+`sudo` - execute a command as another user
 
-See also: [`visudo`](visudo.md)
+See also: [`visudo`](visudo.md), [`sudoedit`](sudoedit.md)
 
 ## Change to root user
 ```bash
@@ -49,4 +49,12 @@ Use `-l, --list` to list what commands a user can run. Useful for checking if a 
 
 ```bash
 $ sudo -l -U my_user
+```
+
+## Other flags
+
+```bash
+# use -e, --edit to edit files as root.
+# the editor can be configured by changing SUDO_EDITOR
+$ sudo -e /etc/shadow
 ```
