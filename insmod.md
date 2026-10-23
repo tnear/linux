@@ -2,14 +2,16 @@
 
 `insmod` - Simple program to insert a module into the Linux Kernel
 
-Note: [modprobe](modprobe.md) has more features.
+Note: [`modprobe`](modprobe.md) has more features.
 
-## Insert kernel module (.ko)
+See also: [`rmmod`](rmmod.md)
+
+## Basic usage
+
 ```bash
+# insert kernel module
 $ sudo insmod test.ko
-```
 
-## Remove kernel module
-```bash
+# remove kernel module
 $ sudo rmmod test.ko
 ```

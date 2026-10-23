@@ -6,7 +6,7 @@
 
 Display network connections. Often used for diagnosing problems or determining traffic.
 
-*Note: Deprecated in favor of [ss](ss.md).*
+*Note: Deprecated in favor of [`ss`](ss.md).*
 
 ## Common flags
 ```
