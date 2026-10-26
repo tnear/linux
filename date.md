@@ -2,6 +2,8 @@
 
 `date` - print or set the system date and time
 
+See also: [`cal`](cal.md)
+
 ## Basic usage
 ```bash
 $ date

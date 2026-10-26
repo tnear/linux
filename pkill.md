@@ -4,13 +4,12 @@
 
 See also: [`kill`](kill.md), [`signal`](signal.md)
 
-## Kill process by name
+## Basic usage
 ```bash
+# kill process name
 $ pkill gedit
-```
 
-### Send SIGINT signal (Ctrl+C)
-```bash
+# send SIGINT signal (Ctrl+C)
 $ pkill -INT gedit
 ```
 
