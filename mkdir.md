@@ -22,8 +22,8 @@ $ mkdir -p new_dir  # creates new directory
 $ mkdir -p new_dir  # does nothing
 ```
 
-## -m, --mode=MOD
-`-m` allows specifying permissions when creating a directory.
+## Specify permissions
+Use `-m, --mode=MOD` to permissions when creating a directory.
 
 ```bash
 # create directory with full permissions
