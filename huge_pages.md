@@ -3,8 +3,8 @@
 HugePages are a Linux kernel feature that allows the system to allocate memory in large chunks (typically 2MB or 1GB) instead of the default 4KB pages. This improves performance for applications that use large amounts of memory by reducing TLB misses.
 
 ## Benefits
-- Reduced TLB Misses: The TLB is a cache that stores virtual-to-physical address mappings. With larger pages, fewer TLB entries are needed to map the same amount of memory, reducing TLB misses and improving performance.
-- Lower Overhead: Managing fewer, larger pages reduces the CPU overhead associated with page table management.
+- Reduced TLB misses: The TLB is a cache that stores virtual-to-physical address mappings. With larger pages, fewer TLB entries are needed to map the same amount of memory, reducing TLB misses and improving performance.
+- Lower overhead: Managing fewer, larger pages reduces the CPU overhead associated with page table management.
 
 ## Query hugepage info
 This machine has 4 hugepages of size 1 GB (1048567 kB):

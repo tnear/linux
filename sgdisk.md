@@ -2,7 +2,7 @@
 
 `sgdisk` - Command-line GUID partition table (GPT) manipulator for Linux and Unix
 
-See also: [`mkfs`](mkfs.md) 
+See also: [`mkfs`](mkfs.md)
 
 ## Introduction
 
