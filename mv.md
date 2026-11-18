@@ -6,7 +6,7 @@ See also: [`cp`](cp.md)
 
 ## Basic usage
 ```bash
-# rename file
+# rename file or directory
 $ mv oldName newName
 
 # move file to directory
@@ -17,9 +17,6 @@ $ mv my_dir /tmp
 
 # move multiple files to directory
 $ mv file1 file2 file3 dir/
-
-# rename directory
-$ mv oldDir newDir
 ```
 
 ### Prompt to overwrite

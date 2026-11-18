@@ -9,7 +9,7 @@ See also: [`runuser`](runuser.md), [PAM](PAM.md)
 
 ```bash
 # Change effective user (reuid) and group (regid).
-# --init-groups is used to set supplementary groups that 'my_user' has.
+# --init-groups sets supplementary groups that 'my_user' has.
 # It acts like 'my_user' normally does.
-setpriv --reuid=my_user --regid=my_user --init-groups ./my_app
+$ setpriv --reuid=my_user --regid=my_user --init-groups ./my_app
 ```
